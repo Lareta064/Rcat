@@ -1,0 +1,28 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Главная страница';
+	- var pageClass= "index-page";
+
+block content
+	.container
+		.title-1.text-center.mb-55 NEW PROJECT
+		.row.mb-30
+			.col
+				.card.align-items-center.pb-35
+					.title-2 UI-Kit
+					+button("Перейти", "ui/ui-kit.html")
+
+		.row
+			.col-md-4.mb-30
+				.card.align-items-center.pb-35
+					.title-2 Главная страница
+					+button("Перейти", "main.html")
+			//- .col-md-4.mb-30
+			//- 	.card.align-items-center.pb-35
+			//- 		.title-2 Каталог товаров
+			//- 		+button("Перейти", "catalog.html")
+			//- .col-md-4.mb-30
+			//- 	.card.align-items-center.pb-35
+			//- 		.title-2 Описание товара
+			//- 		+button("Перейти", "product.html")
