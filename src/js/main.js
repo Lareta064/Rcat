@@ -11,6 +11,16 @@ $(document).ready(function() {
 		$('body').toggleClass('ui-nav--hidden');
 		$('.container').toggleClass('container--left');
 	});
+	//-красим иконку сердечко
+
+	$('.icon-heart').on('click', function(){
+		if($(this).children('svg').attr('data-prefix') == 'far'){
+			$(this).children('svg').attr('data-prefix','fas');
+		}
+		else {
+			$(this).children('svg').attr('data-prefix','far');
+		}
+	})
 
 
 });

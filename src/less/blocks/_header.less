@@ -1,0 +1,48 @@
+.header{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+	background-color: @white;
+	box-shadow: 0px 2px 0px 0px #e5e9f2;
+}
+.header-col{
+	display: flex;
+	align-items: center;
+	.logo{
+		width: 197px;
+		margin-right: 1rem;
+	}
+	.logo-text{
+		color:@title-1;
+		width: 210px;
+		margin-right: 2rem;
+	}
+}
+.header__icon-group{
+	display: flex;
+	align-items: center;
+	margin-right: 2.2rem;
+}
+.header__icon-group__item:not(:last-child){
+	margin-right: 20px;
+}
+
+.header__user-lk{
+	display: flex;
+	align-items: center;
+}
+.header__user__avatar{
+	margin-right: 1.4rem;
+	border: 1px solid #e5e9f2;
+	border-radius: 3px;
+}
+
+.header__user__lk-dropdown{
+	a{
+		margin-right: 9px;
+		display: inline-block;
+
+	}
+}
