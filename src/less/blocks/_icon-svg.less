@@ -1,0 +1,20 @@
+i{
+	display: inline-block;
+	cursor: pointer;
+	transition: .8;
+	&:hover{opacity: .6;}
+}
+.notify{
+	position: relative;
+	display: inline-block;
+
+	.notify-marker{
+		position: absolute;
+		top: -5px;
+		right: -7px;
+		border-radius: 50%;
+		width: 10px;
+		height: 10px;
+		background-color: @redText;
+	}
+}
