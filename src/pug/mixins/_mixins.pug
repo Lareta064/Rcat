@@ -59,10 +59,14 @@ mixin goodsCart (img, text, price)
 
 //- Миксин ссылок
 
-mixin link(linkText)
-	.link-block
-		.link-block__icon
-		.link-block__text #{linkText}
+mixin link(linkText,linkIcon,linkClass)
+	.link-block&attributes(attributes)
+		if linkIcon
+			.link-block__icon
+				+#{linkIcon}
+			.link-block__text(class=' link-block__text--'+ linkClass) #{linkText}
+		else
+			.link-block__text(class=' link-block__text--'+ linkClass) #{linkText}
 
 //- Миксин ссылок
 
