@@ -1,0 +1,16 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = ' Стили для ссылок ';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.main-wrapper
+		.container.container--left
+			.section-ui
+				.title Стили для ссылок
+			.section-ui
+				+link('избранное')
+				+link('отписаться')
+				+link('отправить')
