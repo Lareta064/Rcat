@@ -1,15 +1,14 @@
 .apartment-row{
-	display: flex;
+	display: block;
 	height: 50px;
 	background-color: @white;
 	align-items: center;
+	border-bottom: 2px solid blue;
+	padding-bottom: 2px;
 }
-// .apartment-row{
-// 	height: 100%;
-// 	border: 1px solid green;
-// }
+
 .apartment-row__column{
-	border: 1px solid red;
+	// border: 1px solid red;
 	height: 50px;
 	display: flex;
 	align-items: center;
@@ -20,11 +19,10 @@
 	background-repeat: no-repeat;
 	width: 60px;
 	height: 50px;
-	border: 1px solid blue;
+	margin-right: 28px;
+
 }
 .apartment-row__col--left{
-	width: 520px;
-	border: 1px solid blue;
 	height: 50px;
 
 }
@@ -32,33 +30,44 @@
 .apartment-row__cell-item{
 	display: flex;
 	align-items: center;
-	width: 230px;
-	padding-left: 25px;
 	justify-content: space-between;
 
 }
-.apartment-row__cell-item:first-child{background-color: yellow;}
-.apartment-row--area{
-
-}
-.apartment-row--floor{
-
-}
-.apartment-row--repair{
-
-}
-.apartment-row--price{
-
+.apartment-row__cell-item:first-child{}
+.apartment-row-price{
+	font-weight: 700;
 }
 .apartment-row--price-rub{
-
+	padding-left: 18px;
+	padding-right: 18px;
+	font-weight: 700;
+	width: 163px;
 }
 .apartment-row--price-meter{
-
+	width: 158px;
 }
-.apartment-row--contact{
-
+.apartment-row__col--right{
+	display: flex;
+	justify-content: space-between;
 }
-.apartment-row--favorite{
-
+.apartment-row__col--left--center{
+	padding-left: 60px;
 }
+.button-test{
+	width: 110px;
+	height: 30px;
+	background-color: blue;
+}
+.apartment-row--rooms{
+
+	padding-right: 8px;
+	width:110px ;
+}
+.apartment-row--area{
+	padding-left: 12px;
+	padding-right: 12px;
+	width:110px ;
+}
+.apartment-row--floor{width:80px;}
+.apartment-row--repair{width: ;}
+.test-block{border-bottom: 2px solid red;}
