@@ -1,0 +1,49 @@
+.badge{
+	font-size: 16px;
+	font-weight: 500;
+	padding: 6px 8px;
+	color: @darkBlueBg;
+	border: 1px solid @darkBlueBg;
+	border-radius: 3px;
+	text-align: center;
+	letter-spacing: .5px;
+
+	@media(min-width: 768px){font-size: 14px;}
+}
+
+.badge--dark{
+	background-color: @badgeBg;
+	border: 1px solid @badgeBg;
+	color: @white;
+}
+.big-badge{
+	background-color:@darkBlueBg;
+	color:@white;
+	height: 82px;
+	width: 200px;
+	line-height: 1.3;
+	padding-top: 14px;
+	padding-left: 24px;
+	border-top-right-radius: 12px;
+	border-bottom-right-radius: 12px;
+	@media(min-width: 768px){
+		padding-top: 3px;
+		padding-left: 10px;
+		height: 55px;
+
+		border-radius: 4px;
+	}
+
+}
+.big-badge__top{
+
+	font-size: 24px;
+	font-weight: 700;
+	@media(min-width: 768px){font-size: 20px;}
+}
+.big-badge__bottom{
+	font-size: 16px;
+	@media(min-width: 768px){font-size: 14px;}
+
+}
+
