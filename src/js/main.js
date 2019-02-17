@@ -22,5 +22,16 @@ $(document).ready(function() {
 		}
 	})
 
+	// Изменение фото в блоке Фото ЖК
+	$('.thumbnails__image').on('click',function(){
+		var imgPath = $(this).attr('data-img-path');
+		var mainImage = $('.switch-block__main-photo img')
+
+		mainImage.fadeOut(200, function(){
+			mainImage.attr('src', imgPath).fadeIn(200);
+		});
+	});
+	// слайде фото ЖК на мобильном
+	$('.carousel').carousel()
 
 });

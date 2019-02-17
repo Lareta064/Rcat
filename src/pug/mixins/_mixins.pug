@@ -1,6 +1,6 @@
 // Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.
 mixin colors-product__circle(imgSrc, titleText)
-	
+
 		.colors-product__circle
 			a.colors-product-link(href="#")
 				img(src="../img/good_colors/"+ imgSrc  alt="color" title =""+ titleText)
@@ -53,3 +53,26 @@ mixin goodsCart (img, text, price)
 					span.goods-cart__count 1
 					.btn-counter.btn-counter--plus.goods-cart__counter-plus
 				.goods-cart__price= price
+
+
+
+//- Миксин ссылок
+
+mixin link(linkText,linkIcon,linkClass)
+	a(href='#').link-block&attributes(attributes)
+		if linkIcon
+			.link-block__icon
+				+#{linkIcon}
+			.link-block__text(class=' link-block__text--'+ linkClass) #{linkText}
+		else
+			.link-block__text(class=' link-block__text--'+ linkClass) #{linkText}
+
+//- Миксин ссылок
+
+
+//-большой голубой бейдж
+mixin bag-badge(num1,num2 )
+	.big-badge&attributes(attributes)
+		.big-badge__top #[span #{num1}] из #[span #{num2}]
+		.big-badge__bottom квартир в продаже
+
