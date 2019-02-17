@@ -1,0 +1,22 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = ' Стили для ссылок ';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.main-wrapper
+		.container.container--left
+			.section-ui
+				.title Стили для ссылок
+			.section-ui
+				+link('В избранное','icon-heart')
+				+link('Добавить заметку','icon-add')
+				+link('Еще','arrow-down')
+				+link('Скачать ПФД','', 'line')
+				+link('В избранном','icon-heart')
+			
+			.section-ui
+				a(href='#').link-filter по цене
+			.section-ui
