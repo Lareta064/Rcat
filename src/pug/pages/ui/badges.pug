@@ -1,0 +1,25 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Бейджи';
+	- var pageClass= "body--dashboard";
+
+block content
+	.container.container--left
+		.section-ui
+			h1 Бейджи
+		.section-ui
+			.badge ЦАО
+		.section-ui
+			pre.
+				.badge ЦАО
+		.section-ui
+			.badge.badge--dark Новостройка
+		.section-ui
+			pre.
+				.badge.badge--dark Новостройка
+		.section-ui
+			+bag-badge('48', '116' )
+		.section-ui
+			pre.
+				+bag-badge('48', '116' )
