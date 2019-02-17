@@ -1,12 +1,14 @@
-extends ../layouts/page-layout/page.pug
+extends ../../layouts/ui-layout/ui-layout.pug
 
 block variables
-	- var title = 'Страница ЖК ';
-	- var pageClass = 'index-page';
+	- var title = 'Шапка';
+	- var pageClass= "body--dashboard";
 
 block content
-	.header-wrapper
-		.container
+	.container.container--left
+		.section-ui
+			h1 Шапка
+		.section-ui
 			.header
 				.header-col
 					.logo
@@ -30,4 +32,3 @@ block content
 						.header__user__lk-dropdown
 							a(href="#") Иван Марасин
 							+arrow-down
-
