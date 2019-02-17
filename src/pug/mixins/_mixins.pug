@@ -60,7 +60,7 @@ mixin goodsCart (img, text, price)
 //- Миксин ссылок
 
 mixin link(linkText,linkIcon,linkClass)
-	.link-block&attributes(attributes)
+	a(href='#').link-block&attributes(attributes)
 		if linkIcon
 			.link-block__icon
 				+#{linkIcon}
