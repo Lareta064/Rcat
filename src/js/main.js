@@ -11,7 +11,8 @@ $(document).ready(function() {
 		$('body').toggleClass('ui-nav--hidden');
 		$('.container').toggleClass('container--left');
 	});
-	// Изменение картинки в блоке Фото товара в Каталоге
+
+	// Изменение фото в блоке Фото ЖК
 	$('.thumbnails__image').on('click',function(){
 		var imgPath = $(this).attr('data-img-path');
 		var mainImage = $('.switch-block__main-photo img')
@@ -20,6 +21,7 @@ $(document).ready(function() {
 			mainImage.attr('src', imgPath).fadeIn(200);
 		});
 	});
-
+	// слайде фото ЖК на мобильном
+	$('.carousel').carousel()
 
 });

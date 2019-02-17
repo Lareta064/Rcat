@@ -9,7 +9,7 @@ block content
 		.section-ui
 			h1 ЖК. Блок с фото
 		.section-ui
-			.hs-photo-wrapper
+			.hc-photo-wrapper
 				.row
 					.col-lg-6
 						.hs-photo__switch-block
@@ -36,25 +36,12 @@ block content
 
 								.thumbnails__image(data-img-path = "../img/hc/big-photo1.jpg")
 									img(src="../img/hc/mini-photo7.jpg" alt="Фото комплекса")
-			.hs-photo-mobile
-				.service-block--mobile.owl-carousel
-					.service-block__item.owl-carousel-item
-						img(src="img/service1.jpg", alt="")
-						p.service-block-capture Жилых и нежилых зданий
-						.servise-block__hover
-					.service-block__item.owl-carousel-item
-						img(src="img/service2.jpg", alt="")
-						p.service-block-capture  Производственных объектов
-						.servise-block__hover
-					.service-block__item.owl-carousel-item
-						img(src="img/service3.jpg", alt="")
-						p.service-block-capture  Складских помещений
-						.servise-block__hover
-					.service-block__item.owl-carousel-item
-						img(src="img/service4.jpg", alt="")
-						p.service-block-capture  Офисных комплексов
-						.servise-block__hover
-					.service-block__item.owl-carousel-item
-						img(src="img/service5.jpg", alt="")
-						p.service-block-capture  Торговых центров
-						.servise-block__hover
+			.hc-photo-mobile
+				#hs-photo-slider.carousel.slide(data-ride='carousel')
+					.carousel-inner
+						.carousel-item.active
+							img.d-block.w-100(src='../img/hc/big-photo1.jpg', alt='фото ЖК')
+						.carousel-item
+							img.d-block.w-100(src='../img/hc/big-photo2.jpg', alt='фото ЖК')
+						.carousel-item
+							img.d-block.w-100(src='../img/hc/big-photo3.jpg', alt='фото ЖК')

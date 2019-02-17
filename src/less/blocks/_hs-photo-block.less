@@ -1,8 +1,12 @@
-.hs-photo__switch-block {
+.hc-photo-wrapper {
 	display: none;
-	@media(min-width: 768px){
-		display: block;
-
+	@media(min-width: 768px){display: block;}
+}
+.hc-photo-mobile{
+	display: block;
+	@media(min-width: 768px){display:none ;}
+	.carousel-item img{
+		border-radius: 5px;
 	}
 }
 
@@ -59,11 +63,12 @@
 
 
 .switch-block__thumbnails {
-	display: flex;
+	display: none;
 	justify-content: space-between;
 	cursor: pointer;
 		@media (min-width: 768px) {
 		// min-height: 524px;
+		display: flex;
 		width: 630px;
 		margin-left: auto;
 		margin-right: auto;
