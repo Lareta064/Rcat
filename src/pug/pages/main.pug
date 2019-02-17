@@ -5,4 +5,22 @@ block variables
 	- var pageClass = 'index-page';
 
 block content
-	h1 Hello World!
+	.container
+		.row
+			.col-xl-5
+				.apartment-row__column.apartment-row__col--left
+					.apartment-row__cell.apartment-row-img
+					.apartment-row__cell.apartment-row-data
+						.apartment-row__cell-item
+							.apartment-row--rooms 1-комнатная кв
+							.apartment-row--area 56,4 кв.м.
+						.apartment-row__cell-item 5 этаж
+							.apartment-row--floor С ремонтом
+							.apartment-row--repair
+			.col-xl-5
+				.apartment-row__column.apartment-row__col--left--center
+					.apartment-row-price $354 452
+					.apartment-row--price-rub23 333 333 руб
+					.apartment-row--price-meter422055 руб/кв.м
+			.col-xl-2
+				.apartment-row__column.apartment-row__col--right
