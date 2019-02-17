@@ -1,0 +1,60 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'ЖК. Блок с фото';
+	- var pageClass= "body--dashboard";
+
+block content
+	.container.container--left
+		.section-ui
+			h1 ЖК. Блок с фото
+		.section-ui
+			.hs-photo-wrapper
+				.row
+					.col-lg-6
+						.hs-photo__switch-block
+							.switch-block__main-photo
+								img(src="../img/hc/big-photo1.jpg" alt="Фото комплекса")
+							.switch-block__thumbnails.d-flex
+								.thumbnails__image(data-img-path = "../img/hc/big-photo1.jpg")
+									img(src="../img/hc/mini-photo1.jpg"  alt="Фото комплекса")
+
+								.thumbnails__image(data-img-path = "../img/hc/big-photo2.jpg")
+									img(src="../img/hc/mini-photo2.jpg" alt="Фото комплекса")
+
+								.thumbnails__image(data-img-path = "../img/hc/big-photo3.jpg")
+									img(src="../img/hc/mini-photo3.jpg" alt="Фото комплекса")
+
+								.thumbnails__image(data-img-path = "../img/hc/big-photo1.jpg")
+									img(src="../img/hc/mini-photo4.jpg" alt="Фото комплекса")
+
+								.thumbnails__image(data-img-path = "../img/hc/big-photo2.jpg")
+									img(src="../img/hc/mini-photo5.jpg" alt="Фото комплекса")
+
+								.thumbnails__image(data-img-path = "../img/hc/big-photo3.jpg")
+									img(src="../img/hc/mini-photo6.jpg" alt="Фото комплекса")
+
+								.thumbnails__image(data-img-path = "../img/hc/big-photo1.jpg")
+									img(src="../img/hc/mini-photo7.jpg" alt="Фото комплекса")
+			.hs-photo-mobile
+				.service-block--mobile.owl-carousel
+					.service-block__item.owl-carousel-item
+						img(src="img/service1.jpg", alt="")
+						p.service-block-capture Жилых и нежилых зданий
+						.servise-block__hover
+					.service-block__item.owl-carousel-item
+						img(src="img/service2.jpg", alt="")
+						p.service-block-capture  Производственных объектов
+						.servise-block__hover
+					.service-block__item.owl-carousel-item
+						img(src="img/service3.jpg", alt="")
+						p.service-block-capture  Складских помещений
+						.servise-block__hover
+					.service-block__item.owl-carousel-item
+						img(src="img/service4.jpg", alt="")
+						p.service-block-capture  Офисных комплексов
+						.servise-block__hover
+					.service-block__item.owl-carousel-item
+						img(src="img/service5.jpg", alt="")
+						p.service-block-capture  Торговых центров
+						.servise-block__hover
