@@ -5,28 +5,33 @@ block variables
 	- var pageClass = 'body--dashboard';
 
 block content
-	.container.container--left
-		.title-2.mb-55.mt-55 ЖК. Строка таблицы квартир
-
 	.container
-		.test-block
+		.title-2.mb-55.mt-55 ЖК. Строка таблицы квартир
+	.container
+		.apartment-item
 			.row
-				.col-xl-5
-					.apartment-row__column.apartment-row__col--left
-						.apartment-row-img
-						.apartment-row__cell.apartment-row-data
-							.apartment-row__cell-item
-								.apartment-row--rooms 1-комнатн. кв
-								.apartment-row--area 56,4 кв.м.
-							.apartment-row__cell-item
-								.apartment-row--floor 5 этаж
-								.apartment-row--repair С ремонтом
-				.col-xl-5
-					.apartment-row__column.apartment-row__col--left--center
-						.apartment-row-price $354 452
-						.apartment-row--price-rub 23 333 333 руб
-						.apartment-row--price-meter 422055 руб/кв.м
+				.col-xl-10
+					.apartment-item-column.d-flex
+						.d-flex.column-item
+							.d-flex.apartment-info.apartment-info--pb.order-xl-2
+								.d-flex.apartment-info__col
+									.info-item.info-item--rooms #[span 1 комн.,]
+									.info-item.info-item--area #[span 54,3 кв.м]
+								.d-flex.apartment-info__col
+									.info-item.info-item--floor #[span 5 этаж]
+									.info-item.info-item--repair #[span Без ремонта]
+							.apartment-img.order-xl-1(style="background-image: url(../img/hc/photo-small1.jpg);")
+						.d-flex.column-item
+							.d-flex.apartment-info
+								.d-flex.apartment-info__col
+									.info-item.info-item--price-usd #[span.visible-usd $320 200] #[span.hidden-rub 23 200 200руб]
+
+								.d-flex.apartment-info__col
+									.info-item.info-item--price-rub #[span.visible-rub 23 200 200руб] #[span.hidden-usd $320 200]
+									.info-item.info-item--price-meter #[span 340 200 руб./кв.м]
+
+
 				.col-xl-2
-					.apartment-row__column.apartment-row__col--right
-						.button-test
+					.d-flex.test-block-contacts
+						.contact-phone +7 777 777 77 77
 						+icon-heart
