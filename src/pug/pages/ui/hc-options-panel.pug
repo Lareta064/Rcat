@@ -19,7 +19,7 @@ block content
 			.option-panel.option-panel--mobile
 				+link('В избранное','icon-heart')
 				+link('Еще','arrow-down').order-item#showOptions
-				.dropdown#dropdown--option
+				.dropdown#dropdown--option(data-control= 'hidden')
 					.dropdown-item
 						+link('Следить за объявлениями','icon-notify')
 					.dropdown-item

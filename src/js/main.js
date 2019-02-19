@@ -50,13 +50,23 @@ $(document).ready(function() {
 
 	});
 	//-модальное окно панель опций
-	const dropdownОption = $('#dropdown--option');
-	const showOptions = $('#showOptions');
-	showOptions.on('click', function(e){
-		e.preventDefault();
-		dropdownОption.toggle();
+	const dropdownОption = $('#dropdown--option');// выпадашка
+	const showOptions = $('#showOptions'); //кнопка Еще
+	var dataValue ;
+	showOptions.on('click', function(){
+		dataValue = dropdownОption.attr('data-control');
 
+		if(dataValue =='hidden'){
+
+			dropdownОption.slideDown(800);
+			dropdownОption.attr('data-control','open');
+			dataValue = 'open';
+
+		}else {
+			dropdownОption.slideUp(800);
+			dropdownОption.attr('data-control','hidden');
+			dataValue = 'hidden';
+			}
 	});
-
 
 });
