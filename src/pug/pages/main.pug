@@ -8,7 +8,6 @@ block content
 
 
 	.header-wrapper.mb-50
-
 		.container
 			.header
 				.header-col
@@ -16,7 +15,8 @@ block content
 						a(href="#")
 							img(src="../img/logo.png", width='200' alt="logo")
 					.logo-text Профессиональный каталог недвижимости Москвы
-					.button
+					+button('+ Добавить квартиру', '#', 'btn-add')
+					+mobile-btn('plus')
 				.header-col
 					.header__icon-group
 						.header__icon-group__item
