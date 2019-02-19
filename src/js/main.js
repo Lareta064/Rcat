@@ -11,6 +11,16 @@ $(document).ready(function() {
 		$('body').toggleClass('ui-nav--hidden');
 		$('.container').toggleClass('container--left');
 	});
+	//-красим иконку сердечко
+
+	$('.icon-heart').on('click', function(){
+		if($(this).children('svg').attr('data-prefix') == 'far'){
+			$(this).children('svg').attr('data-prefix','fas');
+		}
+		else {
+			$(this).children('svg').attr('data-prefix','far');
+		}
+	})
 
 	// Изменение фото в блоке Фото ЖК
 	$('.thumbnails__image').on('click',function(){
@@ -22,6 +32,15 @@ $(document).ready(function() {
 		});
 	});
 	// слайде фото ЖК на мобильном
-	$('.carousel').carousel()
+	$('.carousel').carousel();
+
+	$('.contact-phone').on('mouseenter', function(){
+		$(this).css('width','150px');
+		console.log(555);
+	});
+	$('.contact-phone').on('mouseout', function(){
+		$(this).css('width','115px');
+		console.log(444);
+	});
 
 });

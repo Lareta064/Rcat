@@ -1,15 +1,14 @@
-extends ../layouts/page-layout/page.pug
+extends ../../layouts/ui-layout/ui-layout.pug
 
 block variables
-	- var title = 'Страница ЖК ';
-	- var pageClass = 'index-page';
+	- var title = 'Шапка';
+	- var pageClass= "body--dashboard";
 
 block content
-
-
-	.header-wrapper.mb-50
-
-		.container
+	.container.container--left
+		.section-ui
+			h1 Шапка
+		.section-ui
 			.header
 				.header-col
 					.logo
@@ -33,11 +32,3 @@ block content
 						.header__user__lk-dropdown
 							a(href="#") Иван Марасин
 							+arrow-down
-
-	.container
-		.aprtament-table
-			+table-row('1', '#', '54,5', '4','с ремонтом', 'table-photo', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
-			+table-row('1', '#', '54,5', '4','без ремонта', 'plan1', '320 200', '23 200 500', '340 200', '+7 929 222 5555','цена вниз' )
-			+table-row('1', '#', '54,5', '4','с ремонтом', 'table-photo2', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
-			+table-row('1', '#', '54,5', '4','без ремонта', 'plan2', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
-

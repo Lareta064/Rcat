@@ -13,6 +13,7 @@ body {
 	min-height: 100%;
 	position: relative;
 	min-width: 360px;
+	background-color:@bodyBg;
 }
 
 
@@ -53,9 +54,11 @@ img {
 }
 
 a {
+
 	color: #037EC6;
 	&:hover{
 		text-decoration: none;
+
 	}
 }
 
@@ -154,6 +157,7 @@ blockquote p {
 	font-size: 18px;
 	font-weight: 600;
 	margin-bottom: 10px;
+
 }
 
 .section-ui pre {
@@ -171,4 +175,9 @@ blockquote p {
 .col--no-padding {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
+}
+.container{
+	@media(min-width: 1440px){
+		max-width: 1290px;
+	}
 }

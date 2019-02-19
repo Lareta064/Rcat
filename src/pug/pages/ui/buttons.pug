@@ -6,6 +6,26 @@ block variables
 
 block content
 	.container.container--left
-		.title Кнопки
+		.section-ui
+			.title Кнопки
+
+			p Кнопка + Добавить квартиру
+			+button('+ Добавить квартиру', '#', 'btn-add')
+		pre.
+			+button('+ Добавить квартиру', '#', 'btn-add')
+		.section-ui
+
+
+			p Кнопка +7 985 356 452 44 54
+			+button('+7 985 356 452 44 54', '#', 'btn-tel')
+		pre.
+			+button('+7 985 356 452 44 54', '#', 'btn-tel')
+		
 
 		.section-ui
+			a(href="#").mobile-button
+				img(src="../img/icons/plus.png", alt="")
+		pre.
+			+mobile-btn('plus')
+
+		

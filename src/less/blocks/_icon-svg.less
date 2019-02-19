@@ -1,8 +1,7 @@
 i{
 	display: inline-block;
 	cursor: pointer;
-	transition: .8;
-	&:hover{opacity: .6;}
+	transition: .5;
 }
 .notify{
 	position: relative;
@@ -17,4 +16,24 @@ i{
 		height: 10px;
 		background-color: @redText;
 	}
+}
+//-heart
+.svg-inline--fa{
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.icon-heart--red{
+	path{
+		fill: @redText;
+	}
+}
+.icon-heart--grey{
+	path{
+		fill: @lightGrey;
+	}
+}
+//-search
+.icon-search{
+	path{fill: @lightGrey;}
 }
