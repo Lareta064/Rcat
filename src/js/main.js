@@ -34,13 +34,21 @@ $(document).ready(function() {
 	// слайде фото ЖК на мобильном
 	$('.carousel').carousel();
 
+	// при ховере удлинняем/укорачиваем кнопку телефон
 	$('.contact-phone').on('mouseenter', function(){
-		$(this).css('width','150px');
-		console.log(555);
+			$(this).css('width','150px');
 	});
+
+
 	$('.contact-phone').on('mouseout', function(){
-		$(this).css('width','115px');
-		console.log(444);
+		if(window.innerWidth >= 768){
+			$(this).css('width','115px');
+		}
+		else{
+			$(this).css('width','125px');
+		}
+
 	});
+
 
 });

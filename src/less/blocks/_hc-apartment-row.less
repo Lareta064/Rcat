@@ -1,5 +1,4 @@
 .apartment-item{
-	min-width: 1290px;
 	border: 1px solid #e5e9f2;
 	border-radius: 3px;
 	height: 230px;
@@ -8,6 +7,7 @@
 	margin-bottom: 12px;
 	background-color: @white;
 	@media(min-width: 768px){
+		min-width: 1290px;
 		height: 50px;
 		font-size: 14px;
 		padding: 0;
@@ -47,19 +47,22 @@
 .apartment-info__col{
 	width: 100%;
 	height: 25px;
+	margin-bottom: 5px;
 	@media(min-width: 768px){
 		width: 50%;
-		// height: 50px;
+		margin-bottom: 0;
 	}
 }
 
 .info-item{
-	width: 50%;
+	min-width: 105px;
 	text-align: center;
 	font-weight: 500;
 	align-items: center;
 	display: flex;
 	padding-left: 10px;
+	@media(min-width: 768px){width: 50%;}
+
 }
 .apartment-img{
 	background-color: #fefefe;
@@ -86,7 +89,8 @@
 	width: 45%;
 }
 .info-item--floor{
-	width: 40%;
+
+	@media(min-width: 768px){width: 40%;}
 }
 .info-item--repair{width: 60%;}
 .info-item--area,
@@ -132,7 +136,6 @@
 .visible-rub{
 	display: none;
 	@media(min-width: 768px){display: inline-block;}
-
 }
 .hidden-rub,
 .hidden-usd{
@@ -142,7 +145,7 @@
 .hidden-usd{font-weight: 700;}
 
 .info-item.info-item--price-rub{
-	width: 100%;
+	width: 120px;
 	@media(min-width: 768px){width: 60%;}
 }
 .info-item--price-meter{
@@ -154,11 +157,12 @@
 	align-items: center;
 	justify-content: space-between;
 	height: 100%;
+	margin-top: 10px;
 	.icon-group{
 		display: flex;
 		// align-items: center;
 	}
-
+	@media(min-width: 768px){margin-top: 0;}
 }
 
 .contact-phone{
@@ -173,7 +177,7 @@
 	// margin-right: 2em;
 	color: @white;
 	font-weight: 700;
-	transition:1.5s;
+	transition:1.0s;
 	@media(min-width: 768px){width: 112px;}
 	&:hover{color:@white;}
 }
@@ -182,23 +186,28 @@
 	margin-right: 20px;
 	@media(min-width: 768px){display: none;
 	}
+	&:hover{opacity: .8;}
 }
 .apartment-info__col--short{
-	width: 30%;
+	width: 100%;
 	padding-right: 20px;
-
-	@media(min-width: 768px){border-right: 1px solid #e5e9f2;}
-	.info-item{
+	justify-content: flex-start;
+	@media(min-width: 768px){
+		width: 30%;
+		border-right: 1px solid #e5e9f2;
+		.info-item{
 		justify-content: flex-end;
-
 		width: 100%;
+		}
 	}
-
 }
 .apartment-info__col--large{
-	width: 70%;
-	.info-item--price-rub{
+	width: 100%;
+	@media(min-width: 768px){
+		width: 70%;
+		.info-item--price-rub{
 		padding-left: 20px;
+		}
 	}
 }
 .full-width{
@@ -212,30 +221,46 @@
 	display: inline-block;
 	position: relative;
 }
+.hidden-rub,
+.hidden-usd{
+	display: inline-block;
+	@media(min-width: 768px){display: none;}
+}
 .repaire-icon:after{
 	position: absolute;
 	content:"";
-	right: -20px;
-	top: 0px;
+	right: 0px;
+	top: 50%;
+	transform: translate(150%, -50%);
 	height: 22px;
 	width: 15px;
 	background:url(../../img/icons/icon-brush.svg);
 	background-position: center;
 	background-repeat: no-repeat;
 }
+.visible-usd,
+.visible-rub{
+	display: none;
+	@media(min-width: 768px){display: inline-block;}
+}
 //-иконка цена вниз в колонке
 .price-down:after{
 	position: absolute;
 	content:"";
-	right: -32px;
-	top: -2px;
-	height: 22px;
-	width: 22px;
-	background:url(../../img/icons/price-down.svg);
+	right: 0px;
+	top: 50%;
+	transform: translate(200%, -50%);
+	height: 24px;
+	width: 24px;
+	background:url(../../img/icons/price-down.png);
 	background-position: center;
 	background-repeat: no-repeat;
+	@media(min-width: 768px){
+
+	}
 }
-.aprtament-table{
-	overflow-x: auto;
-	min-width: 100%;
+.price-down{color: @redText;}
+.apartament-table{
+	position: relative;
+	@media(min-width: 768px){overflow-x: auto;}
 }
