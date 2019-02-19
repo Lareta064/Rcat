@@ -76,3 +76,7 @@ mixin bag-badge(num1,num2 )
 		.big-badge__top #[span #{num1}] из #[span #{num2}]
 		.big-badge__bottom квартир в продаже
 
+//- Миксин кнопок
+mixin mobile-btn(btnImg, rock)
+	a(href="#" class=" "+ rock).mobile-button
+		img(src="../img/icons/"+ btnImg +".png", alt="")
