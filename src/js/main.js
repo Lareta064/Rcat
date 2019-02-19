@@ -32,6 +32,15 @@ $(document).ready(function() {
 		});
 	});
 	// слайде фото ЖК на мобильном
-	$('.carousel').carousel()
+	$('.carousel').carousel();
+
+	$('.contact-phone').on('mouseenter', function(){
+		$(this).css('width','150px');
+		console.log(555);
+	});
+	$('.contact-phone').on('mouseout', function(){
+		$(this).css('width','115px');
+		console.log(444);
+	});
 
 });
