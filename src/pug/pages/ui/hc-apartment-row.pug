@@ -7,31 +7,9 @@ block variables
 block content
 	.container
 		.title-2.mb-55.mt-55 ЖК. Строка таблицы квартир
-	.container
-		.apartment-item
-			.row
-				.col-xl-10
-					.apartment-item-column.d-flex
-						.d-flex.column-item
-							.d-flex.apartment-info.apartment-info--pb.order-xl-2
-								.d-flex.apartment-info__col
-									.info-item.info-item--rooms #[span 1 комн.,]
-									.info-item.info-item--area #[span 54,3 кв.м]
-								.d-flex.apartment-info__col
-									.info-item.info-item--floor #[span 5 этаж]
-									.info-item.info-item--repair #[span Без ремонта]
-							.apartment-img.order-xl-1(style="background-image: url(../img/hc/photo-small1.jpg);")
-						.d-flex.column-item
-							.d-flex.apartment-info
-								.d-flex.apartment-info__col
-									.info-item.info-item--price-usd #[span.visible-usd $320 200] #[span.hidden-rub 23 200 200руб]
 
-								.d-flex.apartment-info__col
-									.info-item.info-item--price-rub #[span.visible-rub 23 200 200руб] #[span.hidden-usd $320 200]
-									.info-item.info-item--price-meter #[span 340 200 руб./кв.м]
-
-
-				.col-xl-2
-					.d-flex.test-block-contacts
-						.contact-phone +7 777 777 77 77
-						+icon-heart
+		.aprtament-table
+			+table-row('1', '#', '54,5', '4','с ремонтом', 'table-photo', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
+			+table-row('1', '#', '54,5', '4','без ремонта', 'plan1', '320 200', '23 200 500', '340 200', '+7 929 222 5555','цена вниз' )
+			+table-row('1', '#', '54,5', '4','с ремонтом', 'table-photo2', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
+			+table-row('1', '#', '54,5', '4','без ремонта', 'plan2', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
