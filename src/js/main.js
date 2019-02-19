@@ -49,6 +49,14 @@ $(document).ready(function() {
 		}
 
 	});
+	//-модальное окно панель опций
+	const dropdownОption = $('#dropdown--option');
+	const showOptions = $('#showOptions');
+	showOptions.on('click', function(e){
+		e.preventDefault();
+		dropdownОption.toggle();
+
+	});
 
 
 });
