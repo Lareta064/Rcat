@@ -62,10 +62,16 @@ $(document).ready(function() {
 			dropdownОption.attr('data-control','open');
 			dataValue = 'open';
 
+			showOptions.children('.link-block__icon').addClass('icon-down--rotate');
+
+
 		}else {
 			dropdownОption.slideUp(800);
 			dropdownОption.attr('data-control','hidden');
 			dataValue = 'hidden';
+
+			showOptions.children('.link-block__icon').removeClass('icon-down--rotate');
+
 			}
 	});
 

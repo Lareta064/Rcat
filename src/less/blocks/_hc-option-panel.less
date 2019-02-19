@@ -33,12 +33,13 @@
 	right: 0;
 	padding: 20px 0px;
 	border-radius: 5px;
-
+	z-index: 10;
+	background-color: #f5f6fa;
 	border:1px solid #e5e9f2;
 	.dropdown-item{
 		width: 100%;
 		padding: 14px 20px;
-		&:hover{background-color: #e5e9f2;}
+		&:hover{background-color: #fff;}
 	}
 	.link-block__text--line{margin-left: 28px;}
 }
@@ -50,3 +51,9 @@
 	display: flex;
 	@media(min-width: 1350px){display: none;}
 }
+.icon-down--rotate{
+	transform: rotate(180deg) translate(-25%);
+}
+
+
+
