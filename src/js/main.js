@@ -34,13 +34,45 @@ $(document).ready(function() {
 	// слайде фото ЖК на мобильном
 	$('.carousel').carousel();
 
+	// при ховере удлинняем/укорачиваем кнопку телефон
 	$('.contact-phone').on('mouseenter', function(){
-		$(this).css('width','150px');
-		console.log(555);
+			$(this).css('width','150px');
 	});
+
+
 	$('.contact-phone').on('mouseout', function(){
-		$(this).css('width','115px');
-		console.log(444);
+		if(window.innerWidth >= 768){
+			$(this).css('width','115px');
+		}
+		else{
+			$(this).css('width','125px');
+		}
+
+	});
+	//-модальное окно панель опций
+	const dropdownОption = $('#dropdown--option');// выпадашка
+	const showOptions = $('#showOptions'); //кнопка Еще
+	var dataValue ;
+	showOptions.on('click', function(){
+		dataValue = dropdownОption.attr('data-control');
+
+		if(dataValue =='hidden'){
+
+			dropdownОption.slideDown(800);
+			dropdownОption.attr('data-control','open');
+			dataValue = 'open';
+
+			showOptions.children('.link-block__icon').addClass('icon-down--rotate');
+
+
+		}else {
+			dropdownОption.slideUp(800);
+			dropdownОption.attr('data-control','hidden');
+			dataValue = 'hidden';
+
+			showOptions.children('.link-block__icon').removeClass('icon-down--rotate');
+
+			}
 	});
 
 });

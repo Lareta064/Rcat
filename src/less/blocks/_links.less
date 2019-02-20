@@ -1,28 +1,13 @@
 .link-block {
-	display: inline-flex;
+	display: flex;
 	align-items: center;
 	padding-right: 24px;
-	color: @blueBg;
-	cursor:pointer;
-	
-	&:active {
-		
-	}
-
-}
-
-.link-block__icon {
-	margin-right: 8px;
-	width: 24px;
-	height: 24px;
-	
+	color: @btnBg;
 	&:hover {
-		.cls-4 {
-			fill:red;
-		}
+		opacity: .6;
 	}
 }
-
+.link-block__icon{padding-right: 10px;}
 .link-block__text{
 	padding-bottom: 1px;
 	border-bottom: 1px dashed;
@@ -41,11 +26,11 @@
 	color: @white;
 	text-transform: lowecase;
     transition: .25s;
-	
+
 	&:hover{
 		color: @white;
 		opacity: .85;
-	}	
+	}
 }
 
 

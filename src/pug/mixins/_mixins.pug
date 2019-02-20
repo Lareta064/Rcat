@@ -77,8 +77,8 @@ mixin bag-badge(num1,num2 )
 		.big-badge__bottom квартир в продаже
 
 //- Миксин кнопок
-mixin mobile-btn(btnImg, rock)
-	a(href="#" class=" "+ rock).mobile-button
+mixin mobile-btn(btnImg)
+	a(href="#").mobile-button&attributes(attributes)
 		img(src="../img/icons/"+ btnImg +".png", alt="")
 
 
@@ -94,16 +94,19 @@ mixin table-row(roomsNum, roomsLink, roomsArea, roomsFloor,roomsRepair, roomsImg
 								a(href=""+ roomsLink).info-item.info-item--rooms #[span #{roomsNum} комн. кв]
 								.info-item.info-item--area #[span #{roomsArea} кв.м]
 							.d-flex.apartment-info__col
-								.info-item.info-item--floor #[span #{roomsArea} этаж]
-								if(roomsRepair == 'без ремонта')
-									.info-item.info-item--repair #[span Без ремонта]
-								if(roomsRepair == 'с ремонтом')
-									.info-item.info-item--repair #[span.repaire-icon С ремонтом]
+								.info-item.info-item--floor #[span #{roomsFloor} этаж]
+								if(roomsRepair == 'без отделки')
+									.info-item.info-item--repair #[span Без отделки]
+								if(roomsRepair == 'отделка')
+									.info-item.info-item--repair #[span.repaire-icon Отделка]
 						.apartment-img.order-md-1(style="background-image: url(../img/hc/"+ roomsImg +".png);")
 					.d-flex.column-item
 						.d-flex.apartment-info
 							.d-flex.apartment-info__col.apartment-info__col--short
-								.info-item.info-item--price-usd #[span.visible-usd $#{priceUsd}] #[span.hidden-rub #{priceRub}руб]
+								if priceDown
+									.info-item.info-item--price-usd #[span.visible-usd $#{priceUsd}] #[span.hidden-rub.price-down #{priceRub}руб]
+								else
+									.info-item.info-item--price-usd #[span.visible-usd $#{priceUsd}] #[span.hidden-rub #{priceRub}руб]
 
 							.d-flex.apartment-info__col.apartment-info__col--large
 								if priceDown
@@ -119,7 +122,8 @@ mixin table-row(roomsNum, roomsLink, roomsArea, roomsFloor,roomsRepair, roomsImg
 				.d-flex.column-contacts
 					a(href="#").contact-phone #{phoneNumber}
 					.icon-group
-						+icon-mail
+						a(href="#")
+							+icon-mail
 						+icon-heart('red')
 
 //-конец миксина "строка таблицы""
