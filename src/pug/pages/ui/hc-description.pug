@@ -1,0 +1,33 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'ЖК. Описание';
+	- var pageClass= "body--dashboard";
+
+block content
+	.container.container--left
+		.section-ui
+			h1 ЖК. Описание
+		.section-ui
+			.row
+				.col-hl-6
+					.text-bl Photo
+				.col-hl-6
+					.hc-description
+						.row
+							.col-md-5.col-lg-5.pl-0.pr-0
+								.hc-description-column.hc-description-column--area
+									.hc-description-item
+										.headline-bold 53-187 кв.м
+										.text-body площадь квартир
+									.hc-description-item
+										.headline-bold 6
+										.text-body этажей
+							.col-5.order-2.col-md-2.offset-md-1.col-lg-3.offset-lg-0.order-md-1.pl-0.pr-0
+								.hc-description-item.hc-description-item--align
+									.text-box
+										.headline-bold 3,1м
+										.text-body потолки
+							.col-7.order-1.col-md-4.order-md-2.col-lg-4.pl-0.pr-0
+								.hc-description-item.hc-description-item--btn
+									+bag-badge('48', '116' )
