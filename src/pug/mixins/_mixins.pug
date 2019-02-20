@@ -76,6 +76,12 @@ mixin bag-badge(num1,num2 )
 		.big-badge__top #[span #{num1}] из #[span #{num2}]
 		.big-badge__bottom квартир в продаже
 
+
+mixin big-badge(objItem)
+	.big-badge&attributes(attributes)
+		.big-badge__top #[span #{objItem.num1}] из #[span #{objItem.num2}]
+		.big-badge__bottom квартир в продаже
+
 //- Миксин кнопок
 mixin mobile-btn(btnImg)
 	a(href="#").mobile-button&attributes(attributes)
