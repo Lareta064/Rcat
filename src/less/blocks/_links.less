@@ -6,32 +6,29 @@
 	&:hover {
 		opacity: .6;
 	}
-}
-.link-block__icon{padding-right: 10px;}
-.link-block__text{
-	padding-bottom: 1px;
-	border-bottom: 1px dashed;
+
+	.link-block__icon{padding-right: 10px;}
+
 }
 
-.link-block__text--line {
-	border-bottom: 1px solid;
-}
-
-
-.link-filter {
-	padding: 6px 10px;
-	border-radius: 3px;
-	background-color: @badgeBg;
+.sample-link {
 	display: inline-block;
-	color: @white;
-	text-transform: lowecase;
+	line-height: normal;
+	color: @btnBg;
+	text-transform: lowercase;
     transition: .25s;
-
-	&:hover{
+    border-bottom: 1px dashed @btnBg;
+}
+.sample-link--line {
+	border-bottom: 1px solid @btnBg;
+}
+.sample-link--active{
 		color: @white;
 		opacity: .85;
+		padding: 6px 10px;
+		border-radius: 3px;
+		background-color: @badgeBg;
+		border-bottom: 0px;
+
 	}
-}
-
-
 

@@ -18,5 +18,18 @@ block content
 				+link('В избранном','icon-heart')
 
 			.section-ui
-				a(href='#').link-filter по цене
+				pre.
+					+link('В избранное','icon-heart')
+					+link('Добавить заметку','icon-add')
+					+link('Еще','arrow-down')
+					+link('Скачать ПФД','', 'line')
+					+link('В избранном','icon-heart')
+
+			.section-ui.d-flex
+				.test-block.pr-40
+					a(href='#').sample-link по цене
+				a(href='#').sample-link.sample-link--active по цене
 			.section-ui
+				pre.
+					a(href='#').link-filter по цене
+					a(href='#').link-filter.link-filter--active по цене
