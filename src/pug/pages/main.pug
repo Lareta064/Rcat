@@ -3,6 +3,9 @@ extends ../layouts/page-layout/page.pug
 block variables
 	- var title = 'Страница ЖК ';
 	- var pageClass = 'index-page';
+	- var hcPhotoBlock = {mainPhoto:'big-photo1', hcPhotoThumb:{item1:{itemBig:'big-photo1', itemMini:'mini-photo1'},item2:{itemBig:'big-photo2', itemMini:'mini-photo2'},item3:{itemBig:'big-photo3', itemMini:'mini-photo3'},item4:{itemBig:'big-photo1', itemMini:'mini-photo4'},item5:{itemBig:'big-photo2', itemMini:'mini-photo5'},item6:{itemBig:'big-photo3', itemMini:'mini-photo6'},item7:{itemBig:'big-photo1', itemMini:'mini-photo7'}}, hcMobilPhoto:{item1:{mobilePhoto:'big-photo1',activeClass:'active'}, item2:{mobilePhoto:'big-photo2'},item3:{mobilePhoto:'big-photo3'} } };
+
+	- var hauseObject = {area:'53-187',floor:'6',ceilingHeight: '3,1', parkingDescription:'подземная на 115 машиномест (17–35 кв.м), от 4500000 руб. за м/м', objItem:{num1:'16', num2:'147'} ,readinessLevel: '3 квартал 2017, сдан ГК',  infrastructure:'Офисные и административные помещения,кафе-кофейня', operationPrice: '328 руб./кв.м', hauseDescription: 'ЖК “Balchug Viewpoint” занимает площадь в один гектар. По соседствус ним расположена небольшая Георгиевская церковь и Болотная площадь с фонтаном и сквером. Жителям комплекса доступна богатая инфраструктура района: медицинские центры, знаменитые театры и музеи, магазины, фитнес-центры.',apartmentDescription: 'Проектом предусмотрено 116 резиденций в формате апартаментов. Площадь резиденций составляет 53–187 кв. м. Для продажи предлагаются одно-, двух-, трех-и четырехкомнатные апартаменты с гостиничным форматом обслуживания.В квартирах установлены панорамные окна. Из окон открываются шикарные виды на Москву. Высота потолков — 3,1 м'};
 
 block content
 
@@ -34,10 +37,29 @@ block content
 							a(href="#") Иван Марасин
 							+arrow-down
 
-	.container
-		.apartment-table
-			+table-row('1', '#', '54,5', '4','отделка', 'table-photo', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
-			+table-row('1', '#', '54,5', '4','без отделки', 'plan1', '320 200', '23 200 500', '340 200', '+7 929 222 5555','цена вниз' )
-			+table-row('1', '#', '54,5', '4','отделка', 'table-photo2', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
-			+table-row('1', '#', '54,5', '4','без отделки', 'plan2', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
+	section.full-description
+		.container
+			.row
+				.col-hl-6
+					+hc-photoAlbum(hcPhotoBlock)
+				.col-hl-6
+					+hc-description(hauseObject)
+	section.apartment-database
+		.container
+			section.apartment-table
+				+table-row('1', '#', '54,5', '4','отделка', 'table-photo', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
+				+table-row('1', '#', '54,5', '4','без отделки', 'plan1', '320 200', '23 200 500', '340 200', '+7 929 222 5555','цена вниз' )
+				+table-row('1', '#', '54,5', '4','отделка', 'table-photo2', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
+				+table-row('1', '#', '54,5', '4','без отделки', 'plan2', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
+	section.hc-cards
+		.container
+			.row
+				.col-md-6.col-lg-6.col-xl-3
+					+hc-card('card-photo1', 'Садовые кварталы', 'ЦАО, Хамовники, улица Усачева','2 квартал 2019','390 543','Новостройка' )
+				.col-md-6.col-lg-6.col-xl-3
+					+hc-card('card-photo2', 'Дом на Красина', 'ЦАО, Пресня, переулок Красина, ','Дом сдан во 2 квартале 2014','382 800')
+				.col-md-6.col-lg-6.col-xl-3
+					+hc-card('card-photo3', 'Нескучный Home&SPA', 'ЮАО, 5-й Донской проезд','1 квартал 2020','371 050','Новостройка' )
+				.col-md-6.col-lg-6.col-xl-3
+					+hc-card('card-photo4', 'Корона Эйр', 'ЮЗАО, проспект Вернадского, 92к1 ','Дом сдан в 1 квартале 2006','384 500')
 
