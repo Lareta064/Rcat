@@ -12,8 +12,17 @@ block content
 		.section-ui
 			h1 ЖК. Описание
 		.section-ui
-			.row
-				.col-hl-6
-					+hc-photoAlbum(hcPhotoBlock)
-				.col-hl-6
-					+hc-description(hauseObject)
+			section.full-description
+				.row
+					.col-hl-6
+						+hc-photoAlbum(hcPhotoBlock)
+					.col-hl-6
+						+hc-description(hauseObject)
+		.section-ui
+			pre.
+				section.full-description
+					.row
+						.col-hl-6
+							+hc-photoAlbum(hcPhotoBlock)
+						.col-hl-6
+							+hc-description(hauseObject)
