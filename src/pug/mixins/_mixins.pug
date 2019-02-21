@@ -55,7 +55,7 @@ mixin goodsCart (img, text, price)
 				.goods-cart__price= price
 
 
-
+//-Hause Complex
 //- Миксин ссылок
 
 mixin link(linkText,linkIcon,linkClass)
@@ -63,9 +63,9 @@ mixin link(linkText,linkIcon,linkClass)
 		if linkIcon
 			.link-block__icon
 				+#{linkIcon}
-			.link-block__text(class=' link-block__text--'+ linkClass) #{linkText}
+			.sample-link(class=' sample-link--'+ linkClass) #{linkText}
 		else
-			.link-block__text(class=' link-block__text--'+ linkClass) #{linkText}
+			.sample-link(class=' sample-link--'+ linkClass) #{linkText}
 
 //- Миксин ссылок
 
@@ -74,6 +74,12 @@ mixin link(linkText,linkIcon,linkClass)
 mixin bag-badge(num1,num2 )
 	.big-badge&attributes(attributes)
 		.big-badge__top #[span #{num1}] из #[span #{num2}]
+		.big-badge__bottom квартир в продаже
+
+
+mixin big-badge(objItem)
+	.big-badge&attributes(attributes)
+		.big-badge__top #[span #{objItem.num1}] из #[span #{objItem.num2}]
 		.big-badge__bottom квартир в продаже
 
 //- Миксин кнопок
