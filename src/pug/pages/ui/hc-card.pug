@@ -1,0 +1,21 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'ЖК. Карточка дома';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.section-ui
+			.title ЖК. Карточка дома
+		.section-ui
+			.row
+				.col-md-6.col-lg-4
+					+hc-card('card-photo1', 'Садовые кварталы', 'ЦАО, Хамовники, улица Усачева','2 квартал 2019','390 543','Новостройка' )
+				.col-md-6.col-lg-4
+					+hc-card('card-photo1', 'Садовые кварталы', 'ЦАО, Хамовники, улица Усачева','2 квартал 2019','390 543')
+		.section-ui
+			pre.
+				+hc-card('card-photo1', 'Садовые кварталы', 'ЦАО, Хамовники, улица Усачева','2 квартал 2019','390 543','Новостройка' )
+
+				+hc-card('card-photo1', 'Садовые кварталы', 'ЦАО, Хамовники, улица Усачева','2 квартал 2019','390 543')
