@@ -1,0 +1,20 @@
+mixin hc-photoAlbum(hcPhotoData)
+	.hc-photo-wrapper
+		.hs-photo__switch-block
+			.switch-block__main-photo
+				img(src="../img/hc/"+ hcPhotoData.mainPhoto +".jpg" alt="Фото комплекса")
+			.switch-block__thumbnails.d-flex
+				each item in hcPhotoData.hcPhotoThumb
+					.thumbnails__image(data-img-path = "../img/hc/"+ item.itemBig + ".jpg")
+						img(src="../img/hc/"+ item.itemMini +".jpg"  alt="Фото комплекса")
+
+	.hc-photo-mobile
+		#hs-photo-slider.carousel.slide(data-ride='carousel')
+			.carousel-inner
+				each item in hcPhotoData.hcMobilPhoto
+					if item.activeClass
+						.carousel-item(class=" "+ item.activeClass)
+							img.d-block.w-100(src="../img/hc/"+ item.mobilePhoto+".jpg", alt='фото ЖК')
+					else
+						.carousel-item
+							img.d-block.w-100(src="../img/hc/"+ item.mobilePhoto+".jpg", alt='фото ЖК')

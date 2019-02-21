@@ -4,7 +4,8 @@ block variables
 	- var title = 'ЖК. Описание';
 	- var pageClass= "body--dashboard";
 
-	- var hauseObject = {area:'53-187',floor:'6',ceilingHeight: '3,1', parkingDescription:'подземная на 115 машиномест (17–35 кв.м), от 4 500 000 руб. за м/м', objItem:{num1:'16', num2:'147'} ,readinessLevel: '3 квартал 2017, сдан ГК',  infrastructure:'Офисные и административные помещения,кафе-кофейня', operationPrice: '328 руб./кв.м', hauseDescription: 'ЖК “Balchug Viewpoint” занимает площадь в один гектар. По соседствус ним расположена небольшая Георгиевская церковь и Болотная площадь с фонтаном и сквером. Жителям комплекса доступна богатая инфраструктура района: медицинские центры, знаменитые театры и музеи, магазины, фитнес-центры.',apartmentDescription: 'Проектом предусмотрено 116 резиденций в формате апартаментов. Площадь резиденций составляет 53–187 кв. м. Для продажи предлагаются одно-, двух-, трех-и четырехкомнатные апартаменты с гостиничным форматом обслуживания.В квартирах установлены панорамные окна. Из окон открываются шикарные виды на Москву. Высота потолков — 3,1 м'};
+	- var hauseObject = {area:'53-187',floor:'6',ceilingHeight: '3,1', parkingDescription:'подземная на 115 машиномест (17–35 кв.м), от 4500000 руб. за м/м', objItem:{num1:'16', num2:'147'} ,readinessLevel: '3 квартал 2017, сдан ГК',  infrastructure:'Офисные и административные помещения,кафе-кофейня', operationPrice: '328 руб./кв.м', hauseDescription: 'ЖК “Balchug Viewpoint” занимает площадь в один гектар. По соседствус ним расположена небольшая Георгиевская церковь и Болотная площадь с фонтаном и сквером. Жителям комплекса доступна богатая инфраструктура района: медицинские центры, знаменитые театры и музеи, магазины, фитнес-центры.',apartmentDescription: 'Проектом предусмотрено 116 резиденций в формате апартаментов. Площадь резиденций составляет 53–187 кв. м. Для продажи предлагаются одно-, двух-, трех-и четырехкомнатные апартаменты с гостиничным форматом обслуживания.В квартирах установлены панорамные окна. Из окон открываются шикарные виды на Москву. Высота потолков — 3,1 м'};
+
 block content
 	.container.container--left
 		.section-ui
@@ -12,6 +13,40 @@ block content
 		.section-ui
 			.row
 				.col-hl-6
-					.text-bl Photo
+					.hc-photo-wrapper
+
+						.hs-photo__switch-block
+							.switch-block__main-photo
+								img(src="../img/hc/big-photo1.jpg" alt="Фото комплекса")
+							.switch-block__thumbnails.d-flex
+								.thumbnails__image(data-img-path = "../img/hc/big-photo1.jpg")
+									img(src="../img/hc/mini-photo1.jpg"  alt="Фото комплекса")
+
+								.thumbnails__image(data-img-path = "../img/hc/big-photo2.jpg")
+									img(src="../img/hc/mini-photo2.jpg" alt="Фото комплекса")
+
+								.thumbnails__image(data-img-path = "../img/hc/big-photo3.jpg")
+									img(src="../img/hc/mini-photo3.jpg" alt="Фото комплекса")
+
+								.thumbnails__image(data-img-path = "../img/hc/big-photo1.jpg")
+									img(src="../img/hc/mini-photo4.jpg" alt="Фото комплекса")
+
+								.thumbnails__image(data-img-path = "../img/hc/big-photo2.jpg")
+									img(src="../img/hc/mini-photo5.jpg" alt="Фото комплекса")
+
+								.thumbnails__image(data-img-path = "../img/hc/big-photo3.jpg")
+									img(src="../img/hc/mini-photo6.jpg" alt="Фото комплекса")
+
+								.thumbnails__image(data-img-path = "../img/hc/big-photo1.jpg")
+									img(src="../img/hc/mini-photo7.jpg" alt="Фото комплекса")
+					.hc-photo-mobile
+						#hs-photo-slider.carousel.slide(data-ride='carousel')
+							.carousel-inner
+								.carousel-item.active
+									img.d-block.w-100(src='../img/hc/big-photo1.jpg', alt='фото ЖК')
+								.carousel-item
+									img.d-block.w-100(src='../img/hc/big-photo2.jpg', alt='фото ЖК')
+								.carousel-item
+									img.d-block.w-100(src='../img/hc/big-photo3.jpg', alt='фото ЖК')
 				.col-hl-6
 					+hc-description(hauseObject)
