@@ -42,6 +42,18 @@
 		}
 		@media(min-width: 992px){display: none;}
 	}
+	.button-block{
+	.button.btn-add{
+		display: none;
+		@media(min-width: 992px){display: block;}
+	}
+	.logo-text{
+		display: none;
+		@media(min-width: 1350px){
+			display: block;
+		}
+	}
+}
 
 }
 .links-block{align-items: center;}
@@ -57,23 +69,14 @@
 	}
 
 	.logo-text{
-		display: none;
 		color:@title-1;
 		width: 210px;
-		@media(min-width: 1350px){
-			display: block;
-		}
 	}
 
 	@media(min-width: 768px){justify-content: flex-start;}
 	@media(min-width: 992px){width: auto;}
 }
-.button-block{
-	.button.btn-add{
-		display: none;
-		@media(min-width: 992px){display: block;}
-	}
-}
+
 
 .header__icon-group{
 	display: flex;

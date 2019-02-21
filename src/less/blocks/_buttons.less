@@ -19,21 +19,40 @@
 }
 
 .btn-add {
+	position: relative;
 	width:270px;
 	height:60px;
-	padding: 22px 65px 34px;
+	padding: 1.6rem 4.8rem ;
 	white-space: nowrap;
 	font-size: 16px;
 	font-weight: bold;
 
+
 	@media (min-width:768px) {
 		font-size: 14px;
-		padding: 8px 19px ;
+		padding: 7px 10px 8px 28px;
 		width: 200px;
 		height: 30px;
 	}
 }
+.btn-add:before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translate(170%, -50%);
+	width: 20px;
+	height: 20px;
+	background: url(../../img/icons/plus.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	@media (min-width:768px) {
+		width: 8px;
+		height: 8px;
+		transform: translate(245%, -50%);
+	}
 
+}
 
 .btn-tel{
 	width: 120px;
