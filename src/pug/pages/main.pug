@@ -84,8 +84,21 @@ block content
 				+table-row('1', '#', '54,5', '4','без отделки', 'plan1', '320 200', '23 200 500', '340 200', '+7 929 222 5555','цена вниз' )
 				+table-row('1', '#', '54,5', '4','отделка', 'table-photo2', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
 				+table-row('1', '#', '54,5', '4','без отделки', 'plan2', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
+				+table-row('1', '#', '54,5', '4','без отделки', 'plan2', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
+				+table-row('1', '#', '54,5', '4','без отделки', 'plan2', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
+
+			.apartment-database__button.text-center
+				+button('Показать еще 38 квартир', '#', 'btn-add')(class="section-btn")
+
 	section.hc-cards
 		.container
+			.section-top.d-flex.section-top--hc-cards
+				.section-top-title.headline-bold Похожие ЖК
+				.section-top-filters
+
+					a(href='#').link-filter.sample-link.link-filter--active по цене
+					a(href='#').link-filter.sample-link району
+					a(href='#').link-filter.sample-link станциям метро
 			.row
 				.col-md-6.col-lg-6.col-xl-3
 					+hc-card('card-photo1', 'Садовые кварталы', 'ЦАО, Хамовники, улица Усачева','2 квартал 2019','390 543','Новостройка' )

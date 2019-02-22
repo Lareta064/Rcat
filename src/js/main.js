@@ -77,7 +77,7 @@ $(document).ready(function() {
 
 	//-переключаем класс у ссылки-фильтра (по цене)
 	$('.link-filter').on('click', function(e){
-		e.preventDefault;
+		e.preventDefault();
 		$(this).toggleClass('link-filter--active');
 		$(this).siblings('.link-filter--active').removeClass('link-filter--active');
 
