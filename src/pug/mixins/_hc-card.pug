@@ -2,7 +2,7 @@ mixin hc-card(hauseImg, hauseTitle, hauseAddress,hauseStartDate,hausePrice,hause
 	.card.hc-card&attributes(attributes)
 		img.card-img-top(src="../img/hc/"+ hauseImg +".jpg", alt='Карточка новостройки')
 		.card-body.hc-card-body
-			a(href="#").headline-body.sample-link.sample-link--hc-card #{hauseTitle}
+			a(href="#").headline-body.simple-link.simple-link--hc-card #{hauseTitle}
 			.hc-card-body__address.text-body #{hauseAddress}
 			.hc-card-body__data.text-body #{hauseStartDate}
 			.hc-card-body__price от #{hausePrice} руб./кв.м
