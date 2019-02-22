@@ -70,7 +70,16 @@ block content
 					+hc-description(hauseObject)
 	section.apartment-database
 		.container
-			section.apartment-table
+			.section-top.d-flex.section-top--apartment
+				.section-top-title.headline-bold 48 предложений
+				.section-top-subtitle.headline-bold.headline-bold--grey от 386 460 руб./кв.м
+				.section-top-filters
+					span.text-body.text-body--title Отсортировано по
+					a(href='#').link-filter.sample-link.link-filter--active по цене
+					a(href='#').link-filter.sample-link по площади
+
+
+			.apartment-table
 				+table-row('1', '#', '54,5', '4','отделка', 'table-photo', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
 				+table-row('1', '#', '54,5', '4','без отделки', 'plan1', '320 200', '23 200 500', '340 200', '+7 929 222 5555','цена вниз' )
 				+table-row('1', '#', '54,5', '4','отделка', 'table-photo2', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
