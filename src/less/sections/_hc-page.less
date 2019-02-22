@@ -1,23 +1,97 @@
 .section-top{
 	padding-bottom: 24px;
 	padding-top: 24px;
+	flex-direction: column;
+	@media(min-width: 768px){
+		flex-direction: row;
+		align-items: center;
+	}
 }
 .section-top-title{
 	padding-right: 7px;
 }
+.section-top-subtitle{
+	padding-bottom: 28px;
+	@media(min-width: 768px){padding-bottom: 0;}
+}
 .section-top--apartment{
-	.section-top-filters{margin-left: auto;}
-	.text-body--title{padding-right: 10px;}
+
+	.section-top-filters{
+		border: 1px solid #334860;
+		border-radius: 5px;
+		@media(min-width: 768px){
+		display: flex;
+		align-items: center;
+		border: 0px;
+		border-radius: 0px;
+		margin-left: auto;
+	}
+
+	}
+	.text-body--title{
+		display: none;
+		padding-right: 10px;
+		@media(min-width: 1200px){display: block;}
+	}
+	.link-filter.sample-link{
+		width: 50%;
+		padding-top: 7px;
+		padding-bottom: 8px;
+		text-align: center;
+
+		border-bottom: 0px;
+		@media(min-width: 768px){
+			padding-left: 2px;
+			padding-right: 2px;
+			margin-right: 8px;
+			width: auto;
+
+
+		}
+
+	}
+	.sample-link.link-filter--active{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.headline-bold{
+		@media(min-width: 1200px){font-size: 18px;}
+	}
+
+}
+.apartment-database__button{
+	.button{
+		padding-left: 27px;
+		padding-right: 27px;
+		height: 60px;
+		border-radius: 5px;
+		@media(min-width: 768px){
+		padding-left: 75px;
+		padding-right: 75px;
+		height: 30px;
+		border-radius: 0px;
+
+		}
+
+	}
+}
+.section-top--hc-cards{
+	.section-top-title{
+		padding-bottom: 16px;
+		@media(min-width: 768px){
+			padding-right: 26px;
+			padding-bottom: 0;
+		}
+	}
 	.link-filter.sample-link{
 		padding-left: 2px;
 		padding-right: 2px;
 		margin-right: 8px;
+
 	}
 	.sample-link.link-filter--active{
 		padding-left: 10px;
 		padding-right: 10px;
 	}
 
-
 }
-
