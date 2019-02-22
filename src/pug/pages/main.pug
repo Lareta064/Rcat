@@ -11,6 +11,31 @@ block content
 
 	header.header
 		+header('avatar','Иван Марасин')
+	section.title-block
+		.container
+			.title-block-wrapper.d-flex
+				.title-block--left
+					.main-title-block.d-flex
+						.title-1 ЖК «Балчуг Вьюпойнт»
+						.subtitle
+							span.span-title Balchug Viewpoint
+							span.span-details Сдан в 2017
+						.price-badge.headline-bold от 23 339 642 руб.
+
+					.main-badge-block.d-flex
+						.badge-group
+							.badge ЦАО
+							.badge Замоскворечье
+						.link-group
+							a(href="#").sample-link.link-hidden ЦАО,
+							a(href="#").sample-link.link-hidden Замоскворечье,
+							a(href="#").sample-link Садовническая набережная, 5 стр.
+
+						.text-info.text-group.d-flex
+							+text-and-icon('icon-metro','Новокузнеcкая','5 минут','пешком','icon-man')
+				.title-block--right
+					.update-box Обновлено сегодня
+					.price-box.headline-bold от 23 339 642 руб.
 	section.option-panel-wrapper
 		.container
 			.option-panel.option-panel--desktop

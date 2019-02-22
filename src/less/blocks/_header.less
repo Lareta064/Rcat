@@ -1,7 +1,6 @@
 .header{
 	background-color: @white;
 	box-shadow: 0px 2px 0px 0px @lightBorder;
-	margin-bottom: 50px;
 }
 
 .header-top{
@@ -69,8 +68,10 @@
 	}
 
 	.logo-text{
+		display: none;
 		color:@title-1;
 		width: 210px;
+		@media(min-width: 1200px){display: block;}
 	}
 
 	@media(min-width: 768px){justify-content: flex-start;}
