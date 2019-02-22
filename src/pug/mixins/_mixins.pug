@@ -87,6 +87,16 @@ mixin mobile-btn(btnImg)
 	a(href="#").mobile-button&attributes(attributes)
 		img(src="../img/icons/"+ btnImg +".png", alt="")
 
+//-метро+текст+человечек
+mixin text-and-icon(iconFirst,text1,text2, text3,iconLast)
+	.text-group.d-flex&attributes(attributes)
+		span.first-icon
+			+#{iconFirst}
+		span.text-body.first-text #{text1},
+		span.text-body.middle-text.text-body--grey #{text2}
+		span.text-body.last-text.text-body--grey #{text3}
+		span.last-icon
+			+#{iconLast}
 
 //-миксин для таблицы квартир
 mixin table-row(roomsNum, roomsLink, roomsArea, roomsFloor,roomsRepair, roomsImg, priceUsd, priceRub, priceMeter, phoneNumber, priceDown )
