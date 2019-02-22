@@ -4,113 +4,29 @@ block variables
 	- var title = 'Title-block';
 	- var pageClass= "body--dashboard";
 
-block content
-	.container.container--left
-		.section-ui
-			h1 Название блока (ЖК «Балчуг Вьюпойнт»)
-		.section-ui
-			.title-block.d-flex
-				.title-block--left
-					.main-title-block.d-flex
-						.title-1 ЖК «Балчуг Вьюпойнт»
-						.subtitle 
+	block content
+		.container.container--left
+			.section-ui
+			//- h1 Название блока (ЖК «Балчуг Вьюпойнт»)
+			.section-ui
+				.title-block.d-flex
+					.title-block--left
+						.main-title-block.d-flex
+							.title-1 ЖК «Балчуг Вьюпойнт»
+							.subtitle 
 							span.span-title Balchug Viewpoint
 							span.span-details Сдан в 2017
-					.main-badge-block.d-flex
-						.badge-group
-							.badge ЦАО
-							.badge Замоскворечье
-						.link-group
-							+link('Садовническая набережная', '5 стр.')
-							+icon-metro
-						.text-info
-							span.text-body Новокузнецкая,
-							span.text-body.text-body--grey 5 минут пешком
-				.title-block--right
-					.update-box Сдан в 2017
-					.price-box.headline-bold от 23 339 642 руб.
-
-
-
-
-
-
-
-			//- .wrapper
-			//- 	.block.title-block
-			//- 		.title-1 ЖК «Балчуг Вьюпойнт»
-			//- 		.text-mob__title Balchug Viewpoint
-			//- 		.text-mob__details Сдан в 2017 
-			//- 		.price-block.headline-bold от 23 339 642 руб.
-			//- 		.bage-block
-			//- 			.badge ЦАО
-			//- 			.badge Замоскворечье
-			//- 			+link ('Садовническая набережная, 5 стр. 1')
-			//- 			+icon-metro 
-			//- 			.text-body Новокузнецкая,
-			//- 			.text-add 5 минут пешком
-			//- 		.bage-block--mobile
-			//- 			+link ('ЦАО, Замоскворечье, Садовническая набережная, 5 стр. 1')
-			//- 			+icon-metro 
-			//- 			span.text-body Новокузнецкая,
-			//- 			span.text-add 5 мин.
-			//- 			+icon-man
-			//- 	.block.details-block
-			//- 		.text-mob__details Обновлено сегодня 
-
-
-
-
-
-
-//- Черновик
-			//- .wrapper
-			//- 	.block.block-1
-			//- 		.title-1 ЖК «Балчуг Вьюпойнт»
-			//- 		span Balchug Viewpoint
-			//- 		span Сдан в 2017 
-			//- 		.price-block.headline-bold от 23 339 642 руб.
-			//- 		.bage-block
-			//- 			.badge ЦАО
-			//- 			.badge Замоскворечье
-			//- 			+link ('Садовническая набережная, 5 стр. 1')
-			//- 			+icon-metro Новокузнецкая,
-			//- 			p 5 минут пешком
-			//- 		.bage-block--mobile
-			//- 			//- +link ('ЦАО, Замоскворечье, Садовническая набережная, 5 стр. 1')	
-			//- 			+icon-metro Новокузнецкая,
-			//- 			p 5 мин.
-			//- 			+icon-man 
-			//- 	.block.block-2
-			//- 		.price от 23 339 642 руб.			
-
-
-
-
-			//- .wrapper.clearfix
-			//- 	.block-title
-			//- 		.title-1 ЖК «Балчуг Вьюпойнт»
-			//- 	.block-content	
-			//- 		.row-title Balchug Viewpoint
-			//- 		.row-details Сдан в 2017
-			//- 	.block-details.clearfix
-			//- 		.row-details Обновлено сегодня
-					
-
-										
-
-
-			//- .wrapper 
-			//- 	.block-title
-			//- 		.header-row-tittle
-			//- 			.title-1 ЖК «Балчуг Вьюпойнт»
-			//- 			.row-title Balchug Viewpoint
-			//- 			.row-details Сдан в 2017
-			//- 		.header-row-details	
-			//- 			+badge
-								
-
-			//- 	.block-details
-			//- 		.header-row-price
-			//- 			.row-details Обновлено сегодня 
-			//- 			.headline-body От 23 339 642 руб.
+							.main-badge-block.d-flex
+								.badge-group
+									.badge ЦАО
+									.badge Замоскворечье
+									.link-group
+										a(href="#").sample-link Садовническая набережная, 5 стр.
+										.text-info
+											span
+												+icon-metro 
+												span.text-body Новокузнецкая,
+												span.text-body.text-body--grey 5 минут пешком
+												.title-block--right
+													.update-box Обновлено сегодня
+													.price-box.headline-bold от 23 339 642 руб.
