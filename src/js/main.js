@@ -49,7 +49,7 @@ $(document).ready(function() {
 		}
 
 	});
-	//-модальное окно панель опций
+	//-модальное окно для панель опций(иконка+ссылка)
 	const dropdownОption = $('#dropdown--option');// выпадашка
 	const showOptions = $('#showOptions'); //кнопка Еще
 	var dataValue ;
@@ -74,5 +74,10 @@ $(document).ready(function() {
 
 			}
 	});
+
+	//-переключаем класс у ссылки-фильтра (по цене)
+	$('.link-filter').on('click', function(){
+		$(this).toggleClass('link-filter--active');
+	})
 
 });
