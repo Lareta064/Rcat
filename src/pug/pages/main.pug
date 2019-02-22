@@ -32,7 +32,7 @@ block content
 							a(href="#").sample-link Садовническая набережная, 5 стр.
 
 						.text-info.text-group.d-flex
-							+text-and-icon('icon-metro','Новокузнеcкая','5 минут','пешком','icon-man')
+							+text-and-icon('icon-metro','Новокузнецcкая','5 минут','пешком','icon-man')
 				.title-block--right
 					.update-box Обновлено сегодня
 					.price-box.headline-bold от 23 339 642 руб.
@@ -89,6 +89,23 @@ block content
 
 			.apartment-database__button.text-center
 				+button('Показать еще 38 квартир', '#', 'btn-add')(class="section-btn")
+
+	section.section-map
+		.container
+			.headline-bold.section-map--title Расположение
+			#map
+				iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A88af189bfbfa54ba0c0d87a73dcb4251c7279d8c8907e9b03d6502a0f7e32370&amp;source=constructor" width="100%" height="420" frameborder="0")
+			.section-bottom.section-map--bottom.d-flex
+				.badge-group.d-flex
+					.badge ЦАО
+					.badge Замоскворечье
+				.link-group.d-flex
+					a(href="#").sample-link Садовническая набережная, 5 стр.1
+				.text-info.d-flex
+					+text-and-icon('icon-metro','Новокузнеcкая','5 минут','пешком, ')
+					+text-and-icon('','Третьяковская','7 минут','пешком')
+
+
 
 	section.hc-cards
 		.container
