@@ -1,4 +1,4 @@
-// Контейнер для блока
+// Контейнер для блока!
 .wrapper {
 	position: relative;
 	display: flex;
@@ -10,21 +10,65 @@
     	}
 }
 
+//Общий блок заголовка!
 .block{
 	border: 1px solid red;
 	height: 100px;
 }
 
-.block-1 {
+
+//Левая часть блока
+.title-block {
 	width: 65%;
-	.title-1{
-		margin-bottom: 20px;
+	margin-bottom: 21px;
+	padding-left: 25px;
+
+	@media(min-width: 992px){
+		
 	}
 }
 
-.block-2 {
-	width: 25%;
-	display: none;
+.text-mob__title, .text-mob__details{
+	display: inline-block;
+	padding-right: 15px;
+
+	@media(min-width: 992px){
+		float: right;
+		padding: 28px;
+	}
+}
+
+
+.title-1{
+	margin-bottom: 10px;
+
+	@media(min-width: 992px){
+		float: left;
+		margin-top: 38px;
+		// margin-bottom: 18px;
+	}
+}
+
+.price-block{
+	display: block;
+	position: relative;
+	text-align: center;
+	height: 60px;
+	width: 289px;
+	border: 1px solid #e5e9f2;
+	border-radius: 0 5px 5px 0;
+	background-color: @white;
+	margin-top: 23px;
+		
+	@media(min-width: 992px){
+		display: none;
+	}
+}
+
+.headline-bold{
+	padding: 15px;
+	padding-right: 25px;
+	margin-left: -22px;
 	
 	@media(min-width: 992px){
 		display: block;
@@ -33,26 +77,47 @@
 
 .bage-block{
 	display: none;
-	
-		@media(min-width: 992px){
-			display: flex;
-		}
+		
+	@media(min-width: 992px){
+		display: flex;
+		
+	}
+}
+
+
+.badge{
+	float: left;
+		
+	@media(min-width: 992px){
+		margin-right: 10px;
+	}		
 }
 
 .bage-block--mobile{
 	display: block;
-	
-		@media(min-width: 992px){
-			display: none;
-		}
-}
-
-.price-block{
-	display: block;
-	padding-bottom: 20px;
+	margin-top: 29px;
 	
 	@media(min-width: 992px){
 		display: none;
+	}
+}
+
+.text-body, {
+	padding-left: 10px;
+	padding-right: 5px;
+}
+
+.text-add{
+	padding-right: 3px;
+}
+
+//Правая часть блока
+.details-block {
+	width: 25%;
+	display: none;
+
+	@media(min-width: 992px){
+		display: block;
 	}
 }
 
@@ -61,8 +126,7 @@
 
 
 
-
-
+//лишний код
 
 // .wrapper { 
 // 	width: 100%; 
