@@ -40,16 +40,6 @@ $(document).ready(function() {
 			$(this).toggleClass('show-phoneNumber');
 	});
 
-
-		// $('.contact-phone').on('mouseout', function(){
-		// 	if(window.innerWidth >= 768){
-		// 		$(this).css('width','115px');
-		// 	}
-		// 	else{
-		// 		$(this).css('width','125px');
-		// 	}
-
-		// });
 	//-модальное окно для панель опций(иконка+ссылка)
 	const dropdownОption = $('#dropdown--option');// выпадашка
 	const showOptions = $('#showOptions'); //кнопка Еще
@@ -89,6 +79,7 @@ $(document).ready(function() {
 		$('.description__visible-text').text(function(index, text){
 
                 text = text.substr(278,350);
+                $('.description__visible-text')
 
 		});
 
