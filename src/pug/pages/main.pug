@@ -37,29 +37,29 @@ block content
 					.update-box Обновлено сегодня
 					.price-box.headline-bold от 23 339 642 руб.
 	section.option-panel-wrapper
-		.container
-			.option-panel.option-panel--desktop
-				+link('Следить за объявлениями в этом ЖК','icon-notify')
-				+link('В избранное','icon-heart')
-				+link('Отправить эл.почтой','','line')
-				+link('Скачать ПФД','', 'line')
-				+link('Добавить заметку','icon-add')
-				+link('Пожаловаться','icon-question').order-item
 
-			.option-panel.option-panel--mobile
-				+link('В избранное','icon-heart')
-				+link('Еще','arrow-down').order-item#showOptions
-				.dropdown#dropdown--option(data-control= 'hidden')
-					.dropdown-item
-						+link('Следить за объявлениями','icon-notify')
-					.dropdown-item
-						+link('Добавить заметку','icon-add')
-					.dropdown-item
-						+link('Пожаловаться','icon-question')
-					.dropdown-item
-						+link('Отправить эл.почтой','','line')
-					.dropdown-item
-						+link('Скачать ПФД','', 'line')
+		.option-panel.option-panel--desktop
+			+link('Следить за объявлениями в этом ЖК','icon-notify')
+			+link('В избранное','icon-heart')
+			+link('Отправить эл.почтой','','line')
+			+link('Скачать ПФД','', 'line')
+			+link('Добавить заметку','icon-add')
+			+link('Пожаловаться','icon-question').order-item
+
+		.option-panel.option-panel--mobile
+			+link('В избранное','icon-heart')
+			+link('Еще','arrow-down').order-item#showOptions
+			.dropdown#dropdown--option(data-control= 'hidden')
+				.dropdown-item
+					+link('Следить за объявлениями','icon-notify')
+				.dropdown-item
+					+link('Добавить заметку','icon-add')
+				.dropdown-item
+					+link('Пожаловаться','icon-question')
+				.dropdown-item
+					+link('Отправить эл.почтой','','line')
+				.dropdown-item
+					+link('Скачать ПФД','', 'line')
 
 	section.full-description
 		.container

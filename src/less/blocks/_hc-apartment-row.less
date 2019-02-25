@@ -145,6 +145,8 @@
 	display: inline-block;
 	@media(min-width: 768px){display: none;}
 }
+.visible-usd,
+.visible-rub,
 .hidden-usd{font-weight: 700;}
 
 .info-item.info-item--price-rub{
@@ -170,7 +172,9 @@
 
 .contact-phone{
 	width: 125px;
-	padding: 6px 10px;
+	// padding: 3px 10px 1px;
+	height: 24px;
+	padding-top: 3px;
 	border-radius: 3px;
 	text-align: center;
 	white-space:  nowrap;
@@ -179,11 +183,12 @@
 	background-color: @btnBg;
 	// margin-right: 2em;
 	color: @white;
-	font-weight: 700;
-	transition:1.0s;
+	font-weight: 600;
+	transition:.8s;
 	@media(min-width: 768px){width: 112px;}
 	&:hover{color:@white;}
 }
+.show-phoneNumber{width: 150px;}
 .icon-mail{
 	display: block;
 	margin-right: 20px;
@@ -193,15 +198,32 @@
 }
 .apartment-info__col--short{
 	width: 100%;
-	padding-right: 20px;
+
 	justify-content: flex-start;
 	@media(min-width: 768px){
+		padding-right: 20px;
 		width: 30%;
 		border-right: 1px solid #e5e9f2;
 		.info-item{
 		justify-content: flex-end;
 		width: 100%;
 		}
+	}
+	.info-item--price{
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media(min-width: 768px){justify-content: flex-end;}
+
+	}
+	.icon-price-down{
+		display: block;
+		padding-bottom: 14px;
+		svg{width: 24px;
+			height: 24px;}
+		@media(min-width: 768px){display: none;}
+
 	}
 }
 .apartment-info__col--large{
@@ -210,6 +232,16 @@
 		width: 70%;
 		.info-item--price-rub{
 		padding-left: 20px;
+		}
+	}
+	.icon-price-down{
+		display: none;
+		padding-bottom: 2px;
+		margin-left: 8px;
+		@media(min-width: 768px){
+			display: block;
+			svg{width: 20px;
+				height: 20px;}
 		}
 	}
 }
@@ -247,21 +279,21 @@
 	@media(min-width: 768px){display: inline-block;}
 }
 //-иконка цена вниз в колонке
-.price-down:after{
-	position: absolute;
-	content:"";
-	right: 0px;
-	top: 50%;
-	transform: translate(200%, -50%);
-	height: 24px;
-	width: 24px;
-	background:url(../../img/icons/price-down.png);
-	background-position: center;
-	background-repeat: no-repeat;
-	@media(min-width: 768px){
+// .price-down:after{
+// 	position: absolute;
+// 	content:"";
+// 	right: 0px;
+// 	top: 50%;
+// 	transform: translate(200%, -50%);
+// 	height: 24px;
+// 	width: 24px;
+// 	background:url(../../img/icons/price-down.png);
+// 	background-position: center;
+// 	background-repeat: no-repeat;
+// 	@media(min-width: 768px){
 
-	}
-}
+// 	}
+// }
 .price-down{color: @redText;}
 .apartment-table{
 	position: relative;
