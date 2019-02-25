@@ -85,4 +85,22 @@ $(document).ready(function() {
 
 
 
+		$('.description__visible-text').text(function(index, text){
+
+                text = text.substr(278,350);
+
+		});
+	$('.description__hidden-text').hide();
+		$('#openHiddenDescrip').on('click', function(e){
+			e.preventDefault();
+			if($(this).hasClass('hideText')) {
+				$('.description__hidden-text').hide(800);
+				$(this).removeClass('hideText');
+				$(this).text('Подробнее о ЖК');
+			} else {
+			$('.description__hidden-text').show(800);
+			$(this).addClass('hideText');
+			$(this).text('Скрыть описание');
+		}
+	});
 });

@@ -47,10 +47,11 @@ mixin hc-description(objectArgument)
 				.text-body #{objectArgument.hauseDescription}
 
 				.headline-body Квартиры
-				.text-body #{objectArgument.apartmentDescription}
+				.text-body.description__visible-text #{objectArgument.apartmentDescription}
+					.description__hidden-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia voluptates ut mollitia deserunt cumque soluta nihil perspiciatis doloribus impedit a asperiores optio aspernatur fuga, quia neque, aliquam, voluptatem, quisquam consequatur.
 
 			.hc-description__footer-links
 				.footer-links-item
-					a(href="#").simple-link Подробнее о ЖК
+					a(href="#")#openHiddenDescrip.simple-link Подробнее о ЖК
 				.footer-links-item
 					a(href="#").simple-link Сообщить о неточности описания
