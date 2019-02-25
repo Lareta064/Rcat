@@ -81,6 +81,8 @@ $(document).ready(function() {
 		$(this).toggleClass('link-filter--active');
 		$(this).siblings('.link-filter--active').removeClass('link-filter--active');
 
-	})
+	});
+
+
 
 });

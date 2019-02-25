@@ -25,6 +25,6 @@ mixin header(userAvatar,userName)
 						.header__user__avatar
 							img(src="../img/"+ userAvatar +".jpg",width='40' height="40" alt="avatar")
 						.header__user__lk-dropdown
-							a(href="#") #{userName}
+							a(href="#").simple-link #{userName}
 							+arrow-down
 
