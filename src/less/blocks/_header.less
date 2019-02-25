@@ -2,7 +2,14 @@
 	background-color: @white;
 	box-shadow: 0px 2px 0px 0px @lightBorder;
 }
+.logo-icon {
+	margin-right: 20px;
+	svg{
+		height: 40px;
+	width: 200px;
+	}
 
+}
 .header-top{
 	position: relative;
 	width: 100%;
@@ -59,8 +66,8 @@
 
 .logoblock{
 	align-items: center;
-	.logo{
-		width: 200px;
+	.logo-icon{
+
 		margin-right: 3rem;
 		@media(min-width: 1350px){
 			margin-right: 1.1rem;
@@ -99,6 +106,7 @@
 .header__icon-group__item:hover{
 	border-bottom: 2px solid @activeIcon;
 	padding-bottom: 6px;
+	.icon-dashboard,
 	.icon-search,
 	.icon-heart{
 		path{fill:@activeIcon;}
