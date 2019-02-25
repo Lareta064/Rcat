@@ -123,16 +123,16 @@ mixin table-row(roomsNum, roomsLink, roomsArea, roomsFloor,roomsRepair, roomsImg
 						.d-flex.apartment-info
 							.d-flex.apartment-info__col.apartment-info__col--short
 								if priceDown
-									.info-item.info-item--price-usd #[span.visible-usd $#{priceUsd}] #[span.hidden-rub.price-down #{priceRub}руб]
+									.info-item.info-item--price-usd #[span.visible-usd $#{priceUsd}] #[span.hidden-rub.price-down #{priceRub} руб.]
 								else
-									.info-item.info-item--price-usd #[span.visible-usd $#{priceUsd}] #[span.hidden-rub #{priceRub}руб]
+									.info-item.info-item--price-usd #[span.visible-usd $#{priceUsd}] #[span.hidden-rub #{priceRub} руб.]
 
 							.d-flex.apartment-info__col.apartment-info__col--large
 								if priceDown
-									.info-item.info-item--price-rub #[span.visible-rub.price-down #{priceRub}руб] #[span.hidden-usd $#{priceUsd}]
+									.info-item.info-item--price-rub #[span.visible-rub.price-down #{priceRub} руб.] #[span.hidden-usd $#{priceUsd}]
 
 								else
-									.info-item.info-item--price-rub #[span.visible-rub #{priceRub}руб] #[span.hidden-usd $#{priceUsd}]
+									.info-item.info-item--price-rub #[span.visible-rub #{priceRub} руб.] #[span.hidden-usd $#{priceUsd}]
 
 								.info-item.info-item--price-meter #[span #{priceMeter} руб./кв.м]
 
