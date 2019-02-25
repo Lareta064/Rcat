@@ -85,7 +85,8 @@ mixin big-badge(objItem)
 //- Миксин кнопок
 mixin mobile-btn(btnImg)
 	a(href="#").mobile-button&attributes(attributes)
-		img(src="../img/icons/"+ btnImg +".png", alt="")
+		+plus
+		//- img(src="../img/icons/"+ btnImg +".png", alt="")
 
 //-метро+текст+человечек
 mixin text-and-icon(iconFirst,text1,text2, text3,iconLast)
