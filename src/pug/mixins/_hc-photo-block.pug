@@ -9,12 +9,7 @@ mixin hc-photoAlbum(hcPhotoData)
 						img(src="../img/hc/"+ item.itemMini +".jpg"  alt="Фото комплекса")
 
 	.hc-photo-mobile
-		#hs-photo-slider.carousel.slide(data-ride='carousel')
-			.carousel-inner
-				each item in hcPhotoData.hcMobilPhoto
-					if item.activeClass
-						.carousel-item(class=" "+ item.activeClass)
-							img.d-block.w-100(src="../img/hc/"+ item.mobilePhoto+".jpg", alt='фото ЖК')
-					else
-						.carousel-item
-							img.d-block.w-100(src="../img/hc/"+ item.mobilePhoto+".jpg", alt='фото ЖК')
+		.photo-slider
+			each item in hcPhotoData.hcMobilPhoto
+				.photo-slider-item
+					img.d-block.w-100(src="../img/hc/"+ item.mobilePhoto+".jpg", alt='фото ЖК')

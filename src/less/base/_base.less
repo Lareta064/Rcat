@@ -177,3 +177,23 @@ blockquote p {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 }
+.photo-slider{
+	display: flex;
+	height: 250px;
+	overflow-y: hidden;
+	white-space: nowrap;
+	&::-webkit-scrollbar {
+	display: none;
+	}
+	.photo-slider-item{
+		border-radius: 8px;
+		width: 300px;
+		margin-right: 20px;
+		@media(min-width: 480px){
+			width: 360px;
+		}
+		img{
+			border-radius: 10px;
+		}
+	}
+}

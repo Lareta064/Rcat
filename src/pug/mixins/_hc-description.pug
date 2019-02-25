@@ -6,7 +6,7 @@ mixin hc-description(objectArgument)
 				.col-md-5.col-lg-5.pl-0.pr-0
 					.hc-description-column.hc-description-column--area
 						.hc-description-item
-							.headline-bold #{objectArgument.area} кв.м
+							.headline-bold #{objectArgument.area1}&ndash;#{objectArgument.area2}  кв.м
 							.text-body площадь квартир
 						.hc-description-item
 							.headline-bold #{objectArgument.floor}
@@ -48,7 +48,7 @@ mixin hc-description(objectArgument)
 
 				.headline-body Квартиры
 				.text-body.description__visible-text #{objectArgument.apartmentDescription}
-					.description__hidden-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia voluptates ut mollitia deserunt cumque soluta nihil perspiciatis doloribus impedit a asperiores optio aspernatur fuga, quia neque, aliquam, voluptatem, quisquam consequatur.
+					.description__hidden-text  #{objectArgument.hiddenText}
 
 			.hc-description__footer-links
 				.footer-links-item

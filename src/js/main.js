@@ -32,7 +32,7 @@ $(document).ready(function() {
 		});
 	});
 	// слайде фото ЖК на мобильном
-	$('.carousel').carousel();
+	// $('.carousel').carousel();
 
 	// при ховере удлинняем/укорачиваем кнопку телефон
 	$('.contact-phone').on('click', function(e){
@@ -97,4 +97,9 @@ $(document).ready(function() {
 			$(this).text('Скрыть описание');
 		}
 	});
+
+		$('.photo-slider').slick({
+			arrows: false,
+			variableWidth: true
+		});
 });
