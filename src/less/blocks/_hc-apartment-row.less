@@ -17,6 +17,17 @@
 		padding-right: 15px;
 	}
 	color: @black;
+	.icon-group{
+		.icon-heart svg{
+			width: 24px;
+			height: 24px;
+			@media(min-width: 768px){
+				width: 19px;
+				height: 17px;
+			}
+		}
+
+	}
 }
 .test-block-contacts{
 	// height: 50px;
@@ -175,7 +186,8 @@
 	width: 125px;
 	padding-left: 11px;
 	height: 24px;
-	padding-top: 3px;
+	padding-top: 1px;
+	padding-right: 5px;
 	border-radius: 3px;
 	text-align: center;
 	white-space:  nowrap;
@@ -186,7 +198,10 @@
 	color: @white;
 	font-weight: 600;
 	transition:.8s;
-	@media(min-width: 768px){width: 110px;}
+	@media(min-width: 768px){
+		padding-top: 3px;
+		width: 110px;
+	}
 	&:hover{color:@white;}
 }
 .show-phoneNumber{width: 150px;}
