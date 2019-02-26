@@ -11,16 +11,18 @@ $(document).ready(function() {
 		$('body').toggleClass('ui-nav--hidden');
 		$('.container').toggleClass('container--left');
 	});
-	//-красим иконку сердечко
+
+	//-красим иконку сердечко  и меняем слово Избранное
 
 	$('.icon-heart').on('click', function(){
 		if($(this).children('svg').attr('data-prefix') == 'far'){
 			$(this).children('svg').attr('data-prefix','fas');
+			$(this).parents('.link-block__icon').siblings('.simple-link').text('В избранном');
 
 		}
 		else {
 			$(this).children('svg').attr('data-prefix','far');
-
+			$(this).parents('.link-block__icon').siblings('.simple-link').text('В избранноe');
 		}
 	})
 
