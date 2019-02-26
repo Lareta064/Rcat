@@ -1,13 +1,14 @@
 .footer{
-	padding-top: 60px;
+	padding-top: 66px;
 	height: 207px;
 	position: relative;
 
 	@media(min-width: 992px){
-			background: url(../../img/cat-gray.svg);
-			background-position: center bottom -50px;
-			background-size: contain;
-			background-repeat: no-repeat;
+			// background: url(../../img/cat-gray.svg);
+			// background-position: center bottom -50px;
+			// background-size: contain;
+			// background-repeat: no-repeat;
+			overflow:hidden;
 			flex-direction: row;
 			align-items: center;}
 	.footer-top{
@@ -21,10 +22,11 @@
 		@media(min-width: 992px){
 			flex-direction: row;
 			align-items: center;}
+		@media(min-width: 1350px){justify-content: flex-start;}
 	}
 	.simple-link{
-		border-bottom: 1px solid #c2d4e7;
-		margin-right: 2.5rem;
+		border-bottom: 1px solid @linkLine;
+		margin-right: 2rem;
 		padding-top: 1rem;
 		@media(min-width: 992px){padding-top: 0px;}
 	}
@@ -36,7 +38,8 @@
 		@media(min-width: 992px){margin-bottom: 0;}
 	}
 	.button-block{
-		@media(min-width: 992px){margin-left: 4.5rem;}
+		@media(min-width: 992px){}
+		@media(min-width: 1350px){margin-left: auto;}
 	}
 	.logoblock{
 		align-items: flex-start;
@@ -44,11 +47,8 @@
 		@media(min-width: 1350px){
 			align-items: center;
 			flex-direction: row;
+			margin-right: 15.2em;
 		}
-	}
-	.logo{
-		margin-bottom: 1rem;
-		@media(min-width: 992px){margin-bottom: 0;}
 	}
 
 }
@@ -91,4 +91,18 @@
 	@media(min-width: 992px){
 		order:2;
 	}
+}
+.realty-cat-img{
+	display: none;
+	position: absolute;
+	bottom: -73px;
+	left: 50%;
+	transform: translateX(-50%) translateX(30px);
+	svg{
+		width: 230px;
+	}
+	@media(min-width: 992px){display: block;}
+
+	@media(min-width: 1350px){transform: translateX(-50%) translateX(22px);}
+
 }

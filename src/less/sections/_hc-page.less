@@ -14,6 +14,17 @@
 	padding-bottom: 28px;
 	@media(min-width: 768px){padding-bottom: 0;}
 }
+.section-top-filters{
+	.link-filter.simple-link{
+		padding-left: 0px;
+		padding-right: 0px;
+		margin-right: 8px;
+	}
+	.link-filter.simple-link.link-filter--active{
+		padding-left: 10px;
+		padding-right: 10px;
+		}
+}
 .section-top--apartment{
 
 	.section-top-filters{
@@ -25,6 +36,7 @@
 		border: 0px;
 		border-radius: 0px;
 		margin-left: auto;
+		a.simple-link{height: 24px;}
 	}
 
 	}
@@ -33,15 +45,34 @@
 		padding-right: 10px;
 		@media(min-width: 1200px){display: block;}
 	}
+}
+
+.section-top-filters--border{
 	.link-filter.simple-link{
 		width: 50%;
-		padding-top: 7px;
-		padding-bottom: 8px;
-		text-align: center;
 		border-bottom: 0px;
+		margin-right: 0;
 		@media(min-width: 768px){
-			padding-left: 2px;
-			padding-right: 2px;
+			margin-left: 8px;
+			border-bottom: 1px dashed #97bfe7;
+		}
+	}
+	@media(min-width: 768px){
+		.simple-link.link-filter--active{border-bottom: 0}
+	}
+}
+.link-filter.simple-link{
+		font-size: 16px;
+
+		padding-top: 2px;
+		padding-bottom: 4px;
+		text-align: center;
+
+		@media(min-width: 768px){
+			font-size: 14px;
+			padding-left: 0px;
+			padding-right: 0px;
+			margin-left: 2px;
 			margin-right: 8px;
 			width: auto;
 			border-bottom: 1px dashed #97bfe7;
@@ -55,22 +86,27 @@
 		padding-right: 10px;
 		border-bottom: 0px;
 	}
-	.headline-bold{
-		@media(min-width: 1200px){font-size: 18px;}
+	.link-filter--left.link-filter--active{
+		border-radius: 3px 0px 0px 3px;
+		@media(min-width: 768px){border-radius: 3px;}
+	}
+	.link-filter--right.link-filter--active{
+		border-radius: 1px 3px 3px 0px;
+		@media(min-width: 768px){border-radius: 3px;}
 	}
 
-}
 .apartment-database__button{
 	.button{
 		padding-left: 27px;
 		padding-right: 27px;
 		height: 60px;
+		font-weight: 400;
 		border-radius: 5px;
 		@media(min-width: 768px){
 		padding-left: 75px;
 		padding-right: 75px;
 		height: 30px;
-		border-radius: 0px;
+		border-radius: 3px;
 
 		}
 
@@ -84,16 +120,16 @@
 			padding-bottom: 0;
 		}
 	}
-	.link-filter.simple-link{
-		padding-left: 2px;
-		padding-right: 2px;
-		margin-right: 8px;
+	// .link-filter.simple-link{
+	// 	padding-left: 2px;
+	// 	padding-right: 2px;
+	// 	margin-right: 8px;
 
-	}
-	.simple-link.link-filter--active{
-		padding-left: 10px;
-		padding-right: 10px;
-	}
+	// }
+	// .simple-link.link-filter--active{
+	// 	padding-left: 10px;
+	// 	padding-right: 10px;
+	// }
 
 }
 #map{

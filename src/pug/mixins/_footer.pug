@@ -1,0 +1,26 @@
+mixin page-footer
+	footer.footer
+		.container
+			.footer-top.d-flex
+				.logoblock.d-flex
+					+logo-icon
+					.logo-text Профессиональный каталог недвижимости Москвы
+				.links-block.d-flex
+					a(href='#').simple-link.link-solid-border Как присоединиться
+					a(href='#').simple-link.link-solid-border О каталоге
+					a(href='#').simple-link.link-solid-border Контакты
+
+				.button-block
+					+button('Добавить квартиру', '#', 'btn-add')
+
+			.footer-bottom.d-flex
+				.footer-bottom__copyright.
+					 &copy;2018 RealtyCat — Профессиональный каталог недвижимости Москвы
+				.footer-bottom__politic
+					a(href='#').simple-link.link-solid-border Политика конфиденциальности
+
+
+		.realty-cat-img
+			+realty-cat
+
+

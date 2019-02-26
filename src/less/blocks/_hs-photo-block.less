@@ -57,7 +57,27 @@
 	border-radius: 8px;
 	&:last-child {
 		margin-right: 0;
-		@media (min-width: 768px) {margin-right: 0;}
+		&:after{
+			display: flex;
+			position: absolute;
+			align-items: center;
+			padding: 25px;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 2;
+			// background-color: rgba(0, 0, 0, .5);
+			content: '+9';
+			font-size: 20px;
+			line-height: 1.25;
+			font-weight: 700;
+			color: @white; 
+		}
+
+		@media (min-width: 768px) {
+			margin-right: 0;
+		}
 	}
 
 	img {

@@ -6,7 +6,7 @@ mixin hc-description(objectArgument)
 				.col-md-5.col-lg-5.pl-0.pr-0
 					.hc-description-column.hc-description-column--area
 						.hc-description-item
-							.headline-bold #{objectArgument.area} кв.м
+							.headline-bold #{objectArgument.area1}&ndash;#{objectArgument.area2}  кв.м
 							.text-body площадь квартир
 						.hc-description-item
 							.headline-bold #{objectArgument.floor}
@@ -24,7 +24,7 @@ mixin hc-description(objectArgument)
 				.col-md-8.col-lg-8.pl-0
 					.order-1.hc-description__center-item.text-body--pr
 						.headline-body Парковка:
-						.text-body #{objectArgument.parkingDescription}
+						.text-body !{objectArgument.parkingDescription}
 
 
 				.order-3.order-md-2.col-md-4.col-lg-2.offset-lg-2.col-hl-4.offset-hl-0.pr-0.col-pl-0
@@ -35,7 +35,7 @@ mixin hc-description(objectArgument)
 				.order-2.order-md-3.col-md-8.col-lg-8.pl-0
 					.hc-description__center-item.text-body--pr
 						.headline-body Инфрастуктура:
-						.text-body #{objectArgument.infrastructure}
+						.text-body !{objectArgument.infrastructure}
 
 				.order-6.col-md-4.col-lg-2.offset-lg-2.col-hl-4.offset-hl-0.pr-0.col-pl-0
 
@@ -44,13 +44,14 @@ mixin hc-description(objectArgument)
 							.text-body #{objectArgument.operationPrice}
 		.hc-description__footer
 			.hc-description__footer-content
-				.text-body #{objectArgument.hauseDescription}
+				.text-body !{objectArgument.hauseDescription}
 
 				.headline-body Квартиры
-				.text-body #{objectArgument.apartmentDescription}
+				.text-body.description__visible-text !{objectArgument.apartmentDescription}
+					.description__hidden-text  #{objectArgument.hiddenText}
 
 			.hc-description__footer-links
 				.footer-links-item
-					a(href="#").simple-link Подробнее о ЖК
+					a(href="#")#openHiddenDescrip.simple-link Подробнее о ЖК
 				.footer-links-item
 					a(href="#").simple-link Сообщить о неточности описания

@@ -4,7 +4,7 @@
 	// padding: 7px 7px 19px 20px;
 	border-radius: 3px;
 	text-align: center;
-	background-color: @darkBlueBg;
+	background-color: @btnBg;
 	color: @white;
 	display: inline-block;
 	outline: none;
@@ -25,7 +25,7 @@
 	padding: 1.6rem 4.8rem ;
 	white-space: nowrap;
 	font-size: 16px;
-	font-weight: bold;
+	font-weight: 500;
 
 
 	@media (min-width:768px) {
@@ -36,20 +36,21 @@
 	}
 }
 .btn-add:before{
-	content: "";
+	content: "\f067";
 	position: absolute;
 	left: 0;
 	top: 50%;
-	transform: translate(170%, -50%);
+	transform: translate(170%, -77%);
 	width: 20px;
 	height: 20px;
-	background: url(../../img/icons/plus.png);
-	background-position: center;
-	background-repeat: no-repeat;
+	font-family: FontAwesome;
+	// background: url(../../img/icons/plus.png);
+	// background-position: center;
+	// background-repeat: no-repeat;
 	@media (min-width:768px) {
 		width: 8px;
 		height: 8px;
-		transform: translate(245%, -50%);
+		transform: translate(245%, -77%);
 	}
 
 }
@@ -73,7 +74,7 @@
 	display: flex;
 	position: relative;
 	color: @white;
-	background: @btnBg;
+	// background: @btnBg;
 	border-radius: 3px;
 	width: 40px;
 	height: 40px;
@@ -97,4 +98,16 @@
 	color: #fff;
 	font-weight: 700;
 	padding: 20px 50px;
+}
+.button-wrapper{
+	margin-top: 35px;
+	margin-bottom: 20px;
+
+}
+.button-wrapper--mobile{
+	display: block;
+	@media(min-width: 768px){display: none;}
+}
+.section-btn{
+	border-radius: 5px;
 }

@@ -16,7 +16,7 @@ body {
 	background-color:@bodyBg;
 }
 
-
+.fadeText{color:red;}
 
 
 /* fix for top margin collapsing and vertical scroll prevent for body tag, when body height = 100% */
@@ -55,9 +55,10 @@ img {
 
 a {
 
-	color: #037EC6;
+	color: rgb(44,129,209);
 	&:hover{
 		text-decoration: none;
+		color:@linkHover;
 
 	}
 }
@@ -175,4 +176,24 @@ blockquote p {
 .col--no-padding {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
+}
+.photo-slider{
+	display: flex;
+	height: 250px;
+	overflow-y: hidden;
+	white-space: nowrap;
+	&::-webkit-scrollbar {
+	display: none;
+	}
+	.photo-slider-item{
+		border-radius: 8px;
+		width: 300px;
+		margin-right: 20px;
+		@media(min-width: 480px){
+			width: 360px;
+		}
+		img{
+			border-radius: 10px;
+		}
+	}
 }
