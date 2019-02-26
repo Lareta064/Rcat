@@ -16,9 +16,12 @@ $(document).ready(function() {
 	$('.icon-heart').on('click', function(){
 		if($(this).children('svg').attr('data-prefix') == 'far'){
 			$(this).children('svg').attr('data-prefix','fas');
+			$(this).parent('.icon-heart').parent('.link-block__icon').siblings('.simple-link').text('Убрать из избранного')
+			console.log($(this).parent('.icon-heart').parent('.link-block__icon').siblings('.simple-link').text());
 		}
 		else {
 			$(this).children('svg').attr('data-prefix','far');
+			$(this).parent('.icon-heart').parent('.link-block__icon').siblings('.simple-link').text('В избранное')
 		}
 	})
 
