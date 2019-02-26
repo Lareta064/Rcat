@@ -67,7 +67,16 @@ mixin link(linkText,linkIcon,linkClass)
 		else
 			.simple-link(class=' simple-link--'+ linkClass) #{linkText}
 
-//- Миксин ссылок
+//- Миксин для одного бейджа
+mixin badge(...items)
+	each item in items
+		.badge= item
+
+//- Миксин для группы бейджиков
+mixin badge-group(...badgesItems)
+	.badge-group
+		each item in badgesItems
+			+badge(...item)
 
 
 //-большой голубой бейдж

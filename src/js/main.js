@@ -45,7 +45,8 @@ $(document).ready(function() {
 	const dropdownОption = $('#dropdown--option');// выпадашка
 	const showOptions = $('#showOptions'); //кнопка Еще
 	var dataValue ;
-	showOptions.on('click', function(){
+	showOptions.on('click', function(e){
+		e.preventDefault();
 		dataValue = dropdownОption.attr('data-control');
 
 		if(dataValue =='hidden'){
