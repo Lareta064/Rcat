@@ -20,17 +20,21 @@ block content
 			.option-panel.option-panel--mobile
 				+link('В избранное','icon-heart')
 				+link('Еще','arrow-down').order-item#showOptions
-				.dropdown#dropdown--option(data-control= 'hidden')
-					.dropdown-item
-						+link('Следить за объявлениями','icon-notify')
-					.dropdown-item
-						+link('Добавить заметку','icon-add')
-					.dropdown-item
-						+link('Пожаловаться','icon-question')
-					.dropdown-item
-						+link('Отправить эл.почтой','','line')
-					.dropdown-item
-						+link('Скачать ПДФ','', 'line')
+			.dropdown#dropdown--option(data-control= 'hidden')
+				.dropdown-item
+					+link('Следить за объявлениями в этом ЖК','icon-notify')
+				.dropdown-item
+					+link('Добавить заметку','icon-add')
+				.dropdown-item
+					+link('Отправить эл.почтой','','line')(class="link-block--pl")
+				.dropdown-item
+					+link('Скачать ПДФ','', 'line')(class="link-block--pl")
+				.dropdown-item
+					+link('Отправить в Ватсап','', 'line')(class="link-block--pl")
+				.dropdown-item
+					+link('Поделиться в Телеграме','', 'line')(class="link-block--pl")
+				.dropdown-item
+					+link('Пожаловаться','icon-question').order-item
 		.section-ui
 			pre.
 				.option-panel.option-panel--desktop

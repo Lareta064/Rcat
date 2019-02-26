@@ -31,8 +31,6 @@ $(document).ready(function() {
 			mainImage.attr('src', imgPath).fadeIn(200);
 		});
 	});
-	// слайде фото ЖК на мобильном
-	$('.carousel').carousel();
 
 	// при ховере удлинняем/укорачиваем кнопку телефон
 	$('.contact-phone').on('click', function(e){
@@ -40,16 +38,6 @@ $(document).ready(function() {
 			$(this).toggleClass('show-phoneNumber');
 	});
 
-
-		// $('.contact-phone').on('mouseout', function(){
-		// 	if(window.innerWidth >= 768){
-		// 		$(this).css('width','115px');
-		// 	}
-		// 	else{
-		// 		$(this).css('width','125px');
-		// 	}
-
-		// });
 	//-модальное окно для панель опций(иконка+ссылка)
 	const dropdownОption = $('#dropdown--option');// выпадашка
 	const showOptions = $('#showOptions'); //кнопка Еще
@@ -75,6 +63,14 @@ $(document).ready(function() {
 
 			}
 	});
+	//-скрываем выпадашку при ресайзе
+	window.onresize = function(event) {
+
+	  dropdownОption.slideUp(800);
+			dropdownОption.attr('data-control','hidden');
+			dataValue = 'hidden';
+			showOptions.children('.link-block__icon').removeClass('icon-down--rotate');
+	}
 
 	//-переключаем класс у ссылки-фильтра (по цене)
 	$('.link-filter').on('click', function(e){
@@ -89,6 +85,7 @@ $(document).ready(function() {
 		$('.description__visible-text').text(function(index, text){
 
                 text = text.substr(278,350);
+                $('.description__visible-text')
 
 		});
 
@@ -106,4 +103,9 @@ $(document).ready(function() {
 			$(this).text('Скрыть описание');
 		}
 	});
+
+		$('.photo-slider').slick({
+			arrows: false,
+			variableWidth: true
+		});
 });
