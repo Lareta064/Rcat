@@ -31,8 +31,6 @@ $(document).ready(function() {
 			mainImage.attr('src', imgPath).fadeIn(200);
 		});
 	});
-	// слайде фото ЖК на мобильном
-	// $('.carousel').carousel();
 
 	// при ховере удлинняем/укорачиваем кнопку телефон
 	$('.contact-phone').on('click', function(e){
@@ -65,6 +63,14 @@ $(document).ready(function() {
 
 			}
 	});
+	//-скрываем выпадашку при ресайзе
+	window.onresize = function(event) {
+
+	  dropdownОption.slideUp(800);
+			dropdownОption.attr('data-control','hidden');
+			dataValue = 'hidden';
+			showOptions.children('.link-block__icon').removeClass('icon-down--rotate');
+	}
 
 	//-переключаем класс у ссылки-фильтра (по цене)
 	$('.link-filter').on('click', function(e){

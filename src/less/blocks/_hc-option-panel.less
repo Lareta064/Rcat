@@ -38,26 +38,29 @@
 
 .option-panel{
 	.icon-heart path{fill: @redText;}
-	.fa-heart{width: 20px;
-		height: 16px;}
+	.fa-heart{width: 22px;
+		height: 22px;}
 
 }
 
 .dropdown{
 	display: none;
-	position: absolute;
-	top: 100%;
-	left: 0;
-	right: 0;
-	padding: 20px 0px;
-	border-radius: 5px;
+	position: relative;
+	left: 0px;
+	right: 0px;
+	padding: 0px;
+	border-radius: 0 0 5px 5px;
 	z-index: 10;
 	background-color: #f5f6fa;
 	border:1px solid #e5e9f2;
+	border-top: 0px;
+	margin-top: -6px;
 	.dropdown-item{
 		width: 100%;
-		padding: 14px 20px;
-		&:hover{background-color: #fff;}
+		padding: 10px 20px;
+
+		.link-block--pl,
+		.order-item{padding-left: 28px;}
 	}
 	.link-block__text--line{margin-left: 28px;}
 }
