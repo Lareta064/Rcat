@@ -16,12 +16,11 @@ $(document).ready(function() {
 	$('.icon-heart').on('click', function(){
 		if($(this).children('svg').attr('data-prefix') == 'far'){
 			$(this).children('svg').attr('data-prefix','fas');
-			$(this).parent('.icon-heart').parent('.link-block__icon').siblings('.simple-link').text('Убрать из избранного')
-			console.log($(this).parent('.icon-heart').parent('.link-block__icon').siblings('.simple-link').text());
+
 		}
 		else {
 			$(this).children('svg').attr('data-prefix','far');
-			$(this).parent('.icon-heart').parent('.link-block__icon').siblings('.simple-link').text('В избранное')
+
 		}
 	})
 
@@ -45,7 +44,8 @@ $(document).ready(function() {
 	const dropdownОption = $('#dropdown--option');// выпадашка
 	const showOptions = $('#showOptions'); //кнопка Еще
 	var dataValue ;
-	showOptions.on('click', function(){
+	showOptions.on('click', function(e){
+		e.preventDefault();
 		dataValue = dropdownОption.attr('data-control');
 
 		if(dataValue =='hidden'){
@@ -69,10 +69,18 @@ $(document).ready(function() {
 	//-скрываем выпадашку при ресайзе
 	window.onresize = function(event) {
 
-	  dropdownОption.slideUp(800);
-			dropdownОption.attr('data-control','hidden');
-			dataValue = 'hidden';
-			showOptions.children('.link-block__icon').removeClass('icon-down--rotate');
+	    dropdownОption.slideUp(800);
+		dropdownОption.attr('data-control','hidden');
+		dataValue = 'hidden';
+		showOptions.children('.link-block__icon').removeClass('icon-down--rotate');
+
+		if($(document).width()>768){
+			$('.hc-description__footer-content').show();
+		}
+		else{
+			$('.hc-description__footer-content').hide();
+		}
+
 	}
 
 	//-переключаем класс у ссылки-фильтра (по цене)
@@ -93,18 +101,38 @@ $(document).ready(function() {
 		});
 
 	//-показать/скрыть текст описание ЖК
+
 	$('.description__hidden-text').hide();
 		$('#openHiddenDescrip').on('click', function(e){
 			e.preventDefault();
-			if($(this).hasClass('hideText')) {
-				$('.description__hidden-text').hide(800);
-				$(this).removeClass('hideText');
-				$(this).text('Подробнее о ЖК');
-			} else {
-			$('.description__hidden-text').show(800);
-			$(this).addClass('hideText');
-			$(this).text('Скрыть описание');
-		}
+			if($(document).width()>=768){
+
+				if($(this).hasClass('hideText')) {
+					$('.description__hidden-text').hide(800);
+					$(this).removeClass('hideText');
+					$(this).text('Подробнее о ЖК');
+				} else {
+					$('.description__hidden-text').show(800);
+					$(this).addClass('hideText');
+					$(this).text('Скрыть описание');
+				}
+			}
+
+			if($(document).width()<768){
+				if($(this).hasClass('hideText')) {
+					$('.hc-description__footer-content').hide(800);
+					$(this).removeClass('hideText');
+					$(this).text('Подробнее о ЖК');
+				} else {
+					$('.hc-description__footer-content').show(800);
+					$(this).addClass('hideText');
+					$(this).text('Скрыть описание');
+				}
+
+			}
+
+
+
 	});
 
 		$('.photo-slider').slick({

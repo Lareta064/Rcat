@@ -67,7 +67,16 @@ mixin link(linkText,linkIcon,linkClass)
 		else
 			.simple-link(class=' simple-link--'+ linkClass) #{linkText}
 
-//- Миксин ссылок
+//- Миксин для одного бейджа
+mixin badge(...items)
+	each item in items
+		.badge= item
+
+//- Миксин для группы бейджиков
+mixin badge-group(...badgesItems)
+	.badge-group
+		each item in badgesItems
+			+badge(...item)
 
 
 //-большой голубой бейдж
@@ -110,7 +119,7 @@ mixin table-row(roomsNum, roomsLink, roomsArea, roomsFloor,roomsRepair, roomsImg
 					.d-flex.column-item
 						.d-flex.apartment-info.apartment-info--pb.order-md-2
 							.d-flex.apartment-info__col
-								a(href=""+ roomsLink).info-item.info-item--rooms #[span #{roomsNum} комн. кв]
+								a(href=""+ roomsLink).info-item.info-item--rooms #[span.link-solid-border #{roomsNum} комн. кв]
 								.info-item.info-item--area #[span #{roomsArea} кв.м]
 							.d-flex.apartment-info__col
 								.info-item.info-item--floor #[span #{roomsFloor} этаж]
