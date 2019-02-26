@@ -145,3 +145,6 @@ $(document).ready(function() {
 			variableWidth: true
 		});
 });
+
+	//-Text Fade Out / Read More Link
+	
