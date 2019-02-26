@@ -44,7 +44,7 @@ mixin hc-description(objectArgument)
 							.text-body #{objectArgument.operationPrice}
 		.hc-description__footer
 			.hc-description__footer-content
-				.text-body #{objectArgument.hauseDescription}
+				.text-body= objectArgument.hauseDescription
 
 				.headline-body Квартиры
 				.text-body.description__visible-text #{objectArgument.apartmentDescription}
