@@ -1,0 +1,18 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Шапка';
+	- var pageClass= "body--dashboard";
+
+block content
+	.container.container--left
+		.section-ui
+			h1 Шапка
+		.section-ui
+			+header('avatar','Иван Марасин')
+		.section-ui
+			pre.
+				+header('avatar','Иван Марасин')
+
+				mixin header(userAvatar,userName)
+

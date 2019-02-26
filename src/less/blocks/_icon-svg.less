@@ -1,8 +1,7 @@
 i{
 	display: inline-block;
 	cursor: pointer;
-	transition: .8;
-	&:hover{opacity: .6;}
+	transition: .5;
 }
 .notify{
 	position: relative;
@@ -16,5 +15,42 @@ i{
 		width: 10px;
 		height: 10px;
 		background-color: @redText;
+	}
+}
+//-heart
+.svg-inline--fa{
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.icon-heart.icon-heart--red{
+	svg{
+		width: 18px ;
+		height: 16px ;
+	}
+	path{
+		fill: @redText;
+		width: 18px ;
+		height: 16px ;
+	}
+}
+.icon-heart--grey{
+	width: 24px;
+	path{
+		fill: @lightGrey;
+	}
+}
+//-search
+.icon-search{
+	path{fill: @lightGrey;}
+}
+.arrow-down svg{
+	width: 19px;
+	height: 13px;
+}
+.icon-notify{
+	svg{
+		width: 18px;
+		height: 21px;
 	}
 }

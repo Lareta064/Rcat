@@ -1,0 +1,108 @@
+.footer{
+	padding-top: 66px;
+	height: 207px;
+	position: relative;
+
+	@media(min-width: 992px){
+			// background: url(../../img/cat-gray.svg);
+			// background-position: center bottom -50px;
+			// background-size: contain;
+			// background-repeat: no-repeat;
+			overflow:hidden;
+			flex-direction: row;
+			align-items: center;}
+	.footer-top{
+		background: transparent;
+		position: relative;
+		z-index: 2;
+		padding-bottom: 2.2rem;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+		@media(min-width: 992px){
+			flex-direction: row;
+			align-items: center;}
+		@media(min-width: 1350px){justify-content: flex-start;}
+	}
+	.simple-link{
+		border-bottom: 1px solid @linkLine;
+		margin-right: 2rem;
+		padding-top: 1rem;
+		@media(min-width: 992px){padding-top: 0px;}
+	}
+	.links-block{
+		width: 300px;
+		flex-wrap: wrap;
+		margin-bottom: 2.2rem;
+		@media(min-width: 480px){width:  auto;}
+		@media(min-width: 992px){margin-bottom: 0;}
+	}
+	.button-block{
+		@media(min-width: 992px){}
+		@media(min-width: 1350px){margin-left: auto;}
+	}
+	.logoblock{
+		align-items: flex-start;
+		flex-direction: column;
+		@media(min-width: 1350px){
+			align-items: center;
+			flex-direction: row;
+			margin-right: 15.2em;
+		}
+	}
+
+}
+.footer-bottom{
+	flex-direction: column;
+	background: transparent;
+	position: relative;
+	z-index: 2;
+	border-top: 2px solid #ced9f2;
+	padding-top: 1rem;
+	padding-bottom: 2.2rem;
+		@media(min-width: 992px){
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+	.simple-link{
+		display: inline-block;
+
+		order:1;
+		margin-right: 0;
+		margin-bottom: 22px;
+		@media(min-width: 992px){
+		order:2;
+		margin-bottom: 0;
+		}
+	}
+
+}
+.footer-bottom__copyright{
+	color: #999;
+	order:2;
+	@media(min-width: 992px){
+		order:1;
+	}
+}
+.footer-bottom__politic{
+	order:1;
+	@media(min-width: 992px){
+		order:2;
+	}
+}
+.realty-cat-img{
+	display: none;
+	position: absolute;
+	bottom: -73px;
+	left: 50%;
+	transform: translateX(-50%) translateX(30px);
+	svg{
+		width: 230px;
+	}
+	@media(min-width: 992px){display: block;}
+
+	@media(min-width: 1350px){transform: translateX(-50%) translateX(22px);}
+
+}

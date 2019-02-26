@@ -54,8 +54,109 @@ mixin goodsCart (img, text, price)
 					.btn-counter.btn-counter--plus.goods-cart__counter-plus
 				.goods-cart__price= price
 
+
+//-Hause Complex
+//- Миксин ссылок
+
+mixin link(linkText,linkIcon,linkClass)
+	a(href='#').link-block&attributes(attributes)
+		if linkIcon
+			.link-block__icon
+				+#{linkIcon}
+			.simple-link(class=' simple-link--'+ linkClass) #{linkText}
+		else
+			.simple-link(class=' simple-link--'+ linkClass) #{linkText}
+
+//- Миксин для одного бейджа
+mixin badge(...items)
+	each item in items
+		.badge= item
+
+//- Миксин для группы бейджиков
+mixin badge-group(...badgesItems)
+	.badge-group
+		each item in badgesItems
+			+badge(...item)
+
+
 //-большой голубой бейдж
 mixin bag-badge(num1,num2 )
 	.big-badge&attributes(attributes)
 		.big-badge__top #[span #{num1}] из #[span #{num2}]
 		.big-badge__bottom квартир в продаже
+
+
+mixin big-badge(objItem)
+	.big-badge&attributes(attributes)
+		.big-badge__top #[span #{objItem.num1}] из #[span #{objItem.num2}]
+		.big-badge__bottom квартир в продаже
+
+//- Миксин кнопок
+mixin mobile-btn(btnImg)
+	a(href="#").mobile-button&attributes(attributes)
+		+plus
+		//- img(src="../img/icons/"+ btnImg +".png", alt="")
+
+//-метро+текст+человечек
+mixin text-and-icon(iconFirst,text1,text2, text3,iconLast)
+	.text-group.d-flex&attributes(attributes)
+		if iconFirst
+			span.first-icon
+				+#{iconFirst}
+		span.text-body.first-text #{text1},
+		span.text-body.middle-text.text-body--grey #{text2}
+		span.text-body.last-text.text-body--grey #{text3}
+		if iconLast
+			span.last-icon
+				+#{iconLast}
+
+//-миксин для таблицы квартир
+mixin table-row(roomsNum, roomsLink, roomsArea, roomsFloor,roomsRepair, roomsImg, priceUsd, priceRub, priceMeter, phoneNumber, priceDown )
+	.apartment-item
+		.row
+			.col-md-10
+				.apartment-item-column.d-flex
+					.d-flex.column-item
+						.d-flex.apartment-info.apartment-info--pb.order-md-2
+							.d-flex.apartment-info__col
+								a(href=""+ roomsLink).info-item.info-item--rooms #[span.link-solid-border #{roomsNum} комн. кв]
+								.info-item.info-item--area #[span #{roomsArea} кв.м]
+							.d-flex.apartment-info__col
+								.info-item.info-item--floor #[span #{roomsFloor} этаж]
+								if(roomsRepair == 'без отделки')
+									.info-item.info-item--repair #[span Без отделки]
+								if(roomsRepair == 'отделка')
+									.info-item.info-item--repair #[span.repaire-icon Отделка]
+						.apartment-img.order-md-1(style="background-image: url(../img/hc/"+ roomsImg +".png);")
+					.d-flex.column-item
+						.d-flex.apartment-info
+							.d-flex.apartment-info__col.apartment-info__col--short
+								if priceDown
+
+									.info-item.info-item--price.info-item--price-usd #[span.visible-usd $#{priceUsd}] #[span.hidden-rub.price-down #{priceRub} руб.]
+										+icon-price-down
+
+								else
+									.info-item.info-item--price-usd #[span.visible-usd $#{priceUsd}] #[span.hidden-rub #{priceRub} руб.]
+
+							.d-flex.apartment-info__col.apartment-info__col--large
+								if priceDown
+									.info-item.info-item--price-rub #[span.visible-rub.price-down #{priceRub} руб.] #[span.hidden-usd $#{priceUsd}]
+										+icon-price-down
+
+								else
+									.info-item.info-item--price-rub #[span.visible-rub #{priceRub} руб.] #[span.hidden-usd $#{priceUsd}]
+
+								.info-item.info-item--price-meter #[span #{priceMeter} руб./кв.м]
+
+
+			.col-md-2
+				.d-flex.column-contacts
+					a(href="#").contact-phone #{phoneNumber}
+					.icon-group
+						a(href="#")
+							+icon-mail
+						+icon-heart('red')
+
+//-конец миксина "строка таблицы""
+

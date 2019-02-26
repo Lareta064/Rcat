@@ -1,0 +1,27 @@
+
+mixin header(userAvatar,userName)
+	header.header
+		.container
+			.header-top.d-flex
+				.logoblock.d-flex
+					+logo-icon
+					.logo-text Профессиональный каталог недвижимости Москвы
+				.button-block
+					+button('Добавить квартиру', '#', 'btn-add')
+					+mobile-btn('plus')
+				.links-block.d-flex
+					.header__icon-group
+						.header__icon-group__item
+							+icon-search
+						.header__icon-group__item
+							+icon-dashboard
+						.header__icon-group__item
+							+icon-heart('grey')
+						.header__icon-group__item
+							+notify-active
+					.header__user-lk
+						.header__user__avatar
+							img(src="../img/"+ userAvatar +".jpg",width='36' height="36" alt="avatar")
+						.header__user__lk-dropdown
+							a(href="#").simple-link #{userName}
+							+arrow-down

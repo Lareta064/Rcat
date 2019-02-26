@@ -1,0 +1,15 @@
+mixin hc-photoAlbum(hcPhotoData)
+	.hc-photo-wrapper
+		.hs-photo__switch-block
+			.switch-block__main-photo
+				img(src="../img/hc/"+ hcPhotoData.mainPhoto +".jpg" alt="Фото комплекса")
+			.switch-block__thumbnails.d-flex
+				each item in hcPhotoData.hcPhotoThumb
+					.thumbnails__image(data-img-path = "../img/hc/"+ item.itemBig + ".jpg")
+						img(src="../img/hc/"+ item.itemMini +".jpg"  alt="Фото комплекса")
+
+	.hc-photo-mobile
+		.photo-slider
+			each item in hcPhotoData.hcMobilPhoto
+				.photo-slider-item
+					img.d-block.w-100(src="../img/hc/"+ item.mobilePhoto+".jpg", alt='фото ЖК')

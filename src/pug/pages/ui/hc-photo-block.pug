@@ -1,0 +1,22 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'ЖК. Блок с фото';
+	- var pageClass= "body--dashboard";
+	- var hcPhotoBlock = {mainPhoto:'big-photo1', hcPhotoThumb:{item1:{itemBig:'big-photo1', itemMini:'mini-photo1'},item2:{itemBig:'big-photo2', itemMini:'mini-photo2'},item3:{itemBig:'big-photo3', itemMini:'mini-photo3'},item4:{itemBig:'big-photo1', itemMini:'mini-photo4'},item5:{itemBig:'big-photo2', itemMini:'mini-photo5'},item6:{itemBig:'big-photo3', itemMini:'mini-photo6'},item7:{itemBig:'big-photo1', itemMini:'mini-photo7'}}, hcMobilPhoto:{item1:{mobilePhoto:'big-photo1',activeClass:'active'}, item2:{mobilePhoto:'big-photo2'},item3:{mobilePhoto:'big-photo3'} } };
+
+block content
+	.container.container--left
+		.section-ui
+			h1 ЖК. Блок с фото
+
+		.section-ui
+			+hc-photoAlbum(hcPhotoBlock)
+		.section
+			.title-2 Блок подключается миксином для объекта
+		.section
+			pre.
+
+				 +hc-photoAlbum(hcPhotoBlock)
+			pre.
+				var hcPhotoBlock = {mainPhoto:'big-photo1', hcPhotoThumb:{item1:{itemBig:'big-photo1', itemMini:'mini-photo1'},item2:{itemBig:'big-photo2', itemMini:'mini-photo2'},item3:{itemBig:'big-photo3', itemMini:'mini-photo3'},item4:{itemBig:'big-photo1', itemMini:'mini-photo4'},item5:{itemBig:'big-photo2', itemMini:'mini-photo5'},item6:{itemBig:'big-photo3', itemMini:'mini-photo6'},item7:{itemBig:'big-photo1', itemMini:'mini-photo7'}}, hcMobilPhoto:{item1:{mobilePhoto:'big-photo1',activeClass:'active'}, item2:{mobilePhoto:'big-photo2'},item3:{mobilePhoto:'big-photo3'} } };

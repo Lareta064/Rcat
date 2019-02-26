@@ -1,0 +1,37 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = ' Стили для ссылок ';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.main-wrapper
+		.container.container--left
+			.section-ui
+				.title Стили для ссылок
+			.section-ui.d-flex
+				+link('В избранное','icon-heart')
+				+link('Добавить заметку','icon-add')
+				+link('Еще','arrow-down')
+				+link('Скачать ПФД','', 'line')
+				+link('В избранном','icon-heart')
+
+			.section-ui
+				pre.
+					+link('В избранное','icon-heart')
+					+link('Добавить заметку','icon-add')
+					+link('Еще','arrow-down')
+					+link('Скачать ПФД','', 'line')
+					+link('В избранном','icon-heart')
+
+			.section-ui.d-flex
+				.test-block.pr-40
+					a(href='#').link-filter.simple-link по цене
+				a(href='#').link-filter.simple-link.link-filter--active по цене
+			.section-ui
+				pre.
+					Класс link-filter--active меняется по клику
+
+					a(href='#').link-filter.simple-link по цене
+					a(href='#').link-filter.simple-link.link-filter--active по цене

@@ -1,8 +1,108 @@
 extends ../layouts/page-layout/page.pug
 
 block variables
-	- var title = 'Главная страница';
+	- var title = 'Страница ЖК ';
 	- var pageClass = 'index-page';
+	- var hcPhotoBlock = {mainPhoto:'big-photo1', hcPhotoThumb:{item1:{itemBig:'big-photo1', itemMini:'mini-photo1'},item2:{itemBig:'big-photo2', itemMini:'mini-photo2'},item3:{itemBig:'big-photo3', itemMini:'mini-photo3'},item4:{itemBig:'big-photo1', itemMini:'mini-photo4'},item5:{itemBig:'big-photo2', itemMini:'mini-photo5'},item6:{itemBig:'big-photo3', itemMini:'mini-photo6'},item7:{itemBig:'big-photo1', itemMini:'mini-photo7'}}, hcMobilPhoto:{item1:{mobilePhoto:'big-photo1',activeClass:'active'}, item2:{mobilePhoto:'big-photo2'},item3:{mobilePhoto:'big-photo3'} } };
+
+
+
+	- var hauseObject = {area1:'53',area2:'187',floor:'6',ceilingHeight: '3,1', parkingDescription:'подземная на 115 машиномест (17–35 кв.м), от&nbsp;4&nbsp;500&nbsp;000&nbsp;руб.&nbsp;за&nbsp;м/м', objItem:{num1:'16', num2:'147'} ,readinessLevel: '3 квартал 2017, сдан ГК',  infrastructure:'Офисные и административные помещения, кафе&nbsp;-&nbsp;кофейня', operationPrice: '328 руб./кв.м', hauseDescription: 'ЖК “Balchug Viewpoint” занимает площадь в один гектар. По соседству с&nbsp;ним&nbsp;расположена небольшая Георгиевская церковь и Болотная площадь с фонтаном и сквером. Жителям комплекса доступна богатая инфраструктура района: медицинские центры, знаменитые театры и музеи, магазины, фитнес&nbsp;-&nbsp;центры.',apartmentDescription: 'Проектом предусмотрено 116 резиденций в формате апартаментов. Площадь резиденций составляет 53–187 кв. м. Для продажи предлагаются одно-, двух-, трех-и четырехкомнатные апартаменты с гостиничным форматом обслуживания.В квартирах установлены панорамные окна. Из окон открываются шикарные виды на Москву. Высота потолков — 3,1 м', hiddenText:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia voluptates ut mollitia deserunt cumque soluta nihil perspiciatis doloribus impedit a asperiores optio aspernatur fuga, quia neque, aliquam, voluptatem, quisquam consequatur.'};
+
 
 block content
-	h1 Hello World!
+
+	header.header
+		+header('avatar','Иван Марасин')
+	section.title-block
+		.container
+			.title-block-wrapper.d-flex
+				.title-block--left
+					.main-title-block.d-flex
+						.title-1 ЖК «Балчуг Вьюпойнт»
+						.subtitle
+							span.span-title.text-body Balchug Viewpoint
+							span.span-details.text-body Сдан в 2017
+						.price-badge.headline-bold от 23 339 642 руб.
+
+					.main-badge-block.d-flex
+						.badge-group
+							.badge ЦАО
+							.badge Замоскворечье
+						.link-group
+							a(href="#").simple-link.link-hidden ЦАО,
+							a(href="#").simple-link.link-hidden Замоскворечье,
+							a(href="#").simple-link Садовническая набережная, 5 стр.
+
+						.text-info.text-group.d-flex
+							+text-and-icon('icon-metro','Новокузнецcкая','5 минут','пешком','icon-man')
+				.title-block--right
+					.update-box Обновлено сегодня
+					.price-box.headline-bold от 23 339 642 руб.
+	section.option-panel-wrapper
+		+option-panel
+	section.full-description
+		.container
+			.row
+				.col-hl-6
+					+hc-photoAlbum(hcPhotoBlock)
+				.col-hl-6
+					+hc-description(hauseObject)
+			.button-wrapper.button-wrapper--mobile.text-center
+				+button('Позвонить застройщику', '#','btn-add section-btn')
+	section.apartment-database
+		.container
+			.section-top.d-flex.section-top--apartment
+				.section-top-title.headline-bold 48 предложений
+				.section-top-subtitle.headline-bold.headline-bold--grey от 386 460 руб./кв.м
+				.section-top-filters.section-top-filters--border
+					span.text-body.text-body--title Отсортировано&nbsp;по
+					a(href='#').link-filter.link-filter--left.simple-link.link-filter--active по&nbsp;цене
+					a(href='#').link-filter.link-filter--right.simple-link по&nbsp;площади
+
+
+			.apartment-table
+				+table-row('1', '#', '54,5', '4','отделка', 'table-photo', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
+				+table-row('1', '#', '54,5', '4','без отделки', 'plan1', '320 200', '23 200 500', '340 200', '+7 929 222 5555','цена вниз' )
+				+table-row('1', '#', '54,5', '4','отделка', 'table-photo2', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
+				+table-row('1', '#', '54,5', '4','без отделки', 'plan2', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
+				+table-row('1', '#', '54,5', '4','без отделки', 'plan2', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
+				+table-row('1', '#', '54,5', '4','без отделки', 'plan2', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
+
+			.apartment-database__button.text-center
+				+button('Показать еще 38 квартир', '#', 'btn-add')(class="section-btn")
+
+	section.section-map
+		.container
+			.headline-bold.section-map--title Расположение
+			#map
+				iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A88af189bfbfa54ba0c0d87a73dcb4251c7279d8c8907e9b03d6502a0f7e32370&amp;source=constructor" width="100%" height="420" frameborder="0")
+			.section-bottom.section-map--bottom.d-flex
+				.badge-group.d-flex
+					.badge ЦАО
+					.badge Замоскворечье
+				.link-group.d-flex
+					a(href="#").simple-link Садовническая набережная,&nbsp;5&nbsp;стр.1
+				.text-info.d-flex
+					+text-and-icon('icon-metro','Новокузнеcкая','5 минут','пешком, ')
+					+text-and-icon('','Третьяковская','7 минут','пешком')
+
+	section.hc-cards
+		.container
+			.section-top.d-flex.section-top--hc-cards
+				.section-top-title.headline-bold Похожие ЖК
+				.section-top-filters
+
+					a(href='#').link-filter.simple-link.link-filter--active по&nbsp;цене
+					a(href='#').link-filter.simple-link району
+					a(href='#').link-filter.simple-link станциям&nbsp;метро
+			.row
+				.col-md-6.col-lg-6.col-xl-3
+					+hc-card('card-photo1', 'Садовые кварталы', 'ЦАО, Хамовники, улица Усачева','2 квартал 2019','390 543','Новостройка' )
+				.col-md-6.col-lg-6.col-xl-3
+					+hc-card('card-photo2', 'Дом на Красина', 'ЦАО, Пресня, переулок Красина, ','Дом сдан во 2 квартале 2014','382 800')
+				.col-md-6.col-lg-6.col-xl-3
+					+hc-card('card-photo3', 'Нескучный Home&SPA', 'ЮАО, 5-й Донской проезд','1 квартал 2020','371 050','Новостройка' )
+				.col-md-6.col-lg-6.col-xl-3
+					+hc-card('card-photo4', 'Корона Эйр', 'ЮЗАО, проспект Вернадского, 92к1 ','Дом сдан в 1 квартале 2006','384 500')
+	+page-footer

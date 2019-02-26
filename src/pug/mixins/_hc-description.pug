@@ -1,0 +1,57 @@
+//-миксин для описания ЖК
+mixin hc-description(objectArgument)
+	.hc-description
+		.hc-description__top
+			.row
+				.col-md-5.col-lg-5.pl-0.pr-0
+					.hc-description-column.hc-description-column--area
+						.hc-description-item
+							.headline-bold #{objectArgument.area1}&ndash;#{objectArgument.area2}  кв.м
+							.text-body площадь квартир
+						.hc-description-item
+							.headline-bold #{objectArgument.floor}
+							.text-body этажей
+				.col-5.order-2.col-md-2.offset-md-1.col-lg-3.offset-lg-0.order-md-1.pl-0.pr-0
+					.hc-description-item.hc-description-item--align
+						.text-box
+							.headline-bold #{objectArgument.ceilingHeight} м
+							.text-body потолки
+				.col-7.order-1.col-md-4.order-md-2.col-lg-4.pl-0
+					.hc-description-item.hc-description-item--btn
+						+big-badge(objectArgument.objItem )
+		.hc-description__center
+			.row
+				.col-md-8.col-lg-8.pl-0
+					.order-1.hc-description__center-item.text-body--pr
+						.headline-body Парковка:
+						.text-body !{objectArgument.parkingDescription}
+
+
+				.order-3.order-md-2.col-md-4.col-lg-2.offset-lg-2.col-hl-4.offset-hl-0.pr-0.col-pl-0
+					.hc-description__center-item.headline-body--pl
+						.headline-body Готовность:
+						.text-body #{objectArgument.readinessLevel}
+
+				.order-2.order-md-3.col-md-8.col-lg-8.pl-0
+					.hc-description__center-item.text-body--pr
+						.headline-body Инфрастуктура:
+						.text-body !{objectArgument.infrastructure}
+
+				.order-6.col-md-4.col-lg-2.offset-lg-2.col-hl-4.offset-hl-0.pr-0.col-pl-0
+
+					.hc-description__center-item.headline-body--pl
+						.headline-body Эксплуатация:
+							.text-body #{objectArgument.operationPrice}
+		.hc-description__footer
+			.hc-description__footer-content
+				.text-body !{objectArgument.hauseDescription}
+
+				.headline-body Квартиры
+				.text-body.description__visible-text !{objectArgument.apartmentDescription}
+					.description__hidden-text  #{objectArgument.hiddenText}
+
+			.hc-description__footer-links
+				.footer-links-item
+					a(href="#")#openHiddenDescrip.simple-link Подробнее о ЖК
+				.footer-links-item
+					a(href="#").simple-link Сообщить о неточности описания

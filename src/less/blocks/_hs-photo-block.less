@@ -1,5 +1,6 @@
 .hc-photo-wrapper {
 	display: none;
+	margin-bottom: 40px;
 	@media(min-width: 768px){display: block;}
 }
 .hc-photo-mobile{
@@ -11,15 +12,11 @@
 }
 
 .switch-block__main-photo {
-	// min-height: 344px;
 	margin-left: auto;
 	margin-right: auto;
 	overflow:hidden;
 	position:relative;
 	margin-bottom: 8px;
-	// width: 344px;
-	// height: 344px;
-
 
 	img {
 		margin: auto;
@@ -29,35 +26,12 @@
 		position:absolute;
 		top:0; bottom:0;
 		left:0; right:0;
-		// @media (min-width: 1200px){
-		// 	width: 540px;
-		// 	height: 325px;
-		// }
 	}
 
 	@media (min-width: 768px) {
-		// min-height: 360px;
 		width: 630px;
 		height: 425px;
 		margin-bottom: 10px;
-	}
-	@media (min-width: 992px){
-		// min-height: 524px;
-		width: 450px;
-		height: 305px;
-		// margin-bottom: 0;
-	}
-		@media (min-width: 1200px){
-		// min-height: 524px;
-		width: 540px;
-		height: 360px;
-		// margin-bottom: 0;
-	}
-			@media (min-width: 1400px){
-		// min-height: 524px;
-		width: 630px;;
-		height: 425px;
-		// margin-bottom: 0;
 	}
 }
 
@@ -67,64 +41,43 @@
 	justify-content: space-between;
 	cursor: pointer;
 		@media (min-width: 768px) {
-		// min-height: 524px;
 		display: flex;
 		width: 630px;
 		margin-left: auto;
 		margin-right: auto;
-		// height: 424px;
-		// margin-bottom: 0;
-
-	}
-		@media (min-width: 992px) {
-			width: 450px;
-		}
-		@media (min-width: 1200px){
-		// min-height: 524px;
-		width: 540px;
-
-		// margin-bottom: 0;
-	}
-		@media(min-width: 1440px) {
-		// min-height: 524px;
-		width: 630px;
-		// height: 424px;
-		// margin-bottom: 0;
 	}
 }
 
 .thumbnails__image {
-	// border:1px solid red;
-	// margin-right: 8px;
+
 	width: 80px;
 	height: 70px;
 	overflow:hidden;
 	position:relative;
 	border-radius: 8px;
-
-	@media(min-width: 768px){
-		width: 80px;
-		// height: 70px;
-	}
-
-	@media(min-width: 992px) {
-		width: 60px;
-		height: 50px;
-		// max-width: 100%;
-	}
-	@media(min-width: 1200px) {
-		width: 70px;
-		height: 60px;
-		// max-width: 100%;
-	}
-	@media(min-width: 1440px) {
-		width: 80px;
-		height: 70px;
-		// max-width: 100%;
-	}
 	&:last-child {
 		margin-right: 0;
-		@media @tablet {margin-right: 0;}
+		&:after{
+			display: flex;
+			position: absolute;
+			align-items: center;
+			padding: 25px;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			z-index: 2;
+			// background-color: rgba(0, 0, 0, .5);
+			content: '+9';
+			font-size: 20px;
+			line-height: 1.25;
+			font-weight: 700;
+			color: @white; 
+		}
+
+		@media (min-width: 768px) {
+			margin-right: 0;
+		}
 	}
 
 	img {
