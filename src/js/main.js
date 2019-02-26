@@ -86,8 +86,11 @@ $(document).ready(function() {
 	//-переключаем класс у ссылки-фильтра (по цене)
 	$('.link-filter').on('click', function(e){
 		e.preventDefault();
-		$(this).toggleClass('link-filter--active');
-		$(this).siblings('.link-filter--active').removeClass('link-filter--active');
+		if($(this).attr('data-pill','off')){
+			$(this).addClass('link-filter--active');
+			$(this).attr('data-pill','active');
+			$(this).siblings('.link-filter--active').removeClass('link-filter--active');
+		}
 
 	});
 
