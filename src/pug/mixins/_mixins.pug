@@ -56,8 +56,22 @@ mixin goodsCart (img, text, price)
 
 
 //-Hause Complex
-//- Миксин ссылок
 
+//-заголовок секции
+mixin section-title(title)
+	.section-top-title.headline-bold&attributes(attributes) !{title}
+
+//-строка с заголовоком секции , с фильтрами ...
+mixin section-top(sectionTitle,filterToggles,sectionSubtitle,addClass )
+	.section-top.d-flex(class=" "+ addClass)&attributes(attributes)
+		.section-top-title.headline-bold !{sectionTitle}
+		if sectionSubtitle
+			.section-top-subtitle.headline-bold.headline-bold--grey !{sectionSubtitle}
+		//-фильтры
+		if filterToggles
+			+toggle-block(filterToggles)
+
+//- Миксин ссылок
 mixin link(linkText,linkIcon,linkClass)
 	a(href='#').link-block&attributes(attributes)
 		if linkIcon

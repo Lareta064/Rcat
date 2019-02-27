@@ -50,14 +50,7 @@ block content
 				+button('Позвонить застройщику', '#','btn-add section-btn')
 	section.apartment-database
 		.container
-			.section-top.d-flex.section-top--apartment
-				.section-top-title.headline-bold 48 предложений
-				.section-top-subtitle.headline-bold.headline-bold--grey от 386 460 руб./кв.м
-				.filter-toggle.filter-toggle--mobile.filter-toggle--border.d-flex
-					.filter-toggle__text Отсортировано по
-					.filter-toggle-item.filter-toggle-item--left.filter-active цене
-					.filter-toggle-item.filter-toggle-item--right площади
-
+			+section-top('48&nbsp;предложений', {modif:'border',title:'Отсортировано по',items:[{name:'цене',class:'filter-active filter-toggle-item--left'},{name:'площади',class:'filter-toggle-item--right'}]}, 'от&nbsp;386&nbsp;460&nbsp;руб./кв.м', 'section-top--apartment')
 
 			.apartment-table
 				+table-row('1', '#', '54,5', '4','отделка', 'table-photo', '320 200', '23 200 500', '340 200', '+7 929 222 5555' )
@@ -72,7 +65,7 @@ block content
 
 	section.section-map
 		.container
-			.headline-bold.section-map--title Расположение
+			+section-top('Расположение')
 			#map
 				iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A88af189bfbfa54ba0c0d87a73dcb4251c7279d8c8907e9b03d6502a0f7e32370&amp;source=constructor" width="100%" height="420" frameborder="0")
 			.section-bottom.section-map--bottom.d-flex
@@ -89,13 +82,9 @@ block content
 		.container
 			.section-top.d-flex.section-top--hc-cards
 				.section-top-title.headline-bold Похожие ЖК
+				//-фильтры
+				+toggle-block({title:'', items:[{name:'по цене',class:'filter-active'},{name:'по району',class:''},{name:'по станциям метро',class:'filter-active'}]})
 
-
-				.filter-toggle.d-flex
-					//- .filter-toggle__text Отсортировано по
-					.filter-toggle-item.filter-active по цене
-					.filter-toggle-item району
-					.filter-toggle-item станциям метро
 			.row
 				.col-md-6.col-lg-6.col-xl-3
 					+hc-card('card-photo1', 'Садовые кварталы', 'ЦАО, Хамовники, улица Усачева','2 квартал 2019','390 543','Новостройка' )
