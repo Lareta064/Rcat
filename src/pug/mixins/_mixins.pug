@@ -110,6 +110,13 @@ mixin text-and-icon(iconFirst,text1,text2, text3,iconLast)
 			span.last-icon
 				+#{iconLast}
 
+mixin dropdown-double-item(iconName, spanText1,spanText2)
+	a(href='#').dropdown-double-item.d-flex
+		+#{iconName}
+		.dropdown-double-item__text
+			span #{spanText1}
+			span.short-span #{spanText2}
+
 //-миксин для таблицы квартир
 mixin table-row(roomsNum, roomsLink, roomsArea, roomsFloor,roomsRepair, roomsImg, priceUsd, priceRub, priceMeter, phoneNumber, priceDown )
 	.apartment-item

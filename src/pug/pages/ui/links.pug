@@ -36,8 +36,8 @@ block content
 					a(href='#').link-filter.simple-link по цене
 					a(href='#').link-filter.simple-link.link-filter--active по цене
 			.section-ui
-				a(href='#').hidden-dropdawn-item.d-flex
-					+icon-heart
-					.hidden-dropdawn-item__text
-						span Следить за объявлениями
-						span.short-span в этом ЖК
+
+				+dropdown-double-item('icon-notify', 'Следить за объявлениями','в этом ЖК')
+			.section-ui
+				pre.
+					+dropdown-double-item('icon-notify', 'Следить за объявлениями','в этом ЖК')
