@@ -10,31 +10,31 @@ block content
 			h1 Панель опций
 		.section-ui
 			.option-panel.option-panel--desktop
-				+link('Следить за объявлениями в этом ЖК','icon-notify')
-				+link('В избранное','icon-heart')
-				+link('Отправить эл.почтой','','line')
-				+link('Скачать ПДФ','', 'line')
-				+link('Добавить заметку','icon-add')
-				+link('Пожаловаться','icon-question').order-item
+				+link('Следить за объявлениями в этом ЖК','','icon-notify')
+				+link('В избранное','','icon-heart')
+				+link('Отправить эл.почтой','','','line')
+				+link('Скачать ПДФ','','', 'line')
+				+link('Добавить заметку','','icon-add')
+				+link('Пожаловаться','','icon-question').order-item
 
 			.option-panel.option-panel--mobile
-				+link('В избранное','icon-heart')
-				+link('Еще','arrow-down').order-item#showOptions
+				+link('В избранное','','icon-heart')
+				+link('Еще','','arrow-down').order-item#showOptions
 			.dropdown#dropdown--option(data-control= 'hidden')
 				.dropdown-item
 					+dropdown-double-item('icon-notify', 'Следить за объявлениями','в этом ЖК')
 				.dropdown-item
-					+link('Добавить заметку','icon-add')
+					+link('Добавить заметку','','icon-add')
 				.dropdown-item
-					+link('Отправить эл.почтой','','line')(class="link-block--pl")
+					+link('Отправить эл.почтой','','','line')(class="link-block--pl")
 				.dropdown-item
-					+link('Скачать ПДФ','', 'line')(class="link-block--pl")
+					+link('Скачать ПДФ','','', 'line')(class="link-block--pl")
 				.dropdown-item
-					+link('Отправить в Ватсап','', 'line')(class="link-block--pl")
+					+link('Отправить в Ватсап','','', 'line')(class="link-block--pl")
 				.dropdown-item
-					+link('Поделиться в Телеграме','', 'line')(class="link-block--pl")
+					+link('Поделиться в Телеграме','','', 'line')(class="link-block--pl")
 				.dropdown-item
-					+link('Пожаловаться','icon-question').order-item
+					+link('Пожаловаться','','icon-question').order-item
 		.section-ui
 			pre.
 				.option-panel.option-panel--desktop

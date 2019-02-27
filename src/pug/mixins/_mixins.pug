@@ -72,14 +72,20 @@ mixin section-top(sectionTitle,filterToggles,sectionSubtitle,addClass )
 			+toggle-block(filterToggles)
 
 //- Миксин ссылок
-mixin link(linkText,linkIcon,linkClass)
-	a(href='#').link-block&attributes(attributes)
+mixin link(linkText,href, linkIcon,linkClass)
+	a(href=' '+ href).link-block&attributes(attributes)
 		if linkIcon
 			.link-block__icon
 				+#{linkIcon}
-			.simple-link(class=' simple-link--'+ linkClass) #{linkText}
+			if linkClass
+				.simple-link(class=' '+ linkClass) #{linkText}
+			else
+				.simple-link #{linkText}
 		else
-			.simple-link(class=' simple-link--'+ linkClass) #{linkText}
+			if linkClass
+				.simple-link(class=' '+ linkClass) #{linkText}
+			else
+				.simple-link #{linkText}
 
 //- Миксин для одного бейджа
 mixin badge(...items)
@@ -122,6 +128,18 @@ mixin text-and-icon(iconFirst,text1,text2, text3,iconLast)
 		if iconLast
 			span.last-icon
 				+#{iconLast}
+//-миксин для метро
+mixin metro-station(text1,text2, text3)
+	.text-group.d-flex&attributes(attributes)
+		span
+			+icon-metro
+		span.text-body.first-text #{text1},
+		span.text-body.middle-text.text-body--grey #{text2}
+		span.text-body.last-text.text-body--grey #{text3}
+
+		span.last-icon
+			+icon-man
+
 
 mixin dropdown-double-item(iconName, spanText1,spanText2)
 	a(href='#').dropdown-double-item.d-flex&attributes(attributes)

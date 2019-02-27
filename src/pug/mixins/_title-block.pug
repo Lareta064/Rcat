@@ -4,17 +4,16 @@ mixin title-block(titleBlockData)
 			.main-title-block.d-flex
 				.title-1 !{titleBlockData.mainTitle}
 				.subtitle
-					span.span-title.text-body #{titleBlockData.subtitle.subtitleName}
-					span.span-details.text-body #{titleBlockData.subtitle.subtitleDate}
-				.price-badge.headline-bold !{titleBlockData.subtitle.subtitlePrice}
+					span.span-title.text-body #{titleBlockData.subtitleName}
+					span.span-details.text-body #{titleBlockData.subtitleDate}
+				.price-badge.headline-bold !{titleBlockData.subtitlePrice}
 
 			.main-badge-block.d-flex
 				+badge-group(titleBlockData.badgesItems)
 
-		//- 		.link-group
-		//- 			a(href="#").simple-link.link-hidden ЦАО,
-		//- 			a(href="#").simple-link.link-hidden Замоскворечье,
-		//- 			a(href="#").simple-link Садовническая набережная, 5 стр.
+				.link-group
+					each item in titleBlockData.linkItems
+						+link(item.linkText, item.href, item.linkIcon,item.linkClass)
 
 		//- 		.text-info.text-group.d-flex
 		//- 			+text-and-icon('icon-metro','Новокузнеcкая','5 минут','пешком','icon-man')

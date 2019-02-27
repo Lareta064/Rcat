@@ -3,11 +3,12 @@ extends ../../layouts/ui-layout/ui-layout.pug
 block variables
 	- var title = 'Кнопки - UI-kit и HTML фреймворк - Документация';
 	- var pageClass = 'body--dashboard';
+	- var titleBlock = {mainTitle:'Balchug',subtitleName:'AAAAA',subtitleDate:'20/12/2017', subtitlePrice:'23 042 504 руб', badgesItems:['ЦАО','Замоскворечье'], linkItems:[{linkText:'ЦАО',href:'#',linkIcon:'',linkClass:'link-hidden'}, {linkText:'Замоскворечье',href:'#',linkIcon:'',linkClass:'link-hidden'},{linkText:'Садовническая набережная, 5 стр.',href:'#'}]};
 
 block content
 	.container.container--left
 		.section-ui
-			.title Кнопки
+			.title Кнопки Садовническая набережная, 5 стр.
 
 			p Кнопка Добавить квартиру
 			+button('Добавить квартиру', '#', 'btn-add')
@@ -23,8 +24,4 @@ block content
 
 
 		.section-ui
-			a(href="#").mobile-button
-				img(src="../img/icons/plus.png", alt="")
-		pre.
-			+mobile-btn('plus')
-
+			+title-block(titleBlock)
