@@ -96,6 +96,18 @@ $(document).ready(function() {
 
 	});
 
+	//-переключаем класс у ссылки-фильтра (по цене)
+	$('.filter-toggle-item').on('click', function(){
+
+		if($(this).attr('data-pill','off')){
+			$(this).addClass('filter-active');
+			$(this).attr('data-pill','active');
+			$(this).siblings('.filter-toggle-item').removeClass('filter-active');
+		}
+
+	});
+
+
 
 		//-выделить послеюнюю строку описания
 		$('.description__visible-text').text(function(index, text){
@@ -147,4 +159,3 @@ $(document).ready(function() {
 });
 
 	//-Text Fade Out / Read More Link
-	

@@ -1,0 +1,21 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Переключатель фильтра';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.section-ui
+			.title Переключатель фильтра
+		.section-ui
+			.filter-toggle.filter-toggle--mobile.filter-toggle--border.d-flex
+				.filter-toggle__text Отсортировано по
+				.filter-toggle-item.filter-toggle-item--left.filter-active цене
+				.filter-toggle-item.filter-toggle-item--right площади
+		.section-ui
+			.filter-toggle.d-flex
+				.filter-toggle__text Отсортировано по
+				.filter-toggle-item.filter-active цене
+				.filter-toggle-item площади
+				.filter-toggle-item метро

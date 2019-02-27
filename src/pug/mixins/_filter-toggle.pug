@@ -1,0 +1,17 @@
+mixin toggle-item(itemName, itemClass)
+	.filter-toggle-item(class=" "+ itemClass) !{itemName}
+
+mixin toggle-block(blockData)
+	.filter-toggle.filter-toggle--border.d-flex
+		.filter-toggle__text !{blockData.name}
+			each item in blockData.items
+				+toggle-item(item)
+//- mixin toggle-item(toggleItems)
+//- 	each item in toggleItems
+//- 		.filter-toggle-item(class=" "+ toggleItems.addModif) !{toggleItems.name}
+
+//- mixin filter-toggle(filterToggleTitle,filterToggleItems)
+//- 	.filter-toggle.filter-toggle--border.d-flex
+//- 		.filter-toggle__text !{filterToggleTitle}
+//- 		each item in filterToggleItems
+//- 			+toggle-item(...item)
