@@ -53,10 +53,10 @@ block content
 			.section-top.d-flex.section-top--apartment
 				.section-top-title.headline-bold 48 предложений
 				.section-top-subtitle.headline-bold.headline-bold--grey от 386 460 руб./кв.м
-				.section-top-filters.section-top-filters--border
-					span.text-body.text-body--title Отсортировано&nbsp;по
-					a(href='#').link-filter.link-filter--left.simple-link.link-filter--active по&nbsp;цене
-					a(href='#').link-filter.link-filter--right.simple-link по&nbsp;площади
+				.filter-toggle.filter-toggle--mobile.filter-toggle--border.d-flex
+					.filter-toggle__text Отсортировано по
+					.filter-toggle-item.filter-toggle-item--left.filter-active цене
+					.filter-toggle-item.filter-toggle-item--right площади
 
 
 			.apartment-table
@@ -89,11 +89,13 @@ block content
 		.container
 			.section-top.d-flex.section-top--hc-cards
 				.section-top-title.headline-bold Похожие ЖК
-				.section-top-filters
 
-					a(href='#').link-filter.simple-link.link-filter--active по&nbsp;цене
-					a(href='#').link-filter.simple-link району
-					a(href='#').link-filter.simple-link станциям&nbsp;метро
+
+				.filter-toggle.d-flex
+					//- .filter-toggle__text Отсортировано по
+					.filter-toggle-item.filter-active по цене
+					.filter-toggle-item району
+					.filter-toggle-item станциям метро
 			.row
 				.col-md-6.col-lg-6.col-xl-3
 					+hc-card('card-photo1', 'Садовые кварталы', 'ЦАО, Хамовники, улица Усачева','2 квартал 2019','390 543','Новостройка' )
