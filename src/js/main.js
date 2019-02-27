@@ -156,6 +156,29 @@ $(document).ready(function() {
 			arrows: false,
 			variableWidth: true
 		});
+
+
+		//-Retina//
+
+		(function(){
+			if( document.cookie.indexOf('device_pixel_ratio') == -1
+				&& 'devicePixelRatio' in window
+				&& window.devicePixelRatio == 2 ){
+
+				document.cookie = 'device_pixel_ratio=' + window.devicePixelRatio + ';';
+			window.location.reload();
+		}
+	})();
+
+		//-Text Fade Out / Read More Link
 });
 
-	//-Text Fade Out / Read More Link
+
+
+
+	
+
+
+
+
+
