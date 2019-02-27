@@ -14,17 +14,21 @@ $(document).ready(function() {
 
 	//-красим иконку сердечко  и меняем слово Избранное
 
-	$('.icon-heart').on('click', function(){
-		if($(this).children('svg').attr('data-prefix') == 'far'){
-			$(this).children('svg').attr('data-prefix','fas');
-			$(this).parents('.link-block__icon').siblings('.simple-link').text('В избранном');
+	$('.add-favorite').on('click', function(){
 
+
+		if($(this).children('.link-block__icon').children('.icon-heart').children('svg').attr('data-prefix') == 'far'){
+			// $(this).children('svg').attr('data-prefix','fas');
+			// $(this).children('.simple-link').text('В избранном');
+			// console.log($(this).children('.link-block__icon').children());
+			$(this).children('.link-block__icon').children('.icon-heart').children('svg').attr('data-prefix','fas');
+			$(this).children('.simple-link').text('В избранном');
 		}
 		else {
-			$(this).children('svg').attr('data-prefix','far');
-			$(this).parents('.link-block__icon').siblings('.simple-link').text('В избранноe');
+			$(this).children('.link-block__icon').children('.icon-heart').children('svg').attr('data-prefix','far');
+			$(this).children('.simple-link').text('В избранноe');
 		}
-	})
+	});
 
 	// Изменение фото в блоке Фото ЖК
 	$('.thumbnails__image').on('click',function(){
@@ -86,15 +90,15 @@ $(document).ready(function() {
 	}
 
 	//-переключаем класс у ссылки-фильтра (по цене)
-	$('.link-filter').on('click', function(e){
-		e.preventDefault();
-		if($(this).attr('data-pill','off')){
-			$(this).addClass('link-filter--active');
-			$(this).attr('data-pill','active');
-			$(this).siblings('.link-filter--active').removeClass('link-filter--active');
-		}
+	// $('.link-filter').on('click', function(e){
+	// 	e.preventDefault();
+	// 	if($(this).attr('data-pill','off')){
+	// 		$(this).addClass('link-filter--active');
+	// 		$(this).attr('data-pill','active');
+	// 		$(this).siblings('.link-filter--active').removeClass('link-filter--active');
+	// 	}
 
-	});
+	// });
 
 	//-переключаем класс у ссылки-фильтра (по цене)
 	$('.filter-toggle-item').on('click', function(){

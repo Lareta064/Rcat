@@ -95,7 +95,6 @@ mixin big-badge(objItem)
 mixin mobile-btn(btnImg)
 	a(href="#").mobile-button&attributes(attributes)
 		+plus
-		//- img(src="../img/icons/"+ btnImg +".png", alt="")
 
 //-метро+текст+человечек
 mixin text-and-icon(iconFirst,text1,text2, text3,iconLast)
@@ -111,7 +110,7 @@ mixin text-and-icon(iconFirst,text1,text2, text3,iconLast)
 				+#{iconLast}
 
 mixin dropdown-double-item(iconName, spanText1,spanText2)
-	a(href='#').dropdown-double-item.d-flex
+	a(href='#').dropdown-double-item.d-flex&attributes(attributes)
 		+#{iconName}
 		.dropdown-double-item__text
 			span #{spanText1}

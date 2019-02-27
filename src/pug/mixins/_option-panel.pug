@@ -1,18 +1,18 @@
 mixin option-panel
 	.option-panel.option-panel--desktop
 		+link('Следить за объявлениями в этом ЖК','icon-notify')
-		+link('В избранное','icon-heart','fix-width')
+		+link('В избранное','icon-heart',' fix-width')(class=" add-favorite ")
 		+link('Отправить эл.почтой','','line')
 		+link('Скачать ПДФ','', 'line')
 		+link('Добавить заметку','icon-add')
 		+link('Пожаловаться','icon-question').order-item
 
 	.option-panel.option-panel--mobile
-		+link('В избранное','icon-heart')
+		+link('В избранное','icon-heart')(class=" add-favorite ")
 		+link('Еще','arrow-down').order-item#showOptions
 	.dropdown#dropdown--option(data-control= 'hidden')
 		.dropdown-item
-			+link('Следить за объявлениями в этом ЖК','icon-notify')
+			+dropdown-double-item('icon-notify', 'Следить за объявлениями','в этом ЖК')
 		.dropdown-item
 			+link('Добавить заметку','icon-add')
 		.dropdown-item
