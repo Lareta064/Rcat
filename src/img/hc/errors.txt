@@ -1,7 +1,0 @@
-[2019-02-16 14:07:36] layer "+7 985 356 ...": Expected Either a default asset specification or a layer asset specification but "+" found.
-[2019-02-16 14:07:36] layer "+7 985 356 ...": Expected Either a default asset specification or a layer asset specification but "+" found.
-[2019-02-16 14:07:36] layer "+7 980 128 ...": Expected Either a default asset specification or a layer asset specification but "+" found.
-[2019-02-16 14:07:36] layer "+7 980 128 ...": Expected Either a default asset specification or a layer asset specification but "+" found.
-[2019-02-16 14:07:36] layer "+7 985 356 ...": Expected Either a default asset specification or a layer asset specification but "+" found.
-[2019-02-16 14:07:36] layer "+ Добавить квартиру": Expected Either a default asset specification or a layer asset specification but "+" found.
-[2019-02-16 14:07:36] layer "+ Добавить квартиру": Expected Either a default asset specification or a layer asset specification but "+" found.
