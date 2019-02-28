@@ -14,12 +14,9 @@ $(document).ready(function() {
 
 	//-красим иконку сердечко  и меняем слово Избранное
 
-	$('.add-favorite').on('click', function(){
-
+	$('.add-favorite').on('click', function(e){
+		e.preventDefault();
 		if($(this).children('.link-block__icon').children('.icon-heart').children('svg').attr('data-prefix') == 'far'){
-			// $(this).children('svg').attr('data-prefix','fas');
-			// $(this).children('.simple-link').text('В избранном');
-			// console.log($(this).children('.link-block__icon').children());
 			$(this).children('.link-block__icon').children('.icon-heart').children('svg').attr('data-prefix','fas');
 			$(this).children('.simple-link').text('В избранном');
 		}
