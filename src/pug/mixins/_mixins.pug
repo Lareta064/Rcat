@@ -93,10 +93,10 @@ mixin badge(...items)
 		.badge= item
 
 //- Миксин для группы бейджиков
-mixin badge-group(...badgesItems)
-	.badge-group
-		each item in badgesItems
-			+badge(...item)
+mixin badge-group(badges)
+	.badge-group.d-flex
+		each item in badges
+			.badge= item
 
 
 //-большой голубой бейдж

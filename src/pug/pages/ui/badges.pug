@@ -9,10 +9,17 @@ block content
 		.section-ui
 			h3 Бейджи
 		.section-ui
-			.badge ЦАО
+			+badge('ЦАО')
 		.section-ui
 			pre.
-				.badge ЦАО
+				+badge('ЦАО')
+		.section-ui
+			h3 Группа бейджиков
+		.section-ui
+			+badge-group(['ЦАО','Замоскворечье'])
+		.section-ui
+			pre.
+				+badge-group(['ЦАО','Замоскворечье'])
 		.section-ui
 			.badge.badge--dark Новостройка
 		.section-ui
@@ -20,6 +27,7 @@ block content
 				.badge.badge--dark Новостройка
 		.section-ui
 			+bag-badge('48', '116' )
+			+badge-group(['ЦАО','Замоскворечье'])
 		.section-ui
 			pre.
 				+bag-badge('48', '116' )
