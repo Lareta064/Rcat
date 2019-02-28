@@ -111,16 +111,6 @@ $(document).ready(function() {
 
 	});
 
-
-
-		//-выделить послеюнюю строку описания
-		$('.description__visible-text').text(function(index, text){
-
-                text = text.substr(278,350);
-                $('.description__visible-text')
-
-		});
-
 	//-показать/скрыть текст описание ЖК
 
 	$('.description__hidden-text').hide();
@@ -132,10 +122,12 @@ $(document).ready(function() {
 					$('.description__hidden-text').hide(800);
 					$(this).removeClass('hideText');
 					$(this).text('Подробнее о ЖК');
+					$('.description__visible-text').addClass('fadeOut');
 				} else {
 					$('.description__hidden-text').show(800);
 					$(this).addClass('hideText');
 					$(this).text('Скрыть описание');
+					$('.description__visible-text').removeClass('fadeOut');
 				}
 			}
 
@@ -164,17 +156,17 @@ $(document).ready(function() {
 
 		//-Retina//
 
-		(function(){
-			if( document.cookie.indexOf('device_pixel_ratio') == -1
-				&& 'devicePixelRatio' in window
-				&& window.devicePixelRatio == 2 ){
+	// 	(function(){
+	// 		if( document.cookie.indexOf('device_pixel_ratio') == -1
+	// 			&& 'devicePixelRatio' in window
+	// 			&& window.devicePixelRatio == 2 ){
 
-				document.cookie = 'device_pixel_ratio=' + window.devicePixelRatio + ';';
-			window.location.reload();
-		}
-	})();
+	// 			document.cookie = 'device_pixel_ratio=' + window.devicePixelRatio + ';';
+	// 		window.location.reload();
+	// 	}
+	// })();
 
-		//-Text Fade Out / Read More Link
+		
 });
 
 

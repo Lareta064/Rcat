@@ -7,12 +7,19 @@ block variables
 block content
 	.container.container--left
 		.section-ui
-			h1 Бейджи
+			h3 Бейджи
 		.section-ui
-			.badge ЦАО
+			+badge('ЦАО')
 		.section-ui
 			pre.
-				.badge ЦАО
+				+badge('ЦАО')
+		.section-ui
+			h3 Группа бейджиков
+		.section-ui
+			+badge-group(['ЦАО','Замоскворечье'])
+		.section-ui
+			pre.
+				+badge-group(['ЦАО','Замоскворечье'])
 		.section-ui
 			.badge.badge--dark Новостройка
 		.section-ui
@@ -20,6 +27,15 @@ block content
 				.badge.badge--dark Новостройка
 		.section-ui
 			+bag-badge('48', '116' )
+			+badge-group(['ЦАО','Замоскворечье'])
 		.section-ui
 			pre.
 				+bag-badge('48', '116' )
+
+		.section-ui
+			h3 миксин станция метро
+		.section-ui
+			+metro-station('icon-metro','Новокузнецcкая','&nbsp;5 минут','icon-man')
+		.section-ui
+			pre.
+				+metro-station('icon-metro','Новокузнецcкая','&nbsp;5 минут','icon-man')
