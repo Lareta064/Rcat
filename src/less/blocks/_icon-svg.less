@@ -40,8 +40,36 @@ i{
 		fill: @lightGrey;
 	}
 }
+.icon-favorite {
+	svg{
+		width: 23px;
+		height: 23px;
+	}
+	path {fill:#b3b3b3;}
+}
+.icon-favorite--active path{
+	fill: red;
+}
+.icon-favorite--small{
+	padding-bottom: 4px;
+	svg{
+		width: 19px;
+		height: 19px;
+	}
+}
+
+.header__icon-group{
+	.icon-favorite:hover{
+		path{fill: #5696d1;}
+
+	}
+}
 //-search
 .icon-search{
+	svg{
+		width: 23px;
+		height: 23px;
+	}
 	path{fill: @lightGrey;}
 }
 .arrow-down svg{
@@ -50,7 +78,16 @@ i{
 }
 .icon-notify{
 	svg{
-		width: 19px;
-		height: 19px;
+		width: 20px;
+		height: 23px;
 	}
+}
+
+
+.icon-dashboard{
+	svg{
+		width: 23px;
+		height: 23px;
+	}
+
 }
