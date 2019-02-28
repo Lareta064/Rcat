@@ -70,20 +70,17 @@
 		flex-direction: row;
 		align-items: center;
 		flex-wrap: wrap;
-		@media(min-width: 1350px){
-
+		.link-block{
+			padding-right: 0;
+			@media(min-width: 768px){padding-right: 24px;}
 		}
-
 		.badge-group{
 			display: none;
 			align-items: center;
-			@media(min-width: 1350px){
+			@media(min-width: 768px){
 				display: flex;
 			}
-			.badge{
-
-				margin-right: 12px;
-			}
+			.badge{margin-right: 12px;}
 		}
 
 		.link-group{
@@ -98,7 +95,7 @@
 			.link-hidden{
 				display: inline-block;
 				padding-right: 7px;
-				@media(min-width: 1350px){
+				@media(min-width: 768px){
 				display: none;
 			}
 			}

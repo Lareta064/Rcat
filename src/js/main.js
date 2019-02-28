@@ -16,7 +16,6 @@ $(document).ready(function() {
 
 	$('.add-favorite').on('click', function(){
 
-
 		if($(this).children('.link-block__icon').children('.icon-heart').children('svg').attr('data-prefix') == 'far'){
 			// $(this).children('svg').attr('data-prefix','fas');
 			// $(this).children('.simple-link').text('В избранном');
@@ -29,6 +28,21 @@ $(document).ready(function() {
 			$(this).children('.simple-link').text('В избранноe');
 		}
 	});
+	//-красим иконку сердечко  в строке таблицы квартир
+	var tableHeartIcon = $('.table-row--group').children('.icon-heart');
+		tableHeartIcon.on('click', function(){
+			console.log(888);
+		if($(this).children('.fa-heart').attr('data-prefix') == 'far'){
+			 $(this).children('.fa-heart').attr('data-prefix','fas');
+
+		}
+		else {
+			$(this).children('.fa-heart').attr('data-prefix','far');
+
+		}
+
+	});
+
 
 	// Изменение фото в блоке Фото ЖК
 	$('.thumbnails__image').on('click',function(){
@@ -166,13 +180,13 @@ $(document).ready(function() {
 	// 	}
 	// })();
 
-		
+
 });
 
 
 
 
-	
+
 
 
 

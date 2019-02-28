@@ -94,7 +94,7 @@ mixin badge(...items)
 
 //- Миксин для группы бейджиков
 mixin badge-group(badges)
-	.badge-group.d-flex
+	.badge-group
 		each item in badges
 			.badge= item
 
@@ -194,7 +194,7 @@ mixin table-row(roomsNum, roomsLink, roomsArea, roomsFloor,roomsRepair, roomsImg
 			.col-md-2
 				.d-flex.column-contacts
 					a(href="#").contact-phone #{phoneNumber}
-					.icon-group
+					.icon-group(class=" table-row--group")
 						a(href="#")
 							+icon-mail
 						+icon-heart('red')
