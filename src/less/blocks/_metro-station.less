@@ -1,0 +1,30 @@
+.metro-station{
+	align-items: center;
+	.icon-metro{
+		padding-bottom: 3px;
+		margin-right: 7px;
+	}
+	// .icon-metro{padding-right: 5px;}
+	.middle-text{
+		padding-right: 5px;
+		color: @grey;
+	}
+	.last-text{
+		display: none;
+		padding-right: 5px;
+		color: @grey;
+		@media(min-width: 768px){
+			display: block;
+		}
+
+	}
+}
+.last-icon{
+	display: block;
+	@media(min-width: 768px){display: none;}
+
+	margin-top: 4px;
+	@media(min-width: 768px){align-items: flex-end;}
+	@media(min-width: 1350px){margin-top: 0px;}
+
+}
