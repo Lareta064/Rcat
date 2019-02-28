@@ -1,0 +1,40 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Блоки, создаваемые миксином';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.section-ui
+			h2 Блоки, создаваемые миксином.
+		.section-ui
+			h3(style="display:inline-block; border-bottom: 1px solid #000;") Заголовок секции
+		.section-ui
+			+section-title('Расположение')
+		.section-ui
+			pre.
+				+section-title('Расположение')
+		.section-ui
+			h3(style="display:inline-block; border-bottom: 1px solid #000;") Заголовок секции c фильтрами
+		.section-ui
+			+section-top('48&nbsp;предложений', {modif:'border',title:'Отсортировано по',items:[{name:'цене',class:'filter-active filter-toggle-item--left'},{name:'площади',class:'filter-toggle-item--right'}]}, 'от&nbsp;386&nbsp;460&nbsp;руб./кв.м', 'section-top--apartment')
+		.section-ui
+			pre.
+				+section-top('48&nbsp;предложений', {modif:'border',title:'Отсортировано по',items:[{name:'цене',class:'filter-active filter-toggle-item--left'},{name:'площади',class:'filter-toggle-item--right'}]}, 'от&nbsp;386&nbsp;460&nbsp;руб./кв.м', 'section-top--apartment')
+
+				миксин:
+				section-top(sectionTitle,filterToggles,sectionSubtitle,addClass )
+		.section-ui
+			h3(style="display:inline-block; border-bottom: 1px solid #000;") Переключатель фильтра
+		.section-ui
+			+toggle-block({modif:'border',title:'Сортировка по', items:[{name:'цене',class:'filter-active filter-toggle-item--left'},{name:'площади',class:'filter-toggle-item--right'}]})
+		.section-ui
+			pre.
+				+toggle-block({modif:'border',title:'Сортировка', items:[{name:'цене',class:'filter-active filter-toggle-item--left'},{name:'площади',class:'filter-toggle-item--right'}]})
+
+		.section-ui
+			+toggle-block({title:'', items:[{name:'по цене',class:'filter-active'},{name:'по району',class:''},{name:'по станциям метро',class:''}]})
+		.section-ui
+			pre.
+				+toggle-block({title:'', items:[{name:'по цене',class:'filter-active'},{name:'по району',class:''},{name:'по станциям метро',class:''}]})
