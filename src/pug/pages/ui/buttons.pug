@@ -3,25 +3,22 @@ extends ../../layouts/ui-layout/ui-layout.pug
 block variables
 	- var title = 'Кнопки - UI-kit и HTML фреймворк - Документация';
 	- var pageClass = 'body--dashboard';
-	- var titleBlock = {mainTitle:'ЖК «Балчуг Вьюпойнт»',subtitleName:'Balchug Viewpoint',subtitleDate:'Сдан в 2017', subtitlePrice:'23&nbsp;339&nbsp;642', badgesItems:['ЦАО','Замоскворечье'], linkItems:[{linkText:'ЦАО',href:'#',linkIcon:'',linkClass:'link-hidden'}, {linkText:'Замоскворечье',href:'#',linkIcon:'',linkClass:'link-hidden'},{linkText:'Садовническая набережная, 5 стр.',href:'#'}], metroInfo:{firstIcоn:'icon-metro', stationName:'Новокузнецская', timeNum:' 5минут',iconLast:'icon-man'},updateTime:'Обновлено сегодня'};
 
 block content
 	.container.container--left
 		.section-ui
-			.title Кнопки Садовническая набережная, 5 стр.
-
-			p Кнопка Добавить квартиру
+			.title Кнопки
+		.section-ui
+			h3.pb-20 Кнопка Добавить квартиру
 			+button('Добавить квартиру', '#', 'btn-add')
-		pre.
-			+button('+ Добавить квартиру', '#', 'btn-add')
 		.section-ui
-
-
-			p Кнопка +7 985 356 452 44 54
-			+button('+7 985 356 452 44 54', '#', 'btn-tel')
-		pre.
-			+button('+7 985 356 452 44 54', '#', 'btn-tel')
-
+			pre.
+				+button('+ Добавить квартиру', '#', 'btn-add')
 
 		.section-ui
-			+title-block(titleBlock)
+			h3.pb-20 Кнопка +7 985 356 4524
+
+			+button('+7 985 356 4524', '#', 'btn-tel contact-phone')
+		.section-ui
+			pre.
+				+button('+7 985 356 4524', '#', 'btn-tel contact-phone')
