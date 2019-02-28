@@ -116,31 +116,34 @@ mixin mobile-btn(btnImg)
 	a(href="#").mobile-button&attributes(attributes)
 		+plus
 
-//-метро+текст+человечек
-mixin text-and-icon(iconFirst,text1,text2, text3,iconLast)
-	.text-group.d-flex&attributes(attributes)
-		if iconFirst
-			span.first-icon
-				+#{iconFirst}
-		span.text-body.first-text #{text1},
-		span.text-body.middle-text.text-body--grey #{text2}
-		span.text-body.last-text.text-body--grey #{text3}
+
+//-миксин для метро с человечком
+mixin metro-station(firstIcоn,stationName,timeNum, iconLast)
+	.metro-station.d-flex&attributes(attributes)
+		if firstIcоn
+			+#{firstIcоn}
+		span.text-body.first-text #{stationName},
+		span.text-body.middle-text.text-body--grey !{timeNum}
+		span.text-body.last-text.text-body--grey пешком
+		span.last-icon
 		if iconLast
 			span.last-icon
 				+#{iconLast}
-//-миксин для метро
-mixin metro-station(text1,text2, text3)
-	.text-group.d-flex&attributes(attributes)
-		span
-			+icon-metro
-		span.text-body.first-text #{text1},
-		span.text-body.middle-text.text-body--grey #{text2}
-		span.text-body.last-text.text-body--grey #{text3}
 
+//-миксин для метро с человечком для объекта
+mixin metroStation(metroStation)
+	.metro-station.d-flex&attributes(attributes)
+		if metroStation.firstIcоn
+			+#{metroStation.firstIcоn}
+		span.text-body.first-text #{metroStation.stationName},
+		span.text-body.middle-text.text-body--grey !{metroStation.timeNum}
+		span.text-body.last-text.text-body--grey пешком
 		span.last-icon
-			+icon-man
+		if metroStation.iconLast
+			span.last-icon
+				+#{metroStation.iconLast}
 
-
+//-ссылка в две строки Следить за этим ЖК
 mixin dropdown-double-item(iconName, spanText1,spanText2)
 	a(href='#').dropdown-double-item.d-flex&attributes(attributes)
 		+#{iconName}

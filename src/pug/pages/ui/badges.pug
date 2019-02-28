@@ -7,7 +7,7 @@ block variables
 block content
 	.container.container--left
 		.section-ui
-			h1 Бейджи
+			h3 Бейджи
 		.section-ui
 			.badge ЦАО
 		.section-ui
@@ -23,3 +23,11 @@ block content
 		.section-ui
 			pre.
 				+bag-badge('48', '116' )
+
+		.section-ui
+			h3 миксин станция метро
+		.section-ui
+			+metro-station('icon-metro','Новокузнецcкая','&nbsp;5 минут','icon-man')
+		.section-ui
+			pre.
+				+metro-station('icon-metro','Новокузнецcкая','&nbsp;5 минут','icon-man')
