@@ -4,10 +4,7 @@
 	position: relative;
 
 	@media(min-width: 992px){
-			// background: url(../../img/cat-gray.svg);
-			// background-position: center bottom -50px;
-			// background-size: contain;
-			// background-repeat: no-repeat;
+
 			overflow:hidden;
 			flex-direction: row;
 			align-items: center;}
@@ -48,11 +45,15 @@
 	.logoblock{
 		align-items: flex-start;
 		flex-direction: column;
+		padding-bottom: 20px;
 		@media(min-width: 1350px){
 			align-items: center;
 			flex-direction: row;
 			margin-right: 15.2em;
+			padding-bottom: 0;
 		}
+		.logo-text{display: block;}
+
 	}
 
 }
@@ -86,8 +87,12 @@
 .footer-bottom__copyright{
 	color: #999;
 	order:2;
+	font-size: 16px;
 	@media(min-width: 992px){
 		order:1;
+	}
+	@media(min-width: 768px){
+		font-size: 14px;
 	}
 }
 .footer-bottom__politic{

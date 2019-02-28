@@ -1,5 +1,5 @@
 .link-block {
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	padding-right: 24px;
 	color: @btnBg;
@@ -53,6 +53,7 @@
 	}
 }
 .dropdown-double-item{
+	font-size: 16px;
 	.icon-notify{margin-right: 10px;}
 	.dropdown-double-item__text{
 		display: flex;
@@ -64,7 +65,7 @@
 		color:@btnBg ;
 		}
 		.short-span{
-			width: 75px;
+			width: 85px;
 			padding-top: 4px;
 			@media(min-width: 480px){
 				padding-top: 0;
@@ -74,4 +75,5 @@
 		}
 		@media(min-width: 480px){flex-direction: row;}
 	}
+	@media(min-width: 768px){font-size: 14px;}
 }

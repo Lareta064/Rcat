@@ -62,7 +62,7 @@ mixin mobile-btn(btnImg)
 
 //-миксин для метро с человечком
 mixin metro-station(firstIcоn,stationName,timeNum, iconLast)
-	.metro-station.d-flex&attributes(attributes)
+	.metro-station&attributes(attributes)
 		if firstIcоn
 			+#{firstIcоn}
 		span.text-body.first-text #{stationName},
@@ -73,6 +73,13 @@ mixin metro-station(firstIcоn,stationName,timeNum, iconLast)
 			span.last-icon
 				+#{iconLast}
 
+mixin metro-station-mobile(items)
+	.metro-station-mobile
+		each item in items
+			.metro-station-mobile__item
+				.text-body.first-text #{item.stationName}
+				.text-body.middle-text.text-body--grey !{item.timeNum} пешком
+		+icon-metro
 //-миксин для метро с человечком для объекта
 mixin metroStation(metroStation)
 	.metro-station.d-flex&attributes(attributes)

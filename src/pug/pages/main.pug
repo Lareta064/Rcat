@@ -8,7 +8,6 @@ block variables
 
 	- var hauseObject = {area1:'53',area2:'187',floor:'6',ceilingHeight: '3,1', parkingDescription:'подземная на&nbsp;115&nbsp;машиномест&nbsp;(17–35 кв.м), от&nbsp;4&nbsp;500&nbsp;000&nbsp;руб.&nbsp;за&nbsp;м/м', objItem:{num1:'16', num2:'147'} ,readinessLevel: '3 квартал 2017, сдан ГК',  infrastructure:'Офисные и административные помещения, кафе&nbsp;-&nbsp;кофейня', operationPrice: '328 руб./кв.м', hauseDescription: 'ЖК “Balchug Viewpoint” занимает площадь в один гектар. По&nbsp;соседству с&nbsp;ним&nbsp;расположена небольшая Георгиевская церковь и Болотная площадь с фонтаном и сквером. Жителям комплекса доступна богатая инфраструктура района: медицинские центры, знаменитые театры и музеи, магазины, фитнес&nbsp;-&nbsp;центры.',apartmentDescription: 'Проектом предусмотрено 116 резиденций в формате апартаментов. Площадь резиденций составляет 53–187 кв.м. Для продажи предлагаются одно-,двух-,трех- и-&nbsp;четырехкомнатные апартаменты с&nbsp;гостиничным&nbsp;форматом обслуживания. В квартирах установлены панорамные окна. Из окон открываются шикарные виды на Москву. Высота потолков — 3,1 м', hiddenText:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia voluptates ut mollitia deserunt cumque soluta nihil perspiciatis doloribus impedit a asperiores optio aspernatur fuga, quia neque, aliquam, voluptatem, quisquam consequatur.'};
 
-	- var titleBlock = {mainTitle:'ЖК «Балчуг Вьюпойнт»',subtitleName:'Balchug Viewpoint',subtitleDate:'Сдан в 2017', subtitlePrice:'23 339 642', badgesItems:['ЦАО','Замоскворечье'], linkItems:[{linkText:'ЦАО',href:'#',linkIcon:'',linkClass:'link-hidden'}, {linkText:'Замоскворечье',href:'#',linkIcon:'',linkClass:'link-hidden'},{linkText:'Садовническая набережная, 5 стр.',href:'#'}], metroInfo:{firstIcоn:'icon-metro', stationName:'Новокузнецская', timeNum:'&nbsp;5 минут',iconLast:'icon-man'},updateTime:'Обновлено сегодня'};
 
 
 block content
@@ -17,7 +16,7 @@ block content
 		+header('avatar','Иван Марасин')
 	section.title-block
 		.container
-			+title-block(titleBlock)
+			include ../sections/hc-title-block.pug
 	section.option-panel-wrapper
 		+option-panel
 	section.full-description
@@ -55,9 +54,10 @@ block content
 
 				.link-group.d-flex
 					a(href="#").simple-link Садовническая набережная,&nbsp;5&nbsp;стр.1
-				.text-info.d-flex
-					+metro-station('icon-metro','Новокузнеcкая','&nbsp;5 минут')
+				.text-info.text-info--metro.d-flex
+					+metro-station('icon-metro','Новокузнецcкая','&nbsp;5 минут')
 					+metro-station('',', Третьяковская','&nbsp;7 минут')
+					+metro-station-mobile([{stationName:'Новокузнецcкая',timeNum:'5 минут'},{stationName:'Третьяковская',timeNum:'7 минут'}])
 
 	section.hc-cards
 		.container
