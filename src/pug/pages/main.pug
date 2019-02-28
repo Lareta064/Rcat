@@ -64,7 +64,8 @@ block content
 			.section-top.d-flex.section-top--hc-cards
 				.section-top-title.headline-bold Похожие ЖК
 				//-фильтры
-				+toggle-block({title:'', items:[{name:'по цене',class:''},{name:'по району',class:''},{name:'по станциям метро',class:'filter-active'}]})
+				+toggle-block({title:'', items:[{name:'по цене',class:''},{name:'району',class:''},{name:'станциям метро',class:'filter-active'}]})(class=" visible-desktop")
+				+toggle-block({title:'', items:[{name:'по цене',class:''},{name:'району',class:''},{name:'метро',class:'filter-active'}]})(class=" visible-mobile")
 
 			.row
 				.col-md-6.col-lg-6.col-xl-3

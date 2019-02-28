@@ -1,5 +1,6 @@
 .filter-toggle{
 	align-items: center;
+	display: flex;
 }
 .filter-toggle__text{
 	font-size: 16px;
@@ -67,4 +68,12 @@
 	}
 	.filter-toggle-item{font-size: 14px;}
 
+}
+.visible-desktop{
+	display: none;
+	@media(min-width: 768px){display: flex;}
+}
+.visible-mobile{
+
+	@media(min-width: 768px){display: none;}
 }

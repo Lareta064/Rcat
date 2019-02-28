@@ -5,12 +5,12 @@ mixin toggle-item(itemName, itemClass)
 //-миксн для блока с фильтрами
 mixin toggle-block(blockData)
 	if blockData.modif == 'border'
-		.filter-toggle.filter-toggle--border.d-flex&attributes(attributes)
+		.filter-toggle.filter-toggle--border&attributes(attributes)
 			.filter-toggle__text !{blockData.title}
 			each item in blockData.items
 				+toggle-item(item.name,item.class)
 	else
-		.filter-toggle.d-flex&attributes(attributes)
+		.filter-toggle&attributes(attributes)
 			.filter-toggle__text !{blockData.title}
 			each item in blockData.items
 				+toggle-item(item.name,item.class)
