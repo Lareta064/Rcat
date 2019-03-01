@@ -2,9 +2,12 @@
 	padding-top: 66px;
 	height: 207px;
 	position: relative;
-
+	padding-left: 17px;
+	@media(min-width: 768px){
+	padding-left: 0px;
+	}
 	@media(min-width: 992px){
-
+			
 			overflow:hidden;
 			flex-direction: row;
 			align-items: center;}
@@ -53,7 +56,12 @@
 			padding-bottom: 0;
 		}
 		.logo-text{display: block;}
-
+		.logo-icon{
+			margin-bottom: 12px;
+			@media(min-width: 1350px){
+			margin-bottom: 0;
+			}
+		}
 	}
 
 }
