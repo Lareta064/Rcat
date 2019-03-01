@@ -6,47 +6,59 @@
 
 	.link-block__icon{padding-right: 10px;}
 
-}
-.link-filter,
-.simple-link {
-	display: inline-block;
-	font-size: 16px;
-	line-height: normal;
-	color: @btnBg;
 
+}
+
+.simple-link {
+	font-size: 16px;
+
+	color: @btnBg;
     transition: .25s;
-    border-bottom: 1px dashed rgba(44,129,209, .2);
-    @media(min-width: 768px){font-size: 14px;}
-    &:hover{
-		border-bottom: 1px dashed rgba(209,86,86, .2);
+    span{
+    	background: linear-gradient(to right, rgba(44,129,209, .8), rgba(44,129,209, .2) 50%, transparent 50%);
+    	background-position: 0 100%;
+    	background-repeat: repeat-x;
+    	background-size: 3px 1px;
+    	&:hover{
+    	background: linear-gradient(to right, rgba(209,86,86, .2), rgba(209,86,86, .2) 50%, transparent 50%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 3px 1px;
+		// border-bottom: 1px dashed rgba(209,86,86, .2);
 		color:rgb(209,86,86);
 		}
-}
-.simple-link--line {
-	border-bottom: 1px solid rgba(44,129,209, .2);
-}
-.link-filter{
-	padding: 7px 10px;
-	background-color: transparent;
-	padding-bottom: 6px;
-}
-.link-filter--active{
-		color: @white;
-		opacity: .85;
-		padding: 7px 10px;
-		border-radius: 3px;
-		background-color: @badgeBg;
-		border-bottom: 0px;
-		&:hover{
-			opacity: .7;
-			color:@white;
-		}
+    }
+    // border-bottom: 1px dashed rgba(44,129,209, .8);
+    @media(min-width: 768px){font-size: 14px;}
 
-	}
-.link-solid-border:hover,
-.simple-link.link-solid-border:hover{
-	border-bottom: 1px solid rgba(209,86,86, .2);
 }
+.simple-link.simple-link--line {
+	background-image: none;
+
+	// border-bottom: 1px solid rgba(44,129,209, .2);
+}
+// .link-filter{
+// 	padding: 7px 10px;
+// 	background-color: transparent;
+// 	padding-bottom: 6px;
+// }
+// .link-filter--active{
+// 		color: @white;
+// 		opacity: .85;
+// 		padding: 7px 10px;
+// 		border-radius: 3px;
+// 		background-color: @badgeBg;
+// 		border-bottom: 0px;
+// 		&:hover{
+// 			opacity: .7;
+// 			color:@white;
+// 		}
+
+// 	}
+// .link-solid-border:hover,
+// .simple-link.link-solid-border:hover{
+// 	border-bottom: 1px solid rgba(209,86,86, .2);
+// }
 .fix-width{
 	@media(min-width: 768px){
 		min-width: 97px;

@@ -21,14 +21,22 @@ mixin link(linkText,href, linkIcon,linkClass)
 			.link-block__icon
 				+#{linkIcon}
 			if linkClass
-				.simple-link(class=' '+ linkClass) #{linkText}
+				.simple-link(class=' '+ linkClass)
+					span
+						nohyphen #{linkText}
 			else
-				.simple-link #{linkText}
+				.simple-link
+					span
+						nohyphen #{linkText}
 		else
 			if linkClass
-				.simple-link(class=' '+ linkClass) #{linkText}
+				.simple-link(class=' '+ linkClass)
+					span
+						nohyphen #{linkText}
 			else
-				.simple-link #{linkText}
+				.simple-link
+					span
+						nohyphen #{linkText}
 
 //- Миксин для одного бейджа
 mixin badge(...items)

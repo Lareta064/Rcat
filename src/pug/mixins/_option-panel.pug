@@ -2,8 +2,8 @@ mixin option-panel
 	.option-panel.option-panel--desktop
 		+link('Следить за объявлениями в этом ЖК','','icon-notify')
 		+link('В избранное','','icon-heart','fix-width')(class=" add-favorite ")
-		+link('Отправить эл.почтой','','','line')
-		+link('Скачать ПДФ','','', 'line')
+		+link('Отправить эл.почтой','','','simple-link--line')
+		+link('Скачать ПДФ','','', 'simple-link--line')
 		+link('Добавить заметку','','icon-add')
 		+link('Пожаловаться','','icon-question').order-item
 
@@ -12,17 +12,18 @@ mixin option-panel
 		+link('Еще','','arrow-down').order-item#showOptions
 	.dropdown#dropdown--option(data-control= 'hidden')
 		.dropdown-item
-			+dropdown-double-item('icon-notify', 'Следить за объявлениями','в этом ЖК')
+			//- +dropdown-double-item('icon-notify', 'Следить за объявлениями','в этом ЖК')
+			+link('Следить за объявлениями в этом ЖК','', 'icon-notify')
 		.dropdown-item
 			+link('Добавить заметку','','icon-add')
 		.dropdown-item
-			+link('Отправить эл.почтой','','','line')(class="link-block--pl")
+			+link('Отправить эл.почтой','','','simple-link--line')(class="link-block--pl")
 		.dropdown-item
-			+link('Скачать ПДФ','','', 'line')(class="link-block--pl")
+			+link('Скачать ПДФ','','', 'simple-link--line')(class="link-block--pl")
 		.dropdown-item
-			+link('Отправить в Ватсап','','', 'line')(class="link-block--pl")
+			+link('Отправить в Ватсап','','', 'simple-link--line')(class="link-block--pl")
 		.dropdown-item
-			+link('Поделиться в Телеграме','','', 'line')(class="link-block--pl")
+			+link('Поделиться в Телеграме','','', 'simple-link--line')(class="link-block--pl")
 		.dropdown-item
 			+link('Пожаловаться','','icon-question').order-item
 
