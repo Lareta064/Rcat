@@ -46,8 +46,8 @@ $(document).ready(function() {
 		var imgPath = $(this).attr('data-img-path');
 		var mainImage = $('.switch-block__main-photo img')
 
-		mainImage.fadeOut(200, function(){
-			mainImage.attr('src', imgPath).fadeIn(200);
+		mainImage.fadeOut(400, function(){
+			mainImage.attr('src', imgPath).fadeIn(400);
 		});
 	});
 
