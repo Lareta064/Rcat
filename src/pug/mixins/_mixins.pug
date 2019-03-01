@@ -14,7 +14,14 @@ mixin section-top(sectionTitle,filterToggles,sectionSubtitle,addClass )
 		if filterToggles
 			+toggle-block(filterToggles)
 
-//- Миксин ссылок
+//-Простая ссылка
+mixin text-link(linkText,href,linkClass)
+	if linkClass
+		a.text-link(href=""+ href class=" "+ linkClass) !{linkText}
+	else
+		a.text-link(href=""+ href) !{linkText}
+
+//- ссылка, которая может переноситься, подчеркивается градиентом
 mixin link(linkText,href, linkIcon,linkClass)
 	a(href=' '+ href).link-block&attributes(attributes)
 		if linkIcon
@@ -23,20 +30,20 @@ mixin link(linkText,href, linkIcon,linkClass)
 			if linkClass
 				.simple-link(class=' '+ linkClass)
 					span
-						nohyphen #{linkText}
+						nohyphen !{linkText}
 			else
 				.simple-link
 					span
-						nohyphen #{linkText}
+						nohyphen !{linkText}
 		else
 			if linkClass
 				.simple-link(class=' '+ linkClass)
 					span
-						nohyphen #{linkText}
+						nohyphen !{linkText}
 			else
 				.simple-link
 					span
-						nohyphen #{linkText}
+						nohyphen !{linkText}
 
 //- Миксин для одного бейджа
 mixin badge(...items)

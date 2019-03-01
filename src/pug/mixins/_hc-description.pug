@@ -52,6 +52,10 @@ mixin hc-description(objectArgument)
 
 			.hc-description__footer-links
 				.footer-links-item
-					a(href="#")#openHiddenDescrip.simple-link Подробнее о ЖК
+					//- a(href="#")#openHiddenDescrip.simple-link Подробнее о ЖК
+
+					+text-link('Подробнее о ЖК','',' openHiddenDescrip')
 				.footer-links-item
-					a(href="#").simple-link.simple-link--error Сообщить о неточности описания
+					//- a(href="#").simple-link.simple-link--error Сообщить о неточности описания
+					+text-link('Сообщить о неточности описания','',' simple-link--error')
+

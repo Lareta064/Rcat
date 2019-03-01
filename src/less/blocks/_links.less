@@ -15,12 +15,12 @@
 	color: @btnBg;
     transition: .25s;
     span{
-    	background: linear-gradient(to right, rgba(44,129,209, .8), rgba(44,129,209, .2) 50%, transparent 50%);
+    	background: linear-gradient(to right, rgba(44,129,209, .8), rgba(44,129,209, .2) 70%, transparent 50%);
     	background-position: 0 100%;
     	background-repeat: repeat-x;
     	background-size: 3px 1px;
     	&:hover{
-    	background: linear-gradient(to right, rgba(209,86,86, .2), rgba(209,86,86, .2) 50%, transparent 50%);
+    	background: linear-gradient(to right, rgba(209,86,86, .2), rgba(209,86,86, .2) 70%, transparent 50%);
     background-position: 0 100%;
     background-repeat: repeat-x;
     background-size: 3px 1px;
@@ -28,7 +28,7 @@
 		color:rgb(209,86,86);
 		}
     }
-    // border-bottom: 1px dashed rgba(44,129,209, .8);
+    // border-bottom: 1px dashed rgba(44,129,209, .2);
     @media(min-width: 768px){font-size: 14px;}
 
 }
@@ -94,5 +94,31 @@
 	display: none;
 	@media(min-width: 1200px){
 		display: block;
+	}
+}
+.text-link{
+	font-size: 16px;
+	color: rgb(44,129,209);
+	border-bottom: 1px dashed rgba(44,129,209, .2);
+	&:hover{
+		color: rgb(209,86,86);
+		border-bottom: 1px dashed rgba(209,86,86, .2);
+	}
+	@media(min-width: 768px){
+		font-size: 14px;
+	}
+}
+.text-link--line{
+	border-bottom: 1px solid rgba(44,129,209, .2);
+	&:hover{
+
+		border-bottom: 1px solid rgba(209,86,86, .2);
+	}
+}
+.simple-link.link-solid-border,
+.link-solid-border{
+	border-bottom: 1px solid rgba(44,129,209, .2);
+	&:hover{border-color:rgba(209,86,86, .2);
+
 	}
 }

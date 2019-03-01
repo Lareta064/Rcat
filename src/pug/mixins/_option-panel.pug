@@ -2,8 +2,10 @@ mixin option-panel
 	.option-panel.option-panel--desktop
 		+link('Следить за объявлениями в этом ЖК','','icon-notify')
 		+link('В избранное','','icon-heart','fix-width')(class=" add-favorite ")
-		+link('Отправить эл.почтой','','','simple-link--line')
-		+link('Скачать ПДФ','','', 'simple-link--line')
+		//- +link('Отправить эл.почтой','','','simple-link--line')
+		//- +link('Скачать ПДФ','','', 'simple-link--line')
+		+text-link('Отправить эл.почтой','#','text-link--line mr-25')
+		+text-link('Скачать ПДФ','#','text-link--line mr-25')
 		+link('Добавить заметку','','icon-add')
 		+link('Пожаловаться','','icon-question').order-item
 
@@ -17,13 +19,13 @@ mixin option-panel
 		.dropdown-item
 			+link('Добавить заметку','','icon-add')
 		.dropdown-item
-			+link('Отправить эл.почтой','','','simple-link--line')(class="link-block--pl")
+			+text-link('Отправить эл.почтой','#','link-block--pl text-link--line')
 		.dropdown-item
-			+link('Скачать ПДФ','','', 'simple-link--line')(class="link-block--pl")
+			+text-link('Скачать ПДФ','#','link-block--pl text-link--line')
 		.dropdown-item
-			+link('Отправить в Ватсап','','', 'simple-link--line')(class="link-block--pl")
+			+text-link('Отправить в Ватсап','#','link-block--pl text-link--line')
 		.dropdown-item
-			+link('Поделиться в Телеграме','','', 'simple-link--line')(class="link-block--pl")
+			+text-link('Поделиться в Телеграме','#','link-block--pl text-link--line')
 		.dropdown-item
 			+link('Пожаловаться','','icon-question').order-item
 

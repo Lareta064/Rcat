@@ -125,7 +125,7 @@ $(document).ready(function() {
 	//-показать/скрыть текст описание ЖК
 
 	$('.description__hidden-text').hide();
-		$('#openHiddenDescrip').on('click', function(e){
+		$('.openHiddenDescrip').on('click', function(e){
 			e.preventDefault();
 			if($(document).width()>=768){
 
