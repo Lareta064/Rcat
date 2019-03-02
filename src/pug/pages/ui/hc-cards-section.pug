@@ -1,15 +1,12 @@
 extends ../../layouts/ui-layout/ui-layout.pug
 
 block variables
-	- var title = 'Footer';
+	- var title = 'Секция карточек квартир';
 	- var pageClass= "body--dashboard";
 
 block content
 	.container.container--left
 		.section-ui
-			h1 Footer
+			h1 Секция карточек квартир
 		.section-ui
-			+page-footer
-		.section-ui
-			pre.
-				+page-footer
+			include ../../sections/apartment-cards.pug

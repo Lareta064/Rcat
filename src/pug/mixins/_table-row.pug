@@ -1,0 +1,50 @@
+//-миксин для таблицы квартир
+mixin table-row(roomsNum, roomsLink, roomsArea, roomsFloor,roomsRepair, roomsImg, priceUsd, priceRub, priceMeter, phoneNumber, priceDown )
+	.apartment-item
+		.row
+			.col-md-10
+				.apartment-item-column.d-flex
+					.d-flex.column-item
+						.d-flex.apartment-info.apartment-info--pb.order-md-2
+							.d-flex.apartment-info__col
+								a(href=""+ roomsLink).info-item.info-item--rooms #[span.link-solid-border #{roomsNum} комн. кв]
+								.info-item.info-item--area #[span #{roomsArea} кв.м]
+							.d-flex.apartment-info__col
+								.info-item.info-item--floor #[span #{roomsFloor} этаж]
+								if(roomsRepair == 'без отделки')
+									.info-item.info-item--repair #[span Без отделки]
+								if(roomsRepair == 'отделка')
+									.info-item.info-item--repair #[span.repaire-icon Отделка]
+						.apartment-img.order-md-1(style="background-image: url(../img/hc/"+ roomsImg +".png);")
+					.d-flex.column-item
+						.d-flex.apartment-info
+							.d-flex.apartment-info__col.apartment-info__col--short
+								if priceDown
+
+									.info-item.info-item--price.info-item--price-usd #[span.visible-usd $#{priceUsd}] #[span.hidden-rub.price-down #{priceRub} руб.]
+										+icon-price-down
+
+								else
+									.info-item.info-item--price-usd #[span.visible-usd $#{priceUsd}] #[span.hidden-rub #{priceRub} руб.]
+
+							.d-flex.apartment-info__col.apartment-info__col--large
+								if priceDown
+									.info-item.info-item--price-rub #[span.visible-rub.price-down #{priceRub} руб.] #[span.hidden-usd $#{priceUsd}]
+										+icon-price-down
+
+								else
+									.info-item.info-item--price-rub #[span.visible-rub #{priceRub} руб.] #[span.hidden-usd $#{priceUsd}]
+
+								.info-item.info-item--price-meter #[span #{priceMeter} руб./кв.м]
+
+
+			.col-md-2
+				.d-flex.column-contacts
+					a(href="#").contact-phone #{phoneNumber}
+					.icon-group(class=" table-row--group")
+						a(href="#")
+							+icon-mail
+						+icon-heart('red')
+
+//-конец миксина "строка таблицы""
+

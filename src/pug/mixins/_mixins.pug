@@ -45,6 +45,30 @@ mixin link(linkText,href, linkIcon,linkClass)
 					span
 						nohyphen !{linkText}
 
+mixin link(linkData)
+	a(href=' '+ linkData.href).link-block&attributes(attributes)
+		if linkIcon
+			.link-block__icon
+				+#{linkData.Icon}
+			if linkClass
+				.simple-link(class=' '+ linkData.addClass)
+					span
+						nohyphen !{linkData.Text}
+			else
+				.simple-link
+					span
+						nohyphen !{linkData.Text}
+		else
+			if linkClass
+				.simple-link(class=' '+ linkData.addClass)
+					span
+						nohyphen !{linkData.Text}
+			else
+				.simple-link
+					span
+						nohyphen !{linkData.Text}
+
+
 //- Миксин для одного бейджа
 mixin badge(...items)
 	each item in items
@@ -63,7 +87,7 @@ mixin bag-badge(num1,num2 )
 		.big-badge__top #[span #{num1}] из #[span #{num2}]
 		.big-badge__bottom квартир в продаже
 
-
+//-большой голубой бейдж для объекта
 mixin big-badge(objItem)
 	.big-badge&attributes(attributes)
 		.big-badge__top #[span #{objItem.num1}] из #[span #{objItem.num2}]
@@ -107,62 +131,4 @@ mixin metroStation(metroStation)
 		if metroStation.iconLast
 			span.last-icon
 				+#{metroStation.iconLast}
-
-//-ссылка в две строки Следить за этим ЖК
-mixin dropdown-double-item(iconName, spanText1,spanText2)
-	a(href='#').dropdown-double-item.d-flex&attributes(attributes)
-		+#{iconName}
-		.dropdown-double-item__text
-			span #{spanText1}
-			span.short-span #{spanText2}
-
-//-миксин для таблицы квартир
-mixin table-row(roomsNum, roomsLink, roomsArea, roomsFloor,roomsRepair, roomsImg, priceUsd, priceRub, priceMeter, phoneNumber, priceDown )
-	.apartment-item
-		.row
-			.col-md-10
-				.apartment-item-column.d-flex
-					.d-flex.column-item
-						.d-flex.apartment-info.apartment-info--pb.order-md-2
-							.d-flex.apartment-info__col
-								a(href=""+ roomsLink).info-item.info-item--rooms #[span.link-solid-border #{roomsNum} комн. кв]
-								.info-item.info-item--area #[span #{roomsArea} кв.м]
-							.d-flex.apartment-info__col
-								.info-item.info-item--floor #[span #{roomsFloor} этаж]
-								if(roomsRepair == 'без отделки')
-									.info-item.info-item--repair #[span Без отделки]
-								if(roomsRepair == 'отделка')
-									.info-item.info-item--repair #[span.repaire-icon Отделка]
-						.apartment-img.order-md-1(style="background-image: url(../img/hc/"+ roomsImg +".png);")
-					.d-flex.column-item
-						.d-flex.apartment-info
-							.d-flex.apartment-info__col.apartment-info__col--short
-								if priceDown
-
-									.info-item.info-item--price.info-item--price-usd #[span.visible-usd $#{priceUsd}] #[span.hidden-rub.price-down #{priceRub} руб.]
-										+icon-price-down
-
-								else
-									.info-item.info-item--price-usd #[span.visible-usd $#{priceUsd}] #[span.hidden-rub #{priceRub} руб.]
-
-							.d-flex.apartment-info__col.apartment-info__col--large
-								if priceDown
-									.info-item.info-item--price-rub #[span.visible-rub.price-down #{priceRub} руб.] #[span.hidden-usd $#{priceUsd}]
-										+icon-price-down
-
-								else
-									.info-item.info-item--price-rub #[span.visible-rub #{priceRub} руб.] #[span.hidden-usd $#{priceUsd}]
-
-								.info-item.info-item--price-meter #[span #{priceMeter} руб./кв.м]
-
-
-			.col-md-2
-				.d-flex.column-contacts
-					a(href="#").contact-phone #{phoneNumber}
-					.icon-group(class=" table-row--group")
-						a(href="#")
-							+icon-mail
-						+icon-heart('red')
-
-//-конец миксина "строка таблицы""
 
