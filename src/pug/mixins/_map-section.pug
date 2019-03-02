@@ -1,15 +1,15 @@
-mixin map-section(mapCode,badgeItems, linkData )
+mixin map-section(mapCode,badgeItems, linkData,metroData)
 	#map
-		iframe(src=" "+ mapCode width="100%" height="420" )
+		iframe(src=" "+ mapCode width="100%" height="420" frameborder="0")
 	.section-bottom.section-map--bottom.d-flex
 		//- +badge-group(['ЦАО','Замоскворечье'])
 		+badge-group(badgeItems)
 
 		.link-group.d-flex
-			+link(linkData)
+			+linkInMixin(linkData)
 			//- a(href="#").simple-link Садовническая набережная,&nbsp;5&nbsp;стр.1
-		.text-info.text-info--metro.d-flex
+		.text-info.text-info--metro
 			each item in metroData
-				+metro-station(metroData.Icon, metroData.Name, metroData.Time)
+				+metroStation(item)
 
-			+metro-station-mobile([{stationName:'Новокузнецcкая',timeNum:'5 минут'},{stationName:'Третьяковская',timeNum:'7 минут'}])
+		//- 	+metro-station-mobile([{stationName:'Новокузнецcкая',timeNum:'5 минут'},{stationName:'Третьяковская',timeNum:'7 минут'}])

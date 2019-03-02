@@ -45,7 +45,7 @@ mixin link(linkText,href, linkIcon,linkClass)
 					span
 						nohyphen !{linkText}
 
-mixin link(linkData)
+mixin linkInMixin(linkData)
 	a(href=' '+ linkData.href).link-block&attributes(attributes)
 		if linkIcon
 			.link-block__icon
@@ -121,12 +121,13 @@ mixin metro-station-mobile(items)
 		+icon-metro
 //-миксин для метро с человечком для объекта
 mixin metroStation(metroStation)
-	.metro-station.d-flex&attributes(attributes)
-		if metroStation.firstIcоn
-			+#{metroStation.firstIcоn}
-		span.text-body.first-text #{metroStation.stationName},
-		span.text-body.middle-text.text-body--grey !{metroStation.timeNum}
-		span.text-body.last-text.text-body--grey пешком
+	.metro-station&attributes(attributes)
+		span.text-body.first-text #{metroStation.stationName},&nbsp;
+			if metroStation.firstIcоn
+				+#{metroStation.firstIcоn}
+		.metro-station--box.d-flex
+			span.text-body.middle-text.text-body--grey !{metroStation.timeNum}
+			span.text-body.last-text.text-body--grey пешком #[span.last-text--comma , ]
 		span.last-icon
 		if metroStation.iconLast
 			span.last-icon

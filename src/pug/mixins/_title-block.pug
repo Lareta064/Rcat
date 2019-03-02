@@ -16,7 +16,8 @@ mixin title-block(titleBlockData)
 						+link(item.linkText, item.href, item.linkIcon,item.linkClass)
 
 				.text-info.text-group.d-flex
-					+metroStation(titleBlockData.metroInfo)
+					each item in titleBlockData.metroInfo
+						+metroStation(item)(class="metro-station--flex")
 		.title-block--right
 			.update-box !{titleBlockData.updateTime}
 			.price-box.headline-bold от !{titleBlockData.subtitlePrice} руб.

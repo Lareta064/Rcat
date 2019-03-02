@@ -1,20 +1,32 @@
 .metro-station{
+	display: inline-flex;
+	flex-direction: column;
+	width: fit-content;
+	// align-items: center;
+	@media(min-width: 768px){
+		flex-direction: row;
 	align-items: center;
+	}
 	.icon-metro{
 		padding-bottom: 3px;
 		margin-right: 7px;
 	}
 	// .icon-metro{padding-right: 5px;}
+	.first-text{
+		display: inline-block;
+
+		position: relative;
+	}
 	.middle-text{
 		padding-right: 5px;
 		color: @grey;
 	}
 	.last-text{
-		display: none;
+		// display: none;
 		padding-right: 5px;
 		color: @grey;
 		@media(min-width: 768px){
-			display: block;
+			// display: block;
 		}
 
 	}
@@ -27,4 +39,59 @@
 	@media(min-width: 768px){align-items: flex-end;}
 	@media(min-width: 1350px){margin-top: 0px;}
 
+}
+.text-info--metro{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	@media(min-width: 768px){flex-direction: row;}
+
+	.icon-metro{
+		position: absolute;
+		top: -5px;
+		right: -35px;
+		@media(min-width: 768px){
+			right: auto;
+			left: -25px;
+			top: -2px;
+		}
+	}
+}
+.text-info--metro{
+	flex-wrap: wrap;
+	padding-left: 8px;
+	@media(min-width: 768px){padding-left: 25px;}
+}
+.text-info--metro .metro-station:last-child{
+	.last-text--comma{display: none;}
+}
+	// .text-info{
+	// 	flex-wrap: wrap;
+	// 	padding-left: 8px;
+	// 	@media(min-width: 768px){padding-left: 0;}
+
+	// }
+.metro-station--flex{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-left: 40px;
+	@media(min-width: 768px){padding-left: 28px;}
+
+	.icon-metro{
+		position: absolute;
+		left: -35px;
+		top:-2px;
+		@media(min-width: 768px){left: -25px;}
+	}
+	.last-text{
+		display: none;
+		@media(min-width: 768px){display: block;
+		}
+	}
+
+	.icon-man{
+		position: relative;
+		top: -5px;
+	}
 }
