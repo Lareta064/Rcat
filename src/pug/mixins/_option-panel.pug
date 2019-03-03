@@ -1,6 +1,6 @@
 mixin option-panel
 	.option-panel.option-panel--desktop
-		+link('Следить за объявлениями в этом ЖК','','icon-notify')
+		+link('Следить за объявлениями в этом ЖК','','icon-notify')(class="watch-announcements")
 		+link('В избранное','','icon-heart','fix-width')(class=" add-favorite ")
 		//- +link('Отправить эл.почтой','','','simple-link--line')
 		//- +link('Скачать ПДФ','','', 'simple-link--line')
@@ -15,7 +15,7 @@ mixin option-panel
 	.dropdown#dropdown--option(data-control= 'hidden')
 		.dropdown-item
 			//- +dropdown-double-item('icon-notify', 'Следить за объявлениями','в этом ЖК')
-			+link('Следить за объявлениями в этом ЖК','', 'icon-notify')
+			+link('Следить за объявлениями в этом ЖК','', 'icon-notify')(class="watch-announcements")
 		.dropdown-item
 			+link('Добавить заметку','','icon-add')
 		.dropdown-item

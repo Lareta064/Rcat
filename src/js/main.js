@@ -40,6 +40,21 @@ $(document).ready(function() {
 
 	});
 
+		//-следить за объявлениями
+
+	$('.watch-announcements').on('click', function(e){
+		e.preventDefault();
+		if($(this).hasClass('watch-announcements--active')){
+			$(this).removeClass('watch-announcements--active');
+			$(this).children('.simple-link').text('Следить за объявлениями в этом ЖК');
+			console.log($(this).children('.simple-link').text());
+		}
+		else {
+			$(this).addClass('watch-announcements--active');
+			$(this).children('.simple-link').text('Отписаться от объявлений в этом ЖК');
+			console.log($(this).children('.simple-link').text());
+		}
+	});
 
 	// Изменение фото в блоке Фото ЖК
 	$('.thumbnails__image').on('click',function(){
