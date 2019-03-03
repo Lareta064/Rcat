@@ -86,6 +86,9 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
+
+	line-height: normal;
+
 	font-weight: 700;
 
 	@media (min-width:768px) {
@@ -135,4 +138,49 @@
 }
 .section-btn{
 	border-radius: 5px;
+}
+//-синяя кнопка с иконкой колокольчик
+.btn-mode1{
+	display: inline-flex;
+	align-items: center;
+	height: 60px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-weight: 700;
+	width: 100%;
+	.icon-notify{
+		height: 60px;
+		display: flex;
+		padding-right: 19px;
+		border-right: 1px solid #2874bc;
+
+		svg{
+			margin: auto;
+			width: 19px;
+			height: 22px;
+		}
+		path {fill: @white;}
+		@media(min-width: 768px){
+			border-right: 0px;
+			padding-right: 9px;
+		}
+	}
+	.btn-text--mobile{
+		font-size: 16px;
+		height: 60px;
+		padding-top: 23px;
+		padding-left: 39px;
+		border-left: 1px solid #569ada;
+		@media(min-width: 768px){display:none;}
+	}
+	.btn-text{
+		display:none;
+		@media(min-width: 768px){display: block;}
+	}
+	@media(min-width: 768px){
+		width: auto;
+		height: 30px;
+	}
+
+
 }
