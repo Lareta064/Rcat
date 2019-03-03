@@ -14,6 +14,12 @@ mixin section-top(sectionTitle,filterToggles,sectionSubtitle,addClass )
 		if filterToggles
 			+toggle-block(filterToggles)
 
+//-ссылка заголовок
+mixin link-title(linkText, href)
+	a(href=" "+href ).headline-body.simple-link.link-solid-border !{linkText}
+
+
+
 //-Простая ссылка
 mixin text-link(linkText,href,linkClass)
 	if linkClass
