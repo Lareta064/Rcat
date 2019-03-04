@@ -99,7 +99,10 @@ $(document).ready(function() {
 			}
 	});
 	//-скрываем выпадашку при ресайзе
+
 	window.onresize = function(event) {
+		if(detectmob())
+			return;
 
 	    dropdownОption.slideUp(800);
 		dropdownОption.attr('data-control','hidden');
@@ -111,6 +114,8 @@ $(document).ready(function() {
 		}
 		else{
 			$('.hc-description__footer-content').hide();
+			$('.openHiddenDescrip').removeClass('hideText');
+			$('.openHiddenDescrip').text('Подробнее о ЖК');
 		}
 
 	}
@@ -155,15 +160,15 @@ $(document).ready(function() {
 					$(this).text('Скрыть описание');
 					$('.description__visible-text').removeClass('fadeOut');
 				}
-			}
-
-			if($(document).width()<768){
+			}else if($(document).width()<768){
 				if($(this).hasClass('hideText')) {
 					$('.hc-description__footer-content').hide(800);
+					$('.description__hidden-text').hide(800);
 					$(this).removeClass('hideText');
 					$(this).text('Подробнее о ЖК');
 				} else {
 					$('.hc-description__footer-content').show(800);
+					$('.description__hidden-text').show(800);
 					$(this).addClass('hideText');
 					$(this).text('Скрыть описание');
 				}
@@ -189,7 +194,9 @@ $(document).ready(function() {
 	// 	}
 	// })();
 
-
+	function detectmob() {
+	 return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+	}
 });
 
 
