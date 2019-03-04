@@ -45,12 +45,12 @@ $(document).ready(function() {
 		e.preventDefault();
 		if($(this).hasClass('watch-announcements--active')){
 			$(this).removeClass('watch-announcements--active');
-			$(this).children('.simple-link').text('Следить за объявлениями в этом ЖК');
+			$(this).children('.simple-link').children('span').children('nohyphen').text('Следить за объявлениями в этом ЖК');
 
 		}
 		else {
 			$(this).addClass('watch-announcements--active');
-			$(this).children('.simple-link').text('Отписаться от объявлений в этом ЖК');
+			$(this).children('.simple-link').children('span').children('nohyphen').text('Отписаться от объявлений в этом ЖК');
 
 		}
 	});
