@@ -41,18 +41,17 @@ $(document).ready(function() {
 	});
 
 		//-следить за объявлениями
-
 	$('.watch-announcements').on('click', function(e){
 		e.preventDefault();
 		if($(this).hasClass('watch-announcements--active')){
 			$(this).removeClass('watch-announcements--active');
 			$(this).children('.simple-link').text('Следить за объявлениями в этом ЖК');
-			console.log($(this).children('.simple-link').text());
+
 		}
 		else {
 			$(this).addClass('watch-announcements--active');
 			$(this).children('.simple-link').text('Отписаться от объявлений в этом ЖК');
-			console.log($(this).children('.simple-link').text());
+
 		}
 	});
 
@@ -119,6 +118,18 @@ $(document).ready(function() {
 		}
 
 	}
+
+	function detectmob() {
+	 return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+	}
+	//-кнопка телефон в таблице на планшетах
+
+	// if($(document).width()>=768 || $(document).width()<= 992 ){
+	// 	$('.contact-phone').on('click', function(){
+	// 		$(this).toggleClass('contact-phone--tablet')
+	// 	});
+
+	// }
 
 	//-переключаем класс у ссылки-фильтра (по цене)
 	// $('.link-filter').on('click', function(e){
@@ -192,11 +203,11 @@ $(document).ready(function() {
 	// 			document.cookie = 'device_pixel_ratio=' + window.devicePixelRatio + ';';
 	// 		window.location.reload();
 	// 	}
-	// })();
+	// // })();
 
-	function detectmob() {
-	 return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
-	}
+	// function detectmob() {
+	//  return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+	// }
 });
 
 

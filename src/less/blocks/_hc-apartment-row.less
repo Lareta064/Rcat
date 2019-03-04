@@ -177,11 +177,13 @@
 
 }
 .column-contacts{
+	position: relative;
 	align-items: center;
 	justify-content: space-between;
 	height: 100%;
 	margin-top: 10px;
 	.icon-group{
+		margin-left: auto;
 		display: flex;
 		// align-items: center;
 	}
@@ -313,8 +315,16 @@
 	@media(min-width: 768px){overflow-x: auto;}
 	margin-bottom: 32px;
 }
+
+
 //-правки от Андрея
-.container--table{
+
+
+
+.container.container--table{
+	@media(min-width: 768px){
+		max-width: 96%;
+	}
 	@media(min-width: 1152px){
 		max-width: 1064px ;
 	}
@@ -351,20 +361,30 @@
 		display: none;
 
 	}
-
-
-
 }
+
 @media(min-width: 1152px){
 	.column-item{width: 55%;}
 	.column-item--tablet{width: 45%;}
-	.info-item.info-item--price-meter{display: block;}
+	.info-item.info-item--price-meter{
+		width: 42%;
+		display: block;
+	}
 
 	.apartment-info__price-rub--tablet{
 		width: 100%;
 	}
 }
-
+.contact-phone{
+	@media(min-width: 768px){
+		position: relative;
+		left: -10px;
+	}
+	@media(min-width: 768px){
+		position: relative;
+		left: -10px;
+	}
+}
 
 @media(min-width: 1350px){
 	.contact-phone{
@@ -388,3 +408,10 @@
 	}
 
 }
+// .contact-phone--tablet{
+// 	position: absolute;
+// 	top:50%;
+// 	transform: translateY(-50%);
+// 	left: -50px;
+// 	// transition: 0s;
+// }
