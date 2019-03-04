@@ -11,7 +11,8 @@
 	background-color: @white;
 	overflow: hidden;
 	@media(min-width: 768px){
-		min-width: 1290px;
+		// min-width: 1290px;
+		width: 100%;
 		height: 50px;
 		font-size: 14px;
 		padding: 0;
@@ -167,7 +168,8 @@
 
 .info-item.info-item--price-rub{
 	width: 120px;
-	@media(min-width: 768px){width: 60%;}
+	@media(min-width: 768px){width: 100%;}
+	@media(min-width: 1152px){width: 60%;}
 }
 .info-item--price-meter{
 	font-weight: 400;
@@ -216,12 +218,20 @@
 }
 .apartment-info__col--short{
 	width: 100%;
-
 	justify-content: flex-start;
 	@media(min-width: 768px){
+		// padding-right: 20px;
+		// width: 30%;
+		border-right: 1px solid #e5e9f2;
+		.info-item{
+		justify-content: flex-end;
+		width: 100%;
+		}
+	}
+		@media(min-width: 1350px){
 		padding-right: 20px;
 		width: 30%;
-		border-right: 1px solid #e5e9f2;
+		// border-right: 1px solid #e5e9f2;
 		.info-item{
 		justify-content: flex-end;
 		width: 100%;
@@ -302,4 +312,79 @@
 	position: relative;
 	@media(min-width: 768px){overflow-x: auto;}
 	margin-bottom: 32px;
+}
+//-правки от Андрея
+.container--table{
+	@media(min-width: 1152px){
+		max-width: 1064px ;
+	}
+
+	@media(min-width: 1200px){
+		max-width: 1140px ;
+	}
+	@media(min-width: 1350px){
+		max-width: 1320px ;
+	}
+}
+@media(min-width: 768px){
+	.contact-phone{
+		position: relative;
+		left: -10px;
+	}
+	.column-item{width: 70%;}
+	.column-item--tablet{width: 30%;}
+	.apartment-info__col{width: 59%;}
+	.apartment-info__col--tablet{
+		width: 41%;
+	}
+	.apartment-info__price-rub--tablet{
+		width: 100%;
+	}
+	// .info-item{min-width: 30px;}
+	.info-item.info-item--floor{min-width:65px;}
+	.info-item--repair,
+	.apartment-info__col--short{
+		font-size: 0;
+		width: 0;
+	}
+	.info-item.info-item--price-meter{
+		display: none;
+
+	}
+
+
+
+}
+@media(min-width: 1152px){
+	.column-item{width: 55%;}
+	.column-item--tablet{width: 45%;}
+	.info-item.info-item--price-meter{display: block;}
+
+	.apartment-info__price-rub--tablet{
+		width: 100%;
+	}
+}
+
+
+@media(min-width: 1350px){
+	.contact-phone{
+		position: relative;
+		left: 0px;
+	}
+	.apartment-info__col{width:100% ;}
+	.apartment-info__col--tablet{
+		width: 50%;
+	}
+
+	.info-item{min-width: 105px;}
+	.column-item{width: 50%;}
+	.column-item--tablet{width: 50%;}
+	.info-item--repair,
+	.apartment-info__col--short{
+		font-size: 14px;
+		width: auto;
+		// padding-right: 20px;
+
+	}
+
 }

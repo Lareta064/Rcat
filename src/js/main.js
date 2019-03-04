@@ -139,7 +139,7 @@ $(document).ready(function() {
 
 	//-показать/скрыть текст описание ЖК
 
-	$('.description__hidden-text').hide();
+	// $('.description__hidden-text').hide();
 		$('.openHiddenDescrip').on('click', function(e){
 			e.preventDefault();
 			if($(document).width()>=768){
@@ -169,9 +169,6 @@ $(document).ready(function() {
 				}
 
 			}
-
-
-
 	});
 
 		$('.photo-slider').slick({
