@@ -103,10 +103,10 @@ $(document).ready(function() {
 		if(detectmob())
 			return;
 
-	    dropdownОption.slideUp(800);
-		dropdownОption.attr('data-control','hidden');
-		dataValue = 'hidden';
-		showOptions.children('.link-block__icon').removeClass('icon-down--rotate');
+	 //    dropdownОption.slideUp(800);
+		// dropdownОption.attr('data-control','hidden');
+		// dataValue = 'hidden';
+		// showOptions.children('.link-block__icon').removeClass('icon-down--rotate');
 
 		if($(document).width()>768){
 			$('.hc-description__footer-content').show();
@@ -116,6 +116,16 @@ $(document).ready(function() {
 			$('.openHiddenDescrip').removeClass('hideText');
 			$('.openHiddenDescrip').text('Подробнее о ЖК');
 		}
+
+	}
+		window.onresize = function(event) {
+
+
+	    dropdownОption.slideUp(800);
+		dropdownОption.attr('data-control','hidden');
+		dataValue = 'hidden';
+		showOptions.children('.link-block__icon').removeClass('icon-down--rotate');
+
 
 	}
 
