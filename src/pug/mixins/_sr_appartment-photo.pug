@@ -1,0 +1,15 @@
+mixin appartment-photo(apprtPhotoData)
+	.appartment-photo
+		.appartment-photo__switch-block
+			.switch-block__main-photo.appartment__main-photo
+				img(src="../img/appartments/"+ apprtPhotoData.mainPhoto +".jpg" alt="Фото комплекса")
+			.switch-block__thumbnails.d-flex.appartment__thumbnails
+				each item in apprtPhotoData.apprtPhotoThumb
+					.thumbnails__image(data-img-path = "../img/appartments/"+ item.itemBig + ".jpg")
+						img(src="../img/appartments/"+ item.itemMini +".jpg"  alt="Фото комплекса")
+
+	.hc-photo-mobile
+		.photo-slider
+			each item in apprtPhotoData.apprtMobilPhoto
+				.photo-slider-item
+					img.d-block.w-100(src="../img/appartments/"+ item.mobilePhoto+".jpg", alt='фото ЖК')
