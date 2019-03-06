@@ -41,18 +41,17 @@ $(document).ready(function() {
 	});
 
 		//-следить за объявлениями
-
 	$('.watch-announcements').on('click', function(e){
 		e.preventDefault();
 		if($(this).hasClass('watch-announcements--active')){
 			$(this).removeClass('watch-announcements--active');
-			$(this).children('.simple-link').text('Следить за объявлениями в этом ЖК');
-			console.log($(this).children('.simple-link').text());
+			$(this).children('.simple-link').children('span').children('nohyphen').text('Следить за объявлениями в этом ЖК');
+
 		}
 		else {
 			$(this).addClass('watch-announcements--active');
-			$(this).children('.simple-link').text('Отписаться от объявлений в этом ЖК');
-			console.log($(this).children('.simple-link').text());
+			$(this).children('.simple-link').children('span').children('nohyphen').text('Отписаться от объявлений в этом ЖК');
+
 		}
 	});
 
@@ -99,7 +98,10 @@ $(document).ready(function() {
 			}
 	});
 	//-скрываем выпадашку при ресайзе
+
 	window.onresize = function(event) {
+		if(detectmob())
+			return;
 
 	    dropdownОption.slideUp(800);
 		dropdownОption.attr('data-control','hidden');
@@ -111,9 +113,23 @@ $(document).ready(function() {
 		}
 		else{
 			$('.hc-description__footer-content').hide();
+			$('.openHiddenDescrip').removeClass('hideText');
+			$('.openHiddenDescrip').text('Подробнее о ЖК');
 		}
 
 	}
+
+	function detectmob() {
+	 return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+	}
+	//-кнопка телефон в таблице на планшетах
+
+	// if($(document).width()>=768 || $(document).width()<= 992 ){
+	// 	$('.contact-phone').on('click', function(){
+	// 		$(this).toggleClass('contact-phone--tablet')
+	// 	});
+
+	// }
 
 	//-переключаем класс у ссылки-фильтра (по цене)
 	// $('.link-filter').on('click', function(e){
@@ -139,7 +155,7 @@ $(document).ready(function() {
 
 	//-показать/скрыть текст описание ЖК
 
-	$('.description__hidden-text').hide();
+	// $('.description__hidden-text').hide();
 		$('.openHiddenDescrip').on('click', function(e){
 			e.preventDefault();
 			if($(document).width()>=768){
@@ -155,23 +171,20 @@ $(document).ready(function() {
 					$(this).text('Скрыть описание');
 					$('.description__visible-text').removeClass('fadeOut');
 				}
-			}
-
-			if($(document).width()<768){
+			}else if($(document).width()<768){
 				if($(this).hasClass('hideText')) {
 					$('.hc-description__footer-content').hide(800);
+					$('.description__hidden-text').hide(800);
 					$(this).removeClass('hideText');
 					$(this).text('Подробнее о ЖК');
 				} else {
 					$('.hc-description__footer-content').show(800);
+					$('.description__hidden-text').show(800);
 					$(this).addClass('hideText');
 					$(this).text('Скрыть описание');
 				}
 
 			}
-
-
-
 	});
 
 		$('.photo-slider').slick({
@@ -190,9 +203,11 @@ $(document).ready(function() {
 	// 			document.cookie = 'device_pixel_ratio=' + window.devicePixelRatio + ';';
 	// 		window.location.reload();
 	// 	}
-	// })();
+	// // })();
 
-
+	// function detectmob() {
+	//  return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+	// }
 });
 
 

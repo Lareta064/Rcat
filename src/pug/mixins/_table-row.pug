@@ -9,14 +9,14 @@ mixin table-row(roomsNum, roomsLink, roomsArea, roomsFloor,roomsRepair, roomsImg
 							.d-flex.apartment-info__col
 								a(href=""+ roomsLink).info-item.info-item--rooms #[span.link-solid-border #{roomsNum} комн. кв]
 								.info-item.info-item--area #[span #{roomsArea} кв.м]
-							.d-flex.apartment-info__col
+							.d-flex.apartment-info__col.apartment-info__col--tablet
 								.info-item.info-item--floor #[span #{roomsFloor} этаж]
 								if(roomsRepair == 'без отделки')
 									.info-item.info-item--repair #[span Без отделки]
 								if(roomsRepair == 'отделка')
 									.info-item.info-item--repair #[span.repaire-icon Отделка]
 						.apartment-img.order-md-1(style="background-image: url(../img/hc/"+ roomsImg +".png);")
-					.d-flex.column-item
+					.d-flex.column-item.column-item--tablet
 						.d-flex.apartment-info
 							.d-flex.apartment-info__col.apartment-info__col--short
 								if priceDown
@@ -27,7 +27,7 @@ mixin table-row(roomsNum, roomsLink, roomsArea, roomsFloor,roomsRepair, roomsImg
 								else
 									.info-item.info-item--price-usd #[span.visible-usd $#{priceUsd}] #[span.hidden-rub #{priceRub} руб.]
 
-							.d-flex.apartment-info__col.apartment-info__col--large
+							.d-flex.apartment-info__col.apartment-info__col--large.apartment-info__price-rub--tablet
 								if priceDown
 									.info-item.info-item--price-rub #[span.visible-rub.price-down #{priceRub} руб.] #[span.hidden-usd $#{priceUsd}]
 										+icon-price-down

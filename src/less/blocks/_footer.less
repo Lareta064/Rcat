@@ -6,11 +6,15 @@
 	@media(min-width: 768px){
 	padding-left: 0px;
 	}
+	@media(min-width: 1200px){
+		height: 270px;
+		overflow:hidden;
+	}
 	@media(min-width: 1350px){
-
-			overflow:hidden;
-			flex-direction: row;
-			align-items: center;}
+		flex-direction: row;
+		align-items: center;
+		height: 207px;
+	}
 	.footer-top{
 		background: transparent;
 		position: relative;
@@ -126,9 +130,12 @@
 	svg{
 		width: 230px;
 	}
-
-	@media(min-width: 1350px){
+	@media(min-width: 1200px){
 		display: block;
-		transform: translateX(-50%) translateX(22px);}
+		transform: translate(-32%,-10%);
+	}
+	@media(min-width: 1350px){
+		transform: translateX(-50%) translateX(22px);
+		}
 
 }

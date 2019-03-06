@@ -66,15 +66,39 @@
 }
 .option-panel--desktop{
 	display: none;
-	@media(min-width: 1350px){display: flex;}
+	@media(min-width: 1200px){display: flex;}
 }
 .option-panel--mobile{
 	display: flex;
-	@media(min-width: 1350px){display: none;}
+	@media(min-width: 1200px){display: none;}
 }
 .icon-down--rotate{
 	transform: rotate(180deg) translate(-25%);
 }
 
+.dropdown-item:hover{
+	background-color: @btnBg;
 
+	.simple-link span{
+		color: @white;
+		background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 60%, transparent 60%);
+		background-position: 0 100%;
+		background-repeat: repeat-x;
+		background-size: 5px 1px;
+      }
 
+      a{
+      	color:@white;
+      	border-bottom-color: @white;}
+      	.icon-add path,
+      	.icon-question path,
+      	.icon-notify path {fill: @white;}
+
+		.watch-announcements{.simple-link{color:@white;}}
+      	.watch-announcements--active {
+      		.simple-link{color:@white;}
+      		.icon-notify path {fill: @redText;}
+
+      	}
+
+    }
