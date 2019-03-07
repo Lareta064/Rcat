@@ -4,6 +4,7 @@
 	display: flex;
 	border-radius: 10px;
 	padding: 20px ;
+	margin-bottom: 24px;
 	@media(min-width: 1350px){padding: 20px 30px 28px 20px;}
 
 }
@@ -190,6 +191,7 @@
 	align-items: center;
 }
 .appartment-page-link{
+	cursor: pointer;
 	align-items: center;
 	position: absolute;
 	top: 20px;
@@ -205,6 +207,13 @@
 		position: relative;
 		top:-3px;
 	}
+}
+.appartment-page-link:hover{
+	.share-link{
+		svg{path{fill:@redText;}}
+	}
+	.share-link-text{color:@redText;}
+	.tooltip-box{display: block;}
 }
 .appartment--built{
 	padding-right: 28px;
@@ -283,5 +292,5 @@
 }
 .appartment-card__row--toolbar{
 	padding-bottom: 0;
-	// padding-top: 10px;
+
 }

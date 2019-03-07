@@ -1,11 +1,11 @@
 - var apprtPhotoBlock = {mainPhoto:'app1', apprtPhotoThumb:{item1:{itemBig:'app1', itemMini:'app1-mini1'},item2:{itemBig:'app1', itemMini:'app1-mini2'},item3:{itemBig:'app1', itemMini:'app1-mini3'}}, apprtMobilPhoto:{item1:{mobilePhoto:'app1',activeClass:'active'}, item2:{mobilePhoto:'app1'},item3:{mobilePhoto:'app1'} } };
 
-.section-wrapper
+mixin appartment-card
 	.appartment-card
 		.appartment-page-link.d-flex
 			.share-link-text Поделиться
 			+share-link
-		+tooltip
+			+tooltip
 		.appartment-publication.text-body--grey Добавлено сегодня
 		.appartment-card__img
 			+appartment-photo(apprtPhotoBlock)
@@ -50,7 +50,3 @@
 						+icon-mail
 					.appartment-card__toolbar-item.appartment-card__toolbar-item--pdf
 						+text-link('Скачать ПДФ','#','text-link--line')
-						//- +icon-pdf
-+appartment-card
-+appartment-card
-+appartment-card

@@ -8,7 +8,8 @@
 	font-size: 14px;
 	background-color:@badgeBg;
 	top: 0;
-	right: 0;
+	transform: translateY(-110%);
+	right: -50px;
 	z-index: 20;
 	display: none;
 
@@ -33,13 +34,16 @@
 .tooltip-box:after{
 	content: "";
 	position: absolute;
-	width: 10px;
-	height: 10px;
+	width: 0px;
+	height: 0px;
 	border: 10px solid @badgeBg;
 	border-bottom-width: 0px;
 	border-left-color: transparent;
 	border-right-color: transparent;
-	bottom:-5px;
+	bottom:-7px;
 	right: 50px;
 
+}
+.tooltip-box--visible{
+	display: block;
 }

@@ -195,4 +195,6 @@ $(document).ready(function() {
 	 //-dotdotdot
 	$(".appartment-card__truncate-text").dotdotdot();
 
+
+
 });
