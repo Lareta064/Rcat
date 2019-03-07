@@ -139,3 +139,12 @@ mixin metroStation(metroStation)
 			span.last-icon
 				+#{metroStation.iconLast}
 
+//-миксин для ссылки-кнопки с кол-вом квартир
+mixin link-btn(text)
+	a(href='#').link-btn
+		span.link-btn--text= text
+
+mixin link-btn-block(...items) 
+	.link-btn-block
+		each item in items 
+			+link-btn(item) 
