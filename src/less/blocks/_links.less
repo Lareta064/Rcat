@@ -1,3 +1,4 @@
+//Ссылки для страницы hc-ЖК
 .link-block {
 	display: inline-flex;
 	align-items: center;
@@ -102,6 +103,43 @@
 
 	}
 }
+
+//Ссылки для страницы фильтров и его состояний
+.link-btn-block{
+	display: flex;
+	align-items: center;
+}
+
+.link-btn{
+    // display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	border-radius: 3px;
+	border: 1px solid @blueBorder; 
+    // padding: 14px 15px; 
+    color: @blueBorder; 
+    margin-right: 4px;
+    width: 40px;
+    height: 40px;
+    
+    @media(min-width:768px){
+    	width: 30px;
+  		height: 30px;
+    }
+    
+    &:hover{
+		color: @white;
+		background-color: @blueBorder;
+    }
+}
+
+.link-btn--active{
+	color: @white;
+	background-color: @blueBorder;
+}
+
+
 .link-title--middle{
 	font-size: 20px;
 }
