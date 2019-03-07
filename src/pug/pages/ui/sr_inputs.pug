@@ -1,0 +1,24 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Поля ввода input';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.section-ui
+			.title Поля ввода input
+		.section-ui
+			h4 Одиночный input
+		.section-ui
+			+input-block('text','Улица, район, ЖК, адрес')
+							
+				
+		.section-ui
+			h4 Двойной input
+		.section-ui
+			+input-block--double('text','от','','text','до')
+		
+
+
+		

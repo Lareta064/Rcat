@@ -226,6 +226,15 @@ $(document).ready(function() {
 	// function detectmob() {
 	//  return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
 	// }
+
+	//Скрипт для фокуса input
+	$('.form-input').focus(function(event){
+		$ (this).addClass('form-input--focus');
+	});
+
+	$('.form-input').blur(function(event){
+		$ (this).removeClass('form-input--focus');
+	});
 });
 
 
