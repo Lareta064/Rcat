@@ -103,10 +103,6 @@ $(document).ready(function() {
 		if(detectmob())
 			return;
 
-	 //    dropdownОption.slideUp(800);
-		// dropdownОption.attr('data-control','hidden');
-		// dataValue = 'hidden';
-		// showOptions.children('.link-block__icon').removeClass('icon-down--rotate');
 
 		if($(document).width()>768){
 			$('.hc-description__footer-content').show();
@@ -116,41 +112,21 @@ $(document).ready(function() {
 			$('.openHiddenDescrip').removeClass('hideText');
 			$('.openHiddenDescrip').text('Подробнее о ЖК');
 		}
-
 	}
-		window.onresize = function(event) {
 
+	window.onresize = function(event) {
 
 	    dropdownОption.slideUp(800);
 		dropdownОption.attr('data-control','hidden');
 		dataValue = 'hidden';
 		showOptions.children('.link-block__icon').removeClass('icon-down--rotate');
 
-
 	}
 
 	function detectmob() {
 	 return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
 	}
-	//-кнопка телефон в таблице на планшетах
 
-	// if($(document).width()>=768 || $(document).width()<= 992 ){
-	// 	$('.contact-phone').on('click', function(){
-	// 		$(this).toggleClass('contact-phone--tablet')
-	// 	});
-
-	// }
-
-	//-переключаем класс у ссылки-фильтра (по цене)
-	// $('.link-filter').on('click', function(e){
-	// 	e.preventDefault();
-	// 	if($(this).attr('data-pill','off')){
-	// 		$(this).addClass('link-filter--active');
-	// 		$(this).attr('data-pill','active');
-	// 		$(this).siblings('.link-filter--active').removeClass('link-filter--active');
-	// 	}
-
-	// });
 
 	//-переключаем класс у ссылки-фильтра (по цене)
 	$('.filter-toggle-item').on('click', function(){
@@ -202,26 +178,6 @@ $(document).ready(function() {
 		variableWidth: true
 	});
 
-	//-обрезать текст троеточием
-	var size = 189,
-	newsContent= $('.appartment-card__truncate-text'),
-	newsText = newsContent.text();
-
-	if(newsText.length > size){
-		newsContent.text(newsText.slice(0, size) + ' ...');
-	}
-
-		//-Retina//
-
-	// 	(function(){
-	// 		if( document.cookie.indexOf('device_pixel_ratio') == -1
-	// 			&& 'devicePixelRatio' in window
-	// 			&& window.devicePixelRatio == 2 ){
-
-	// 			document.cookie = 'device_pixel_ratio=' + window.devicePixelRatio + ';';
-	// 		window.location.reload();
-	// 	}
-	// // })();
 
 	// function detectmob() {
 	//  return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
@@ -235,14 +191,8 @@ $(document).ready(function() {
 	$('.form-input').blur(function(event){
 		$ (this).removeClass('form-input--focus');
 	});
+
+	 //-dotdotdot
+	$(".appartment-card__truncate-text").dotdotdot();
+
 });
-
-
-
-
-
-
-
-
-
-

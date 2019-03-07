@@ -26,24 +26,22 @@
 				+text-link('1-й Обыденский переулок, 12 стр. 1','#', 'appartment-card--address')
 				+repaire-item('С ремонтом')
 
-			.appartment-card__row
-				.appartment-card__text-box
-					.appartment-card--text.text-body.
-						Трехкомнатная квартира с отделкой в спокойном классическом стиле площадью&nbsp;156&nbsp;кв.м.
-					.appartment-card--text.text-body.
-						 Функциональная планировка: кухня, гостиная с балконом и видами на Храм Христа Спасителя, 2&nbsp;спальни со своими ванными комнатами и большим балконом, гардеробная, постирочная.
-					.appartment-card--text.text-body.
-						На подземном паркинге есть 1 машино-место. Продается без мебели.
-					.appartment-card--text.appartment-card__truncate-text.text-body.
-						Клубный «Дом у Пречистенских Ворот» — это шестиэтажный особняк, образец классического стиля. В&nbsp;здании работают бассейн, тренажерный зал, сауна, детская игровая площадка. Территория комплекса оснащена
+			.appartment-card__row.appartment-card__row--description
+				.appartment-card__text-box.appartment-card__truncate-text.
+					Трехкомнатная квартира с отделкой в спокойном классическом стиле площадью&nbsp;156&nbsp;кв.м. #[br]
+					Функциональная планировка: кухня, гостиная с балконом и видами на Храм Христа Спасителя, 2&nbsp;спальни со своими ванными комнатами и большим балконом, гардеробная, постирочная.#[br]
+					На подземном паркинге есть 1 машино-место. Продается без мебели.#[br]
+					Клубный «Дом у Пречистенских Ворот» — это шестиэтажный особняк, образец классического стиля. В&nbsp;здании работают бассейн, тренажерный зал, сауна, детская игровая площадка. Территория комплекса оснащена
 
-			.appartment-card__row.pl-0
+			.appartment-card__row.appartment-card__row--toolbar.pl-0
 				.appartment-card__toolbar.d-flex
 					.appartment-card__toolbar-item
 						+button('+7 985 356 4524', '#', 'btn-tel contact-phone')
 					.appartment-card__toolbar-item
 						+link('В избранное','','icon-heart','fix-width')(class=" add-favorite icon-heart--small")
-					.appartment-card__toolbar-item
+					.appartment-card__toolbar-item.appartment-card__toolbar-item--mail
 						+text-link('Отправить электронной почтой','#','text-link--line')
-					.appartment-card__toolbar-item
+						+icon-mail
+					.appartment-card__toolbar-item.appartment-card__toolbar-item--pdf
 						+text-link('Скачать ПДФ','#','text-link--line')
+						//- +icon-pdf

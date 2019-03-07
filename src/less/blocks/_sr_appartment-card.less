@@ -3,8 +3,9 @@
 	border: 1px solid @lightBorder;
 	display: flex;
 	border-radius: 10px;
-	padding: 20px 30px 28px 20px;
-	height: 320px;
+	padding: 20px ;
+	@media(min-width: 1350px){padding: 20px 30px 28px 20px;}
+
 }
 .appartment-card__img{
 	height: 100%;
@@ -15,7 +16,7 @@
 //-photo-block
 .appartment-photo {
 	display: none;
-	margin-bottom: 40px;
+	// margin-bottom: 40px;
 	@media(min-width: 768px){display: block;}
 }
 .hc-photo-mobile{
@@ -86,7 +87,7 @@
 	height: 47px;
 	overflow:hidden;
 	position:relative;
-	border-radius: 8px;
+	border-radius: 3px;
 	&:last-child {margin-right: 0;}
 
 		@media (min-width: 1200px) {
@@ -127,7 +128,11 @@
 }
 .appartment-card__title{
 	padding-right: 28px;
-	padding-bottom: 9px;
+	padding-bottom: 14px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	// @media(min-width: px){padding-bottom: 0px;}
 	@media(min-width: 992px){padding-bottom: 0px;}
 }
 .appartment-card__price{
@@ -140,8 +145,15 @@
 	display: block;
 	@media(min-width: 992px){display: none;}
 	@media(min-width: 1200px){display: block;}
-
-
+}
+.appartment-card__row{
+	.repaire-item{
+		display: none;
+		@media(min-width: 1054px){display: block;}
+	}
+	.icon-brach{display: none;
+		@media(min-width: 992px){display: block;}
+	}
 
 }
 .appartment-page-link{
@@ -162,18 +174,44 @@
 	margin-left: 10px;
 }
 .appartment-card__text-box{
+	// display: none;
 	width: 99%;
-	@media(min-width: 1350px){width: 80%;}
+	.text-body{padding-bottom: 4px;}
+	@media(min-width: 992px){width:80%	}
+	@media(min-width: 1350px){width: 800px;}
+
 
 }
-.appartment-card--text{
-	padding-bottom: 4px;
-}
+
 .appartment-card__toolbar-item{
-	padding-top: 12px;
+	// padding-top: 12px;
 	padding-right: 28px;
 	.link-block{padding-right: 0;}
 
+}
+.appartment-card__toolbar-item--mail{
+	.text-link{
+		display: none;
+		@media(min-width: 1054px){display: block;}
+	}
+	.icon-mail{
+		display: block;
+		padding-right: 10px;
+		margin-right: 0;
+		@media(min-width: 1054px){display: none;}
+	}
+}
+.appartment-card__toolbar-item--pdf{
+	// .text-link{display: none;
+	// 	@media(min-width: 992px){display: block;}
+	// }
+	// .icon-pdf{
+	// 	display: block;
+	// 	position: relative;
+	// 	bottom: 8px;
+
+	// 	@media(min-width: 992px){display: none;}
+	// }
 }
 
 .appartment-publication{
@@ -182,4 +220,15 @@
 	bottom: 30px;
 	display: none;
 	@media(min-width: 1350px){display: block;}
+}
+.appartment-card__truncate-text{
+	height: 38px;
+	@media(min-width: 992px){height: 70px;}
+	@media(min-width: 992px){height: 97px;}
+	@media(min-width: 1350px){height: 140px;}
+
+}
+.appartment-card__row--toolbar{
+	padding-bottom: 0;
+	// padding-top: 10px;
 }
