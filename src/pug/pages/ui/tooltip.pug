@@ -1,0 +1,21 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Тултип';
+	- var pageClass= "body--dashboard";
+
+block content
+	.container.container--left
+		.section-ui
+			h1 Тултип
+		.section-ui
+			.tooltip-box
+				.tooltip__title Ссылка на объект
+				+input-block('text','http://realtycat.pro/36732')
+				.tooltip__links.d-flex
+					+text-link('Отправить по эл почте','#','text-link--line')
+					+text-link('Скачать ПДФ','#','text-link--line')
+
+
+
+

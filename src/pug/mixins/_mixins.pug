@@ -155,10 +155,10 @@ mixin link-btn(text)
 	a(href='#').link-btn
 		span.link-btn--text= text
 
-mixin link-btn-block(...items) 
+mixin link-btn-block(...items)
 	.link-btn-block
-		each item in items 
-			+link-btn(item) 
+		each item in items
+			+link-btn(item)
 
 mixin repaire-item(text)
 	if text == 'С ремонтом'
@@ -180,4 +180,12 @@ mixin input-block--double(inputType1,inputPlace1,inputName1,inputType2,inputPlac
 	.input-block.input-block--double.d-flex&attributes(attributes)
 		input.form-input.form-input--left(type=""+ inputType1 placeholder=""+inputPlace1 name=""+ inputName1)
 		input.form-input.form-input--right(type=""+ inputType2 placeholder=""+ inputPlace2 name=""+ inputName2)
+
+mixin tooltip
+	.tooltip-box&attributes(attributes)
+		.tooltip__title Ссылка на объект
+		+input-block('text','http://realtycat.pro/36732')
+		.tooltip__links.d-flex
+			+text-link('Отправить по эл почте','#','text-link--line')
+			+text-link('Скачать ПДФ','#','text-link--line')
 

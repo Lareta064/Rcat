@@ -190,10 +190,21 @@
 	align-items: center;
 }
 .appartment-page-link{
+	align-items: center;
 	position: absolute;
 	top: 20px;
 	right: 20px;
 	@media(min-width: 1350px){right: 30px;}
+	.share-link-text{
+		color: @btnBg;
+		padding-right: 10px;
+		display: none;
+		@media(min-width: 1350px){display: block;}
+	}
+	.share-link{
+		position: relative;
+		top:-3px;
+	}
 }
 .appartment--built{
 	padding-right: 28px;

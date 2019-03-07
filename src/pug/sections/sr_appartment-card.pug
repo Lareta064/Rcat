@@ -2,8 +2,10 @@
 
 .section-wrapper
 	.appartment-card
-		.appartment-page-link
-			+external-link
+		.appartment-page-link.d-flex
+			.share-link-text Поделиться
+			+share-link
+		+tooltip
 		.appartment-publication.text-body--grey Добавлено сегодня
 		.appartment-card__img
 			+appartment-photo(apprtPhotoBlock)
