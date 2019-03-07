@@ -16,7 +16,7 @@ mixin section-top(sectionTitle,filterToggles,sectionSubtitle,addClass )
 
 //-ссылка заголовок
 mixin link-title(linkText, href)
-	a(href=" "+href ).headline-body.simple-link.link-solid-border !{linkText}
+	a(href=" "+href ).headline-body.simple-link.link-solid-border&attributes(attributes) !{linkText}
 
 
 
@@ -104,6 +104,13 @@ mixin mobile-btn(btnImg)
 	a(href="#").mobile-button&attributes(attributes)
 		+plus
 
+//-базовый миксин иконка + метро
+mixin metro(...metroName )
+	.metro-block.d-flex&attributes(attributes)
+		+icon-metro
+		each item in metroName
+			.metro-name !{item} #[span.metro-name--comma ,]
+
 
 //-миксин для метро с человечком
 mixin metro-station(firstIcоn,stationName,timeNum, iconLast)
@@ -118,6 +125,7 @@ mixin metro-station(firstIcоn,stationName,timeNum, iconLast)
 			span.last-icon
 				+#{iconLast}
 
+
 mixin metro-station-mobile(items)
 	.metro-station-mobile
 		each item in items
@@ -125,6 +133,8 @@ mixin metro-station-mobile(items)
 				.text-body.first-text #{item.stationName}
 				.text-body.middle-text.text-body--grey !{item.timeNum} пешком
 		+icon-metro
+
+
 //-миксин для метро с человечком для объекта
 mixin metroStation(metroStation)
 	.metro-station&attributes(attributes)
@@ -138,4 +148,14 @@ mixin metroStation(metroStation)
 		if metroStation.iconLast
 			span.last-icon
 				+#{metroStation.iconLast}
+
+mixin repaire-item(text)
+	if text == 'С ремонтом'
+		.repaire-item-box
+			+icon-brach
+			.repaire-item= text
+	else
+		.repaire-item= text
+
+
 
