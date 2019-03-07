@@ -163,45 +163,53 @@ $(document).ready(function() {
 
 	});
 
-	//-показать/скрыть текст описание ЖК
+		//-показать/скрыть текст описание ЖК
 
-	// $('.description__hidden-text').hide();
-		$('.openHiddenDescrip').on('click', function(e){
-			e.preventDefault();
-			if($(document).width()>=768){
+		// $('.description__hidden-text').hide();
+	$('.openHiddenDescrip').on('click', function(e){
+		e.preventDefault();
+		if($(document).width()>=768){
 
-				if($(this).hasClass('hideText')) {
-					$('.description__hidden-text').hide(800);
-					$(this).removeClass('hideText');
-					$(this).text('Подробнее о ЖК');
-					$('.description__visible-text').addClass('fadeOut');
-				} else {
-					$('.description__hidden-text').show(800);
-					$(this).addClass('hideText');
-					$(this).text('Скрыть описание');
-					$('.description__visible-text').removeClass('fadeOut');
-				}
-			}else if($(document).width()<768){
-				if($(this).hasClass('hideText')) {
-					$('.hc-description__footer-content').hide(800);
-					$('.description__hidden-text').hide(800);
-					$(this).removeClass('hideText');
-					$(this).text('Подробнее о ЖК');
-				} else {
-					$('.hc-description__footer-content').show(800);
-					$('.description__hidden-text').show(800);
-					$(this).addClass('hideText');
-					$(this).text('Скрыть описание');
-				}
-
+			if($(this).hasClass('hideText')) {
+				$('.description__hidden-text').hide(800);
+				$(this).removeClass('hideText');
+				$(this).text('Подробнее о ЖК');
+				$('.description__visible-text').addClass('fadeOut');
+			} else {
+				$('.description__hidden-text').show(800);
+				$(this).addClass('hideText');
+				$(this).text('Скрыть описание');
+				$('.description__visible-text').removeClass('fadeOut');
 			}
+		}else if($(document).width()<768){
+			if($(this).hasClass('hideText')) {
+				$('.hc-description__footer-content').hide(800);
+				$('.description__hidden-text').hide(800);
+				$(this).removeClass('hideText');
+				$(this).text('Подробнее о ЖК');
+			} else {
+				$('.hc-description__footer-content').show(800);
+				$('.description__hidden-text').show(800);
+				$(this).addClass('hideText');
+				$(this).text('Скрыть описание');
+			}
+
+		}
 	});
 
-		$('.photo-slider').slick({
-			arrows: false,
-			variableWidth: true
-		});
+	$('.photo-slider').slick({
+		arrows: false,
+		variableWidth: true
+	});
 
+	//-обрезать текст троеточием
+	var size = 189,
+	newsContent= $('.appartment-card__truncate-text'),
+	newsText = newsContent.text();
+
+	if(newsText.length > size){
+		newsContent.text(newsText.slice(0, size) + ' ...');
+	}
 
 		//-Retina//
 
