@@ -166,7 +166,28 @@
 	.icon-brach{display: none;
 		@media(min-width: 800px){display: block;}
 	}
+	.badge--dark{
+		position: relative;
+		left: -10px;
+		margin-right: 9px;
+	}
 
+	.metro-block{
+		padding-top: 10px;
+		@media(min-width: 1200px){padding-top: 0px;}
+	}
+
+}
+.appartment-card__row--transform{
+	align-items: flex-start;
+	flex-direction: column;
+	@media(min-width: 1200px){
+		align-items: center;
+		flex-direction: row;
+	}
+}
+.appartment-card__row-col{
+	align-items: center;
 }
 .appartment-page-link{
 	position: absolute;
@@ -177,7 +198,10 @@
 .appartment--built{
 	padding-right: 28px;
 	display: none;
-	@media(min-width: 992px){display: block;}
+	@media(min-width: 880px){
+		display: flex;
+		// align-self: baseline;
+	}
 }
 .appartment-card--link-title{
 	padding-right: 28px;
@@ -190,7 +214,7 @@
 	// display: none;
 	width: 99%;
 	.text-body{padding-bottom: 4px;}
-	// @media(min-width: 992px){width:80%	}
+	@media(min-width: 1200px){width:90%	}
 	@media(min-width: 1350px){width: 800px;}
 
 
@@ -236,9 +260,13 @@
 	@media(min-width: 1350px){display: block;}
 }
 .appartment-card__truncate-text{
-	height: 38px;
-	@media(min-width: 992px){height: 70px;}
-	@media(min-width: 1200px){height: 97px;}
+	display: none;
+
+	@media(min-width: 992px){
+		display: block;
+		height: 38px;
+	}
+	@media(min-width: 1200px){height: 95px;}
 	@media(min-width: 1350px){height: 140px;}
 
 }
