@@ -167,3 +167,17 @@ mixin repaire-item(text)
 			.repaire-item= text
 	else
 		.repaire-item= text
+
+
+//-миксин для одиночного инпута
+mixin input-block(inputType,inputPlace,inputName)
+	.input-block&attributes(attributes)
+		input.form-input(type=""+ inputType placeholder=""+ inputPlace name=""+ inputName)
+
+
+//-миксин для двойного инпута
+mixin input-block--double(inputType1,inputPlace1,inputName1,inputType2,inputPlace2,inputName2)
+	.input-block.input-block--double.d-flex&attributes(attributes)
+		input.form-input.form-input--left(type=""+ inputType1 placeholder=""+inputPlace1 name=""+ inputName1)
+		input.form-input.form-input--right(type=""+ inputType2 placeholder=""+ inputPlace2 name=""+ inputName2)
+

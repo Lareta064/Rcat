@@ -11,9 +11,14 @@ block content
 		.section-ui
 			h4 Одиночный input
 		.section-ui
-			.input-block
-				input.form-input(type="text" placeholder="Улица, район, ЖК, адрес" name="")
-
+			+input-block('text','Улица, район, ЖК, адрес')
+							
+				
 		.section-ui
 			h4 Двойной input
 		.section-ui
+			+input-block--double('text','от','','text','до')
+		
+
+
+		
