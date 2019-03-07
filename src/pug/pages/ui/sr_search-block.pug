@@ -1,0 +1,45 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Фильтр поиска';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.section-ui
+			.title Фильтр поиска
+		.section-ui
+
+			.search-block 
+				.search-header
+					.section-top.d-flex
+						.section-top-title--rooms Комнат
+							+link-btn-block('1','2','3','4+') Комнат
+						.section-top-title--area Площадь, кв.м
+							
+						.section-top-title--value Стоимость, рубли
+						.section-top-title--adress Адрес или ЖК
+							+link('Еще','#','arrow-down')
+							+button('Показать', '#','button--basic')
+						
+						
+						
+
+						//- .row-items-1
+						//- 	+link-btn-block('1','2','3','4+') Комнат
+						//- 	.row-items-2
+
+						//- 		.row-items-3
+
+						//- 			.row-items-4
+
+						//- 				.row-items-5
+
+
+
+
+
+											.section-ui
+												h4 Двойной input
+												.section-ui
+													+input-block--double('text','от','','text','до')
