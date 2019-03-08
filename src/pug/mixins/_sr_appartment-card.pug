@@ -14,7 +14,12 @@ mixin appartment-card(cardData)
 					+link-title(cardData.title, cardData.titleHref)(class="link-title--middle")
 
 				.appartment-card__price
-					.appartment-card__price--num.headline-bold !{cardData.price} руб.
+					if cardData.priceDown
+						.appartment-card__price-block.d-flex
+							.appartment-card__price--num.headline-bold !{cardData.price} руб.
+							+icon-price-down
+					else
+						.appartment-card__price--num.headline-bold !{cardData.price} руб.
 					.appartment-card__price--area.text-body.text-body--grey #[b !{cardData.areaPrice} руб./кв.м]
 						+icon-brach(class='icon-brach--hidden')
 
