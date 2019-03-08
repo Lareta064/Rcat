@@ -11,7 +11,30 @@ block content
 		.section-ui
 
 			.search-block 
-				.search-header
+				.search-block-row.search-block-row--header
+					.search-row-item
+						.search-item-title Комнат
+						+link-btn-block('1','2','3','4+')
+					.search-row-item.search-row-item--doubleinput
+						.search-item-title Площадь, кв.м
+						+input-block--double('text','от','','text','до')
+					.search-row-item.search-row-item--doubleinput
+						.search-item-title Стоимость,
+							+text-link('рубли','#')
+						+input-block--double('text','от','','text','до')
+					.search-row-item.search-row-item--input
+						.search-item-title Адрес или ЖК
+						+input-block('text','Улица, район, ЖК, адрес')
+					.search-row-item.search-row-item--flex
+						+link('Еще','#','arrow-down')
+					.search-row-item.search-row-item--flex
+						+button('Показать', '#','button--basic')
+
+				.search-block-row
+				.search-block-row
+				.search-block-row
+				.search-block-row
+				//- .search-header
 					.section-top.d-flex
 						.section-top-title--rooms Комнат
 							+link-btn-block('1','2','3','4+') Комнат
@@ -24,22 +47,4 @@ block content
 						
 						
 						
-
-						//- .row-items-1
-						//- 	+link-btn-block('1','2','3','4+') Комнат
-						//- 	.row-items-2
-
-						//- 		.row-items-3
-
-						//- 			.row-items-4
-
-						//- 				.row-items-5
-
-
-
-
-
-											.section-ui
-												h4 Двойной input
-												.section-ui
-													+input-block--double('text','от','','text','до')
+			
