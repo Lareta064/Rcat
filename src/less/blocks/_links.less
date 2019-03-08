@@ -1,0 +1,146 @@
+//Ссылки для страницы hc-ЖК
+.link-block {
+	display: inline-flex;
+	align-items: center;
+	padding-right: 24px;
+	color: @btnBg;
+
+	.link-block__icon{padding-right: 10px;}
+}
+.link-group{
+	@media(min-width: 768px){flex-shrink: 0}
+
+}
+.simple-link {
+	font-size: 16px;
+
+	color: @btnBg;
+    transition: .25s;
+    span{
+    	background: linear-gradient(to right, rgba(44,129,209, .2), rgba(44,129,209, .2) 60%, transparent 60%);
+    	background-position: 0 100%;
+    	background-repeat: repeat-x;
+    	background-size: 5px 1px;
+    	padding-bottom: 4px;
+    	&:hover{
+    	background: linear-gradient(to right, rgba(209,86,86, .2), rgba(209,86,86, .2) 60%, transparent 60%);
+    	background-position: 0 100%;
+    	background-repeat: repeat-x;
+    	background-size: 5px 1px;
+
+		color:rgb(209,86,86);
+		}
+    }
+
+    @media(min-width: 768px){font-size: 14px;}
+
+}
+.simple-link.simple-link--line {
+	background-image: none;
+
+}
+
+.fix-width{
+	@media(min-width: 768px){
+		min-width: 97px;
+	}
+}
+.dropdown-double-item{
+	font-size: 16px;
+	.icon-notify{margin-right: 10px;}
+	.dropdown-double-item__text{
+		display: flex;
+		flex-direction: column;
+		span{
+			width: auto;
+			display: inline;
+			border-bottom: 1px dashed rgba(44,129,209, .5);
+		color:@btnBg ;
+		}
+		.short-span{
+			width: 85px;
+			padding-top: 4px;
+			@media(min-width: 480px){
+				padding-top: 0;
+				width: 85px;
+				padding-left: 4px;
+			}
+		}
+		@media(min-width: 480px){flex-direction: row;}
+	}
+	@media(min-width: 768px){font-size: 14px;}
+}
+
+.simple-link--error{
+	display: none;
+	@media(min-width: 1200px){
+		display: block;
+	}
+}
+.text-link{
+	font-size: 16px;
+	color: rgb(44,129,209);
+	border-bottom: 1px dashed rgba(44,129,209, .2);
+	&:hover{
+		color: rgb(209,86,86);
+		border-bottom: 1px dashed rgba(209,86,86, .2);
+	}
+	@media(min-width: 768px){
+		font-size: 14px;
+	}
+}
+.text-link--line{
+	border-bottom: 1px solid rgba(44,129,209, .2);
+	&:hover{
+
+		border-bottom: 1px solid rgba(209,86,86, .2);
+	}
+}
+.simple-link.link-solid-border,
+.link-solid-border{
+	border-bottom: 1px solid rgba(44,129,209, .2);
+	&:hover{border-color:rgba(209,86,86, .2);
+
+	}
+}
+
+//Ссылки для страницы фильтров и его состояний
+.link-btn-block{
+	display: flex;
+	align-items: center;
+}
+
+.link-btn{
+    // display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	border-radius: 3px;
+	border: 1px solid @blueBorder; 
+    // padding: 14px 15px; 
+    color: @blueBorder; 
+    margin-right: 4px;
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+    
+    @media(min-width:768px){
+    	width: 30px;
+  		height: 30px;
+    }
+    
+    &:hover{
+		color: @white;
+		background-color: @blueBorder;
+    }
+}
+
+.link-btn--active{
+	color: @white;
+	background-color: @blueBorder;
+}
+
+
+.link-title--middle{
+	font-size: 20px;
+}
