@@ -191,3 +191,9 @@ mixin tooltip
 		.tooltip__links.d-flex
 			+text-link('Отправить по эл почте','#','text-link--line')
 			+text-link('Скачать ПДФ','#','text-link--line')
+
+mixin custom-checkbox(text)
+	label.checkbox-label
+		span.checkbox-title= text
+		input(type="checkbox" name="form-checkbox" class="form-checkbox")
+		span.custom-checkbox

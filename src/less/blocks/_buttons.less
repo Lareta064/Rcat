@@ -181,3 +181,38 @@
 		height: 30px;
 	}
 }
+//-custom checkbox
+.checkbox-label{
+	cursor: pointer;
+    .checkbox-title{
+    	padding-right: 10px;
+    	position: relative;
+    	top: -7px;
+    }
+
+}
+/*КАСТОМНЫЙ ЧЕКБОКС*/
+.form-checkbox{
+	width: 0.01px;
+}
+.form-checkbox:focus + .custom-checkbox{
+	border: 1px solid @btnBg;
+}
+
+.custom-checkbox{
+	position: relative;
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	border: 1px solid @btnBg;
+	background-color: #fff;
+
+	transition: 0.5s ease-out;
+
+}
+.form-checkbox:checked + .custom-checkbox{
+	border: 6px solid #f3f3f3;
+	background-color: @btnBg;
+
+}
