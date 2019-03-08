@@ -193,12 +193,24 @@ $(document).ready(function() {
 	});
 
 	 //-dotdotdot
-	$(".appartment-card__truncate-text").dotdotdot();
+	//$(".appartment-card__truncate-text").dotdotdot();
 
 	$('.badge').on('click', function(){
 		$(this).toggleClass('badge--active');
 
 	});
 
+
+
+	var snipping = function(){
+		$(".appartment-card__truncate-text").snipper({
+			height: '140px',
+			ellipsis: '&hellip;'
+		});
+
+	};
+
+	snipping();
+	$(window).resize(snipping);
 
 });
