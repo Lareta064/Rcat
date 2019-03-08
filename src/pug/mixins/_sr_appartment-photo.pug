@@ -5,7 +5,7 @@ mixin appartment-photo(apprtPhotoData)
 				img(src="../img/appartments/"+ apprtPhotoData.mainPhoto +".jpg" alt="Фото комплекса")
 			.switch-block__thumbnails.d-flex.appartment__thumbnails
 				each item in apprtPhotoData.apprtPhotoThumb
-					.thumbnails__image(data-img-path = "../img/appartments/"+ item.itemBig + ".jpg")
+					.thumbnails__image--appartment(data-img-path = "../img/appartments/"+ item.itemBig + ".jpg")
 						img(src="../img/appartments/"+ item.itemMini +".jpg"  alt="Фото комплекса")
 
 	.hc-photo-mobile
