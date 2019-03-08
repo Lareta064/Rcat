@@ -65,6 +65,18 @@ $(document).ready(function() {
 		});
 	});
 
+	// Изменение фото в карточке квартир на стр Поиска квартиры
+	$('.thumbnails__image--appartment').on('click',function(){
+		var imgPath = $(this).attr('data-img-path');
+		var mainImage = $(this).closest('.appartment-photo__switch-block').children('.switch-block__main-photo').children('img');
+		console.log(imgPath);
+		mainImage.attr('src', imgPath)
+
+		mainImage.fadeOut(300, function(){
+			mainImage.attr('src', imgPath).fadeIn(300);
+		});
+	});
+
 	// при ховере удлинняем/укорачиваем кнопку телефон
 	$('.contact-phone').on('click', function(e){
 		e.preventDefault();

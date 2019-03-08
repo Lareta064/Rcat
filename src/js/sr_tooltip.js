@@ -13,4 +13,15 @@ $(document).ready(function() {
 		}
 	});
 
+		$('.thumbnails__image').on('click',function(){
+		var imgPath = $(this).attr('data-img-path');
+		var mainImage = $(this).closest('.appartment-photo__switch-block').children('.switch-block__main-photo').children('img');
+		console.log(imgPath);
+		mainImage.attr('src', imgPath)
+
+		/*mainImage.fadeOut(400, function(){
+			mainImage.attr('src', imgPath).fadeIn(400);
+		});*/
+	});
+
 })
