@@ -178,11 +178,6 @@ $(document).ready(function() {
 		variableWidth: true
 	});
 
-
-	// function detectmob() {
-	//  return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
-	// }
-
 	//Скрипт для фокуса input
 	$('.form-input').focus(function(event){
 		$ (this).addClass('form-input--focus');
@@ -192,16 +187,15 @@ $(document).ready(function() {
 		$ (this).removeClass('form-input--focus');
 	});
 
-	 //-dotdotdot
-	//$(".appartment-card__truncate-text").dotdotdot();
 
+	//-меняем цвет бейджа ЦАО
 	$('.badge').on('click', function(){
 		$(this).toggleClass('badge--active');
 
 	});
 
 
-
+	//-обрезка текста троеточием
 	var snipping = function(){
 		$(".appartment-card__truncate-text").snipper({
 			height: '140px',
@@ -209,8 +203,8 @@ $(document).ready(function() {
 		});
 
 	};
-
 	snipping();
 	$(window).resize(snipping);
+	//- //обрезка текста троеточием
 
 });
