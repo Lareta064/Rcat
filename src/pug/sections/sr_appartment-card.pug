@@ -5,10 +5,12 @@
 
 -var apprtCard3 = {apprtPhotoBlock:{mainPhoto:'app2', apprtPhotoThumb:{item1:{itemBig:'app2', itemMini:'app2-mini1'},item2:{itemBig:'app2', itemMini:'app2-mini2'},item3:{itemBig:'app1', itemMini:'app2-mini3'}}, apprtMobilPhoto:{item1:{mobilePhoto:'app2',activeClass:'active'}, item2:{mobilePhoto:'app2'},item3:{mobilePhoto:'app2'} } }, title:'3-комн. кв., 108 кв.м., 5/5 этаж', titleHref:'#',  price:'35 100 000',priceDown: 'Цена снижена',areaPrice:'325 000', darkBadge:'Новостройка', hcName:'ЖК «Большая почтовая, 5',hcHref:'#', appartBuilt:'Сдан 2001', metroName:'Бауманская', region:['ВАО'],address:'Большая почтовая, 5',addressHref:'#',repaireText:'Без ремонта',paragrafe1:'Трехкомнатная квартира с отделкой в спокойном классическом стиле площадью&nbsp;156&nbsp;кв.м.',paragrafe2:'Функциональная планировка: кухня, гостиная с балконом и видами на Храм Христа Спасителя, 2&nbsp;спальни&nbsp;со&nbsp;своими ванными комнатами и большим балконом, гардеробная, постирочная.',paragrafe3:'На подземном паркинге есть 1 машино-место. Продается без мебели',paragrafe4:'Клубный «Дом у Пречистенских Ворот» — это шестиэтажный особняк, образец классического стиля. В&nbsp;здании работают бассейн, тренажерный зал, сауна, детская игровая площадка. Территория комплекса оснащена',phoneNumber:'+7 985 356 4524', publicDate:'Вчера' }
 
-
-.container
-	+appartment-card(apprtCard1)
-	+appartment-card(apprtCard2)
-	+appartment-card(apprtCard3)
-
-	//- +appartment-card
+section.search-result
+	.container
+		.search-result__cards
+			+appartment-card(apprtCard1)
+			+appartment-card(apprtCard2)
+			+appartment-card(apprtCard3)
+		.search-result__footer.d-flex
+			+pagination([{href:'#', value:'1',modif:'active'},{href:'#', value:'2'},{href:'#', value:'3'},{href:'#', value:'4'},{href:'#', value:'5'},{href:'#', value:'6'},{href:'#', value:'7'},{href:'#', value:'&hellip;'}])
+			+button('Показать еще 10 объектов', '#','button--basic')
