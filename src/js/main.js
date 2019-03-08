@@ -13,7 +13,6 @@ $(document).ready(function() {
 	});
 
 	//-красим иконку сердечко  и меняем слово Избранное
-
 	$('.add-favorite').on('click', function(e){
 		e.preventDefault();
 		if($(this).children('.link-block__icon').children('.icon-heart').children('svg').attr('data-prefix') == 'far'){
@@ -65,17 +64,7 @@ $(document).ready(function() {
 		});
 	});
 
-	// Изменение фото в карточке квартир на стр Поиска квартиры
-	$('.thumbnails__image--appartment').on('click',function(){
-		var imgPath = $(this).attr('data-img-path');
-		var mainImage = $(this).closest('.appartment-photo__switch-block').children('.switch-block__main-photo').children('img');
-		console.log(imgPath);
-		mainImage.attr('src', imgPath)
 
-		mainImage.fadeOut(300, function(){
-			mainImage.attr('src', imgPath).fadeIn(300);
-		});
-	});
 
 	// при ховере удлинняем/укорачиваем кнопку телефон
 	$('.contact-phone').on('click', function(e){
@@ -190,33 +179,12 @@ $(document).ready(function() {
 		variableWidth: true
 	});
 
-	//Скрипт для фокуса input
-	$('.form-input').focus(function(event){
-		$ (this).addClass('form-input--focus');
-	});
-
-	$('.form-input').blur(function(event){
-		$ (this).removeClass('form-input--focus');
-	});
-
-
-	//-меняем цвет бейджа ЦАО
+	 //-меняем цвет бейджа ЦАО
 	$('.badge').on('click', function(){
 		$(this).toggleClass('badge--active');
 
 	});
 
 
-	//-обрезка текста троеточием
-	var snipping = function(){
-		$(".appartment-card__truncate-text").snipper({
-			height: '140px',
-			ellipsis: '&hellip;'
-		});
-
-	};
-	snipping();
-	$(window).resize(snipping);
-	//- //обрезка текста троеточием
 
 });
