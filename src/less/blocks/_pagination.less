@@ -1,0 +1,26 @@
+.pagination{
+	display: inline-flex;
+}
+.pagination-item{
+	font-weight: 500;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 3px;
+	transition: background-color .5s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	margin-right: 9px;
+	&:hover{
+		color: #000;
+	}
+
+}
+.pagination-item:last-child{margin-right: 0;}
+.pagination-item--active{
+	border: 1px solid @lightBorder;
+	background-color: @white;
+	color: #000;
+}
