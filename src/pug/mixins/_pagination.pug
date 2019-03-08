@@ -1,0 +1,7 @@
+mixin pagination(paginationData)
+	.pagination&attributes(attributes)
+		each item in paginationData
+			if item.modif
+				a.pagination-item(href=""+ item.href class=" pagination-item--"+ item.modif  ) !{item.value}
+			else
+				a.pagination-item(href=""+ item.href ) !{item.value}
