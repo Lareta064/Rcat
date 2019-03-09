@@ -3,58 +3,17 @@ extends ../../layouts/ui-layout/ui-layout.pug
 block variables
 	- var title = 'карточка квартиры';
 	- var pageClass = 'body--dashboard';
+	-var apprtCard1 = {apprtPhotoBlock:{mainPhoto:'app1', apprtPhotoThumb:{item1:{itemBig:'app1', itemMini:'app1-mini1'},item2:{itemBig:'app2', itemMini:'app1-mini2'},item3:{itemBig:'app1', itemMini:'app1-mini3'}}, apprtMobilPhoto:{item1:{mobilePhoto:'app1',activeClass:'active'}, item2:{mobilePhoto:'app1'},item3:{mobilePhoto:'app1'} } }, title:'3-комн. кв., 156 кв.м., 3/6 этаж', titleHref:'#',  price:'135 000 000',areaPrice:'865 400',  hcName:'ЖК «Дом у Пречистенских ворот',hcHref:'#', appartBuilt:'Сдан 2014', metroName:'Кропоткинская', region:['ЦАО', 'Хамовники'],address:'1-й Обыденский переулок, 12 стр. 1',addressHref:'#',repaireText:'С ремонтом',paragrafe1:'Трехкомнатная квартира с отделкой в спокойном классическом стиле площадью&nbsp;156&nbsp;кв.м.',paragrafe2:'Функциональная планировка: кухня, гостиная с балконом и видами на Храм Христа Спасителя, 2&nbsp;спальни&nbsp;со&nbsp;своими ванными комнатами и большим балконом, гардеробная, постирочная.',paragrafe3:'На подземном паркинге есть 1 машино-место. Продается без мебели',paragrafe4:'Клубный «Дом у Пречистенских Ворот» — это шестиэтажный особняк, образец классического стиля. В&nbsp;здании работают бассейн, тренажерный зал, сауна, детская игровая площадка. Территория комплекса оснащена',phoneNumber:'+7 985 356 4524', publicDate:'Опубликовано сегодня' }
+
 
 
 block content
 	.container.container--left
+		.section-ui.mt-150
+			+appartment-card(apprtCard1)
 		.section-ui
-			include ../../sections/sr_appartment-card.pug
-	//- .section-wrapper
-	//- 	.appartment-card
-	//- 		.appartment-page-link
-	//- 			+share-link
-	//- 		.appartment-card__img
-	//- 			+appartment-photo(apprtPhotoBlock)
-	//- 		.appartment-card__content
-	//- 			.appartment-card__row
-	//- 				.appartment-card__title
-	//- 					+link-title('3-комн. кв., 156 кв.м., 3/6 этаж', '#')(class="link-title--middle")
-	//- 				.appartment-card__price
-	//- 					.appartment-card__price--num.headline-bold 135 000 000 руб.
-	//- 					.appartment-card__price--area.text-body.text-body--grey #[b 865 400 руб./кв.м]
+			pre.
+				+appartment-card(apprtCard1)
 
-	//- 			.appartment-card__row
-	//- 				.appartment-card--link-title
-	//- 					+link-title('ЖК «Дом у Пречистенских ворот» ', '#')
-	//- 				.appartment--built.text-body.text-body--grey Сдан 2014
-	//- 				+metro('Кропоткинская')
-
-	//- 			.appartment-card__row.pl-0
-	//- 				+badge-group(['ЦАО', 'Хамовники'])
-	//- 				+text-link('1-й Обыденский переулок, 12 стр. 1','#', 'appartment-card--address')
-	//- 				+repaire-item('С ремонтом')
-
-	//- 			.appartment-card__row
-	//- 				.appartment-card__text-box
-	//- 					.appartment-card--text.text-body.
-	//- 						Трехкомнатная квартира с отделкой в спокойном классическом стиле площадью 156 кв.м.
-	//- 					.appartment-card--text.text-body.
-	//- 						 Функциональная планировка: кухня, гостиная с балконом и видами на Храм Христа Спасителя,2 спальни со своими ванными комнатами и большим балконом, гардеробная, постирочная.
-	//- 					.appartment-card--text.text-body.
-	//- 						На подземном паркинге есть 1 машино-место. Продается без мебели.
-	//- 					.appartment-card--text.appartment-card__truncate-text.text-body.
-	//- 						Клубный «Дом у Пречистенских Ворот» — это шестиэтажный особняк, образец классического стиля.В здании работают бассейн, тренажерный зал, сауна, детская игровая площадка. Территория комплекса оснащена
-
-	//- 			.appartment-card__row.pl-0
-	//- 				.appartment-card__toolbar.d-flex
-	//- 					.appartment-card__toolbar-item
-	//- 						+button('+7 985 356 4524', '#', 'btn-tel contact-phone')
-	//- 					.appartment-card__toolbar-item
-	//- 						+link('В избранное','','icon-heart','fix-width')(class=" add-favorite icon-heart--small")
-	//- 					.appartment-card__toolbar-item
-	//- 						+text-link('Отправить электронной почтой','#','text-link--line')
-	//- 					.appartment-card__toolbar-item
-	//- 						+text-link('Скачать ПДФ','#','text-link--line')
-
-
+				-var apprtCard1 = {apprtPhotoBlock:{mainPhoto:'app1', apprtPhotoThumb:{item1:{itemBig:'app1', itemMini:'app1-mini1'},item2:{itemBig:'app2', itemMini:'app1-mini2'},item3:{itemBig:'app1', itemMini:'app1-mini3'}}, apprtMobilPhoto:{item1:{mobilePhoto:'app1',activeClass:'active'}, item2:{mobilePhoto:'app1'},item3:{mobilePhoto:'app1'} } }, title:'3-комн. кв., 156 кв.м., 3/6 этаж', titleHref:'#',  price:'135 000 000',areaPrice:'865 400',  hcName:'ЖК «Дом у Пречистенских ворот',hcHref:'#', appartBuilt:'Сдан 2014', metroName:'Кропоткинская', region:['ЦАО', 'Хамовники'],address:'1-й Обыденский переулок, 12 стр. 1',addressHref:'#',repaireText:'С ремонтом',paragrafe1:'Трехкомнатная квартира с отделкой в спокойном классическом стиле площадью&nbsp;156&nbsp;кв.м.',paragrafe2:'Функциональная планировка: кухня, гостиная с балконом и видами на Храм Христа Спасителя, 2&nbsp;спальни&nbsp;со&nbsp;своими ванными комнатами и большим балконом, гардеробная, постирочная.',paragrafe3:'На подземном паркинге есть 1 машино-место. Продается без мебели',paragrafe4:'Клубный «Дом у Пречистенских Ворот» — это шестиэтажный особняк, образец классического стиля. В&nbsp;здании работают бассейн, тренажерный зал, сауна, детская игровая площадка. Территория комплекса оснащена',phoneNumber:'+7 985 356 4524', publicDate:'Опубликовано сегодня' }
 

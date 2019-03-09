@@ -2,10 +2,17 @@
 	display: flex;
 	align-items: center;
 }
-.check--hc-type{
-	padding-right: 28px;
+.search-result__header--filters{
+	display: flex;
+	align-items: center;
 	margin-left: auto;
+	padding-top: 0;
+	.filter-toggle__text{display: none;
+	@media(min-width: 992px){display: block;}
+	}
 }
+.check--hc-type{padding-right: 28px;}
+
 .check--hc-type:hover{
 	.checkbox-title{
 		color:@redText;
