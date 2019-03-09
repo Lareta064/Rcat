@@ -9,7 +9,7 @@ mixin hc-photoAlbum(hcPhotoData)
 						img(src="../img/hc/"+ item.itemMini +".jpg"  alt="Фото комплекса")
 
 	.hc-photo-mobile
-		.photo-slider
+		#hc-photo-slider.photo-slider
 			each item in hcPhotoData.hcMobilPhoto
 				.photo-slider-item
 					img.d-block.w-100(src="../img/hc/"+ item.mobilePhoto+".jpg", alt='фото ЖК')
