@@ -142,6 +142,7 @@ label{
 	margin: 0;
 	padding: 0;
 }
+.pt-16{padding-top: 16px;}
 .clear {
 	clear: both;
 	display: table;
@@ -213,7 +214,21 @@ label{
 		}
 	}
 }
-
+.appartment-card--mobile{
+	.photo-slider{
+		height: auto;
+	// 	@media(min-width: 480px){height: 190px;}
+	}
+}
+.card--photo-slider{
+	.photo-slider-item{
+		min-height: 150px;
+		width: 250px;
+		@media(min-width: 480px){
+			width: 300px;
+		}
+	}
+}
 .fadeOut:after{
 	display: none;
 	content:"";

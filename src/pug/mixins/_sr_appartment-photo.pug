@@ -9,7 +9,7 @@ mixin appartment-photo(apprtPhotoData)
 						img(src="../img/appartments/"+ item.itemMini +".jpg"  alt="Фото комплекса")
 
 	.hc-photo-mobile
-		.photo-slider
+		.photo-slider.card--photo-slider
 			each item in apprtPhotoData.apprtMobilPhoto
 				.photo-slider-item
-					img.d-block.w-100(src="../img/appartments/"+ item.mobilePhoto+".jpg", alt='фото ЖК')
+					img.d-block.w-100(src="../img/appartments/slider/"+ item.mobilePhoto+".jpg", alt='фото ЖК')

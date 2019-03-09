@@ -2,19 +2,14 @@
 	display: none;
 	position: relative;
 	border: 1px solid @lightBorder;
-	// display: flex;
 	border-radius: 10px;
 	padding: 20px ;
 	margin-bottom: 24px;
 	min-height: 250px;
 	&:last-child{margin-bottom: 0px;}
 	@media(min-width: 768px){display: flex;}
-	// @media(min-width: 992px){height: 250px;}
-	// @media(min-width: 1200px){height: 320px;}
-	@media(min-width: 1350px){
-		// height: 320px;
-		padding: 20px 30px 28px 20px;
-	}
+
+	@media(min-width: 1350px){padding: 20px 30px 28px 20px;}
 
 	.appartment-photo{
 		background-color:@bodyBg;
@@ -23,6 +18,7 @@
 	}
 }
 .appartment-card__img{
+	@media(min-width: 768px){
 	position: relative;
 	height: 100%;
 	width: 240px;
@@ -42,6 +38,7 @@
 		text-align: center;
 		font-size: 14px;
 		color: #999;
+		}
 	}
 }
 
@@ -146,19 +143,23 @@
 		right: 0;left:0;
 	}
 }
-.appartment-photo .thumbnails__image--appartment:last-child:after{display: none;}
+.appartment-photo{
+.thumbnails__image--appartment:last-child:after{display: none;}
+}
 //-//photo-block
 
 //-описание квартиры
 .appartment-card__content{
+	display: none;
 	width: 100%;
 	height: 100%;
 	padding-left: 19px;
-	min-height: 210px;
-	display: flex;
+	min-height: 207px;
+	// display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	@media(min-width: 1200px){min-height: 240px;}
+	@media(min-width: 768px){display: flex;}
+	@media(min-width: 1200px){min-height: 275px;}
 }
 .appartment-card__row{
 	display: flex;
@@ -170,7 +171,6 @@
 	@media(min-width: 1200px){padding-bottom: 10px;}
 }
 .appartment-card__row--header{
-	// flex-wrap: nowrap;
 	flex-direction: column;
 	align-items: flex-start;
 	@media(min-width: 1200px){
@@ -208,7 +208,6 @@
 .appartment-card__price--area{
 	position: relative;
 	display: block;
-	// @media(min-width: 992px){display: none;}
 	@media(min-width: 1200px){display: block;}
 	.icon-brach.icon-brach--hidden{
 		position: absolute;
@@ -236,31 +235,30 @@
 	.metro-block{
 		padding-top: 10px;
 		@media(min-width: 992px){padding-top: 0px;}
-		// @media(min-width: 1200px){padding-top: 0px;}
 	}
 
 }
 .appartment-card__row--transform{
 	align-items: flex-start;
 	flex-direction: column;
+	padding-bottom: 0;
 	@media(min-width: 992px){
 		align-items: center;
 		flex-direction: row;
+		padding-bottom: 6px;
 	}
-	// @media(min-width: 1200px){
-	// 	align-items: center;
-	// 	flex-direction: row;
-	// }
 }
 .appartment-card__row-col{
 	align-items: center;
 }
 .appartment-page-link{
+	display: none;
 	cursor: pointer;
 	align-items: center;
 	position: absolute;
 	top: 20px;
 	right: 20px;
+	@media(min-width: 768px){display: flex;}
 	@media(min-width: 1350px){right: 30px;}
 	.share-link-text{
 		color: @btnBg;
@@ -286,7 +284,6 @@
 	display: none;
 	@media(min-width: 992px){
 		display: block;
-		// align-self: baseline;
 	}
 }
 .appartment-card--link-title{
@@ -298,7 +295,6 @@
 	@media(min-width: 992px){margin-right: 28px;}
 }
 .appartment-card__text-box{
-	// display: none;
 	width: 99%;
 	p{
 		padding: 0;
@@ -313,9 +309,10 @@
 }
 
 .appartment-card__toolbar-item{
-	// padding-top: 12px;
 	padding-right: 28px;
-	.link-block{padding-right: 0;}
+	.link-block{
+		padding-right: 0;
+	}
 
 }
 .appartment-card__toolbar-item--mail{
@@ -325,23 +322,12 @@
 	}
 	.icon-mail{
 		display: block;
-		// padding-right: 10px;
 		margin-right: 0;
 		@media(min-width: 1054px){display: none;}
 	}
 }
 .appartment-card__toolbar-item--pdf{
 	padding-right: 0;
-	.text-link{
-		// @media(min-width: 992px){display: block;}
-	}
-	// .icon-pdf{
-	// 	display: block;
-	// 	position: relative;
-	// 	bottom: 8px;
-
-	// 	@media(min-width: 992px){display: none;}
-	// }
 }
 
 .appartment-publication{
@@ -358,9 +344,6 @@
 		display: block;
 
 	}
-	// @media(min-width: 1200px){height: 95px;}
-	// @media(min-width: 1350px){height: 140px;}
-
 	.appartment-card__last-paragraf{
 		display: none;
 		@media(min-width: 1350px){display: block;}
@@ -369,7 +352,13 @@
 }
 .appartment-card__row--toolbar{
 	padding-bottom: 0;
+
 	@media(min-width: 768px){padding-top: 8px;}
 	@media(min-width: 1200px){padding-top: 12px;}
-
+}
+.appartment-card__row--badges{
+	padding-bottom: 0;
+	.badge-group{padding-bottom: 4px;}
+	.appartment-card--address{padding-bottom: 4px;}
+	.repaire-item{padding-bottom: 4px;}
 }

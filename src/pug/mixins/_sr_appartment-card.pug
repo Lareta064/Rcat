@@ -1,6 +1,6 @@
 mixin appartment-card(cardData)
 	.appartment-card
-		.appartment-page-link.d-flex
+		.appartment-page-link
 			.share-link-text Поделиться
 			+share-link
 			+tooltip
@@ -32,7 +32,7 @@ mixin appartment-card(cardData)
 					.appartment--built.text-body.text-body--grey !{cardData.appartBuilt}
 				+metro(cardData.metroName)
 
-			.appartment-card__row.pl-0
+			.appartment-card__row.pl-0.appartment-card__row--badges
 				+badge-group(cardData.region)
 				+text-link(cardData.address,cardData.addressHref, 'appartment-card--address')
 				+repaire-item(cardData.repaireText)
@@ -54,3 +54,34 @@ mixin appartment-card(cardData)
 						+icon-mail
 					.appartment-card__toolbar-item.appartment-card__toolbar-item--pdf
 						+text-link('Скачать ПДФ','#','text-link--line')
+
+	.appartment-card.appartment-card--mobile
+		.appartment-card__img
+			if cardData.apprtPhotoBlock
+				+appartment-photo(cardData.apprtPhotoBlock)
+		.appartment-content--mobile
+			.appartment-content--mobile-row.pt-16
+				+link-title(cardData.title, cardData.titleHref)
+				if cardData.repaireText == 'С ремонтом'
+					.appartment-card--mobile-repaire-icon
+			.appartment-content--mobile-row
+				.text-body !{cardData.hcName }
+			.appartment-content--mobile-row
+				.appartment-card__price
+					if cardData.priceDown
+						.appartment-card__price-block.d-flex
+							.appartment-card__price--num.headline-bold !{cardData.price} руб.
+							+icon-price-down
+					else
+						.appartment-card__price--num.headline-bold !{cardData.price} руб.
+
+			.appartment-content--mobile-row.d-flex
+				.appartment-card__price--usd $!{cardData.priceUsd}
+				.appartment-card__price--area.text-body.text-body--grey !{cardData.areaPrice} руб./кв.м
+
+			.appartment-card__toolbar
+				.appartment-card__toolbar-item
+					+button(cardData.phoneNumber, '#', 'btn-tel contact-phone')
+				.appartment-card__toolbar-item.appartment-card__toolbar-icons.d-flex
+					+icon-mail
+					+link('В избранное','','icon-heart')(class=" item-favorite")

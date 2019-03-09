@@ -173,9 +173,15 @@ $(document).ready(function() {
 
 		}
 	});
-
-	$('.photo-slider').slick({
+	//-слайдер на странице ЖК
+	$('#hc-photo-slider').slick({
 		arrows: false,
+		variableWidth: true
+	});
+	//-слайдер на странице поиск квартир
+	$('.card--photo-slider').slick({
+		arrows: false,
+		 centerPadding: '50px',
 		variableWidth: true
 	});
 
