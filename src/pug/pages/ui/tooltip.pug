@@ -8,15 +8,16 @@ block content
 	.container.container--left
 		.section-ui
 			h1 Тултип
+		.section-ui(style="width:600px; position: relative;margin-top:250px")
+			h4 клик по ссылке Поделиться
+			.appartment-page-link
+				.share-link-text Поделиться
+				+share-link
+				+tooltip
 		.section-ui
-			.tooltip-box
-				.tooltip__title Ссылка на объект
-				.tooltip__input
-					+icon-copy
-					+input-block('text','http://realtycat.pro/36732')
-				.tooltip__links.d-flex
-					+text-link('Отправить по эл почте','#','text-link--line')
-					+text-link('Скачать ПДФ','#','text-link--line')
+			pre.
+				+tooltip
+
 
 
 
