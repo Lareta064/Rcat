@@ -62,6 +62,8 @@ mixin appartment-card(cardData)
 		.appartment-content--mobile
 			.appartment-content--mobile-row.pt-16
 				+link-title(cardData.title, cardData.titleHref)
+				if cardData.repaireText == 'С ремонтом'
+					.appartment-card--mobile-repaire-icon
 			.appartment-content--mobile-row
 				.text-body !{cardData.hcName }
 			.appartment-content--mobile-row

@@ -375,6 +375,7 @@
 }
 .appartment-card__row--toolbar{
 	padding-bottom: 0;
+
 	@media(min-width: 768px){padding-top: 8px;}
 	@media(min-width: 1200px){padding-top: 12px;}
 }
@@ -382,6 +383,18 @@
 .appartment-card--mobile{
 	display: block;
 	@media(min-width: 768px){display: none;}
+
+	.appartment-card__img{
+		min-height:145px;
+		background: url(../../img/appartments/cat-placeholder.jpg);
+		background-repeat: no-repeat;
+		background-position: bottom;
+		background-size: cover;
+	}
+	.hc-photo-mobile{background-color: @bodyBg;}
+}
+.appartment-content--mobile-row{
+	position: relative;
 }
 .appartment-content--mobile{
 
@@ -394,9 +407,12 @@
 		font-weight: 700;
 		color: #000;
 	}
+	.icon-price-down{
+		padding-left: 8px;
+	}
 	.appartment-card__price--num{
-		padding-right: 0;
-		padding-top: 6px;
+		padding-right: 0px;
+
 		font-size: 20px;
 	}
 	.appartment-card__price--area{
@@ -411,9 +427,10 @@
 		.icon-heart path{fill: @redText;}
 	}
 	.appartment-card__toolbar-item{padding-right: 0;}
-	.btn-tel{line-height: 1.5;}
+	.btn-tel{line-height: 1.7;}
 }
 .appartment-card__toolbar{
+		padding-top: 8px;
 		display: flex;
 		align-items: center;
 		.appartment-card__toolbar-item{
