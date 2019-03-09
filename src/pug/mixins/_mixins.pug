@@ -193,7 +193,7 @@ mixin tooltip
 			+text-link('Скачать ПДФ','#','text-link--line')
 
 mixin custom-checkbox(text)
-	label.checkbox-label
+	label.checkbox-label(for='hc-type')&attributes(attributes)
 		span.checkbox-title= text
-		input(type="checkbox" name="form-checkbox" class="form-checkbox")
+		input(type="checkbox" id='hc-type' name="form-checkbox" class="form-checkbox")
 		span.custom-checkbox

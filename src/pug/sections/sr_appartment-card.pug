@@ -7,6 +7,10 @@
 
 section.search-result
 	.container
+		.section-top.search-result__header
+			.title-1 Поиск квартир
+			+custom-checkbox('Сгруппировать по ЖК')(class=' check--hc-type')
+			+toggle-block({modif:'border',title:'Отсортированы по', items:[{name:'цене',class:'filter-active filter-toggle-item--left'},{name:'площади',class:'filter-toggle-item--right'}]})
 		.search-result__cards
 			+appartment-card(apprtCard1)
 			+appartment-card(apprtCard2)
