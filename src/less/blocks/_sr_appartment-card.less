@@ -2,19 +2,14 @@
 	display: none;
 	position: relative;
 	border: 1px solid @lightBorder;
-	// display: flex;
 	border-radius: 10px;
 	padding: 20px ;
 	margin-bottom: 24px;
 	min-height: 250px;
 	&:last-child{margin-bottom: 0px;}
 	@media(min-width: 768px){display: flex;}
-	// @media(min-width: 992px){height: 250px;}
-	// @media(min-width: 1200px){height: 320px;}
-	@media(min-width: 1350px){
-		// height: 320px;
-		padding: 20px 30px 28px 20px;
-	}
+
+	@media(min-width: 1350px){padding: 20px 30px 28px 20px;}
 
 	.appartment-photo{
 		background-color:@bodyBg;
@@ -148,7 +143,9 @@
 		right: 0;left:0;
 	}
 }
-.appartment-photo .thumbnails__image--appartment:last-child:after{display: none;}
+.appartment-photo{
+.thumbnails__image--appartment:last-child:after{display: none;}
+}
 //-//photo-block
 
 //-описание квартиры
@@ -157,12 +154,12 @@
 	width: 100%;
 	height: 100%;
 	padding-left: 19px;
-	min-height: 210px;
+	min-height: 207px;
 	// display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	@media(min-width: 768px){display: flex;}
-	@media(min-width: 1200px){min-height: 240px;}
+	@media(min-width: 1200px){min-height: 275px;}
 }
 .appartment-card__row{
 	display: flex;
@@ -174,7 +171,6 @@
 	@media(min-width: 1200px){padding-bottom: 10px;}
 }
 .appartment-card__row--header{
-	// flex-wrap: nowrap;
 	flex-direction: column;
 	align-items: flex-start;
 	@media(min-width: 1200px){
@@ -212,7 +208,6 @@
 .appartment-card__price--area{
 	position: relative;
 	display: block;
-	// @media(min-width: 992px){display: none;}
 	@media(min-width: 1200px){display: block;}
 	.icon-brach.icon-brach--hidden{
 		position: absolute;
@@ -240,21 +235,18 @@
 	.metro-block{
 		padding-top: 10px;
 		@media(min-width: 992px){padding-top: 0px;}
-		// @media(min-width: 1200px){padding-top: 0px;}
 	}
 
 }
 .appartment-card__row--transform{
 	align-items: flex-start;
 	flex-direction: column;
+	padding-bottom: 0;
 	@media(min-width: 992px){
 		align-items: center;
 		flex-direction: row;
+		padding-bottom: 6px;
 	}
-	// @media(min-width: 1200px){
-	// 	align-items: center;
-	// 	flex-direction: row;
-	// }
 }
 .appartment-card__row-col{
 	align-items: center;
@@ -292,7 +284,6 @@
 	display: none;
 	@media(min-width: 992px){
 		display: block;
-		// align-self: baseline;
 	}
 }
 .appartment-card--link-title{
@@ -304,7 +295,6 @@
 	@media(min-width: 992px){margin-right: 28px;}
 }
 .appartment-card__text-box{
-	// display: none;
 	width: 99%;
 	p{
 		padding: 0;
@@ -319,9 +309,10 @@
 }
 
 .appartment-card__toolbar-item{
-	// padding-top: 12px;
 	padding-right: 28px;
-	.link-block{padding-right: 0;}
+	.link-block{
+		padding-right: 0;
+	}
 
 }
 .appartment-card__toolbar-item--mail{
@@ -331,23 +322,12 @@
 	}
 	.icon-mail{
 		display: block;
-		// padding-right: 10px;
 		margin-right: 0;
 		@media(min-width: 1054px){display: none;}
 	}
 }
 .appartment-card__toolbar-item--pdf{
 	padding-right: 0;
-	.text-link{
-		// @media(min-width: 992px){display: block;}
-	}
-	// .icon-pdf{
-	// 	display: block;
-	// 	position: relative;
-	// 	bottom: 8px;
-
-	// 	@media(min-width: 992px){display: none;}
-	// }
 }
 
 .appartment-publication{
@@ -364,9 +344,6 @@
 		display: block;
 
 	}
-	// @media(min-width: 1200px){height: 95px;}
-	// @media(min-width: 1350px){height: 140px;}
-
 	.appartment-card__last-paragraf{
 		display: none;
 		@media(min-width: 1350px){display: block;}
@@ -379,78 +356,9 @@
 	@media(min-width: 768px){padding-top: 8px;}
 	@media(min-width: 1200px){padding-top: 12px;}
 }
-//-mobile-card
-.appartment-card--mobile{
-	display: block;
-	@media(min-width: 768px){display: none;}
-
-	.appartment-card__img{
-		position: relative;
-		min-height:145px;
-		background-color: #f8f8f8;
-		background: url(../../img/appartments/cat-placeholder.jpg);
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
-		@media(min-width: 480px){min-height:175px;}
-	}
-	.appartment-card__img:after{
-		position: absolute;
-		content: "Объект без фото";
-		left: 0;
-		right: 0;
-		top: 20px;
-		text-align: center;
-
-	}
-	.hc-photo-mobile{
-		background-color: @bodyBg;
-		position: relative;
-		z-index: 2;
-	}
-}
-.appartment-content--mobile-row{
-	position: relative;
-}
-.appartment-content--mobile{
-
-	.photo-slider{height: 195px;}
-	.appartment-content--mobile-row{
-		padding-bottom: 8px;
-	}
-	.appartment-card__price--usd{
-		font-size: 16px;
-		font-weight: 700;
-		color: #000;
-	}
-	.icon-price-down{
-		padding-left: 8px;
-	}
-	.appartment-card__price--num{
-		padding-right: 0px;
-
-		font-size: 20px;
-	}
-	.appartment-card__price--area{
-		padding-left: 24px;
-	}
-
-	.link-block .simple-link{display: none;	}
-	.appartment-card__toolbar-icons{
-		padding-left: 70px;
-
-		align-items: center;
-		.icon-heart path{fill: @redText;}
-	}
-	.appartment-card__toolbar-item{padding-right: 0;}
-	.btn-tel{line-height: 1.7;}
-}
-.appartment-card__toolbar{
-		padding-top: 8px;
-		display: flex;
-		align-items: center;
-		.appartment-card__toolbar-item{
-			align-items: center;
-			display: flex;
-		}
+.appartment-card__row--badges{
+	padding-bottom: 0;
+	.badge-group{padding-bottom: 4px;}
+	.appartment-card--address{padding-bottom: 4px;}
+	.repaire-item{padding-bottom: 4px;}
 }

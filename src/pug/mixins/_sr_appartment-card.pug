@@ -32,7 +32,7 @@ mixin appartment-card(cardData)
 					.appartment--built.text-body.text-body--grey !{cardData.appartBuilt}
 				+metro(cardData.metroName)
 
-			.appartment-card__row.pl-0
+			.appartment-card__row.pl-0.appartment-card__row--badges
 				+badge-group(cardData.region)
 				+text-link(cardData.address,cardData.addressHref, 'appartment-card--address')
 				+repaire-item(cardData.repaireText)
