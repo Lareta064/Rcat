@@ -5,18 +5,11 @@ mixin appartment-card(cardData)
 			+share-link
 			+tooltip
 		.appartment-publication.text-body--grey !{cardData.publicDate}
-		.appartment-card__img
-			if cardData.apprtPhotoBlock
-				//- +appartment-photo(cardData.apprtPhotoBlock)
-				.fotorama(data-nav="thumbs")
-					a(href="../img/appartments/app1.jpg")
-						img(src="../img/appartments/app1-mini1.jpg")
-					a(href="../img/appartments/app1.jpg")
-						img(src="../img/appartments/app2-mini2.jpg")
-					a(href="../img/appartments/app2.jpg")
-						img(src="../img/appartments/app1-mini1.jpg")
-					a(href="../img/appartments/app2.jpg")
-						img(src="../img/appartments/app2-mini2.jpg")
+		if cardData.fotorama
+			.appartment-card__img
+				+fotorama(cardData.fotorama)
+		else
+			.appartment-card__img.appartment-card__img--empty
 		.appartment-card__content
 			.appartment-card__row.appartment-card__row--header
 				.appartment-card__title
