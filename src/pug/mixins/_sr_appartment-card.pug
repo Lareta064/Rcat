@@ -7,7 +7,16 @@ mixin appartment-card(cardData)
 		.appartment-publication.text-body--grey !{cardData.publicDate}
 		.appartment-card__img
 			if cardData.apprtPhotoBlock
-				+appartment-photo(cardData.apprtPhotoBlock)
+				//- +appartment-photo(cardData.apprtPhotoBlock)
+				.fotorama(data-nav="thumbs")
+					a(href="../img/appartments/app1.jpg")
+						img(src="../img/appartments/app1-mini1.jpg")
+					a(href="../img/appartments/app1.jpg")
+						img(src="../img/appartments/app2-mini2.jpg")
+					a(href="../img/appartments/app2.jpg")
+						img(src="../img/appartments/app1-mini1.jpg")
+					a(href="../img/appartments/app2.jpg")
+						img(src="../img/appartments/app2-mini2.jpg")
 		.appartment-card__content
 			.appartment-card__row.appartment-card__row--header
 				.appartment-card__title
