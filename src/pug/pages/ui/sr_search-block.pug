@@ -12,39 +12,49 @@ block content
 
 			.search-block 
 				.search-block-row.search-block-row--header
-					.search-row-item
-						.search-item-title Комнат
-						+link-btn-block('1','2','3','4+')
-					.search-row-item.search-row-item--doubleinput
-						.search-item-title Площадь, кв.м
-						+input-block--double('text','от','','text','до')
-					.search-row-item.search-row-item--doubleinput
-						.search-item-title Стоимость,
-							+text-link('рубли','#')
-						+input-block--double('text','от','','text','до')
-					.search-row-item.search-row-item--input
-						.search-item-title Адрес или ЖК
-						+input-block('text','Улица, район, ЖК, адрес')
-					.search-row-item.search-row-item--flex
-						+link('Еще','#','arrow-down')
-					.search-row-item.search-row-item--flex
-						+button('Показать', '#','button--basic')
+					.search-block-col
+						.search-row-item
+							.search-item-title Комнат
+							+link-btn-block('1','2','3','4+')
 
-				.search-block-row
-				.search-block-row
-				.search-block-row
-				.search-block-row
-				//- .search-header
-					.section-top.d-flex
-						.section-top-title--rooms Комнат
-							+link-btn-block('1','2','3','4+') Комнат
-						.section-top-title--area Площадь, кв.м
-							
-						.section-top-title--value Стоимость, рубли
-						.section-top-title--adress Адрес или ЖК
+						.search-row-item.search-row-item--doubleinput
+							.search-item-title Площадь, кв.м
+							+input-block--double('text','от','','text','до')
+						.search-row-item.search-row-item--doubleinput
+							.search-item-title Стоимость,&nbsp;
+								+text-link('рубли','#')
+							+input-block--double('text','от','','text','до')
+
+					.search-block-col
+						.search-row-item.search-row-item--input
+							.search-item-title Адрес или ЖК
+							+input-block('text','Улица, район, ЖК, адрес')
+						.search-row-item.search-row-item--flex
 							+link('Еще','#','arrow-down')
+						.search-row-item.search-row-item--flex
 							+button('Показать', '#','button--basic')
-						
-						
-						
-			
+
+				.search-block-row.search-block-row--body
+					.search-block-col.search-block-col-left
+						.search-row-item
+							.search-item-title Содержит слова
+							+input-block('text','Укажите любое слово')
+							.search-item-subtitle Можно ввести несколько слов через запятую
+
+					.search-block-col.search-block-col-right.d-flex
+						.search-row-item.search-row-item-badge
+							.search-item-title Отделка
+							+badge-group(['с ремонтом','без отделки'])
+						.search-row-item.search-row-item-link
+							+text-link('Сбросить параметры поиска','#')
+				.line
+
+
+					
+				
+				//- .search-block-row
+				//- .search-block-row
+				//- .search-block-row
+
+
+				
