@@ -1,0 +1,5 @@
+mixin fotorama(items)
+	.fotorama(data-nav="thumbs")&attributes(attributes)
+		each item in items
+			a(href='../img/appartments/'+ item.bigFoto +'.jpg')
+				img(src='../img/appartments/'+ item.miniFoto +'.jpg')

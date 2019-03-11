@@ -155,10 +155,10 @@ mixin link-btn(text)
 	a(href='#').link-btn
 		span.link-btn--text= text
 
-mixin link-btn-block(...items) 
+mixin link-btn-block(...items)
 	.link-btn-block
-		each item in items 
-			+link-btn(item) 
+		each item in items
+			+link-btn(item)
 
 mixin repaire-item(text)
 	if text == 'С ремонтом'
@@ -181,3 +181,19 @@ mixin input-block--double(inputType1,inputPlace1,inputName1,inputType2,inputPlac
 		input.form-input.form-input--left(type=""+ inputType1 placeholder=""+inputPlace1 name=""+ inputName1)
 		input.form-input.form-input--right(type=""+ inputType2 placeholder=""+ inputPlace2 name=""+ inputName2)
 
+//-окошко тултип
+mixin tooltip
+	.tooltip-box&attributes(attributes)
+		.tooltip__title Ссылка на объект
+		.tooltip__input
+			+icon-copy
+			+input-block('text','http://realtycat.pro/36732')
+		.tooltip__links.d-flex
+			+text-link('Отправить по эл почте','#','text-link--line')
+			+text-link('Скачать ПДФ','#','text-link--line')
+
+mixin custom-checkbox(text)
+	label.checkbox-label(for='hc-type')&attributes(attributes)
+		span.checkbox-title= text
+		input(type="checkbox" id='hc-type' name="form-checkbox" class="form-checkbox")
+		span.custom-checkbox

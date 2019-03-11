@@ -1,0 +1,79 @@
+//-mobile-card
+.appartment-card--mobile{
+	display: block;
+	@media(min-width: 768px){display: none;}
+
+	.appartment-card__img{
+		position: relative;
+		min-height:145px;
+		background-color: #f8f8f8;
+		background: url(../../img/appartments/cat-placeholder.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		@media(min-width: 480px){min-height:175px;}
+	}
+	.appartment-card__img:after{
+		position: absolute;
+		content: "Объект без фото";
+		left: 0;
+		right: 0;
+		top: 20px;
+		text-align: center;
+
+	}
+	.hc-photo-mobile{
+		background-color: @bodyBg;
+		position: relative;
+		z-index: 2;
+	}
+}
+.appartment-content--mobile-row{
+	position: relative;
+}
+.appartment-content--mobile{
+
+	.photo-slider{height: 195px;}
+	.appartment-content--mobile-row{
+		padding-bottom: 10px;
+	}
+	.appartment-card__price--usd{
+		font-size: 16px;
+		font-weight: 700;
+		color: #000;
+	}
+	.icon-price-down{
+		padding-left: 8px;
+	}
+	.appartment-card__price--num{
+		padding-right: 0px;
+
+		font-size: 20px;
+	}
+	.appartment-card__price--area{
+		padding-left: 24px;
+	}
+
+	.link-block .simple-link{display: none;	}
+	.appartment-card__toolbar-icons{
+		padding-left: 70px;
+
+		align-items: center;
+		.icon-heart path{fill: @redText;}
+	}
+	.appartment-card__toolbar-item{padding-right: 0;}
+	.btn-tel{line-height: 1.7;}
+}
+.appartment-card__toolbar{
+		// padding-top: 8px;
+		display: flex;
+		align-items: center;
+		.appartment-card__toolbar-item{
+			align-items: center;
+			display: flex;
+		}
+		.appartment-card__toolbar-item--mail{
+			@media(min-width: 768px){display: none;}
+		}
+}
+.appartment-content--mobile-row.mobile-row--price{padding-bottom: 20px;}

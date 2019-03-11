@@ -1,0 +1,107 @@
+.section-top--search-result{
+	.title-1{padding-left: 14px;}
+	@media(min-width: 768px){
+		display: flex;
+		align-items: center;
+		.title-1{padding-left: 0px;}
+	}
+}
+.search-result__top--filters{
+		@media(min-width: 768px){
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+		padding-top: 0;
+	}
+	.filter-toggle__text{display: none;
+	@media(min-width: 992px){display: block;}
+	}
+}
+.check--hc-type{
+	padding-left: 14px;
+	padding-top: 24px;
+	padding-bottom: 20px;
+	padding-right: 28px;
+	@media(min-width: 768px){
+		padding-left: 0;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		padding-right: 28px;
+	}
+}
+
+.check--hc-type:hover{
+	.checkbox-title{
+		color:@redText;
+		border-bottom-color:@linkActiveLine;
+	}
+}
+
+.search-result__cards{
+	padding-bottom: 40px;
+}
+.search-result__footer{
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 55px;
+	padding-top: 30px;
+	@media(min-width: 768px){
+		justify-content: space-between;
+		padding-top: 0;
+	}
+	.button--basic{
+		max-width: 270px;
+		// @media(min-width: 768px){max-width: 245px;}
+	}
+}
+//-popular-objects
+.section-top--popular-objects{
+
+	@media(min-width: 992px){
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+.popular-objects-top__link{
+	display: none;
+	@media(min-width: 768px){display: flex;}
+	.icon-flag{
+		align-self: flex-start;
+		margin-right: 9px;
+		position: relative;
+		top:-5px;
+	}
+}
+.popular-objects-top__link-title{
+	color: #000;
+	padding-right: 5px;
+}
+.title-2--middle{
+	font-size: 28px;
+	font-weight: 400;
+	width: 60%;
+	padding-left: 14px;
+	@media(min-width: 360px){width: 100%;}
+	@media(min-width: 768px){
+		width: auto;
+
+		padding-left: 0;
+		padding-bottom: 16px;
+	}
+	@media(min-width: 992px){padding-bottom: 0px;}
+}
+.appartment-card--mobile-repaire-icon{
+	position: absolute;
+	top:-35px;
+	left: -6px;
+	width: 40px;
+	height: 40px;
+	background-color: @greenBg;
+	border-radius: 50%;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}

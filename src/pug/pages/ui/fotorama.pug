@@ -1,0 +1,16 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Фоторама';
+	- var pageClass= "body--dashboard";
+
+block content
+	.container.container--left
+		.section-ui
+			h1 Фоторама
+		.section-ui
+			+fotorama([{bigFoto:'app1', miniFoto:'app1-mini1'},{bigFoto:'app1', miniFoto:'app1-mini1'},{bigFoto:'app1', miniFoto:'app1-mini1'},{bigFoto:'app1', miniFoto:'app1-mini1'}])
+		.section-ui
+			pre.
+				+fotorama([{bigFoto:'app1', miniFoto:'app1-mini1'},{bigFoto:'app1', miniFoto:'app1-mini1'},{bigFoto:'app1', miniFoto:'app1-mini1'},{bigFoto:'app1', miniFoto:'app1-mini1'}])
+

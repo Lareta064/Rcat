@@ -1,0 +1,14 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Страница ЖК ';
+
+
+block content
+	header.header
+		+header('avatar','Иван Марасин')
+
+	include ../sections/sr_appartment-card.pug
+	include ../sections/sr_popular-objects.pug
+	footer.footer
+		+page-footer

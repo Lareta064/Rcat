@@ -1,0 +1,24 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Тултип';
+	- var pageClass= "body--dashboard";
+
+block content
+	.container.container--left
+		.section-ui
+			h1 Тултип
+		.section-ui(style="width:600px; position: relative;margin-top:250px")
+			h4 клик по ссылке Поделиться
+			.appartment-page-link
+				.share-link-text Поделиться
+				+share-link
+				+tooltip
+		.section-ui
+			pre.
+				+tooltip
+
+
+
+
+
