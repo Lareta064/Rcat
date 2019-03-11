@@ -207,7 +207,7 @@
 .search-block--footer{
 	padding-top: 30px;
 	width: 100%;
-
+	flex-wrap: wrap;
 	.badge{
 		margin-right: 5px;
 
@@ -219,7 +219,8 @@
 
 	.badge-group{
 		display: flex;
-		justify-content: space-between;
+		flex-wrap: wrap;
+		// justify-content: space-between;
 	}
 }
 
@@ -267,9 +268,27 @@
 	margin-left: auto;
 	flex-shrink:2;
 }
-
+.mobile-badge-block--first{
+	order:1;
+}
 .areas-badges{
 	display: none;
+	order:2;
+	@media(min-width: 768px){
+		order:4;
+	}
+}
+.mobile-badge-block.mobile-badge-block--second{
+	order:3;
+	@media(min-width: 768px){
+		order:2;
+	}
+}
+.mobile-badge-block.mobile-badge-block--third{
+	order:4;
+	@media(min-width: 768px){
+		order:3;
+	}
 }
 .areas-badges--visible{
 	display: flex;
