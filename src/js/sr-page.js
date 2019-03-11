@@ -62,6 +62,12 @@ $(document).ready(function() {
 		$('.areas-badges').toggleClass('areas-badges--visible');
 
 	});
+	//-красим кнопки с квартирами
+	$('.rooms-num .link-btn').on('click', function(){
+		$(this).toggleClass('link-btn--active');
+
+	});
+
 
 
 })

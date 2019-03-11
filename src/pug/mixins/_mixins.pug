@@ -156,7 +156,7 @@ mixin link-btn(text)
 		span.link-btn--text= text
 
 mixin link-btn-block(...items)
-	.link-btn-block
+	.link-btn-block&attributes(attributes)
 		each item in items
 			+link-btn(item)
 
