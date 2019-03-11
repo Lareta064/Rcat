@@ -24,14 +24,21 @@ $(document).ready(function() {
 
 
 	//-обрезка текста троеточием
-	var snipping = function(){
+	var snipping = function(height){
 		$(".appartment-card__truncate-text").snipper({
-			height: '140px',
+			height: height,
 			ellipsis: '&hellip;'
 		});
 
 	};
-	snipping();
+
+	if($(document).width()>992){
+		snipping('140px');
+	}
+	else{
+		snipping('50px');
+	}
+
 	$(window).resize(snipping);
 	//- //обрезка текста троеточием
 

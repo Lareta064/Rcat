@@ -5,9 +5,11 @@ mixin appartment-card(cardData)
 			+share-link
 			+tooltip
 		.appartment-publication.text-body--grey !{cardData.publicDate}
-		.appartment-card__img
-			if cardData.apprtPhotoBlock
-				+appartment-photo(cardData.apprtPhotoBlock)
+		if cardData.fotorama
+			.appartment-card__img
+				+fotorama(cardData.fotorama)
+		else
+			.appartment-card__img.appartment-card__img--empty
 		.appartment-card__content
 			.appartment-card__row.appartment-card__row--header
 				.appartment-card__title
