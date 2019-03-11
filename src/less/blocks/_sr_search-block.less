@@ -20,9 +20,7 @@
 	}
 }
 
-.search-row-item--pb{
-	padding-bottom: 15px;
-}
+
 
 .search-item-title{
 	padding-bottom: 12px;
@@ -129,6 +127,16 @@
 	display: flex;
 	// padding-top: 20px;
 	align-items: center;
+	
+	.text-link{
+		@media(min-width:768px){
+			font-size: 13px;
+		}
+
+		@media(min-width:1350px){
+			font-size: 14px;
+		}
+	}
 }
 
 
@@ -167,8 +175,12 @@
 	.input-block{
 		padding-bottom: 10px;
 	}
-}
 
+	@media(min-width:1350px){
+	padding-bottom: 15px;
+		
+	}
+}
 
 .search-block-row--body{
 	flex-direction: column;
