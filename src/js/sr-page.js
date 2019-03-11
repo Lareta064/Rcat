@@ -58,6 +58,10 @@ $(document).ready(function() {
 	});
 
 	//-клик по бэйджу в фильтре поиска
-	
-	
+	$('.badge-group.click-badge .badge').on('click', function(){
+		$('.areas-badges').toggleClass('areas-badges--visible');
+
+	});
+
+
 })

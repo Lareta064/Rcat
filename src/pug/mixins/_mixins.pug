@@ -82,7 +82,7 @@ mixin badge(...items)
 
 //- Миксин для группы бейджиков
 mixin badge-group(badges)
-	.badge-group
+	.badge-group&attributes(attributes)
 		each item in badges
 			.badge= item
 
