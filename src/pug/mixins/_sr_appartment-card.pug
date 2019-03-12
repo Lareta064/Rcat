@@ -50,7 +50,8 @@ mixin appartment-card(cardData)
 					.appartment-card__toolbar-item
 						+button(cardData.phoneNumber, '#', 'btn-tel contact-phone')
 					.appartment-card__toolbar-item
-						+link('В избранное','','icon-heart','fix-width')(class=" item-favorite icon-heart--small")
+						+link('В избранное','','icon-heart')(class="icon-heart--tablet item-favorite")
+						+link('В избранное','','icon-heart','fix-width')(class="icon-heart--desk item-favorite icon-heart--small")
 					.appartment-card__toolbar-item.appartment-card__toolbar-item--mail
 						+text-link('Отправить электронной почтой','#','text-link--line')
 						+icon-mail

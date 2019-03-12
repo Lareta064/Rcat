@@ -17,6 +17,10 @@
 		position: relative;
 		z-index: 2;
 	}
+	.badge-group{
+		display: flex;
+		.badge:not(:last-child){margin-right: 9px;}
+	}
 }
 .appartment-card__img--empty{
 	@media(min-width: 768px){
@@ -181,7 +185,7 @@
 }
 .appartment-card__title{
 
-	padding-right: 28px;
+	padding-right: 25px;
 	padding-bottom: 14px;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -313,6 +317,19 @@
 	padding-right: 28px;
 	.link-block{
 		padding-right: 0;
+	}
+	.icon-heart--tablet{
+		display: flex;
+		@media(min-width: 1350px){display: none;}
+		.simple-link{display: none;	}
+		path{fill:red;}
+		svg{width: 24px;}
+		.link-block__icon{padding-right: 0;}
+	}
+	.icon-heart--desk{
+		display: none;
+		@media(min-width: 1350px){display: flex;}
+
 	}
 
 }
