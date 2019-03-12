@@ -21,13 +21,14 @@
 		display: flex;
 		.badge:not(:last-child){margin-right: 9px;}
 	}
+	.text-part:not(:last-child){padding-bottom: 7px;}
 }
 .appartment-card__img--empty{
 	@media(min-width: 768px){
 	position: relative;
 	height: 100%;
-	width: 240px;
-	min-height: 200px;
+	min-width: 240px;
+	min-height: 268px;
 	background: url(../../img/appartments/cat-placeholder.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -369,6 +370,6 @@
 .appartment-card__row--badges{
 	padding-bottom: 0;
 	.badge-group{padding-bottom: 4px;}
-	.appartment-card--address{padding-bottom: 4px;}
+	.appartment-card--address{margin-bottom: 4px;}
 	.repaire-item{padding-bottom: 4px;}
 }
