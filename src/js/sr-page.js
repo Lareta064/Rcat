@@ -33,7 +33,7 @@ $(document).ready(function() {
 	};
 
 	if($(document).width()>992){
-		snipping('140px');
+		snipping('130px');
 	}
 	else{
 		snipping('50px');

@@ -116,19 +116,19 @@
     justify-content: center;
     align-items: center;
 	border-radius: 3px;
-	border: 1px solid @blueBorder; 
-    // padding: 14px 15px; 
-    color: @blueBorder; 
+	border: 1px solid @blueBorder;
+    // padding: 14px 15px;
+    color: @blueBorder;
     margin-right: 4px;
     width: 40px;
     height: 40px;
     transition: 0.5s;
-    
+
     @media(min-width:768px){
     	width: 30px;
   		height: 30px;
     }
-    
+
     &:hover{
 		color: @white;
 		background-color: @blueBorder;
@@ -143,4 +143,10 @@
 
 .link-title--middle{
 	font-size: 20px;
+}
+.text-link--grey{
+	color:#888;
+	padding-bottom: 2px;
+	border-bottom-color:rgba(154,154,154, .3);
+	&:hover{opacity: .7;}
 }
