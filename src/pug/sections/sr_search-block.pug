@@ -4,6 +4,10 @@
 			.search-row-item.search-row-item--rooms
 				.search-item-title Комнат
 				+link-btn-block('1','2','3','4+')(class="rooms-num")
+			.search-row-item.search-row-item-desk
+				.search-item-title Площадь, кв.м
+				+input-block--double('text','от','','text','до')
+				
 			.search-row-item.search-row-item--input
 				.search-item-title Адрес или ЖК
 				+input-block('text','Улица, район, ЖК, адрес')

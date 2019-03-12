@@ -194,6 +194,10 @@
 .search-dropdown{
 	padding-top: 18px;
 	
+	@media(min-width:768px){
+		display: none;
+	}
+
 	.search-row-item--doubleinput{
 	// width: 220px;
 	// @media(min-width:768px){
@@ -204,6 +208,14 @@
 		width: 220px;
 	}
 }
+}
+
+.search-row-item-desk{
+	display: none;
+	
+	@media(min-width: 768px){
+		display: block;
+	}
 }
 
 .search-row-item--mobile{
