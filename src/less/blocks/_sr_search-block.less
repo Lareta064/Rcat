@@ -1,3 +1,12 @@
+.container-search--block{
+	@media(min-width:1350px){
+		width: 1340px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+
 .search-block{
 	display: flex;
 	flex-wrap: wrap;
@@ -9,6 +18,8 @@
 	border: 1px solid #e5e9f2;
  	border-radius: 10px;
 }
+
+
 
 .search-block-row{
 	display: flex;
@@ -249,6 +260,10 @@
 
 .search-row-item--mobile{
 	display: flex;
+	
+	@media(min-width: 768px){
+		display: none;
+	}
 	
 	.arrow-down{
 		margin-left: 18px;
