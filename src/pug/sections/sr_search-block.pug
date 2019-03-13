@@ -4,14 +4,14 @@
 			.search-row-item.search-row-item--rooms
 				.search-item-title Комнат
 				+link-btn-block('1','2','3','4+')(class="rooms-num")
-			.search-row-item.search-row-item-desk
+			.search-row-item.search-row-item-desk.item-order-2
 				.search-item-title Площадь, кв.м
 				+input-block--double('text','от','','text','до')
 				
-			.search-row-item.search-row-item--input
+			.search-row-item.search-row-item--input.item-order-4
 				.search-item-title Адрес или ЖК
 				+input-block('text','Улица, район, ЖК, адрес')
-			.search-row-item.search-row-item--doubleinput
+			.search-row-item.search-row-item--doubleinput.item-order-3
 				.search-item-title Стоимость,&nbsp;
 					+text-link('рубли','#')
 				+input-block--double('text','от','','text','до')
@@ -50,10 +50,10 @@
 
 				.line
 			
-			.search-row-item.search-row-item--flex
+			.search-row-item.search-row-item--flex.item-order-5
 				+link('Свернуть','#','arrow-down')(class="search-link--mob")
 				+link('Еще','#','arrow-down')(class="search-link--desk")
-			.search-row-item.search-row-item--flex.search-row-item--col
+			.search-row-item.search-row-item--flex.search-row-item--col.item-order-6
 				+link('Сохранить поиск','#','icon-heart')(class="icon-heart--small")
 				+button('Показать', '#','button--basic')
 
