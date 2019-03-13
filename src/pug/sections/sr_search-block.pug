@@ -19,21 +19,23 @@
 					+text-link('Площадь, отделка...','#')
 					+arrow-down
 			
-			.search-dropdown
+			.search-dropdown.item-order-7
 				.search-row-item.search-row-item--doubleinput
 					.search-item-title Площадь, кв.м
 					+input-block--double('text','от','','text','до')
-				.search-row-item.search-row-item--pb
+				.search-row-item.search-row-item--pb.dropdown-order-1
 					.search-item-title Содержит слова
 					+input-block('text','Укажите любое слово')
 					.search-item-subtitle Можно ввести несколько слов через запятую
-				.search-row-item.search-row-item-badge
+				.search-row-item.search-row-item-badge.dropdown-order-2
 					.search-item-title Отделка
 					+badge-group(['с ремонтом','без отделки'])
+				.search-row-item.search-row-item-link.box-visible-desk.dropdown-order-3
+						+text-link('Сбросить параметры поиска','#')
 					
-				.line
+				.line.box-visible-desk.dropdown-order-4
 					
-				.search-block--footer.d-flex
+				.search-block--footer.dropdown-order-5.d-flex
 					.mobile-badge-block.mobile-badge-block--first
 						.search-item-title Округ
 						+badge-group(['ЦАО','ВАО','СВАО','СЗАО','ЗАО','ЮЗАО','САО'])(class="click-badge")
@@ -45,10 +47,10 @@
 					.mobile-badge-block.mobile-badge-block--third
 						.search-item-title Дополнительно
 						+badge-group(['Без апартаментов','Только аппартаменты'])
-					.search-row-item.search-row-item-link
+					.search-row-item.search-row-item-link.box-visible-mob
 						+text-link('Сбросить параметры поиска','#')
 
-				.line
+				.line.dropdown-order-6
 			
 			.search-row-item.search-row-item--flex.item-order-5
 				+link('Свернуть','#','arrow-down')(class="search-link--mob")
