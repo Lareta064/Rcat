@@ -1,0 +1,90 @@
+.container.container-search--block
+	.search-block
+		.search-block-header
+			.search-row-item.search-row-item--rooms
+				.search-item-title Комнат
+				+link-btn-block('1','2','3','4+')(class="rooms-num")
+			.search-row-item.search-row-item-desk.item-order-2
+				.search-item-title Площадь, кв.м
+				+input-block--double('text','от','','text','до')
+				
+			.search-row-item.search-row-item--input.item-order-4
+				.search-item-title Адрес или ЖК
+				+input-block('text','Улица, район, ЖК, адрес')
+			.search-row-item.search-row-item--doubleinput.item-order-3
+				.search-item-title Стоимость,&nbsp;
+					+text-link('рубли','#')
+				+input-block--double('text','от','','text','до')
+			.search-row-item.search-row-item--mobile
+					+text-link('Площадь, отделка...','#')
+					+arrow-down
+			
+			.search-dropdown.item-order-7
+				.search-dropdown-wrapper
+					.search-row-item.search-row-item--doubleinput
+						.search-item-title Площадь, кв.м
+						+input-block--double('text','от','','text','до')
+					.search-row-item.search-row-item--pb.dropdown-order-1
+						.search-item-title Содержит слова
+						+input-block('text','Укажите любое слово')
+						.search-item-subtitle Можно ввести несколько слов через запятую
+					.search-row-item.search-row-item-badge.dropdown-order-2
+						.search-item-title Отделка
+						+badge-group(['с ремонтом','без отделки'])
+					.search-row-item.search-row-item-link.box-visible-desk.dropdown-order-3
+							+text-link('Сбросить параметры поиска','#')
+						
+					.line.box-visible-desk.dropdown-order-4
+						
+					.search-block--footer.dropdown-order-5.d-flex
+						.mobile-badge-block.mobile-badge-block--first
+							.search-item-title Округ
+							+badge-group(['ЦАО','ВАО','СВАО','СЗАО','ЗАО','ЮЗАО','САО'])(class="click-badge")
+						.areas-badges.mobile-badge-block.mobile-badge-block--four
+							+badge-group(['Арбат','Замоскворечье и Якиманка','Москва-Сити','Остоженка','Патриаршие','Пресня','Таганка','Тверская','Хамовники','Чистые пруды','Басманный'])
+						.mobile-badge-block.mobile-badge-block--second
+							.search-item-title Дом
+							+badge-group(['Новостройка','Сдан'])
+						.mobile-badge-block.mobile-badge-block--third
+							.search-item-title Дополнительно
+							+badge-group(['Без апартаментов','Только аппартаменты'])
+						.search-row-item.search-row-item-link.box-visible-mob
+							+text-link('Сбросить параметры поиска','#')
+
+				.line.dropdown-order-6
+				
+				.search-edit.dropdown-order-7
+					.search-edit-header.d-flex
+						.search-edit-title Сохраненные поиски:
+						.search-edit-items
+							+text-link('2-комн., 50–100 кв.м., в САО и СВАО','#','text-link--line')
+							+text-link('Двушки с ремонтом','#','text-link--line')
+						+text-link('Скрыть','#')
+						
+					.search-edit-body
+						.search-edit-body__item.d-flex
+							.search-edit-badges
+								+input-block('text','2-комн., 50–100 кв.м, 50 000 000 – 70 000 000 руб.. с ремонтом, содержит слово «срочно», ВАО и СВАО')
+								+badge-group(['2-комн.','50-100 кв.м','50 000 000 - 70 000 000 руб.','С ремонтом','Содержит слово "срочно"','ВАО','СВАО'])
+							.search-edit-basket.d-flex
+								.basket-text Удалить
+								.basket-icon
+									+icon-basket
+
+						.search-edit-body__item.d-flex
+							.search-edit-badges
+								+input-block('text','2-комн., 50–100 кв.м, 50 000 000 – 70 000 000 руб.. с ремонтом, содержит слово «срочно», ВАО и СВАО')
+								+badge-group(['2-комн.','50-100 кв.м','50 000 000 - 70 000 000 руб.','С ремонтом','Содержит слово "срочно"','ВАО','СВАО'])
+							.search-edit-basket.d-flex
+								.basket-text Удалить
+								.basket-icon
+									+icon-basket
+
+			.search-row-item.search-row-item--flex.item-order-5
+				+link('Свернуть','#','arrow-down')(class="search-link--mob")
+				+link('Еще','#','arrow-down')(class="search-link--desk")
+			.search-row-item.search-row-item--flex.search-row-item--col.item-order-6
+				+link('Сохранить поиск','#','icon-heart')(class="icon-heart--small")
+				+button('Показать', '#','button--basic')
+
+			
