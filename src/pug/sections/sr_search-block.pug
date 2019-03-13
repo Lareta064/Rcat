@@ -52,7 +52,34 @@
 							+text-link('Сбросить параметры поиска','#')
 
 				.line.dropdown-order-6
-			
+				
+				.search-edit.dropdown-order-7
+					.search-edit-header.d-flex
+						.search-edit-title Сохраненные поиски:
+						.search-edit-items
+							+text-link('2-комн., 50–100 кв.м., в САО и СВАО','#','text-link--line')
+							+text-link('Двушки с ремонтом','#','text-link--line')
+						+text-link('Скрыть','#')
+						
+					.search-edit-body
+						.search-edit-body__item.d-flex
+							.search-edit-badges
+								+input-block('text','2-комн., 50–100 кв.м, 50 000 000 – 70 000 000 руб.. с ремонтом, содержит слово «срочно», ВАО и СВАО')
+								+badge-group(['2-комн.','50-100 кв.м','50 000 000 - 70 000 000 руб.','С ремонтом','Содержит слово "срочно"','ВАО','СВАО'])
+							.search-edit-basket.d-flex
+								.basket-text Удалить
+								.basket-icon
+									+icon-basket
+
+						.search-edit-body__item.d-flex
+							.search-edit-badges
+								+input-block('text','2-комн., 50–100 кв.м, 50 000 000 – 70 000 000 руб.. с ремонтом, содержит слово «срочно», ВАО и СВАО')
+								+badge-group(['2-комн.','50-100 кв.м','50 000 000 - 70 000 000 руб.','С ремонтом','Содержит слово "срочно"','ВАО','СВАО'])
+							.search-edit-basket.d-flex
+								.basket-text Удалить
+								.basket-icon
+									+icon-basket
+
 			.search-row-item.search-row-item--flex.item-order-5
 				+link('Свернуть','#','arrow-down')(class="search-link--mob")
 				+link('Еще','#','arrow-down')(class="search-link--desk")
