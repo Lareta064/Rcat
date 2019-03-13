@@ -20,35 +20,36 @@
 					+arrow-down
 			
 			.search-dropdown.item-order-7
-				.search-row-item.search-row-item--doubleinput
-					.search-item-title Площадь, кв.м
-					+input-block--double('text','от','','text','до')
-				.search-row-item.search-row-item--pb.dropdown-order-1
-					.search-item-title Содержит слова
-					+input-block('text','Укажите любое слово')
-					.search-item-subtitle Можно ввести несколько слов через запятую
-				.search-row-item.search-row-item-badge.dropdown-order-2
-					.search-item-title Отделка
-					+badge-group(['с ремонтом','без отделки'])
-				.search-row-item.search-row-item-link.box-visible-desk.dropdown-order-3
-						+text-link('Сбросить параметры поиска','#')
-					
-				.line.box-visible-desk.dropdown-order-4
-					
-				.search-block--footer.dropdown-order-5.d-flex
-					.mobile-badge-block.mobile-badge-block--first
-						.search-item-title Округ
-						+badge-group(['ЦАО','ВАО','СВАО','СЗАО','ЗАО','ЮЗАО','САО'])(class="click-badge")
-					.areas-badges.mobile-badge-block.mobile-badge-block--four
-						+badge-group(['Арбат','Замоскворечье и Якиманка','Москва-Сити','Остоженка','Патриаршие','Пресня','Таганка','Тверская','Хамовники','Чистые пруды','Басманный'])
-					.mobile-badge-block.mobile-badge-block--second
-						.search-item-title Дом
-						+badge-group(['Новостройка','Сдан'])
-					.mobile-badge-block.mobile-badge-block--third
-						.search-item-title Дополнительно
-						+badge-group(['Без апартаментов','Только аппартаменты'])
-					.search-row-item.search-row-item-link.box-visible-mob
-						+text-link('Сбросить параметры поиска','#')
+				.search-dropdown-wrapper
+					.search-row-item.search-row-item--doubleinput
+						.search-item-title Площадь, кв.м
+						+input-block--double('text','от','','text','до')
+					.search-row-item.search-row-item--pb.dropdown-order-1
+						.search-item-title Содержит слова
+						+input-block('text','Укажите любое слово')
+						.search-item-subtitle Можно ввести несколько слов через запятую
+					.search-row-item.search-row-item-badge.dropdown-order-2
+						.search-item-title Отделка
+						+badge-group(['с ремонтом','без отделки'])
+					.search-row-item.search-row-item-link.box-visible-desk.dropdown-order-3
+							+text-link('Сбросить параметры поиска','#')
+						
+					.line.box-visible-desk.dropdown-order-4
+						
+					.search-block--footer.dropdown-order-5.d-flex
+						.mobile-badge-block.mobile-badge-block--first
+							.search-item-title Округ
+							+badge-group(['ЦАО','ВАО','СВАО','СЗАО','ЗАО','ЮЗАО','САО'])(class="click-badge")
+						.areas-badges.mobile-badge-block.mobile-badge-block--four
+							+badge-group(['Арбат','Замоскворечье и Якиманка','Москва-Сити','Остоженка','Патриаршие','Пресня','Таганка','Тверская','Хамовники','Чистые пруды','Басманный'])
+						.mobile-badge-block.mobile-badge-block--second
+							.search-item-title Дом
+							+badge-group(['Новостройка','Сдан'])
+						.mobile-badge-block.mobile-badge-block--third
+							.search-item-title Дополнительно
+							+badge-group(['Без апартаментов','Только аппартаменты'])
+						.search-row-item.search-row-item-link.box-visible-mob
+							+text-link('Сбросить параметры поиска','#')
 
 				.line.dropdown-order-6
 			
@@ -59,3 +60,4 @@
 				+link('Сохранить поиск','#','icon-heart')(class="icon-heart--small")
 				+button('Показать', '#','button--basic')
 
+			
