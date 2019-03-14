@@ -23,9 +23,9 @@ mixin link-title(linkText, href)
 //-Простая ссылка
 mixin text-link(linkText,href,linkClass)
 	if linkClass
-		a.text-link(href=""+ href class=" "+ linkClass) !{linkText}
+		a.text-link(href=""+ href class=" "+ linkClass)&attributes(attributes) !{linkText}
 	else
-		a.text-link(href=""+ href) !{linkText}
+		a.text-link(href=""+ href)&attributes(attributes) !{linkText}
 
 //- ссылка, которая может переноситься, подчеркивается градиентом
 mixin link(linkText,href, linkIcon,linkClass)

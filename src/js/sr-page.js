@@ -103,4 +103,26 @@ $(document).ready(function() {
 
 	});
 
+	//-Открыть редактир. поиска
+	$('.open-save-items').on('click', function(){
+		if($(this).attr('data-action') !=='open'){
+			$(this).parent('.search-edit-header').siblings('.search-edit-body').addClass('show-block');
+			$(this).text('Cкрыть');
+			$(this).attr('data-action','open');
+
+		}
+		else{
+			$(this).parent('.search-edit-header').siblings('.search-edit-body').removeClass('show-block');
+			$(this).text('Редактировать');
+			$(this).attr('data-action','close');
+
+		}
+	});
+
+	$('.search-edit-basket').on('click', function(){
+		$(this).closest('.search-edit-body__item').css('display','none');
+
+	})
+
+
 })
