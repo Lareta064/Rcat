@@ -57,17 +57,50 @@ $(document).ready(function() {
 		}
 	});
 
-	//-клик по бэйджу в фильтре поиска
-	$('.badge-group.click-badge .badge').on('click', function(){
-		$('.areas-badges').toggleClass('areas-badges--visible');
 
-	});
 	//-красим кнопки с квартирами
 	$('.rooms-num .link-btn').on('click', function(){
 		$(this).toggleClass('link-btn--active');
 
 	});
+	//-блок поиска показать полный поиск
+	$('.show-full-search').on('click', function(){
+		if($(this).children('.text-link').attr('data-action') !=='open'){
+			$(this).children('.arrow-down').addClass('arrow-down--rotate');
+			$('.search-dropdown').addClass('show-flex');
+			$(this).children('.text-link').text('Скрыть');
+			$(this).children('.text-link').attr('data-action','open');
+		}
+		else{
+			$(this).children('.arrow-down').removeClass('arrow-down--rotate');
+			$('.search-dropdown').removeClass('show-flex');
+			$(this).children('.text-link').text('Еще');
+			$(this).children('.text-link').attr('data-action','close');
+		}
+
+	});
 
 
+	$('.badge-group.click-badge .badge').on('click', function(){
+		$('.areas-badges').toggleClass('areas-badges--visible');
+
+	});
+	//-полный поиск на мобилках
+	$('.full-search-mobile').on('click', function(){
+
+		$('.search-dropdown').addClass('show-flex');
+		$(this).css('display','none');
+		$(this).siblings('.close-full-mobile').css('display','flex');
+
+	});
+
+	//-свернуть полный поиск на мобилках
+		$('.close-full-mobile').on('click', function(){
+
+		$('.search-dropdown').removeClass('show-flex');
+		$(this).css('display','none');
+		$(this).siblings('.full-search-mobile').css('display','flex');
+
+	});
 
 })

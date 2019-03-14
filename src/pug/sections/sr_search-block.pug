@@ -7,7 +7,7 @@
 			.search-row-item.search-row-item-desk.item-order-2
 				.search-item-title Площадь, кв.м
 				+input-block--double('text','от','','text','до')
-				
+
 			.search-row-item.search-row-item--input.item-order-4
 				.search-item-title Адрес или ЖК
 				+input-block('text','Улица, район, ЖК, адрес')
@@ -15,10 +15,10 @@
 				.search-item-title Стоимость,&nbsp;
 					+text-link('рубли','#')
 				+input-block--double('text','от','','text','до')
-			.search-row-item.search-row-item--mobile
+			.search-row-item.search-row-item--mobile.full-search-mobile
 					+text-link('Площадь, отделка...','#')
 					+arrow-down
-			
+
 			.search-dropdown.item-order-7
 				.search-dropdown-wrapper
 					.search-row-item.search-row-item--doubleinput
@@ -33,9 +33,9 @@
 						+badge-group(['с ремонтом','без отделки'])
 					.search-row-item.search-row-item-link.box-visible-desk.dropdown-order-3
 							+text-link('Сбросить параметры поиска','#')
-						
+
 					.line.box-visible-desk.dropdown-order-4
-						
+
 					.search-block--footer.dropdown-order-5.d-flex
 						.mobile-badge-block.mobile-badge-block--first
 							.search-item-title Округ
@@ -52,7 +52,7 @@
 							+text-link('Сбросить параметры поиска','#')
 
 				.line.dropdown-order-6
-				
+
 				.search-edit.dropdown-order-7
 					.search-edit-header.d-flex
 						.search-edit-title Сохраненные поиски:
@@ -60,7 +60,7 @@
 							+text-link('2-комн., 50–100 кв.м., в САО и СВАО','#','text-link--line')
 							+text-link('Двушки с ремонтом','#','text-link--line')
 						+text-link('Скрыть','#')
-						
+
 					.search-edit-body
 						.search-edit-body__item.d-flex
 							.search-edit-badges
@@ -80,11 +80,14 @@
 								.basket-icon
 									+icon-basket
 
-			.search-row-item.search-row-item--flex.item-order-5
-				+link('Свернуть','#','arrow-down')(class="search-link--mob")
-				+link('Еще','#','arrow-down')(class="search-link--desk")
+			.search-row-item.search-row-item--flex.item-order-5.show-full-search
+
+				+text-link('Еще', '#')
+				+arrow-down
+			.search-row-item.search-row-item--flex.item-order-5.close-full-mobile
+				+text-link('Скрыть', '#')
+				+arrow-down
 			.search-row-item.search-row-item--flex.search-row-item--col.item-order-6
 				+link('Сохранить поиск','#','icon-heart')(class="icon-heart--small")
 				+button('Показать', '#','button--basic')
 
-			
