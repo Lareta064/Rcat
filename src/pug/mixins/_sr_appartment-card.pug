@@ -62,6 +62,8 @@ mixin appartment-card(cardData)
 		.appartment-card__img
 			if cardData.apprtPhotoBlock
 				+appartment-photo(cardData.apprtPhotoBlock)
+			else
+				img.cat-placeholder(src="../img/appartments/cat-placeholder.jpg", alt="")
 		.appartment-content--mobile
 			.appartment-content--mobile-row.pt-16
 				+link-title(cardData.title, cardData.titleHref)
