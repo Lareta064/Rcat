@@ -4,6 +4,9 @@
 	@media(min-width: 768px){display: none;}
 
 	.appartment-card__img{
+		width: 110%;
+		left: -16px;
+		right: -16px;
 		position: relative;
 		min-height:145px;
 		background-color: #f8f8f8;
@@ -11,7 +14,14 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
-		@media(min-width: 480px){min-height:175px;}
+		@media(min-width: 420px){width: 109%;}
+
+		@media(min-width: 475px){
+			width: 108%;
+
+			min-height:175px;
+		}
+		@media(min-width: 500px){width: 107%;}
 	}
 	.appartment-card__img:after{
 		position: absolute;
@@ -23,7 +33,7 @@
 
 	}
 	.hc-photo-mobile{
-		background-color: @bodyBg;
+		background-color: #fff;
 		position: relative;
 		z-index: 2;
 	}
