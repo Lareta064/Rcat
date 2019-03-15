@@ -6,15 +6,17 @@
 				+link-btn-block('1','2','3','4+')(class="rooms-num")
 			.search-row-item.search-row-item-desk.item-order-2
 				.search-item-title Площадь, кв.м
-				+input-block--double('text','от','','text','до')
+				+input-block--double('number','от','','number','до')
 
 			.search-row-item.search-row-item--input.item-order-4
 				.search-item-title Адрес или ЖК
 				+input-block('text','Улица, район, ЖК, адрес')
 			.search-row-item.search-row-item--doubleinput.item-order-3
 				.search-item-title Стоимость,&nbsp;
-					+text-link('рубли','#')
-				+input-block--double('text','от','','text','до')
+					select.currency-select
+						option(value='rub') рубли
+						option(value='usd') usd
+				+input-block--double('number','от','','number','до')
 			.search-row-item.search-row-item--mobile.full-search-mobile
 					+text-link('Площадь, отделка...','#')
 					+arrow-down
@@ -23,7 +25,7 @@
 				.search-dropdown-wrapper
 					.search-row-item.search-row-item--doubleinput
 						.search-item-title Площадь, кв.м
-						+input-block--double('text','от','','text','до')
+						+input-block--double('number','от','','number','до')
 					.search-row-item.search-row-item--pb.dropdown-order-1
 						.search-item-title Содержит слова
 						+input-block('text','Укажите любое слово')

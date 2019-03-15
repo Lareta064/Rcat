@@ -182,15 +182,15 @@ mixin input-block--double(inputType1,inputPlace1,inputName1,inputType2,inputPlac
 		input.form-input.form-input--right(type=""+ inputType2 placeholder=""+ inputPlace2 name=""+ inputName2)
 
 //-окошко тултип
-mixin tooltip
+mixin tooltip(placeholder, mailHref, pdfHref)
 	.tooltip-box&attributes(attributes)
 		.tooltip__title Ссылка на объект
 		.tooltip__input
 			+icon-copy
-			+input-block('text','http://realtycat.pro/36732')
+			input.form-input(type='text' placeholder=''+ placeholder readonly)
 		.tooltip__links.d-flex
-			+text-link('Отправить по эл почте','#','text-link--line')
-			+text-link('Скачать ПДФ','#','text-link--line')
+			+text-link('Отправить по эл почте','mailto:'+mailHref,'text-link--line')
+			+text-link('Скачать ПДФ',pdfHref,'text-link--line')(download)
 
 mixin custom-checkbox(text)
 	label.checkbox-label(for='hc-type')&attributes(attributes)

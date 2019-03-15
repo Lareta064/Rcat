@@ -104,7 +104,8 @@ $(document).ready(function() {
 	});
 
 	//-Открыть редактир. поиска
-	$('.open-save-items').on('click', function(){
+	$('.open-save-items').on('click', function(e){
+		e.preventDefault()
 		if($(this).attr('data-action') !=='open'){
 			$(this).parent('.search-edit-header').siblings('.search-edit-body').addClass('show-block');
 			$(this).text('Cкрыть');
