@@ -94,11 +94,34 @@ $(document).ready(function() {
 
 	});
 
-
+	//-выбор районов для округа
 	$('.badge-group.click-badge .badge').on('click', function(){
-		$('.areas-badges').toggleClass('areas-badges--visible');
+		var activeBadge = $(this);
+		$('.badge-group.click-badge .badge').each( function(){
+			if(activeBadge != $(this)){
+				$(this).removeClass("badge--active");
+			}
+		});
+
+
+		var badgeDataValue = $(this).attr('data-name');
+		var areasBadgesGroup = $('.areas-badges .badge-group');
+
+
+
+		areasBadgesGroup.each( function(){
+			$(this).removeClass('visible');
+
+			if($(this).attr('data-group') == badgeDataValue){
+				$(this).addClass('visible');
+
+			}
+		});
+
+
 
 	});
+
 	//-полный поиск на мобилках
 	$('.full-search-mobile').on('click', function(e){
 		e.preventDefault();

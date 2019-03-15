@@ -75,7 +75,18 @@ mixin linkInMixin(linkData)
 						nohyphen !{linkData.Text}
 
 
-//- Миксин для одного бейджа
+//-бэйдж с дата аттрибутом
+mixin badge2(  attrValue,badgeName )
+	.badge(data-group=''+ attrValue ) !{badgeName}
+mixin badge-attr(badgeGroup)
+	.badge-group&attributes(attributes)
+		each item in badgeGroup
+			if item.badgeClass
+				.badge(data-name=''+ item.attrValue class= ''+ item.badgeClass) !{item.badgeName}
+			else
+				.badge(data-name=''+ item.attrValue ) !{item.badgeName}
+
+//-бэйджи без дата аттрибута
 mixin badge(...items)
 	each item in items
 		.badge= item

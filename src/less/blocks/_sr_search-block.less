@@ -549,8 +549,17 @@
 }
 
 .show-flex{display: flex;}
-.areas-badges{display: none;}
-.areas-badges--visible{display:flex;}
+
+.areas-badges{
+	.badge-group{display: none;}
+	}
+.areas-badges{
+	.badge-group.visible{display:flex;}
+}
+
+
+
+
 .close-full-mobile{
 	display: none;
 	@media(min-width: 768px){display: none !important;}
