@@ -13,6 +13,20 @@ $(document).ready(function() {
 		});
 	});
 
+	//-показать синий бордер слева при группировке по жк
+	 $(".form-checkbox").click(function (event) {
+ 		event.stopPropagation();
+
+        if (!$(".form-checkbox").is(':checked')) {
+            $(".vertical-border").removeClass('active');
+            console.log(222);
+        } else {
+            $(".vertical-border").addClass('active');
+            console.log(333);
+        }
+
+    });
+
 	//Скрипт для фокуса input
 	$('.form-input').focus(function(event){
 		$ (this).addClass('form-input--focus');

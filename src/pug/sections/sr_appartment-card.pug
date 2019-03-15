@@ -21,6 +21,11 @@ section.search-result
 				+custom-checkbox('Сгруппировать по ЖК')(class=' check--hc-type')
 			+toggle-block({modif:'border',title:'Отсортированы по', items:[{name:'цене',class:'filter-active filter-toggle-item--left'},{name:'площади',class:'filter-toggle-item--right'}]})
 		.section-cards-wrapper
+			.vertical-border
+			+appartment-card(apprtCard1)
+			+appartment-card(apprtCard2)
+			+appartment-card(apprtCard3)
+		.section-cards-wrapper
 			+appartment-card(apprtCard1)
 			+appartment-card(apprtCard2)
 			+appartment-card(apprtCard3)
