@@ -86,8 +86,8 @@ $(document).ready(function() {
 
 	});
 	//-полный поиск на мобилках
-	$('.full-search-mobile').on('click', function(){
-
+	$('.full-search-mobile').on('click', function(e){
+		e.preventDefault();
 		$('.search-dropdown').addClass('show-flex');
 		$(this).css('display','none');
 		$(this).siblings('.close-full-mobile').css('display','flex');
