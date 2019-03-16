@@ -1,7 +1,21 @@
-.search-save
-	.search-save-title Сохраненные поиски
-	+arrow-down
-		.search-edit-items--mobile
-			+text-link('2-комн., 50–100 кв.м., в САО и СВАО','#','text-link--line')
-			+text-link('Двушки с ремонтом','#','text-link--line')
-			+text-link('Редактировать','#')(class="open-save-items")
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'ЖК. Карточка дома';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.section-ui
+			.title Сохраненные поиски 360
+		.section-ui
+			.search-save-mob
+				.search-save-title 
+					span Сохраненные поиски
+					+arrow-down
+				.search-edit-items--mobile
+					.search-edit-items--links
+						+text-link('2-комн., 50–100 кв.м., в САО и СВАО','#','text-link--line')
+						+text-link('Однушки и двушки в ЦАО','#','text-link--line')
+					.search-edit--mobile
+						+text-link('Редактировать','#')(class="open-save-items")
