@@ -95,26 +95,36 @@ $(document).ready(function() {
 	});
 
 	//-выбор районов для округа
+	var selectedDataValue;
+
 	$('.badge-group.click-badge .badge').on('click', function(){
 		var activeBadge = $(this);
+		var badgeDataValue = $(this).attr('data-name');
+		var areasBadgesGroup = $('.areas-badges .badge-group');
+
+
 		$('.badge-group.click-badge .badge').each( function(){
-			if(activeBadge != $(this)){
+			if(badgeDataValue != $(this).attr('data-name')){
 				$(this).removeClass("badge--active");
 			}
 		});
 
-
-		var badgeDataValue = $(this).attr('data-name');
-		var areasBadgesGroup = $('.areas-badges .badge-group');
-
 		areasBadgesGroup.each( function(){
 			$(this).removeClass('visible');
 
+			if(badgeDataValue == selectedDataValue)
+				return;
+
 			if($(this).attr('data-group') == badgeDataValue){
 				$(this).addClass('visible');
-
 			}
 		});
+
+		if(badgeDataValue == selectedDataValue){
+			selectedDataValue = undefined;
+		}
+		else
+			selectedDataValue = badgeDataValue;
 	});
 
 	//-полный поиск на мобилках

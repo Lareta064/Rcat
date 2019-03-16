@@ -188,7 +188,6 @@ $(document).ready(function() {
 	 //-меняем цвет бейджа ЦАО
 	$('.badge').on('click', function(){
 		$(this).toggleClass('badge--active');
-
 	});
 
 });
