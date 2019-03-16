@@ -6,15 +6,17 @@
 				+link-btn-block('1','2','3','4+')(class="rooms-num")
 			.search-row-item.search-row-item-desk.item-order-2
 				.search-item-title Площадь, кв.м
-				+input-block--double('text','от','','text','до')
+				+input-block--double('number','от','','number','до')
 
 			.search-row-item.search-row-item--input.item-order-4
 				.search-item-title Адрес или ЖК
 				+input-block('text','Улица, район, ЖК, адрес')
 			.search-row-item.search-row-item--doubleinput.item-order-3
 				.search-item-title Стоимость,&nbsp;
-					+text-link('рубли','#')
-				+input-block--double('text','от','','text','до')
+					select.currency-select
+						option(value='rub') рубли
+						option(value='usd') usd
+				+input-block--double('number','от','','number','до')
 			.search-row-item.search-row-item--mobile.full-search-mobile
 					+text-link('Площадь, отделка...','#')
 					+arrow-down
@@ -23,7 +25,7 @@
 				.search-dropdown-wrapper
 					.search-row-item.search-row-item--doubleinput
 						.search-item-title Площадь, кв.м
-						+input-block--double('text','от','','text','до')
+						+input-block--double('number','от','','number','до')
 					.search-row-item.search-row-item--pb.dropdown-order-1
 						.search-item-title Содержит слова
 						+input-block('text','Укажите любое слово')
@@ -39,9 +41,18 @@
 					.search-block--footer.dropdown-order-5.d-flex
 						.mobile-badge-block.mobile-badge-block--first
 							.search-item-title Округ
-							+badge-group(['ЦАО','ВАО','СВАО','СЗАО','ЗАО','ЮЗАО','САО'])(class="click-badge")
+							//- +badge-group(['ЦАО','ВАО','СВАО','СЗАО','ЗАО','ЮЗАО','САО'])(class="click-badge")
+							+badge-attr([{attrValue:'1', badgeName:'ЦАО'},{attrValue:'2', badgeName:'ВАО'},{attrValue:'3', badgeName:'СВАО'},{attrValue:'4', badgeName:'СЗАО'},{attrValue:'5', badgeName:'ЗАО'},{attrValue:'6', badgeName:'ЮЗАО'},{attrValue:'7', badgeName:'САО'}])(class="click-badge")
 						.areas-badges.mobile-badge-block.mobile-badge-block--four
-							+badge-group(['Арбат','Замоскворечье и Якиманка','Москва-Сити','Остоженка','Патриаршие','Пресня','Таганка','Тверская','Хамовники','Чистые пруды','Басманный'])
+							+badge-group(['Арбат','Замоскворечье и Якиманка','Москва-Сити','Остоженка','Патриаршие','Пресня','Таганка','Тверская','Хамовники','Чистые пруды','Басманный'])(data-group='1')
+
+							+badge-group(['Коньково','Митино','Раменки','Царицыно','Савелки','Чертаново'])(data-group='2')
+							+badge-group(['Зюзино','Ховрино','Братеево','Басманный','Черемушки','Коптево','Перово', 'Зюзино','Ховрино','Братеево'])(data-group='3')
+							+badge-group(['Арбат','Замоскворечье и Якиманка','Москва-Сити','Остоженка','Патриаршие','Пресня','Таганка','Тверская','Хамовники','Чистые пруды','Басманный'])(data-group='4')
+							+badge-group(['Коньково','Митино','Раменки','Царицыно','Савелки','Чертаново', 'Арбат'])(data-group='5')
+							+badge-group(['Зюзино','Ховрино','Братеево','Басманный','Черемушки','Коптево','Перово', 'Зюзино','Ховрино','Братеево'])(data-group='6')
+							+badge-group(['Коньково','Митино','Раменки','Царицыно','Басманный','Черемушки','Коптево','Перово', 'Зюзино','Ховрино','Братеево'])(data-group='7')
+
 						.mobile-badge-block.mobile-badge-block--second
 							.search-item-title Дом
 							+badge-group(['Новостройка','Сдан'])

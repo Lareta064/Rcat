@@ -13,6 +13,20 @@ $(document).ready(function() {
 		});
 	});
 
+	//-показать синий бордер слева при группировке по жк
+	 $(".form-checkbox").click(function (event) {
+ 		event.stopPropagation();
+
+        if (!$(".form-checkbox").is(':checked')) {
+            $(".vertical-border").removeClass('active');
+            console.log(222);
+        } else {
+            $(".vertical-border").addClass('active');
+            console.log(333);
+        }
+
+    });
+
 	//Скрипт для фокуса input
 	$('.form-input').focus(function(event){
 		$ (this).addClass('form-input--focus');
@@ -80,11 +94,39 @@ $(document).ready(function() {
 
 	});
 
+	//-выбор районов для округа
+	var selectedDataValue;
 
 	$('.badge-group.click-badge .badge').on('click', function(){
-		$('.areas-badges').toggleClass('areas-badges--visible');
+		var activeBadge = $(this);
+		var badgeDataValue = $(this).attr('data-name');
+		var areasBadgesGroup = $('.areas-badges .badge-group');
 
+
+		$('.badge-group.click-badge .badge').each( function(){
+			if(badgeDataValue != $(this).attr('data-name')){
+				$(this).removeClass("badge--active");
+			}
+		});
+
+		areasBadgesGroup.each( function(){
+			$(this).removeClass('visible');
+
+			if(badgeDataValue == selectedDataValue)
+				return;
+
+			if($(this).attr('data-group') == badgeDataValue){
+				$(this).addClass('visible');
+			}
+		});
+
+		if(badgeDataValue == selectedDataValue){
+			selectedDataValue = undefined;
+		}
+		else
+			selectedDataValue = badgeDataValue;
 	});
+
 	//-полный поиск на мобилках
 	$('.full-search-mobile').on('click', function(e){
 		e.preventDefault();
@@ -104,7 +146,8 @@ $(document).ready(function() {
 	});
 
 	//-Открыть редактир. поиска
-	$('.open-save-items').on('click', function(){
+	$('.open-save-items').on('click', function(e){
+		e.preventDefault()
 		if($(this).attr('data-action') !=='open'){
 			$(this).parent('.search-edit-header').siblings('.search-edit-body').addClass('show-block');
 			$(this).text('Cкрыть');
