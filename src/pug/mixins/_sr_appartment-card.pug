@@ -90,5 +90,6 @@ mixin appartment-card(cardData)
 				.appartment-card__toolbar-item
 					+button(cardData.phoneNumber, cardData.phoneLink, 'btn-tel contact-phone')
 				.appartment-card__toolbar-item.appartment-card__toolbar-icons.d-flex
-					+icon-mail
+					a(href='mailto:'+ cardData.mailAddress)
+						+icon-mail
 					+link('В избранное','','icon-heart')(class=" item-favorite")
