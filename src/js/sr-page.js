@@ -107,8 +107,6 @@ $(document).ready(function() {
 		var badgeDataValue = $(this).attr('data-name');
 		var areasBadgesGroup = $('.areas-badges .badge-group');
 
-
-
 		areasBadgesGroup.each( function(){
 			$(this).removeClass('visible');
 
@@ -117,9 +115,6 @@ $(document).ready(function() {
 
 			}
 		});
-
-
-
 	});
 
 	//-полный поиск на мобилках
