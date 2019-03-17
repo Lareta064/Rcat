@@ -60,7 +60,10 @@
 							.search-item-title Дополнительно
 							+badge-group(['Без апартаментов','Только аппартаменты'])
 						.search-row-item.search-row-item-link.box-visible-mob
+							+link('Сохранить поиск','#','icon-heart')(class="icon-heart--small")
 							+text-link('Сбросить параметры поиска','#')
+
+					
 
 				.line.dropdown-order-6
 
@@ -101,4 +104,15 @@
 			.search-row-item.search-row-item--flex.search-row-item--col.item-order-6
 				+link('Сохранить поиск','#','icon-heart')(class="icon-heart--small")
 				+button('Показать', '#','button--basic')
+
+	.search-save-mob
+		.search-save-title 
+			span Сохраненные&nbsp;поиски
+			+arrow-down
+		.search-edit-items--mobile
+			.search-edit-items--links
+				+text-link('2-комн., 50–100 кв.м., в САО и СВАО','#','text-link--line')
+				+text-link('Однушки и двушки в ЦАО','#','text-link--line')
+			.search-edit--mobile
+				+text-link('Редактировать','#')(class="open-save-items")
 
