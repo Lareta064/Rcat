@@ -14,6 +14,16 @@ block content
 			pre.
 				+badge('ЦАО')
 		.section-ui
+			h3 Бейджи с data-атрибутом
+		.section-ui
+			+badge-attr([{attrValue:'1',badgeName:'SOS'},{attrValue:'1',badgeName:'SOS'}])
+		.section-ui
+			pre.
+				+badge-attr([{attrValue:'1',badgeName:'SOS'},{attrValue:'2',badgeName:'BOS'}])
+		.section-ui
+			pre.
+				+badge('ЦАО')
+		.section-ui
 			h3 Группа бейджиков
 		.section-ui
 			+badge-group(['ЦАО','Замоскворечье'])
@@ -30,4 +40,3 @@ block content
 		.section-ui
 			pre.
 				+bag-badge('48', '116' )
-

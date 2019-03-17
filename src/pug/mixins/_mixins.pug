@@ -23,9 +23,9 @@ mixin link-title(linkText, href)
 //-Простая ссылка
 mixin text-link(linkText,href,linkClass)
 	if linkClass
-		a.text-link(href=""+ href class=" "+ linkClass) !{linkText}
+		a.text-link(href=""+ href class=" "+ linkClass)&attributes(attributes) !{linkText}
 	else
-		a.text-link(href=""+ href) !{linkText}
+		a.text-link(href=""+ href)&attributes(attributes) !{linkText}
 
 //- ссылка, которая может переноситься, подчеркивается градиентом
 mixin link(linkText,href, linkIcon,linkClass)
@@ -75,14 +75,25 @@ mixin linkInMixin(linkData)
 						nohyphen !{linkData.Text}
 
 
-//- Миксин для одного бейджа
+//-бэйдж с дата аттрибутом
+mixin badge2(  attrValue,badgeName )
+	.badge(data-group=''+ attrValue ) !{badgeName}
+mixin badge-attr(badgeGroup)
+	.badge-group&attributes(attributes)
+		each item in badgeGroup
+			if item.badgeClass
+				.badge(data-name=''+ item.attrValue class= ''+ item.badgeClass) !{item.badgeName}
+			else
+				.badge(data-name=''+ item.attrValue ) !{item.badgeName}
+
+//-бэйджи без дата аттрибута
 mixin badge(...items)
 	each item in items
 		.badge= item
 
 //- Миксин для группы бейджиков
 mixin badge-group(badges)
-	.badge-group
+	.badge-group&attributes(attributes)
 		each item in badges
 			.badge= item
 
@@ -156,7 +167,7 @@ mixin link-btn(text)
 		span.link-btn--text= text
 
 mixin link-btn-block(...items)
-	.link-btn-block
+	.link-btn-block&attributes(attributes)
 		each item in items
 			+link-btn(item)
 
@@ -182,12 +193,18 @@ mixin input-block--double(inputType1,inputPlace1,inputName1,inputType2,inputPlac
 		input.form-input.form-input--right(type=""+ inputType2 placeholder=""+ inputPlace2 name=""+ inputName2)
 
 //-окошко тултип
-mixin tooltip
+mixin tooltip(placeholder, mailHref, pdfHref)
 	.tooltip-box&attributes(attributes)
 		.tooltip__title Ссылка на объект
 		.tooltip__input
 			+icon-copy
-			+input-block('text','http://realtycat.pro/36732')
+			input.form-input(type='text' placeholder=''+ placeholder readonly)
 		.tooltip__links.d-flex
-			+text-link('Отправить по эл почте','#','text-link--line')
-			+text-link('Скачать ПДФ','#','text-link--line')
+			+text-link('Отправить по эл почте','mailto:'+mailHref,'text-link--line')
+			+text-link('Скачать ПДФ',pdfHref,'text-link--line')(download)
+
+mixin custom-checkbox(text)
+	label.checkbox-label(for='hc-type')&attributes(attributes)
+		span.checkbox-title= text
+		input(type="checkbox" id='hc-type' name="form-checkbox" class="form-checkbox")
+		span.custom-checkbox
