@@ -165,7 +165,13 @@ $(document).ready(function() {
 	$('.search-edit-basket').on('click', function(){
 		$(this).closest('.search-edit-body__item').css('display','none');
 
-	})
+	});
+
+	//Показать сохр.поиски на мобильных
+	$('.search-save-title').on('click', function(){
+		$(this).siblings('.search-edit-items--mobile').toggleClass('visible');
+		$(this).children('.arrow-down').toggleClass('icon-rotate');
+	});
 
 
 })
