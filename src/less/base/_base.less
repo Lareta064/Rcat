@@ -6,6 +6,8 @@
 
 html,
 body {
+	width: 100%;
+	height: 100%;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
 	padding: 0;
@@ -15,9 +17,15 @@ body {
 	min-width: 360px;
 	background-color:@bodyBg;
 }
-
-.fadeText{color:red;}
-
+.wrapper-page{
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+.main-content{
+	display: table-row;
+	height: 100%;
+}
 
 /* fix for top margin collapsing and vertical scroll prevent for body tag, when body height = 100% */
 
@@ -129,6 +137,7 @@ label{
 	margin: 0;
 	padding: 0;
 }
+
 .pt-16{padding-top: 16px;}
 .clear {
 	clear: both;

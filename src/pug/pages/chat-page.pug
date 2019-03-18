@@ -5,8 +5,11 @@ block variables
 
 
 block content
-	header.header
-		+header('avatar','Иван Марасин','icon-exchange')
+	.wrapper-page
+		.main-content
+			header.header
+				+header('avatar','Иван Марасин','icon-exchange')
+			include ../sections/ch_title-block.pug
 
-	footer.footer
-		+page-footer
+		footer.footer
+			+page-footer
