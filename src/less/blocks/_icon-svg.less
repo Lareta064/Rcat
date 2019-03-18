@@ -171,6 +171,7 @@ i{
 	color: @lightGrey;
 	font-weight: 700;
 	.icon-group__icon{margin-right: 6px;}
+
 }
 .icon-group.group--icon-like{
 	.icon-group__num--color{color:@greenBg; }
@@ -179,5 +180,15 @@ i{
 			use{fill:@greenBg;}
 		}
 	}
+
+}
+.icon-group.group--icon-dislike{
+	.icon-group__num--color{color:@redText; }
+	&:hover{
+		.icon-dislike{
+			use{fill:@redText;}
+		}
+	}
+	.icon-group__num{padding-bottom: 4px;}
 
 }
