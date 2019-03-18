@@ -203,8 +203,19 @@ mixin tooltip(placeholder, mailHref, pdfHref)
 			+text-link('Отправить по эл почте','mailto:'+mailHref,'text-link--line')
 			+text-link('Скачать ПДФ',pdfHref,'text-link--line')(download)
 
+//-кастомный чекбокс
 mixin custom-checkbox(text)
 	label.checkbox-label(for='hc-type')&attributes(attributes)
 		span.checkbox-title= text
 		input(type="checkbox" id='hc-type' name="form-checkbox" class="form-checkbox")
 		span.custom-checkbox
+
+//-иконка лайк с количеством лайков
+mixin icon-group(groupData)
+	.icon-group.d-flex(class=" group--"+ groupData.iconName )&attributes(attributes)
+		.icon-group__icon
+			+#{groupData.iconName}
+		if groupData.countNum > 0
+			span.icon-group__num.icon-group__num--color #{groupData.countNum}
+		else
+			span.icon-group__num #{groupData.countNum}

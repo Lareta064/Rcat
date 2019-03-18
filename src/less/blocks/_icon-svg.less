@@ -164,6 +164,20 @@ i{
 	opacity: .7;
 }
 
-.icon-exchange{
+.icon-group{
+	cursor:pointer;
+	align-items: flex-end;
+	font-size: 14px;
+	color: @lightGrey;
+	font-weight: 700;
+	.icon-group__icon{margin-right: 6px;}
+}
+.icon-group.group--icon-like{
+	.icon-group__num--color{color:@greenBg; }
+	&:hover{
+		.icon-like{
+			use{fill:@greenBg;}
+		}
+	}
 
 }
