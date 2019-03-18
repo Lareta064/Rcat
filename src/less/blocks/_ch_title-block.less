@@ -35,18 +35,20 @@
 .chat-title__filters{
 	background-color: @bgChatPage;
 	padding: 20px;
-	padding-bottom: 30px;
+	padding-bottom: 40px;
 	border-radius: 10px;
 	position: relative;
 	overflow: hidden;
 	.input-block{
 		position: relative;
 		z-index: 2;
-		padding-bottom: 0;
+		@media(min-width: 768px){padding-bottom: 0;}
+
 	}
+	@media(min-width: 768px){padding-bottom: 28px;}
 }
 .chat-title__filters-top{
-	padding-bottom: 25px;
+	padding-bottom: 27px;
 	display: inline-block;
 	position: relative;
 }
@@ -79,10 +81,14 @@
 }
 .chat-title__filters-inputs{
 	display: flex;
-	align-items: flex-end;
+	flex-direction: column;
+	// align-items: flex-end;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	input{width: 100%;}
 	@media(min-width: 768px){
+		flex-direction: row;
+		align-items: flex-end;
 		input[name='appart-areas']{
 			min-width: 250px;
 		}
@@ -145,15 +151,15 @@
 	font-size: 12px;
 	font-weight: 700;
 	color: @black;
-	padding-bottom: 9px;
+	padding-bottom: 7px;
 }
 .chat-title__filters-bg{
 	display: none;
 
 	position: absolute;
-	bottom: -90px;
+	bottom: -95px;
 	right: 87px;
-	svg{width: 175%;}
+	svg{width: 175px;}
 	z-index: 1;
 	@media(min-width: 1200px){display: block;}
 }
