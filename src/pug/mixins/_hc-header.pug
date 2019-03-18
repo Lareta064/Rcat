@@ -1,5 +1,5 @@
 
-mixin header(userAvatar,userName)
+mixin header(userAvatar,userName,addIcon)
 	header.header
 		.container
 			.header-top.d-flex
@@ -19,6 +19,9 @@ mixin header(userAvatar,userName)
 							+icon-heart('grey')
 						.header__icon-group__item
 							+notify-active
+						if addIcon
+							.header__icon-group__item.header__icon-group__item--add
+								+#{addIcon}
 					.header__user-lk
 						.header__user__avatar
 							img(src="../img/"+ userAvatar +".png",width='36' height="36" alt="avatar")
