@@ -1,7 +1,7 @@
 //-страница бесед
 $(document).ready(function() {
 
-
+	//-скрипт для иконок like and dislike
 	$('.icon-group').click(function(){
 		var likeNum = parseInt($(this).children('.icon-group__num').text());
 
