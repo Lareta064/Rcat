@@ -1,0 +1,31 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Информация об агенте';
+	- var pageClass= "body--dashboard";
+
+block content
+	.container.container--left
+		.section-ui
+			h3 Информация об агенте
+		.section-ui
+			.agent-info
+				.agent-info-content
+					.agent-info-text
+						.agent-name
+							+text-link('Жанна Гончарова','#','text-link--line')
+						.posted-time поделилась лотом два часа назад
+						.agent-company
+							+text-link('APK','#','text-link--line')
+
+					.agent-info-img(style='background:url(../img/agents/agent1.jpg) no-repeat;')
+
+				.agent-info-download-num.d-flex
+					.download-num-item(style='background:url(../img/avatar.png) no-repeat;')
+					.download-num-item(style='background:url(../img/avatar.png) no-repeat;')
+					.download-num-item(style='background:url(../img/avatar.png) no-repeat;')
+					.download-num-item(style='background:url(../img/avatar.png) no-repeat;')
+					.download-num-item(style='background:url(../img/avatar.png) no-repeat;')
+				.text-body.text-body--grey Скачали 56 человек
+
+
