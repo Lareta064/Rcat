@@ -35,8 +35,15 @@
 .chat-title__filters{
 	background-color: @bgChatPage;
 	padding: 20px;
+	padding-bottom: 30px;
 	border-radius: 10px;
-
+	position: relative;
+	overflow: hidden;
+	.input-block{
+		position: relative;
+		z-index: 2;
+		padding-bottom: 0;
+	}
 }
 .chat-title__filters-top{
 	padding-bottom: 25px;
@@ -53,8 +60,7 @@
 	display: block;
 	position: absolute;
 	right: 0;
-	transform: translateX(150%);
-	bottom: 25px;
+	top: 6px;
 	width: 18px;
 	height: 18px;
 	border-radius: 50%;
@@ -64,25 +70,90 @@
 	justify-content: center;
 	align-items: center;
 	font-size: 13px;
+	@media(min-width: 1200px){
+		top: auto;
+		transform: translateX(150%);
+		bottom: 26px;
+	}
 
 }
 .chat-title__filters-inputs{
 	display: flex;
-	align-items: center;
+	align-items: flex-end;
 	justify-content: space-between;
-	input[name='appart-areas']{
-		min-width: 210px;
+	flex-wrap: wrap;
+	@media(min-width: 768px){
+		input[name='appart-areas']{
+			min-width: 250px;
+		}
+		input[name='appart-price']{
+			min-width: 250px;
+		}
+		input[name='appart-address']{
+			min-width: 470px;
+		}
+
 	}
-	input[name='appart-price']{
-		min-width: 230px;
+		@media(min-width: 992px){
+		input[name='appart-areas']{
+			min-width: 210px;
+		}
+		input[name='appart-price']{
+			min-width: 210px;
+		}
+		input[name='appart-address']{
+			min-width: 400px;
+		}
 	}
-	input[name='appart-address']{
-		min-width: 605px;
+		@media(min-width: 1200px){
+		input[name='appart-areas']{
+			min-width: 200px;
+		}
+		input[name='appart-price']{
+			min-width: 200px;
+		}
+		input[name='appart-address']{
+			min-width: 440px;
+		}
+
 	}
+	@media(min-width: 1350px){
+		input[name='appart-areas']{
+			min-width: 210px;
+		}
+		input[name='appart-price']{
+			min-width: 230px;
+		}
+		input[name='appart-address']{
+			min-width: 605px;
+		}
+
+	}
+	.button--basic{
+		@media(min-width: 992px){
+			margin-left: auto;
+			margin-top: 20px;
+		}
+		@media(min-width: 1200px){
+			margin-left: 0;
+			margin-top: 0px;
+		}
+	}
+
 }
 .chat-title__filters-item-title{
 	font-size: 12px;
 	font-weight: 700;
 	color: @black;
 	padding-bottom: 9px;
+}
+.chat-title__filters-bg{
+	display: none;
+
+	position: absolute;
+	bottom: -90px;
+	right: 87px;
+	svg{width: 175%;}
+	z-index: 1;
+	@media(min-width: 1200px){display: block;}
 }

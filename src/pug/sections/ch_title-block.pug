@@ -1,5 +1,5 @@
 section.chat-title
-	.container
+	.container.container-search--block
 		.section-top.section-top--chat-title
 			.title-1 Запросы на&nbsp;покупку
 			.section-top__link
@@ -27,5 +27,7 @@ section.chat-title
 					.chat-title__filters-item-title Адрес или ЖК
 					+input-block('text','Улица, район, ЖК, адрес','appart-address')
 				+button('Фильтровать', '#','button--basic')
+			.chat-title__filters-bg
+				+realty-cat
 
 
