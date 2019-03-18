@@ -212,7 +212,7 @@ mixin custom-checkbox(text)
 
 //-иконка лайк с количеством лайков
 mixin icon-group(groupData)
-	.icon-group.d-flex(class=" group--"+ groupData.iconName )&attributes(attributes)
+	.icon-group(class=" group--"+ groupData.iconName )&attributes(attributes)
 		.icon-group__icon
 			+#{groupData.iconName}
 		if groupData.countNum > 0
