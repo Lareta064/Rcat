@@ -31,3 +31,58 @@
 	}
 
 }
+
+.chat-title__filters{
+	background-color: @bgChatPage;
+	padding: 20px;
+	border-radius: 10px;
+
+}
+.chat-title__filters-top{
+	padding-bottom: 25px;
+	display: inline-block;
+	position: relative;
+}
+.chat-title__filters-title{
+	font-size: 20px;
+	color: @darkTitle;
+	line-height: 1.5;
+	font-weight: 700;
+}
+.help-link{
+	display: block;
+	position: absolute;
+	right: 0;
+	transform: translateX(150%);
+	bottom: 25px;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background-color: @white;
+	color:@btnBg;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 13px;
+
+}
+.chat-title__filters-inputs{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	input[name='appart-areas']{
+		min-width: 210px;
+	}
+	input[name='appart-price']{
+		min-width: 230px;
+	}
+	input[name='appart-address']{
+		min-width: 605px;
+	}
+}
+.chat-title__filters-item-title{
+	font-size: 12px;
+	font-weight: 700;
+	color: @black;
+	padding-bottom: 9px;
+}
