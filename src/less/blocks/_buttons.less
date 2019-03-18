@@ -236,3 +236,31 @@
 	background-color: @btnBg;
 
 }
+
+
+.comment{
+	position: relative;
+	width: 300px;
+	min-height: 50px;
+	background-color: grey;
+	z-index: 2;
+}
+
+.comment:after{
+	z-index: 1;
+	content: "";
+	position: absolute;
+	left: 0px;
+	top: 12px;
+    transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border: 8px solid grey;
+	border-bottom: 0;
+	border-right-color: transparent;
+	border-left-color: transparent;
+}
+
+.comment:before{
+	
+}
