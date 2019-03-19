@@ -19,8 +19,17 @@ $(document).ready(function() {
 		}
 
 
-	});
 
+	});
+	//-затемнение на последнее фото в карточке агента
+	// var testItem = $('.download-num-item');
+	// var testItemLength = testItem.length;
+
+	// if(testItemLength ==6){
+	// 	var lastItem = testItem[5];
+	// 	// lastItem.addClass('download-num-item-last');
+	// 	console.log(lastItem)
+	// }
 
 
 

@@ -3,29 +3,21 @@ extends ../../layouts/ui-layout/ui-layout.pug
 block variables
 	- var title = 'Информация об агенте';
 	- var pageClass= "body--dashboard";
+	- var agentData = {agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'поделилась лотом два часа назад',agentCompany:'APK',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1',downloadInfo:['user1','user2','user3','user4'], downloadNum:'56 человек'   }
+
 
 block content
 	.container.container--left
 		.section-ui
 			h3 Информация об агенте
 		.section-ui
-			.agent-info
-				.agent-info-content
-					.agent-info-text
-						.agent-name
-							+text-link('Жанна Гончарова','#','text-link--line')
-						.posted-time поделилась лотом два часа назад
-						.agent-company
-							+text-link('APK','#','text-link--line')
+			+agent-info({agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'поделилась лотом два часа назад',agentCompany:'APK',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1',downloadInfo:['user1','user2','user3','user4','user5','user4'], downloadNum:'56 человек'   })
+		.section-ui
+			pre.
+				+agent-info({agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'поделилась лотом два часа назад',agentCompany:'APK',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1',downloadInfo:['user1','user2','user3','user4'], downloadNum:'56 человек'   })
 
-					.agent-info-img(style='background:url(../img/agents/agent1.jpg) no-repeat;')
-
-				.agent-info-download-num.d-flex
-					.download-num-item(style='background:url(../img/avatar.png) no-repeat;')
-					.download-num-item(style='background:url(../img/avatar.png) no-repeat;')
-					.download-num-item(style='background:url(../img/avatar.png) no-repeat;')
-					.download-num-item(style='background:url(../img/avatar.png) no-repeat;')
-					.download-num-item(style='background:url(../img/avatar.png) no-repeat;')
-				.text-body.text-body--grey Скачали 56 человек
-
-
+		.section-ui
+			+agent-info({agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'поделилась лотом два часа назад',agentCompany:'APK',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1'})
+		.section-ui
+			pre.
+				+agent-info({agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'поделилась лотом два часа назад',agentCompany:'APK',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1'})

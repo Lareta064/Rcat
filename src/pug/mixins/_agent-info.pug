@@ -1,0 +1,23 @@
+mixin agent-info(agentData)
+	.agent-info&attributes(attributes)
+		.agent-info-content
+			.agent-info-text
+				.agent-name
+					+text-link(agentData.agentName,agentData.agentPageLink,agentData.agentClass)
+				.posted-time !{agentData.postedTime}
+				.agent-company
+					+text-link(agentData.agentCompany,agentData.agentCompanyLink,agentData.CompanyLinkClass)
+
+			.agent-info-img
+				img(src="../img/agents/"+ agentData.agentAvatar +".jpg", alt="agent")
+		if agentData.downloadInfo
+			.agent-info-download
+				.agent-info-download-num.d-flex
+					each item in agentData.downloadInfo
+						.download-num-item
+							img(src="../img/agents/"+ item +".jpg", alt="user")
+					//- if agentData.downloadInfo.length ==6
+
+					//- 	.download-num-item-last
+					//- 		span 51
+				.text-body.text-body--grey Скачали !{agentData.downloadNum}
