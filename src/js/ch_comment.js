@@ -7,6 +7,3 @@ $(document).ready(function(){
 		
 });
    
-
-// const element = document.querySelector('.ch-title')
-// click element.addEventListener('click', (evt) => {/*обработчик события*/})
