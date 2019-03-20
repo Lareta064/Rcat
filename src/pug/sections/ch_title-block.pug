@@ -1,0 +1,33 @@
+section.chat-title
+	.container.container-search--block
+		.section-top.section-top--chat-title
+			.title-1 Запросы на&nbsp;покупку
+			.section-top__link
+				+icon-fire
+				a(href="#").text-link.text-link--line
+					span Горячие предложения
+					span.text-link--mob &nbsp;о продаже
+		.chat-title__filters
+			.chat-title__filters-top
+				.chat-title__filters-title Поиск по запросам
+				.chat-title__filters-text Чтобы предложить свою квартиру найдите тех, кто искал обьект по следующим параметра
+				a(href="#").help-link
+					span ?
+			.chat-title__filters-inputs
+				.chat-title__filters-item
+					.chat-title__filters-item-title Площадь, кв.м
+					+input-block('number','от','appart-areas')
+				.chat-title__filters-item
+					.chat-title__filters-item-title Стоимость,&nbsp;
+						select.currency-select
+							option(value='rub') рубли
+							option(value='usd') usd
+					+input-block('number','до','appart-price')
+				.chat-title__filters-item
+					.chat-title__filters-item-title Адрес или ЖК
+					+input-block('text','Улица, район, ЖК, адрес','appart-address')
+				+button('Фильтровать', '#','button--basic')
+			.chat-title__filters-bg
+				+realty-cat
+
+

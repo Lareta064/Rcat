@@ -5,8 +5,11 @@ block variables
 
 
 block content
-	header.header
-		+header('avatar','Иван Марасин')
-	
-	footer.footer
-		+page-footer
+	.wrapper-page
+		.main-content.main-content--chat-page
+			header.header
+				+header('avatar','Иван Марасин','icon-exchange')
+
+
+		footer.footer
+			+page-footer
