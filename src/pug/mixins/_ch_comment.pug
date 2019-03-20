@@ -1,0 +1,16 @@
+mixin comment(imgPath,commentData)
+	if commentData
+		.message
+			.message-author
+				img(src="../img/message/"+imgPath+".png", alt="")
+			.message-block&attributes(attributes)
+				.message-top
+					+text-link(commentData.author,commentData.authorLink,commentData.addClass)
+					.message-time !{commentData.time}
+				.comment(contenteditable='true') #{commentData.text}
+	else
+		.message
+			.message-author
+				img(src="../img/message/"+imgPath+".png", alt="") 
+			.message-block&attributes(attributes)
+				.comment(contenteditable='true')
