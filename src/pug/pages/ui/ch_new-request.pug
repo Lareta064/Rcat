@@ -1,7 +1,24 @@
-.card-wrapper 
-	.card-description ghbdtn
-		.badge-row 
-		.title-row
-		.info-row
-		.tools-row
-	.agent-card
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Комментарии';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.section-ui
+			.title Карточка новых запросо	
+		.section-ui
+			.card-wrapper 
+				.card-description 
+					.badge-row 
+						+badge-attr([{attrValue:'1',badgeName:'ЦАО'},{attrValue:'2',badgeName:'Хамовники'}])
+						.share-link-text
+
+						//- +tooltip('http://realtycat.pro/36732', 'mailto:info@mail.ru', '../img/test.pdf')
+
+					.title-row
+
+					.info-row
+					.tools-row
+				.agent-card
