@@ -185,6 +185,7 @@ $(document).ready(function() {
 		variableWidth: true,
 		speed: 1000,
 		slidesToScroll: 2,
+		slidesToShow: 4,
 		responsive: [
     	{
       		breakpoint: 1200,
