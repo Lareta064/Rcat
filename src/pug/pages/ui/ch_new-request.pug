@@ -7,9 +7,9 @@ block variables
 block content
 	.container.container--left
 		.section-ui
-			.title Карточка новых запросов	
+			.title Карточка новых запросов
 		.section-ui
-			.card-offer.card-offer--new
+			.card-offer.card-offer--new.mt-150
 				.card-description
 					.card-description-top
 						.offer-row.offer-row--swipe
@@ -36,10 +36,21 @@ block content
 							.appartment-card__toolbar
 								.appartment-card__toolbar-item
 									+button('+798555555555', 'cardData.phoneLink', 'btn-tel contact-phone')
-								.appartment-card__toolbar-item.appartment-card__toolbar-icons.d-flex
+								.appartment-card__toolbar-item
+									+link('В избранное','','icon-heart')(class="icon-heart--tablet item-favorite")
+									+link('В избранное','','icon-heart','fix-width')(class="icon-heart--desk item-favorite icon-heart--small")
+								.appartment-card__toolbar-item.appartment-card__toolbar-item--mail
+									a.text-link.text-link--line(href='#'+ 'cardData.mailAddress') Отправить электронной почтой
 									a(href='#')
 										+icon-mail
-									+link('В избранное','','icon-heart')(class=" item-favorite")
-									.card-description-chat
-
+								.icons-like
+									+icon-group({iconName:'icon-like', countNum:'45'})
+									+icon-group({iconName:'icon-dislike', countNum:'45'})
+					.line
+					
+					.card-description-chat
+						+comment("Anton",{author:'Антон Ленский,',authorLink:'#',time:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'})
+						+comment("Janna")
+				
 				.agent-card
+					+agent-info({agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'поделилась лотом два часа назад',agentCompany:'APK',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1',downloadInfo:['user1','user2','user3','user4'] })

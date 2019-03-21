@@ -1,15 +1,27 @@
 .card-offer{
-	
+	display: block;
 	@media(min-width:768px){
-		display: block;
+		display: flex;
+	}
+
+	.card-description{
+		padding: 20px;
+		background-color: @white;
+        border-radius: 10px 0 0 10px;
 	}
 }
 
+
+
 .offer-row{
 	display: flex;
-	// justify-content: space-between;
-	-webkit-align-items: center;
-	        align-items: center;
+	align-items: center;
+	padding-bottom: 25px;
+	    
+    .badge{
+    	margin-right: 10px;
+    	
+    }
 	
 	.appartment-page-link{
 		position: relative;
@@ -17,27 +29,51 @@
 		right: auto;
 		margin-left: auto;
 	}
+
+	.appartment-card__toolbar{
+		width: 100%;
+	}
 }
+
+
 
 .offer-row--title{
 	align-items: flex-start;
-
-	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
+    flex-direction: column;
 	    
 	 @media(min-width:768px){
-	        align-items: center;
-	 	
-	 	-webkit-flex-direction: row;
-	 	    -ms-flex-direction: row;
-	 	        flex-direction: row;
-	 }   
+	    align-items: center;
+	 	flex-direction: row;
+	 }  
+	 
+	.link-title{
+
+	} 
 	    
 }
 
-.card-description{
+.icons-like{
+	display: flex;
+	// -webkit-align-items: center;
+	//         align-items: center;
+	margin-left: auto;   
 	
+	.group--icon-dislike{
+		margin-left: 22px;
+	}
+	
+}
+
+
+.line{
+	height: 1px;
+	width: 100%;
+	border-color: #e5e9f2;
+}
+
+.card-description-chat{
+	padding-bottom: 20px;
+	padding-top: 20px;
 
 	@media(min-width:768px){
 
