@@ -1,0 +1,39 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Свайп блок';
+	- var pageClass= "body--dashboard";
+
+block content
+	.container.container--left
+		.section-ui
+			h1 Свайп блок
+		.section-ui
+			.swape-block
+				+badge-group(['Первый элемент','Второй элемент','Третий элемент','Четвертый элемент'])
+		.section-ui
+			h5.pb-20 Свайп эффект создается за счет стилей
+			h5 Разметка для кода , в примере выше:
+		.section-ui
+			pre.
+				.swape-block
+					+badge-group(['Первый элемент','Второй элемент','Третий элемент','Четвертый элемент'])
+		.section-ui
+			h5 Стили для данной разметки
+		.section-ui
+			pre.
+				.swape-block{
+					width: 300px;
+
+				  	border: 1px solid #999;
+				  	padding: 16px;
+
+				  	overflow-x: auto;
+				  	overflow-y: hidden;
+				  	white-space: nowrap;
+
+
+				  &::-webkit-scrollbar {
+				    display: none;
+				  }
+				}
