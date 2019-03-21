@@ -178,6 +178,24 @@ $(document).ready(function() {
 		arrows: false,
 		variableWidth: true
 	});
+		//-слайдер горячие предложения
+	$('.card-slider').slick({
+		arrows: false,
+		centerPadding: '20px',
+		variableWidth: true,
+		speed: 1000,
+		slidesToScroll: 2,
+		responsive: [
+    	{
+      		breakpoint: 1200,
+		      settings: {
+		        slidesToShow: 4,
+		        slidesToScroll: 1,
+
+		      }
+		    }
+		]
+	});
 	//-слайдер на странице поиск квартир
 	$('.card--photo-slider').slick({
 		arrows: false,
@@ -185,9 +203,12 @@ $(document).ready(function() {
 		variableWidth: true
 	});
 
+
 	 //-меняем цвет бейджа ЦАО
 	$('.badge').on('click', function(){
 		$(this).toggleClass('badge--active');
 	});
+
+
 
 });

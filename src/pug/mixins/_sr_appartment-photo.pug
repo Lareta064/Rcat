@@ -8,7 +8,7 @@ mixin appartment-photo(apprtPhotoData)
 	//- 				.thumbnails__image--appartment(data-img-path = "../img/appartments/"+ item.itemBig + ".jpg")
 	//- 					img(src="../img/appartments/"+ item.itemMini +".jpg"  alt="Фото комплекса")
 
-	.hc-photo-mobile
+	.hc-photo-mobile&attributes(attributes)
 		.photo-slider.card--photo-slider
 			each item in apprtPhotoData.apprtMobilPhoto
 				.photo-slider-item

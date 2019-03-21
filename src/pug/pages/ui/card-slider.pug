@@ -1,0 +1,16 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Слайдер фото в карточке';
+	- var pageClass= "body--dashboard";
+
+block content
+	.container.container--left
+		.section-ui
+			h1 Слайдер фото в карточке
+		.section-ui
+			+card-slider({item1:{imgSrc:'hot-slider1'},item2:{imgSrc:'hot-slider2'},item3:{imgSrc:'hot-slider3'},item4:{imgSrc:'hot-slider4'},item5:{imgSrc:'hot-slider1'},item6:{imgSrc:'hot-slider2'}})
+		.section-ui
+			pre.
+				+card-slider({item1:{imgSrc:'hot-slider1'},item2:{imgSrc:'hot-slider2'},item3:{imgSrc:'hot-slider3'},item4:{imgSrc:'hot-slider4'},item5:{imgSrc:'hot-slider1'},item6:{imgSrc:'hot-slider2'}})
+
