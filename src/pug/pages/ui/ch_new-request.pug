@@ -7,7 +7,7 @@ block variables
 block content
 	.container.container--left
 		.section-ui
-			.title Карточка новых запросо	
+			.title Карточка новых запросов	
 		.section-ui
 			.card-offer.card-offer--new
 				.card-description
@@ -22,12 +22,24 @@ block content
 								.share-link-text Поделиться
 								+share-link
 								+tooltip('cardData.tooltipLink','cardData.mailAddress','cardData.pdfLink')
-							
-			
-						.title-row
+						
+						.offer-row.offer-row--title
+							+link-title('cardData.title', 'cardData.titleHref')(class="link-title--middle")
+							.appartment-card__price--num.headline-bold от 200 000 руб.
+							.appartment-card__price--area.text-body.text-body--grey 147 115 руб./кв.м
+							+repaire-item('С ремонтом')
 
-						.info-row
-						.tools-row
-					.card-description-chat
+						.offer-row.offer-row--info.text-body.
+							Ищу 1–2-комнатную квартиру в ЗАО до 92 млн. руб. Новый дом. Средний этаж. С ремонтом, в хорошем состоянии, чтобы можно было сразу въехать и жить. Другие районы и без отделки не предлагать.
+
+						.offer-row.offer-row--tools
+							.appartment-card__toolbar
+								.appartment-card__toolbar-item
+									+button('+798555555555', 'cardData.phoneLink', 'btn-tel contact-phone')
+								.appartment-card__toolbar-item.appartment-card__toolbar-icons.d-flex
+									a(href='#')
+										+icon-mail
+									+link('В избранное','','icon-heart')(class=" item-favorite")
+									.card-description-chat
 
 				.agent-card

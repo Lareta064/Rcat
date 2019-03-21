@@ -19,6 +19,23 @@
 	}
 }
 
+.offer-row--title{
+	align-items: flex-start;
+
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	    
+	 @media(min-width:768px){
+	        align-items: center;
+	 	
+	 	-webkit-flex-direction: row;
+	 	    -ms-flex-direction: row;
+	 	        flex-direction: row;
+	 }   
+	    
+}
+
 .card-description{
 	
 
@@ -27,42 +44,19 @@
 	}
 }
 
-.badge-row{
-	
+.offer-row--swipe{
+	box-sizing: border-box;
+  	
+  	padding: 16px;
 
-	@media(min-width:768px){
+  	overflow-x: auto;
+  	overflow-y: hidden;
+  	white-space: nowrap;
 
-	}
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
-
-.title-row{
 	
 
-	@media(min-width:768px){
-
-	}
-}
-
-.info-row{
-	
-	
-	@media(min-width:768px){
-
-	}
-}
-
-.tools-row{
-	
-
-	@media(min-width:768px){
-
-	}
-}
-
-.agent-card{
-	
-
-	@media(min-width:768px){
-
-	}
-}
