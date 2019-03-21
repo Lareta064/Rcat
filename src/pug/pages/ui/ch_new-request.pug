@@ -9,16 +9,25 @@ block content
 		.section-ui
 			.title Карточка новых запросо	
 		.section-ui
-			.card-wrapper 
-				.card-description 
-					.badge-row 
-						+badge-attr([{attrValue:'1',badgeName:'ЦАО'},{attrValue:'2',badgeName:'Хамовники'}])
-						.share-link-text
+			.card-offer.card-offer--new
+				.card-description
+					.card-description-top
+						.offer-row.offer-row--swipe
+							.badge.badge--dark Новостройка
+							+badge-group(['ЦАО','Замоскворечье'])
+							+text-link('cardData.address','cardData.addressHref', 'appartment-card--address')
+							.appartment--built.text-body.text-body--grey Сдан в 2014
+							+metro('Кропоткинская')
+							.appartment-page-link
+								.share-link-text Поделиться
+								+share-link
+								+tooltip('cardData.tooltipLink','cardData.mailAddress','cardData.pdfLink')
+							
+			
+						.title-row
 
-						//- +tooltip('http://realtycat.pro/36732', 'mailto:info@mail.ru', '../img/test.pdf')
+						.info-row
+						.tools-row
+					.card-description-chat
 
-					.title-row
-
-					.info-row
-					.tools-row
 				.agent-card
