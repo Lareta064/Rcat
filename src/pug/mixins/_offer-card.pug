@@ -1,0 +1,51 @@
+mixin offer-card(cardObject)
+	.card-offer.card-offer--new
+		.card-description
+			.card-description-top
+				.offer-row.offer-row--swipe
+					if cardObject.badgeDark
+						.badge.badge--dark Новостройка
+
+					+badge-group(cardObject.badgeGroup)
+					+text-link(cardObject.adress,cardObject.addressHref,'appartment-card--address')
+					.appartment--built.text-body.text-body--grey !{cardObject.builtDate}
+					+metro(cardObject.metroName)
+					.appartment-page-link
+						.share-link-text Поделиться
+						+share-link
+						+tooltip(cardObject.tooltipLink,cardObject.mailAddress,cardObject.pdfLink)
+				
+				.offer-row.offer-row--title
+					+link-title(cardObject.appartmentRooms, cardObject.titleHref)(class="link-title--middle")
+					.offer-row--transform
+						.appartment-card__price--num.headline-bold от !{cardObject.price} руб.
+						.appartment-card__price--area.text-body.text-body--grey !{cardObject.priceArea} руб./кв.м
+						+repaire-item(cardObject.repaireText)
+
+				.offer-row.offer-row--info.text-body !{cardObject.cardDescription}
+					span.text-hidden !{cardObject.cardDescriptionHidden}
+					.more
+						+text-link('Развернуть','#')
+
+				.offer-row.offer-row--tools
+					.appartment-card__toolbar
+						.appartment-card__toolbar-item
+							+button(cardObject.telNumber, cardObject.telLink, 'btn-tel contact-phone')
+						.appartment-card__toolbar-item
+							+link('В избранное','','icon-heart')(class="icon-heart--tablet item-favorite")
+							+link('В избранное','','icon-heart','fix-width')(class="icon-heart--desk item-favorite icon-heart--small")
+						.appartment-card__toolbar-item.appartment-card__toolbar-item--mail
+							a.text-link.text-link--line(href='#'+ 'cardObject.mailAddress') Отправить электронной почтой
+							a(href='#')
+								+icon-mail
+						.icons-like
+							+icon-group({iconName:'icon-like', countNum:'45'})
+							+icon-group({iconName:'icon-dislike', countNum:'45'})
+			.row-line
+			
+			.card-description-chat
+				+comment("Anton",{author:'Антон Ленский,',authorLink:'#',time:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'})
+				+comment("Janna")
+		
+		.agent-card
+			+agent-info({agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'поделилась лотом два часа назад',agentCompany:'APK',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1',downloadInfo:['user1','user2','user3','user4'] })
