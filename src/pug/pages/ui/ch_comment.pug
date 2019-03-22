@@ -16,14 +16,14 @@ block content
 							.ch-title
 								span.desk
 									+text-link('Развернуть предыдущие комментарии','#')
-								span.mb 
+								span.mb
 									+text-link('Развернуть комментарии','#')
 							.ch-subtitle
 								span.first еще
 								span.mob 2
 						.hidden-comments
 							+comment("Anton",{author:'Макс,',authorLink:'#',time:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'})
-			
+
 
 				+comment("Anton",{author:'Антон Ленский,',authorLink:'#',time:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'})
 
@@ -38,9 +38,5 @@ block content
 				+comment("Anton",{author:'Антон Ленский,',authorLink:'#',time:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'})
 
 				+comment("Janna")
-
-
-		
-
-
-						
+		.section-ui
+			+messages({item1:{ImgPath:'Anton',messageText:{author:'Антон Ленский,',authorLink:'#',publTime:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'} }, item2:{ImgPath:'Anton' }})
