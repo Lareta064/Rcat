@@ -9,13 +9,13 @@ block content
 		.section-ui
 			.title Карточка новых запросов
 		.section-ui
-			.card-offer.card-offer--new.mt-150
+			.card-offer.card-offer--new
 				.card-description
 					.card-description-top
 						.offer-row.offer-row--swipe
 							.badge.badge--dark Новостройка
 							+badge-group(['ЦАО','Замоскворечье'])
-							+text-link('cardData.address','cardData.addressHref', 'appartment-card--address')
+							+text-link('1-й Обыденский переулок, 12 стр. 1','cardData.addressHref', 'appartment-card--address')
 							.appartment--built.text-body.text-body--grey Сдан в 2014
 							+metro('Кропоткинская')
 							.appartment-page-link
@@ -24,7 +24,7 @@ block content
 								+tooltip('cardData.tooltipLink','cardData.mailAddress','cardData.pdfLink')
 						
 						.offer-row.offer-row--title
-							+link-title('cardData.title', 'cardData.titleHref')(class="link-title--middle")
+							+link-title('3-комн. кв., 156 кв.м., 3/6 этаж', 'cardData.titleHref')(class="link-title--middle")
 							.appartment-card__price--num.headline-bold от 200 000 руб.
 							.appartment-card__price--area.text-body.text-body--grey 147 115 руб./кв.м
 							+repaire-item('С ремонтом')
@@ -37,7 +37,7 @@ block content
 						.offer-row.offer-row--tools
 							.appartment-card__toolbar
 								.appartment-card__toolbar-item
-									+button('+798555555555', 'cardData.phoneLink', 'btn-tel contact-phone')
+									+button('+7 985 356 56 56', 'cardData.phoneLink', 'btn-tel contact-phone')
 								.appartment-card__toolbar-item
 									+link('В избранное','','icon-heart')(class="icon-heart--tablet item-favorite")
 									+link('В избранное','','icon-heart','fix-width')(class="icon-heart--desk item-favorite icon-heart--small")
