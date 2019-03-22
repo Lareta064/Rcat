@@ -9,7 +9,9 @@ block content
 		.main-content.main-content--chat-page
 			header.header
 				+header('avatar','Иван Марасин','icon-exchange')
-			.container(style="margin-top: 50px;")
+
+			.container(style="margin-top:50px;")
+
 				.card-offer.card-offer--new
 					.card-description
 						.card-description-top
@@ -51,12 +53,14 @@ block content
 										+icon-group({iconName:'icon-dislike', countNum:'45'})
 						.row-line
 
+
 						.card-description-chat
 							+comment("Anton",{author:'Антон Ленский,',authorLink:'#',time:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'})
 							+comment("Janna")
 
 					.agent-card
 						+agent-info({agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'поделилась лотом два часа назад',agentCompany:'APK',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1',downloadInfo:['user1','user2','user3','user4'] })
+
 
 
 
