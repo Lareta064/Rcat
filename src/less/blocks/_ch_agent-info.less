@@ -4,20 +4,18 @@
 	padding-left: 15px;
 	padding-right: 15px;
 	background-color: @lightBorder;
-	border-radius: 0px 0px 5px 5px;
+	border-radius: 0px 0px 10px 10px;
 	height: 100%;
-	@media(min-width: 768px){border-radius: 0px 10px 10px 0px;}
-	@media(min-width: 1350px){
-		max-width: 270px;
-	}
+	@media(min-width: 768px){border-radius: 0 0 10px 10px;}
+	@media(min-width: 992px){border-radius: 0 10px 10px 0;}
+	@media(min-width: 1350px){max-width: 270px;}
 
 }
 
 .agent-card{
 	width: 100%;
-	@media(min-width: 992px){
-		width: 20%;
-	}
+	@media(min-width: 768px){border-radius: 0 0 10px 10px;}
+	@media(min-width: 992px){width: 20%;}
 
 	
 	
