@@ -1,5 +1,5 @@
 mixin offer-card(cardObject)
-	.card-offer.card-offer--new
+	.card-offer(class='card-offer--'+cardObject.modif)
 		.card-description
 			.card-description-top
 				.offer-row.offer-row--swipe
@@ -19,13 +19,19 @@ mixin offer-card(cardObject)
 					+link-title(cardObject.appartmentRooms, cardObject.titleHref)(class="link-title--middle")
 					.offer-row--transform
 						.appartment-card__price--num.headline-bold от !{cardObject.price} руб.
-						.appartment-card__price--area.text-body.text-body--grey !{cardObject.priceArea} руб./кв.м
+						.appartment-card__price--area.text-body.text-body--grey !{cardObject.priceArea} 
 						+repaire-item(cardObject.repaireText)
 
-				.offer-row.offer-row--info.text-body !{cardObject.cardDescription}
-					span.text-hidden !{cardObject.cardDescriptionHidden}
-					.more
-						+text-link('Развернуть','#')
+				if cardObject.modif='new'
+					.offer-row.offer-row--info.text-body !{cardObject.cardDescription}
+						span.text-hidden !{cardObject.cardDescriptionHidden}
+						.more
+							+text-link('Развернуть','#')
+				else 
+					.offer-row.offer-row--info
+						+card-slider(cardObject.sliderItems)
+						.text-body !{cardObject.sliderSubText}
+										
 
 				.offer-row.offer-row--tools
 					.appartment-card__toolbar
@@ -38,16 +44,18 @@ mixin offer-card(cardObject)
 							a.text-link.text-link--line(href='#'+ 'cardObject.mailAddress') Отправить электронной почтой
 							a(href='#')
 								+icon-mail
-						.icons-like
-							+icon-group({iconName:'icon-like', countNum:'45'})
-							+icon-group({iconName:'icon-dislike', countNum:'45'})
-			.row-line
+
+						if	cardObject.modif='hot'	
+							.icons-like
+								+icon-group({iconName:'icon-like', countNum:'45'})
+								+icon-group({iconName:'icon-dislike', countNum:'45'})
+								
+		//- 	.row-line
 			
-			.card-description-chat
-				+comment("Anton",{author:'Антон Ленский,',authorLink:'#',time:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'})
-				+comment("Janna")
+		//- 	.card-description-chat
+		//- 		+messages(cardObject.messagesData)
 		
-		.agent-card
-			+agent-info({agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'поделилась лотом два часа назад',agentCompany:'APK',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1',downloadInfo:['user1','user2','user3','user4'] })
+		//- .agent-card
+		//- 	+agent-info(cardObject.agentData)
 
 

@@ -2,116 +2,120 @@ extends ../layouts/page-layout/page.pug
 
 block variables
 	- var title = 'Страница бесед';
+	- var card1 = {modif:'new',badgeGroup:['ЦАО', 'ВАО'],adress:'Набережная, д.5',addressHref:'#',builtDate:'Сдан 2014',metroName:'Кропоткинская',appartmentRooms:'3-комн. кв., 156 кв.м., 3/6 этаж',titleHref:'#',price:'200 000',priceArea:' от 865 400 руб./кв.м',repaireText:'С ремонтом',cardDescription:'Ищу 1–2-комнатную квартиру в ЗАО до 92 млн. руб. Новый дом. Средний этаж. С ремонтом, в хорошем состоянии, чтобы можно было сразу въехать и жить. Другие районы и без отделки не предлагать.',cardDescriptionHidden:'Ищу 1–2-комнатную квартиру в ЗАО до 92 млн. руб. Новый дом. Средний этаж. С ремонтом, в хорошем состоянии, чтобы можно было сразу въехать и жить. Другие районы и без отделки не предлагать.',telNumber:'+7 985 356 56 56',telLink:'tel:89853565656'};
 
+	- var card2 = {modif:'hot',badgeDark:'+',badgeGroup:['ЦАО', 'ВАО'],adress:'Набережная, д.5',addressHref:'#',builtDate:'Сдан 2014',metroName:'Кропоткинская',appartmentRooms:'3-комн. кв., 156 кв.м., 3/6 этаж',titleHref:'#',price:'200 000',priceArea:' от 865 400 руб./кв.м',repaireText:'С ремонтом',sliderItems:{item1:{imgSrc:'hot-slider1'},item2:{imgSrc:'hot-slider2'},item3:{imgSrc:'hot-slider3'},item4:{imgSrc:'hot-slider4'}},telNumber:'+7 985 356 56 56',telLink:'tel:89853565656'};
 
 block content
 
 	header.header
 		+header('avatar','Иван Марасин','icon-exchange')
 	.container
-		.card-offer.card-offer--new
-			.card-description
-				.card-description-top
-					.offer-row.offer-row--swipe
-						.badge.badge--dark Новостройка
-						+badge-group(['ЦАО','Замоскворечье'])
-						+text-link('1-й Обыденский переулок, 12 стр. 1','cardData.addressHref', 'appartment-card--address')
-						.appartment--built.text-body.text-body--grey Сдан в 2014
-						+metro('Кропоткинская')
-						.appartment-page-link
-							.share-link-text Поделиться
-							+share-link
-							+tooltip('cardData.tooltipLink','cardData.mailAddress','cardData.pdfLink')
+		+offer-card(card1)
+		+offer-card(card2)
+	//- 	.card-offer.card-offer--new
+	//- 		.card-description
+	//- 			.card-description-top
+	//- 				.offer-row.offer-row--swipe
+	//- 					.badge.badge--dark Новостройка
+	//- 					+badge-group(['ЦАО','Замоскворечье'])
+	//- 					+text-link('1-й Обыденский переулок, 12 стр. 1','cardData.addressHref', 'appartment-card--address')
+	//- 					.appartment--built.text-body.text-body--grey Сдан в 2014
+	//- 					+metro('Кропоткинская')
+	//- 					.appartment-page-link
+	//- 						.share-link-text Поделиться
+	//- 						+share-link
+	//- 						+tooltip('cardData.tooltipLink','cardData.mailAddress','cardData.pdfLink')
 
-					.offer-row.offer-row--title
-						+link-title('3-комн. кв., 156 кв.м., 3/6 этаж', 'cardData.titleHref')(class="link-title--middle")
-						.appartment-card__price--num.headline-bold от 200 000 руб.
-						.appartment-card__price--area.text-body.text-body--grey 147 115 руб./кв.м
-						+repaire-item('С ремонтом')
+	//- 				.offer-row.offer-row--title
+	//- 					+link-title('3-комн. кв., 156 кв.м., 3/6 этаж', 'cardData.titleHref')(class="link-title--middle")
+	//- 					.appartment-card__price--num.headline-bold от 200 000 руб.
+	//- 					.appartment-card__price--area.text-body.text-body--grey 147 115 руб./кв.м
+	//- 					+repaire-item('С ремонтом')
 
-					.offer-row.offer-row--info.text-body Ищу 1–2-комнатную квартиру в ЗАО до 92 млн. руб. Новый дом. Средний этаж. С ремонтом, в хорошем состоянии, чтобы можно было сразу въехать и жить. Другие районы и без отделки не предлагать.
-						span.text-hidden Ищу 1–2-комнатную квартиру в ЗАО до 92 млн. руб. Новый дом. Средний этаж. С ремонтом, в хорошем состоянии, чтобы можно было сразу въехать и жить. Другие районы и без отделки не предлагать.
-						.more
-							+text-link('Развернуть','#')
+	//- 				.offer-row.offer-row--info.text-body Ищу 1–2-комнатную квартиру в ЗАО до 92 млн. руб. Новый дом. Средний этаж. С ремонтом, в хорошем состоянии, чтобы можно было сразу въехать и жить. Другие районы и без отделки не предлагать.
+	//- 					span.text-hidden Ищу 1–2-комнатную квартиру в ЗАО до 92 млн. руб. Новый дом. Средний этаж. С ремонтом, в хорошем состоянии, чтобы можно было сразу въехать и жить. Другие районы и без отделки не предлагать.
+	//- 					.more
+	//- 						+text-link('Развернуть','#')
 
-					.offer-row.offer-row--tools
-						.appartment-card__toolbar
-							.appartment-card__toolbar-item
-								+button('+7 985 356 56 56', 'cardData.phoneLink', 'btn-tel contact-phone')
-							.appartment-card__toolbar-item
-								+link('В избранное','','icon-heart')(class="icon-heart--tablet item-favorite")
-								+link('В избранное','','icon-heart','fix-width')(class="icon-heart--desk item-favorite icon-heart--small")
-							.appartment-card__toolbar-item.appartment-card__toolbar-item--mail
-								a.text-link.text-link--line(href='#'+ 'cardData.mailAddress') Отправить электронной почтой
-								a(href='#')
-									+icon-mail
-							.icons-like
-								+icon-group({iconName:'icon-like', countNum:'45'})
-								+icon-group({iconName:'icon-dislike', countNum:'45'})
-				.row-line
-
-
-				.card-description-chat
-					+comment("Anton",{author:'Антон Ленский,',authorLink:'#',time:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'})
-					+comment("Janna")
-
-			.agent-card
-				+agent-info({agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'поделилась лотом два часа назад',agentCompany:'APK',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1',downloadInfo:['user1','user2','user3','user4'] })
+	//- 				.offer-row.offer-row--tools
+	//- 					.appartment-card__toolbar
+	//- 						.appartment-card__toolbar-item
+	//- 							+button('+7 985 356 56 56', 'cardData.phoneLink', 'btn-tel contact-phone')
+	//- 						.appartment-card__toolbar-item
+	//- 							+link('В избранное','','icon-heart')(class="icon-heart--tablet item-favorite")
+	//- 							+link('В избранное','','icon-heart','fix-width')(class="icon-heart--desk item-favorite icon-heart--small")
+	//- 						.appartment-card__toolbar-item.appartment-card__toolbar-item--mail
+	//- 							a.text-link.text-link--line(href='#'+ 'cardData.mailAddress') Отправить электронной почтой
+	//- 							a(href='#')
+	//- 								+icon-mail
+	//- 						.icons-like
+	//- 							+icon-group({iconName:'icon-like', countNum:'45'})
+	//- 							+icon-group({iconName:'icon-dislike', countNum:'45'})
+	//- 			.row-line
 
 
+	//- 			.card-description-chat
+	//- 				+comment("Anton",{author:'Антон Ленский,',authorLink:'#',time:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'})
+	//- 				+comment("Janna")
 
-		.card-offer.card-offer--hot
-			.card-description
-				.card-description-top
-					.offer-row.offer-row--swipe
-						.badge.badge--dark Новостройка
-						+badge-group(['ЦАО','Замоскворечье'])
-						+text-link('1-й Обыденский переулок, 12 стр. 1','cardData.addressHref', 'appartment-card--address')
-						.appartment--built.text-body.text-body--grey Сдан в 2014
-						+metro('Кропоткинская')
-						.appartment-page-link
-							.share-link-text Поделиться
-							+share-link
-							+tooltip('cardData.tooltipLink','cardData.mailAddress','cardData.pdfLink')
-
-					.offer-row.offer-row--title
-						+link-title('3-комн. кв., 156 кв.м., 3/6 этаж', 'cardData.titleHref')(class="link-title--middle")
-						.appartment-card__price--num.headline-bold от 200 000 руб.
-						.appartment-card__price--area.text-body.text-body--grey 147 115 руб./кв.м
-						+repaire-item('С ремонтом')
-
-					.offer-row.offer-row--info
-						+card-slider({item1:{imgSrc:'hot-slider1'},item2:{imgSrc:'hot-slider2'},item3:{imgSrc:'hot-slider3'},item4:{imgSrc:'hot-slider4'}})
-						.text-body.
-							Уважаемые, коллеги! Не забывайте про мою чудесную квартирку в районе Кропоткинской
-
-					.offer-row.offer-row--tools
-						.appartment-card__toolbar
-							.appartment-card__toolbar-item
-								+button('+7 985 356 56 56', 'cardData.phoneLink', 'btn-tel contact-phone')
-							.appartment-card__toolbar-item
-								+link('В избранное','','icon-heart')(class="icon-heart--tablet item-favorite")
-								+link('В избранное','','icon-heart','fix-width')(class="icon-heart--desk item-favorite icon-heart--small")
-							.appartment-card__toolbar-item.appartment-card__toolbar-item--mail
-								a.text-link.text-link--line(href='#'+ 'cardData.mailAddress') Отправить электронной почтой
-								a(href='#')
-									+icon-mail
-							.icons-like
-								+icon-group({iconName:'icon-like', countNum:'45'})
-								+icon-group({iconName:'icon-dislike', countNum:'45'})
-				.row-line
-
-
-				.card-description-chat
-					+comment("Anton",{author:'Антон Ленский,',authorLink:'#',time:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'})
-					+comment("Janna")
-
-			.agent-card
-				+agent-info({agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'поделилась лотом два часа назад',agentCompany:'APK',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1',downloadInfo:['user1','user2','user3','user4'] })
+	//- 		.agent-card
+	//- 			+agent-info({agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'поделилась лотом два часа назад',agentCompany:'APK',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1',downloadInfo:['user1','user2','user3','user4'] })
 
 
 
+	//- 	.card-offer.card-offer--hot
+	//- 		.card-description
+	//- 			.card-description-top
+	//- 				.offer-row.offer-row--swipe
+	//- 					.badge.badge--dark Новостройка
+	//- 					+badge-group(['ЦАО','Замоскворечье'])
+	//- 					+text-link('1-й Обыденский переулок, 12 стр. 1','cardData.addressHref', 'appartment-card--address')
+	//- 					.appartment--built.text-body.text-body--grey Сдан в 2014
+	//- 					+metro('Кропоткинская')
+	//- 					.appartment-page-link
+	//- 						.share-link-text Поделиться
+	//- 						+share-link
+	//- 						+tooltip('cardData.tooltipLink','cardData.mailAddress','cardData.pdfLink')
 
-	footer.footer
-		+page-footer
+	//- 				.offer-row.offer-row--title
+	//- 					+link-title('3-комн. кв., 156 кв.м., 3/6 этаж', 'cardData.titleHref')(class="link-title--middle")
+	//- 					.appartment-card__price--num.headline-bold от 200 000 руб.
+	//- 					.appartment-card__price--area.text-body.text-body--grey 147 115 руб./кв.м
+	//- 					+repaire-item('С ремонтом')
+
+	//- 				.offer-row.offer-row--info
+	//- 					+card-slider({item1:{imgSrc:'hot-slider1'},item2:{imgSrc:'hot-slider2'},item3:{imgSrc:'hot-slider3'},item4:{imgSrc:'hot-slider4'}})
+	//- 					.text-body.
+	//- 						Уважаемые, коллеги! Не забывайте про мою чудесную квартирку в районе Кропоткинской
+
+	//- 				.offer-row.offer-row--tools
+	//- 					.appartment-card__toolbar
+	//- 						.appartment-card__toolbar-item
+	//- 							+button('+7 985 356 56 56', 'cardData.phoneLink', 'btn-tel contact-phone')
+	//- 						.appartment-card__toolbar-item
+	//- 							+link('В избранное','','icon-heart')(class="icon-heart--tablet item-favorite")
+	//- 							+link('В избранное','','icon-heart','fix-width')(class="icon-heart--desk item-favorite icon-heart--small")
+	//- 						.appartment-card__toolbar-item.appartment-card__toolbar-item--mail
+	//- 							a.text-link.text-link--line(href='#'+ 'cardData.mailAddress') Отправить электронной почтой
+	//- 							a(href='#')
+	//- 								+icon-mail
+	//- 						.icons-like
+	//- 							+icon-group({iconName:'icon-like', countNum:'45'})
+	//- 							+icon-group({iconName:'icon-dislike', countNum:'45'})
+	//- 			.row-line
+
+
+	//- 			.card-description-chat
+	//- 				+comment("Anton",{author:'Антон Ленский,',authorLink:'#',time:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'})
+	//- 				+comment("Janna")
+
+	//- 		.agent-card
+	//- 			+agent-info({agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'поделилась лотом два часа назад',agentCompany:'APK',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1',downloadInfo:['user1','user2','user3','user4'] })
+
+
+
+
+	//- footer.footer
+	//- 	+page-footer
 
