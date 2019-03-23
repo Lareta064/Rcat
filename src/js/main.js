@@ -185,17 +185,8 @@ $(document).ready(function() {
 		variableWidth: true,
 		speed: 1000,
 		slidesToScroll: 1,
-		loop: true,
-		// responsive: [
-  //   	{
-  //     		breakpoint: 1200,
-		//       settings: {
-		//         slidesToShow: 4,
-		//         slidesToScroll: 1
+		loop: true
 
-		//       }
-		//     }
-		// ]
 	});
 	//-слайдер на странице поиск квартир
 	$('.card--photo-slider').slick({
