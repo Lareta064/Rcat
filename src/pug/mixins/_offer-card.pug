@@ -22,7 +22,7 @@ mixin offer-card(cardObject)
 						.appartment-card__price--area.text-body.text-body--grey !{cardObject.priceArea}
 						+repaire-item(cardObject.repaireText)
 
-				if cardObject.modif='new'
+				if cardObject.modif=='new'
 					.offer-row.offer-row--info.text-body !{cardObject.cardDescription}
 						span.text-hidden !{cardObject.cardDescriptionHidden}
 						.more
@@ -45,17 +45,21 @@ mixin offer-card(cardObject)
 							a(href='#')
 								+icon-mail
 
+
 						if cardObject.modif='hot'
+
 							.icons-like
 								+icon-group({iconName:'icon-like', countNum:'45'})
 								+icon-group({iconName:'icon-dislike', countNum:'45'})
 
-		//- 	.row-line
 
-		//- 	.card-description-chat
-		//- 		+messages(cardObject.messagesData)
+			if cardObject.messagesData
+				.row-line
+				.card-description-chat
+					+messages(cardObject.messagesData)
 
-		//- .agent-card
-		//- 	+agent-info(cardObject.agentData)
+		.agent-card
+			+agent-info(cardObject.agentData)
+
 
 
