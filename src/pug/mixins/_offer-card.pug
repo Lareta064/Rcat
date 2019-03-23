@@ -14,12 +14,12 @@ mixin offer-card(cardObject)
 						.share-link-text Поделиться
 						+share-link
 						+tooltip(cardObject.tooltipLink,cardObject.mailAddress,cardObject.pdfLink)
-				
+
 				.offer-row.offer-row--title
 					+link-title(cardObject.appartmentRooms, cardObject.titleHref)(class="link-title--middle")
 					.offer-row--transform
 						.appartment-card__price--num.headline-bold от !{cardObject.price} руб.
-						.appartment-card__price--area.text-body.text-body--grey !{cardObject.priceArea} 
+						.appartment-card__price--area.text-body.text-body--grey !{cardObject.priceArea}
 						+repaire-item(cardObject.repaireText)
 
 				if cardObject.modif='new'
@@ -27,11 +27,11 @@ mixin offer-card(cardObject)
 						span.text-hidden !{cardObject.cardDescriptionHidden}
 						.more
 							+text-link('Развернуть','#')
-				else 
+				else
 					.offer-row.offer-row--info
 						+card-slider(cardObject.sliderItems)
 						.text-body !{cardObject.sliderSubText}
-										
+
 
 				.offer-row.offer-row--tools
 					.appartment-card__toolbar
@@ -45,16 +45,16 @@ mixin offer-card(cardObject)
 							a(href='#')
 								+icon-mail
 
-						if	cardObject.modif='hot'	
+						if cardObject.modif='hot'
 							.icons-like
 								+icon-group({iconName:'icon-like', countNum:'45'})
 								+icon-group({iconName:'icon-dislike', countNum:'45'})
-								
+
 		//- 	.row-line
-			
+
 		//- 	.card-description-chat
 		//- 		+messages(cardObject.messagesData)
-		
+
 		//- .agent-card
 		//- 	+agent-info(cardObject.agentData)
 
