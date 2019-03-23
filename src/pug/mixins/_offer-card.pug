@@ -10,10 +10,10 @@ mixin offer-card(cardObject)
 					+text-link(cardObject.adress,cardObject.addressHref,'appartment-card--address')
 					.appartment--built.text-body.text-body--grey !{cardObject.builtDate}
 					+metro(cardObject.metroName)
-					.appartment-page-link
-						.share-link-text Поделиться
-						+share-link
-						+tooltip(cardObject.tooltipLink,cardObject.mailAddress,cardObject.pdfLink)
+				.appartment-page-link
+					.share-link-text Поделиться
+					+share-link
+					+tooltip(cardObject.tooltipLink,cardObject.mailAddress,cardObject.pdfLink)
 
 				.offer-row.offer-row--title
 					+link-title(cardObject.appartmentRooms, cardObject.titleHref)(class="link-title--middle")
