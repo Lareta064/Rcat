@@ -23,6 +23,7 @@
 .card-description-top{
 	padding: 10px;
 	padding-bottom: 0;
+	border-radius: 10px 10px 10px 10px;
 }
 
 .offer-row{
@@ -32,23 +33,14 @@
 	padding-left: 20px;
 	// padding-top: 20px;
 	padding-right: 28px;
-	
-	.appartment--built{
-		@media(min-width:768px){
-			// padding-right: 10px;
-		}
-	}
 		
-	
 	.appartment-card--address{margin-right: 15px;}
 	  
     .badge{margin-right: 10px;}
-	
-    .metro-block{
-    	@media(min-width:768px){
-    		padding-right: 10px;}
-    	}
 
+    .metro-block{
+    	@media(min-width:768px){padding-right: 10px;}
+    }
 
     .appartment-page-link{
     	position: relative;
@@ -59,16 +51,7 @@
     }
 
 	.appartment-card__toolbar{width: 100%;}	
-
-	// .appartment-card--mb{
-	// 	padding-left: 70px;
-	// 	@media(min-width:768px){
-			
-	// 	}
-	// }
 	
-	
-
 	.appartment-card__price--area{
 		display: none;
 		@media(min-width:768px){display: block;}
@@ -95,34 +78,41 @@
 
 .offer-row--transform{
 	display: block;
-	padding-top: 16px;
+	
 	@media(min-width:768px){
 		display: flex;
 	}
 	@media(min-width:1200px){
 		padding-top: 0;
 	}
+
+	.appartment-card__price--num{
+		font-size: 20px;
+		padding-right: 0;
+		padding-bottom: 18px;
+		@media(min-width:768px){
+			padding-bottom: 0;
+			padding-right: 34px;
+			margin: 0;
+		}
+	}
 }
 
 .appartment-card__price-section{
 	display: flex;
-	text-align: center;
-	margin-bottom: 17px;
-		
+	align-items: center;
+	
 	@media(min-width:768px){
 		padding-right: 28px;
-		margin-bottom: 0;
 		
 		.appartment-card__price--num{
-			font-size: 20px;
-			padding-right: 0;
+			padding-right: 10px;
 		}
 
 		.icon-price-down{
 			display: inline-block;	
 			cursor: pointer;
-			padding-left: 8px;
-			// margin-top: -3px;
+			// padding-left: 8px;
 		}
 	}
 }
@@ -137,57 +127,54 @@
 			display: block;
 		}
 
-	.text-hidden:after{
-		display: none;
-		content: "";
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		margin: 0;
-		height: 3em;
-		background-color: rgba(255, 255, 255, 0);
-		background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #f5f6fa 100%);
-}
-		@media(min-width: 768px){
-			display: block;
+		.text-hidden:after{
+			display: none;
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			margin: 0;
+			height: 3em;
+			background-color: rgba(255, 255, 255, 0);
+			background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #f5f6fa 100%);
+
 		}
+		
 	}	
 }
 
-	.more{
-		// display: block;
-		@media(min-width: 768px){
-			display: none;
-		}
+.more{
+	// display: block;
+	@media(min-width: 768px){
+		display: none;
 	}
+}
 
 .offer-row--title{
 	align-items: flex-start;
-    flex-direction: column;
-    padding-right: 30px;
-	    
-	 @media(min-width:1350px){
-	    align-items: center;
-	 	flex-direction: row;
-		// padding-right: 30px;
-	 	
-	 }  
-	
-	.simple-link{
-	 	margin-bottom: 17px;
-	 	font-size: 16px;
-	 	@media(min-width:768px){
-	 		font-size: 20px;
-			margin-right: 30px;
-	 		margin-bottom: 0;
-	 	}	
-	}
+	flex-direction: column;
+	padding-right: 30px;
 
-	.appartment-card__price--area{
+	@media(min-width:1350px){
+		flex-direction: row;
+		// padding-right: 30px;
+
+	}  
+	
+.simple-link{
+	margin-bottom: 17px;
+	font-size: 16px;
+	@media(min-width:768px){
+		font-size: 20px;
 		margin-right: 30px;
-	}
-	    
+	}	
+}
+
+.appartment-card__price--area{
+	margin-right: 30px;
+}
+    
 }
 
 .icons-like{
@@ -199,17 +186,13 @@
 	.icon-group{
 		display: none;
 		@media(min-width:768px){
-			display: flex;
-			
-			
+			display: flex;	
 		}
 	}  
 	
-	.group--icon-dislike{
-		// display: inline-box;
-		margin-left: 22px;
+	.group--icon-dislike{margin-left: 22px;
+	// display: inline-box;
 	}
-	
 }
 
 
