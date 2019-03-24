@@ -11,6 +11,9 @@ mixin header(userAvatar,userName,addIcon)
 					+mobile-btn('plus')
 				.links-block.d-flex
 					.header__icon-group
+						if addIcon
+							.header__icon-group__item.header__icon-group__item--add
+								+#{addIcon}
 						.header__icon-group__item
 							+icon-search
 						.header__icon-group__item
@@ -19,9 +22,9 @@ mixin header(userAvatar,userName,addIcon)
 							+icon-heart('grey')
 						.header__icon-group__item
 							+notify-active
-						if addIcon
-							.header__icon-group__item.header__icon-group__item--add
-								+#{addIcon}
+						//- if addIcon
+						//- 	.header__icon-group__item.header__icon-group__item--add
+						//- 		+#{addIcon}
 					.header__user-lk
 						.header__user__avatar
 							img(src="../img/"+ userAvatar +".png",width='36' height="36" alt="avatar")
