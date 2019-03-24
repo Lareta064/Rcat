@@ -19,8 +19,9 @@ mixin offer-card(cardObject)
 					+link-title(cardObject.appartmentRooms, cardObject.titleHref)(class="link-title--middle")
 					.offer-row--transform
 						if cardObject.priceDown
-							.appartment-card__price--num.headline-bold !{cardObject.price} руб.
-							+icon-price-down
+							.appartment-card__price-section
+								.appartment-card__price--num.headline-bold !{cardObject.price} руб.
+								+icon-price-down
 						else
 							.appartment-card__price--num.headline-bold !{cardObject.price} руб.
 
