@@ -52,6 +52,7 @@
 }
 .agent-info-download{
 	display: none;
+	padding-top: 100px;
 	@media(min-width: 992px){display: block;}
 }
 .download-num-item{
@@ -62,9 +63,12 @@
 	border-radius: 5px;
 }
 .agent-info-download-num{
+	display: none;
 	position: relative;
-	padding-top: 120px;
 	padding-bottom: 12px;
+	@media(min-width: 1200px){
+		display: flex;
+	}
 }
 .download-num-item:last-child{padding-right: 0;}
 .download-num-item-last{
