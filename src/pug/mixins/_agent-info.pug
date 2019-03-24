@@ -12,11 +12,11 @@ mixin agent-info(agentData)
 				img(src="../img/agents/"+ agentData.agentAvatar +".jpg", alt="agent")
 		if agentData.downloadInfo
 			.agent-info-download
-				.agent-info-download-num.d-flex
+				.agent-info-download-num
 					- for (var i = 0; i < agentData.downloadInfo.length && i<6; i++)
 						.download-num-item
 							img(src="../img/agents/"+ agentData.downloadInfo[i] +".jpg", alt="user")
 							if i==5 && agentData.downloadInfo.length > 6
 								.download-num-item-last
 									span #{(agentData.downloadInfo.length - 6)}
-				.text-body.text-body--grey Скачали #{(agentData.downloadInfo.length - 6)} человек
+				.text-body.text-body--grey Скачали #{(agentData.downloadInfo.length )} человек

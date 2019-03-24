@@ -2,14 +2,16 @@ extends ../layouts/page-layout/page.pug
 
 block variables
 	- var title = 'Страница бесед';
-
-
+	
 block content
-	.wrapper-page
-		.main-content.main-content--chat-page
-			header.header
-				+header('avatar','Иван Марасин','icon-exchange')
 
+	header.header
+		+header('avatar','Иван Марасин','icon-exchange')
+	include ../sections/ch_title-block.pug
+	include ../sections/ch_new-offer.pug
+	include ../sections/ch_hot-offer.pug
 
-		footer.footer
-			+page-footer
+	
+	footer.footer
+		+page-footer
+

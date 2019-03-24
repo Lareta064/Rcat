@@ -186,16 +186,16 @@ $(document).ready(function() {
 		speed: 1000,
 		slidesToScroll: 2,
 		loop: true,
-		responsive: [
-    	{
-      		breakpoint: 1200,
-		      settings: {
-		        slidesToShow: 4,
-		        slidesToScroll: 1,
+		// responsive: [
+  //   	{
+  //     		breakpoint: 1200,
+		//       settings: {
+		//         slidesToShow: 4,
+		//         slidesToScroll: 1,
 
-		      }
-		    }
-		]
+		//       }
+		//     }
+		// ]
 	});
 	//-слайдер на странице поиск квартир
 	$('.card--photo-slider').slick({
