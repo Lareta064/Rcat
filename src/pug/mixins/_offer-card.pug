@@ -23,13 +23,14 @@ mixin offer-card(cardObject)
 								.appartment-card__price--num.headline-bold !{cardObject.price} руб.
 								+icon-price-down
 						else
-							.appartment-card__price--num.headline-bold !{cardObject.price} руб.
+							.appartment-card__price-section
+								.appartment-card__price--num.headline-bold !{cardObject.price} руб.
 
 						.appartment-card__price--area.text-body.text-body--grey !{cardObject.priceArea} 
 						+repaire-item(cardObject.repaireText)
 
 				if cardObject.modif=='new'
-					.offer-row.offer-row--info.text-body !{cardObject.cardDescription}
+					.offer-row.offer-row--info.text-body.fadeOut !{cardObject.cardDescription}
 						span.text-hidden !{cardObject.cardDescriptionHidden}
 						.more
 							+text-link('Развернуть','#')

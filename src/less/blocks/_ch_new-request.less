@@ -9,11 +9,13 @@
 	
 	.card-description{
 		width: 100%;
+		position: relative;
 		background-color: @white;
 		border-radius: 10px 10px 10px 10px;
         // display: block;
-        @media(min-width:768px){border-radius: 10px 0 0 10px;}
+        @media(min-width:768px){border-radius: 10px 10px 0 10px;}
         @media(min-width:992px){
+        	border-radius: 10px 0 0 10px;
         	width: 80%;
         	padding: 20px;        	
         }
@@ -22,8 +24,23 @@
 
 .card-description-top{
 	padding: 10px;
+	padding-top: 27px;
 	padding-bottom: 0;
 	border-radius: 10px 10px 10px 10px;
+	
+	@media(min-width:768px){padding-top: 16px;}	
+	
+	@media(min-width:992px){padding-top: 0;}
+	
+	.fadeOut:after{
+		display: block;
+		bottom: 60px;
+		background-color: rgba(255,255,255,0);
+		background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0, rgb(255,255,255) 100%);
+		@media(min-width:768px){
+			display: none;
+		}
+	}
 }
 
 .offer-row{
@@ -43,9 +60,9 @@
     }
 
     .appartment-page-link{
-    	position: relative;
-    	top: auto;
-    	right: auto;
+    	// position: relative;
+    	// top: auto;
+    	// right: auto;
     	margin-left: auto;
     	.share-link-text{display: none;}
     }
@@ -61,6 +78,7 @@
 .offer-row--swipe{
 	box-sizing: border-box;
 	padding: 16px;
+	padding-top: 0;
 	padding-bottom: 30px;
 	overflow-x: auto;
 	overflow-y: hidden;
@@ -89,10 +107,10 @@
 	.appartment-card__price--num{
 		font-size: 20px;
 		padding-right: 0;
-		padding-bottom: 18px;
+		// padding-bottom: 18px;
 		@media(min-width:768px){
 			padding-bottom: 0;
-			padding-right: 34px;
+			// padding-right: 34px;
 			margin: 0;
 		}
 	}
@@ -101,24 +119,25 @@
 .appartment-card__price-section{
 	display: flex;
 	align-items: center;
+	margin-bottom: 18px;
 	
-	@media(min-width:768px){
-		padding-right: 28px;
-		
-		.appartment-card__price--num{
-			padding-right: 10px;
-		}
-
-		.icon-price-down{
+	.icon-price-down{
+			margin-left: 10px;
 			display: inline-block;	
 			cursor: pointer;
 			// padding-left: 8px;
 		}
+	
+	@media(min-width:768px){
+		padding-right: 28px;
+		
+		
 	}
 }
 
 .offer-row--info{
 	display: block;
+	position: relative;
 	
 	.text-hidden{
 		display: none;
@@ -126,28 +145,15 @@
 		@media(min-width: 768px){
 			display: block;
 		}
-
-		.text-hidden:after{
-			display: none;
-			content: "";
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			margin: 0;
-			height: 3em;
-			background-color: rgba(255, 255, 255, 0);
-			background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #f5f6fa 100%);
-
-		}
-		
 	}	
 }
 
 .more{
+	padding-top: 12px;
 	// display: block;
 	@media(min-width: 768px){
 		display: none;
+		padding-top: 0;
 	}
 }
 
@@ -159,7 +165,6 @@
 	@media(min-width:1350px){
 		flex-direction: row;
 		// padding-right: 30px;
-
 	}  
 	
 .simple-link{
@@ -173,8 +178,7 @@
 
 .appartment-card__price--area{
 	margin-right: 30px;
-}
-    
+	}
 }
 
 .icons-like{
@@ -194,7 +198,6 @@
 	// display: inline-box;
 	}
 }
-
 
 .row-line{
 	padding-bottom: 20px;
