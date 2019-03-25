@@ -34,10 +34,12 @@ mixin offer-card(cardObject)
 
 
 				if cardObject.modif=='new'
-					.offer-row.offer-row--info.text-body.fadeOut !{cardObject.cardDescription}
-						span.text-hidden !{cardObject.cardDescriptionHidden}
-						.show-hidden-text
-							+text-link('Развернуть','#')
+					if cardObject.cardDescription
+						.offer-row.offer-row--info.text-body.fadeOut !{cardObject.cardDescription}
+							span.text-hidden !{cardObject.cardDescriptionHidden}
+							if cardObject.cardDescription
+								.show-hidden-text
+									+text-link('Развернуть','#')
 				else
 					.offer-row.offer-row--info
 						if cardObject.modif=='hot' && cardObject.sliderItems
