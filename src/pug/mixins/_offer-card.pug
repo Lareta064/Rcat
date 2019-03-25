@@ -70,8 +70,8 @@ mixin offer-card(cardObject)
 							+link('В избранное','','icon-heart')(class="icon-heart--tablet item-favorite")
 							+link('В избранное','','icon-heart','fix-width')(class="icon-heart--desk item-favorite icon-heart--small")
 						.appartment-card__toolbar-item.appartment-card__toolbar-item--mail
-							a.text-link.text-link--line(href='#'+ 'cardObject.mailAddress') Отправить электронной почтой
-							a(href='#')
+							a.text-link.text-link--line(href='mailto:'+ 'cardObject.mailAddress') Отправить электронной почтой
+							a(href='mailto:'+cardObject.mailAddress)
 								+icon-mail
 
 						if	cardObject.modif=='hot'
