@@ -1,7 +1,7 @@
 .content-block{
 	width: 320px;
 	@media(min-width: 360px){
-		width: 100%;		
+		width: 100%;
 	}
 }
 
@@ -9,7 +9,7 @@
 .ch-block{
 	width: 100%;
 	display: block;
-	
+
 	@media(min-width: 768px){
 		display: flex;
 		flex-direction: row;
@@ -46,7 +46,7 @@
 	display: flex;
 	text-align: center;
 	margin-left: auto;
-	
+
 	@media(min-width: 992px){
 		margin-left: 7px;
 	}
@@ -57,8 +57,8 @@
 
 	span.first{
 		display: none;
-		
-		
+
+
 		@media(min-width: 768px){
 			display: block;
 		}
@@ -67,7 +67,7 @@
 	span.mob{
 		font-weight: 700;
 		margin: auto;
-		
+
 		@media(min-width: 768px){
 			padding-left: 7px;
 			font-weight: 400;
@@ -80,14 +80,16 @@
 	display: block;
 	margin-bottom: 20px;
 	max-width: 700px;
+	border-radius: 10px;
+	overflow: hidden;
 	@media(min-width: 768px){
 	// display: flex;
 	position: relative;
 	height: 100%;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 12px;
+	padding-bottom: 12px;
 	background-color: #f2f3f7;
-	border-radius: 10px;
+
 	}
 }
 
@@ -99,13 +101,13 @@
 
 .message{
 	display: flex;
-	
+
 }
 
 .message-top{
 	display: block;
 	margin-bottom: 12px;
-	
+
 	@media(min-width: 768px){
 		// margin-bottom: 5px;
 		display: flex;
@@ -113,21 +115,21 @@
 		position: relative;
 		z-index: 2;
 	    flex-direction: row;
-	    padding-left: 15px;	
+	    padding-left: 15px;
 	}
 }
 
 .message-time{
-	
+
 	@media(min-width: 768px){
 		padding-left: 5px;
-		
+
 	}
 }
 
 .message-author{
 		display: none;
-			
+
 		@media(min-width: 768px){
 			display: block;
 			margin-right: 11px;
@@ -141,10 +143,10 @@
 .comment{
 	padding-right: 15px;
 	font-size: 16px;
-	
+
 	@media(min-width: 768px){
 	position: relative;
-	min-height: 40px;
+	// min-height: 40px;
 	max-width: 700px;
 	padding-left: 15px;
 	background-color: #f2f3f7;
@@ -154,7 +156,7 @@
 	font-size: 14px;
 	border: 0px;
 	cursor: text;
-	}		
+	}
 }
 
 
@@ -171,7 +173,7 @@
 	border: 8px solid #f2f3f7;
 	border-bottom: 0;
 	border-right-color: transparent;
-	border-left-color: transparent;  	
+	border-left-color: transparent;
 	}
 }
 
@@ -181,12 +183,12 @@
 	border: none;
 	outline: none;
 	min-width: 270px;
-	min-height: 60px;
+	// min-height: 60px;
 	content: "Написать комментарий...";
 	text-align: center;
 	display: block;
-	padding-top: 15px;
-	// padding-bottom: 10px;
+	padding-top: 12px;
+	padding-bottom: 12px;
 	padding-right: 15px;
 	// padding-left: 15px;
 	font-size: 16px;
@@ -195,12 +197,13 @@
 
 	@media(min-width: 768px){
 		background-color: transparent;
-		min-height: 40px;
+		// min-height: 40px;
 		font-size: 14px;
 		text-align: start;
-		padding-top: 9px;
-		
-		
+		padding-top: 0;padding-bottom: 0;
+		// padding-top: 9px;
+
+
 	}
 }
 
