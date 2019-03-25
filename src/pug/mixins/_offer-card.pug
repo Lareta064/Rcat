@@ -20,7 +20,7 @@ mixin offer-card(cardObject)
 					.offer-row--transform
 						if cardObject.priceDown
 							.appartment-card__price-section
-								.appartment-card__price--num.headline-bold !{cardObject.price} руб.
+								.appartment-card__price--num.headline-bold.price-down !{cardObject.price} руб.
 								+icon-price-down
 						else
 							.appartment-card__price-section
@@ -42,9 +42,15 @@ mixin offer-card(cardObject)
 
 				.offer-row.offer-row--tools
 					.appartment-card__toolbar
-						.appartment-card__toolbar-item
-							+button(cardObject.telNumber, cardObject.telLink, 'btn-tel contact-phone')
-						.appartment-card__toolbar-item
+						if cardObject.modif=='new'
+							.appartment-card__toolbar-item.appartment-card__toolbar-item--tel
+								+button(cardObject.telNumber, cardObject.telLink, 'btn-tel contact-phone')
+						else
+							.appartment-card__toolbar-item.appartment-card__toolbar-item--btn
+								a(href=""+cardObject.presentation-link download).button-download
+									span.button-download--desk Скачать презентацию
+									span.button-download--mob Презентация				
+						.appartment-card__toolbar-item.appartment-card__toolbar-item--heart
 							+link('В избранное','','icon-heart')(class="icon-heart--tablet item-favorite")
 							+link('В избранное','','icon-heart','fix-width')(class="icon-heart--desk item-favorite icon-heart--small")
 						.appartment-card__toolbar-item.appartment-card__toolbar-item--mail

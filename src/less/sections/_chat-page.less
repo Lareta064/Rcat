@@ -31,7 +31,7 @@
 	.badge--green{
 		margin-bottom: 20px;
 		@media(min-width: 768px){
-			width: 100%;
+			// width: 100%;
 			margin-bottom: 0;
 		}
 	}
@@ -40,7 +40,7 @@
 .section-cards{
 	margin-bottom: 30px;
 	@media(min-width: 768px){
-		margin-bottom: 0;
+		margin-bottom: 50px;
 	}
 }
 
@@ -48,6 +48,7 @@
 	display: flex;
     justify-content: space-between;
     margin-bottom: 80px;
+    
     .btn-text{
     	display: none;
     	@media(min-width: 768px){
@@ -63,22 +64,46 @@
     }
 }
 
-.section-top.section-top--hot-offer{
+.section-top--hot-offer{
 	display: block;
+	padding-top: 0;
+	padding-bottom: 0;
+	// margin-bottom: 24px;
+	
+	.title-1--desk{
+		display: none;
+		@media(min-width: 992px){
+			display: block;	
+			padding-right: 28px;
+		}
+	}
 
-	.title-2{
+	.title-1--mob{
+		display: block;
 		padding-bottom: 14px;
+		@media(min-width: 768px){
+			padding-bottom: 0;
+			padding-right: 28px;	
+		}
+		@media(min-width: 992px){
+			display: none;
+		}
 	}
 
 	.badge{
 		margin-bottom: 20px;
-
+		@media(min-width: 768px){
+			margin-bottom: 0;
+			margin-right: 28px;	
+				
+		}
 	}
 
 	@media(min-width: 768px){display: flex;}
 }
 
 .hot-offer-footer{
+	.button--basic{@media(min-width: 768px){width: 100%;}}
 	.btn-text{
     	display: none;
     	@media(min-width: 768px){
@@ -92,4 +117,51 @@
     		display: none;
     	}
     }
+}
+
+.button-download{
+	height: 30px;
+	text-align: center;
+	background-color: @btnBg;
+	color: @white;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	border-radius: 3px;
+	font-weight: 700;
+	&:hover, &:active, &:focus {
+		color: @white;
+		text-decoration: none;
+		opacity: .85;
+	}
+
+	.button-download--desk{
+		display: none;
+		@media(min-width:768px){
+			display: block;
+		}
+	}
+	.button-download--mob{
+		display: block;
+		@media(min-width:768px){
+			display: none;
+		}
+	}
+}
+
+.appartment-card__toolbar-item--btn{
+       flex-grow: 2;
+	    @media(min-width:768px){
+	    	flex-grow: inherit;
+	    }
+}
+
+.offer-row--tools{
+	.icon-heart--tablet{
+		.simple-link{@media(min-width:1200px){
+			display: block;
+			padding-left: 8px;
+			}
+		}		
+	}
 }

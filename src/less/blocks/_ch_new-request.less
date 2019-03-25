@@ -132,18 +132,17 @@
 	margin-bottom: 18px;
 	
 	.icon-price-down{
-			margin-left: 10px;
-			display: inline-block;	
-			cursor: pointer;
-			// padding-left: 8px;
-		}
-	
-	@media(min-width:768px){
-		padding-right: 28px;
-		
-		
+		display: flex;
+		margin-left: 10px;
+		display: inline-block;	
+		cursor: pointer;
+		// padding-left: 8px;
 	}
-}
+
+		@media(min-width:768px){
+			padding-right: 28px;
+		}
+	}
 
 .offer-row--info{
 	display: block;
@@ -228,5 +227,23 @@
 	}
 }
 
+.offer-row--tools{
+	.appartment-card__toolbar-item--mail{
+		padding-right: 0;
+		@media(min-width:768px){
+			padding-right: 28px;
+		}
+	}
+	.appartment-card__toolbar-item--tel{
+		margin-right: auto;
+		@media(min-width:1200px){margin-right: 0;}		
+	}
 
+	.appartment-card__toolbar-item--heart{
+		padding-right: 20px;
+		@media(min-width:768px){
+			padding-right: 28px;
+		}
+	}
+}
 
