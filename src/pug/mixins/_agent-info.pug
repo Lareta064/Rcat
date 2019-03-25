@@ -7,9 +7,11 @@ mixin agent-info(agentData)
 				.posted-time !{agentData.postedTime}
 				.agent-company
 					+text-link(agentData.agentCompany,agentData.agentCompanyLink,agentData.CompanyLinkClass)
-
-			.agent-info-img
-				img(src="../img/agents/"+ agentData.agentAvatar +".jpg", alt="agent")
+			if agentData.agentAvatar
+				.agent-info-img
+					img(src="../img/agents/"+ agentData.agentAvatar +".jpg", alt="agent")
+			else
+				.agent-info-img
 		if agentData.downloadInfo
 			.agent-info-download
 				.agent-info-download-num
