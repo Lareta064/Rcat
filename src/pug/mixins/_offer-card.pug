@@ -26,8 +26,11 @@ mixin offer-card(cardObject)
 							.appartment-card__price-section
 								.appartment-card__price--num.headline-bold !{cardObject.price} руб.
 
-						.appartment-card__price--area.text-body.text-body--grey !{cardObject.priceArea} 
+						.mobile-price
+							.appartment-card__price--usd $ !{cardObject.priceUsd}
+							.appartment-card__price--area.text-body.text-body--grey !{cardObject.priceArea} 
 						+repaire-item(cardObject.repaireText)
+							
 
 				if cardObject.modif=='new'
 					.offer-row.offer-row--info.text-body.fadeOut !{cardObject.cardDescription}
@@ -36,6 +39,10 @@ mixin offer-card(cardObject)
 							+text-link('Развернуть','#')
 				else 
 					.offer-row.offer-row--info
+						if cardObject.modif=='hot'
+							if cardObject.repaireText=='С ремонтом'
+								.appartment-card--mobile-repaire-icon
+									+brach-white
 						+card-slider(cardObject.sliderItems)
 						.text-body !{cardObject.sliderSubText}
 										

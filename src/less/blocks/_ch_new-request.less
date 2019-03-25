@@ -79,10 +79,7 @@
 
 	.appartment-card__toolbar{width: 100%;}	
 	
-	.appartment-card__price--area{
-		display: none;
-		@media(min-width:768px){display: block;}
-	}
+	
 }
 
 .offer-row--swipe{
@@ -247,3 +244,38 @@
 	}
 }
 
+.card-offer--hot{
+	.appartment-card__price--usd{
+		display: block;
+		color: @black;
+		font-weight: 700;
+		@media(min-width:768px){
+			display: none;
+		}
+	}
+	.repaire-item-box{
+		display: none;
+		@media(min-width:768px){
+			display: flex;
+		}
+	}
+}
+
+.card-offer--new{
+	.mobile-price{
+		display: none;
+		@media(min-width:768px){display: flex;}
+	}
+
+	.appartment-card__price--area{
+		display: none;
+		@media(min-width:768px){display: block;}
+	}
+	.appartment-card__price--usd{
+		display: none;
+	}
+}
+
+.mobile-price{
+	display: flex;
+}
