@@ -7,9 +7,10 @@ mixin offer-card(cardObject)
 						.badge.badge--dark Новостройка
 
 					+badge-group(cardObject.badgeGroup)
-					+text-link(cardObject.adress,cardObject.addressHref,'appartment-card--address')
-					.appartment--built.text-body.text-body--grey !{cardObject.builtDate}
-					+metro(cardObject.metroName)
+					if cardObject.modif=='hot'
+						+text-link(cardObject.adress,cardObject.addressHref,'appartment-card--address')
+						.appartment--built.text-body.text-body--grey !{cardObject.builtDate}
+						+metro(cardObject.metroName)
 					.appartment-page-link
 						.share-link-text Поделиться
 						+share-link
@@ -35,7 +36,7 @@ mixin offer-card(cardObject)
 				if cardObject.modif=='new'
 					.offer-row.offer-row--info.text-body.fadeOut !{cardObject.cardDescription}
 						span.text-hidden !{cardObject.cardDescriptionHidden}
-						.more
+						.show-hidden-text
 							+text-link('Развернуть','#')
 				else
 					.offer-row.offer-row--info
