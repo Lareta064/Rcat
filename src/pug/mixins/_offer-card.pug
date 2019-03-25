@@ -14,7 +14,7 @@ mixin offer-card(cardObject)
 						.share-link-text Поделиться
 						+share-link
 						+tooltip(cardObject.tooltipLink,cardObject.mailAddress,cardObject.pdfLink)
-				
+
 				.offer-row.offer-row--title
 					+link-title(cardObject.appartmentRooms, cardObject.titleHref)(class="link-title--middle")
 					.offer-row--transform
@@ -28,24 +28,30 @@ mixin offer-card(cardObject)
 
 						.mobile-price
 							.appartment-card__price--usd $ !{cardObject.priceUsd}
-							.appartment-card__price--area.text-body.text-body--grey !{cardObject.priceArea} 
+							.appartment-card__price--area.text-body.text-body--grey !{cardObject.priceArea}
 						+repaire-item(cardObject.repaireText)
-							
+
 
 				if cardObject.modif=='new'
 					.offer-row.offer-row--info.text-body.fadeOut !{cardObject.cardDescription}
 						span.text-hidden !{cardObject.cardDescriptionHidden}
 						.more
 							+text-link('Развернуть','#')
-				else 
+				else
 					.offer-row.offer-row--info
-						if cardObject.modif=='hot'
+						if cardObject.modif=='hot' && cardObject.sliderItems
 							if cardObject.repaireText=='С ремонтом'
 								.appartment-card--mobile-repaire-icon
 									+brach-white
-						+card-slider(cardObject.sliderItems)
-						.text-body !{cardObject.sliderSubText}
-										
+						else
+							if cardObject.modif=='hot'
+								.double-repaire-box
+									+repaire-item(cardObject.repaireText)
+
+						if 	cardObject.sliderItems
+							+card-slider(cardObject.sliderItems)
+							.text-body !{cardObject.sliderSubText}
+
 
 				.offer-row.offer-row--tools
 					.appartment-card__toolbar
@@ -54,9 +60,9 @@ mixin offer-card(cardObject)
 								+button(cardObject.telNumber, cardObject.telLink, 'btn-tel contact-phone')
 						else
 							.appartment-card__toolbar-item.appartment-card__toolbar-item--btn
-								a(href=""+cardObject.presentation-link download).button-download
+								a(href=""+cardObject.presentationLink download).button-download
 									span.button-download--desk Скачать презентацию
-									span.button-download--mob Презентация				
+									span.button-download--mob Презентация
 						.appartment-card__toolbar-item.appartment-card__toolbar-item--heart
 							+link('В избранное','','icon-heart')(class="icon-heart--tablet item-favorite")
 							+link('В избранное','','icon-heart','fix-width')(class="icon-heart--desk item-favorite icon-heart--small")
@@ -74,7 +80,7 @@ mixin offer-card(cardObject)
 				.row-line
 				.card-description-chat
 					+messages(cardObject.messagesData)
-			
+
 		.agent-card
 			+agent-info(cardObject.agentData)
 

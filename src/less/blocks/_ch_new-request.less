@@ -4,9 +4,9 @@
 	border-radius: 10px 10px 10px 10px;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	
+
 	@media(min-width:992px){display: flex;}
-	
+
 	.card-slider{
 		position: relative;
 		margin-left: -23px;
@@ -27,7 +27,7 @@
         @media(min-width:992px){
         	border-radius: 10px 0 0 10px;
         	width: 80%;
-        	padding: 20px;        	
+        	padding: 20px;
         }
     }
 }
@@ -37,11 +37,11 @@
 	padding-top: 27px;
 	padding-bottom: 0;
 	border-radius: 10px 10px 10px 10px;
-	
-	@media(min-width:768px){padding-top: 16px;}	
-	
+
+	@media(min-width:768px){padding-top: 16px;}
+
 	@media(min-width:992px){padding-top: 0;}
-	
+
 	.fadeOut:after{
 		display: block;
 		bottom: 60px;
@@ -60,9 +60,9 @@
 	padding-left: 20px;
 	// padding-top: 20px;
 	padding-right: 28px;
-		
+
 	.appartment-card--address{margin-right: 15px;}
-	  
+
     .badge{margin-right: 10px;}
 
     .metro-block{
@@ -77,9 +77,9 @@
     	.share-link-text{display: none;}
     }
 
-	.appartment-card__toolbar{width: 100%;}	
-	
-	
+	.appartment-card__toolbar{width: 100%;}
+
+
 }
 
 .offer-row--swipe{
@@ -95,7 +95,7 @@
 	&::-webkit-scrollbar {
 		display: none;
 	}
-	
+
 	@media(min-width:768px){margin-bottom: 0;
 	width: 100%;}
 }
@@ -103,7 +103,7 @@
 
 .offer-row--transform{
 	display: block;
-	
+
 	@media(min-width:768px){
 		display: flex;
 	}
@@ -127,11 +127,11 @@
 	display: flex;
 	align-items: center;
 	margin-bottom: 18px;
-	
+
 	.icon-price-down{
 		display: flex;
 		margin-left: 10px;
-		display: inline-block;	
+		display: inline-block;
 		cursor: pointer;
 		// padding-left: 8px;
 	}
@@ -144,14 +144,14 @@
 .offer-row--info{
 	display: block;
 	position: relative;
-	
+
 	.text-hidden{
 		display: none;
-		
+
 		@media(min-width: 768px){
 			display: block;
 		}
-	}	
+	}
 }
 
 .more{
@@ -166,20 +166,20 @@
 .offer-row--title{
 	align-items: flex-start;
 	flex-direction: column;
-	padding-right: 30px;
+	padding-right: 25px;
 
 	@media(min-width:1350px){
 		flex-direction: row;
 		// padding-right: 30px;
-	}  
-	
+	}
+
 .simple-link{
 	margin-bottom: 17px;
 	font-size: 16px;
 	@media(min-width:768px){
 		font-size: 20px;
 		margin-right: 30px;
-	}	
+	}
 }
 
 .appartment-card__price--area{
@@ -191,15 +191,15 @@
 	display: flex;
 	// -webkit-align-items: center;
 	//         align-items: center;
-	margin-left: auto; 
-	
+	margin-left: auto;
+
 	.icon-group{
 		display: none;
 		@media(min-width:768px){
-			display: flex;	
+			display: flex;
 		}
-	}  
-	
+	}
+
 	.group--icon-dislike{margin-left: 22px;
 	// display: inline-box;
 	}
@@ -217,7 +217,7 @@
 	padding-bottom: 20px;
 	padding-top: 20px;
 	background-color: #f5f6fa;
-	
+
 	@media(min-width:768px){
 		background-color: @white;
 
@@ -233,7 +233,7 @@
 	}
 	.appartment-card__toolbar-item--tel{
 		margin-right: auto;
-		@media(min-width:1200px){margin-right: 0;}		
+		@media(min-width:1200px){margin-right: 0;}
 	}
 
 	.appartment-card__toolbar-item--heart{
@@ -249,6 +249,8 @@
 		display: block;
 		color: @black;
 		font-weight: 700;
+		 font-size: 16px;
+    	padding-right: 16px;
 		@media(min-width:768px){
 			display: none;
 		}
@@ -258,6 +260,12 @@
 		@media(min-width:768px){
 			display: flex;
 		}
+	}
+	.appartment-card__price--area{
+		margin-right: 0;
+		@media(min-width:768px){margin-right: 30px;}
+
+
 	}
 }
 
@@ -278,4 +286,7 @@
 
 .mobile-price{
 	display: flex;
+}
+.double-repaire-box{
+	.repaire-item-box{display: flex;}
 }
