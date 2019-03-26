@@ -3,56 +3,20 @@ extends ../../layouts/ui-layout/ui-layout.pug
 block variables
 	- var title = 'Комментарии';
 	- var pageClass = 'body--dashboard';
+	- var newOffer3 = {modif:'new',tooltipLink:'http://realtycat.pro/36732', mailAddress: 'info@mail.ru', pdfLink:'../img/test.pdf', badgeGroup:['ЦАО', 'ЗАО'],  appartmentRooms:'3-комн. кв., до 200 кв.м.',titleHref:'#', price:' от 200 000 000', repaireText:'Отделка значения не имеет', cardDescription:'Нужна трешка до 200 млн. Центр + ЗАО (Кутузовский до Парка Победы). Любое состояние.', telNumber:'+7 985 356 56 56',telLink:'tel:89853565656',messagesData:[{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'},{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'}, {ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'}, {ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'},{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'},{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'},{ImgPath:'Janna' }], agentData:{agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'два часа назад',agentCompany:'ARK Realty',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1',downloadInfo:['user1','user2','user3','user4','user5','user4','user1','user2','user3','user4','user5']}};
+
 
 block content
 	.container.container--left
 		.section-ui
 			.title Карточка новых запросов
 		.section-ui
-			.card-offer.card-offer--new
-				.card-description
-					.card-description-top
-						.offer-row.offer-row--swipe
-							.badge.badge--dark Новостройка
-							+badge-group(['ЦАО','Замоскворечье'])
-							+text-link('1-й Обыденский переулок, 12 стр. 1','cardData.addressHref', 'appartment-card--address')
-							.appartment--built.text-body.text-body--grey Сдан в 2014
-							+metro('Кропоткинская')
-							.appartment-page-link
-								.share-link-text Поделиться
-								+share-link
-								+tooltip('cardData.tooltipLink','cardData.mailAddress','cardData.pdfLink')
-						
-						.offer-row.offer-row--title
-							+link-title('3-комн. кв., 156 кв.м., 3/6 этаж', 'cardData.titleHref')(class="link-title--middle")
-							.appartment-card__price--num.headline-bold от 200 000 руб.
-							.appartment-card__price--area.text-body.text-body--grey 147 115 руб./кв.м
-							+repaire-item('С ремонтом')
+			+offer-card(newOffer3)
+		.section-ui
+			h4 Миксин карточки расположен по адресу src/pug/mixins/_offer-card.pug
+		.section-ui
+			pre.
+				+offer-card(newOffer3)
 
-						.offer-row.offer-row--info.text-body Ищу 1–2-комнатную квартиру в ЗАО до 92 млн. руб. Новый дом. Средний этаж. С ремонтом, в хорошем состоянии, чтобы можно было сразу въехать и жить. Другие районы и без отделки не предлагать.
-							span.text-hidden Ищу 1–2-комнатную квартиру в ЗАО до 92 млн. руб. Новый дом. Средний этаж. С ремонтом, в хорошем состоянии, чтобы можно было сразу въехать и жить. Другие районы и без отделки не предлагать.
-							.more
-								+text-link('Развернуть','#')
+				- var newOffer3 = {modif:'new',tooltipLink:'http://realtycat.pro/36732', mailAddress: 'info@mail.ru', pdfLink:'../img/test.pdf', badgeGroup:['ЦАО', 'ЗАО'],  appartmentRooms:'3-комн. кв., до 200 кв.м.',titleHref:'#', price:' от 200 000 000', repaireText:'Отделка значения не имеет', cardDescription:'Нужна трешка до 200 млн. Центр + ЗАО (Кутузовский до Парка Победы). Любое состояние.', telNumber:'+7 985 356 56 56',telLink:'tel:89853565656',messagesData:[{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'},{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'}, {ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'}, {ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'},{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'},{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'},{ImgPath:'Janna' }], agentData:{agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'два часа назад',agentCompany:'ARK Realty',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1',downloadInfo:['user1','user2','user3','user4','user5','user4','user1','user2','user3','user4','user5']}};
 
-						.offer-row.offer-row--tools
-							.appartment-card__toolbar
-								.appartment-card__toolbar-item
-									+button('+7 985 356 56 56', 'cardData.phoneLink', 'btn-tel contact-phone')
-								.appartment-card__toolbar-item
-									+link('В избранное','','icon-heart')(class="icon-heart--tablet item-favorite")
-									+link('В избранное','','icon-heart','fix-width')(class="icon-heart--desk item-favorite icon-heart--small")
-								.appartment-card__toolbar-item.appartment-card__toolbar-item--mail
-									a.text-link.text-link--line(href='#'+ 'cardData.mailAddress') Отправить электронной почтой
-									a(href='#')
-										+icon-mail
-								.icons-like
-									+icon-group({iconName:'icon-like', countNum:'45'})
-									+icon-group({iconName:'icon-dislike', countNum:'45'})
-					.row-line
-					
-					.card-description-chat
-						+comment("Anton",{author:'Антон Ленский,',authorLink:'#',time:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'})
-						+comment("Janna")
-				
-				.agent-card
-					+agent-info({agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'поделилась лотом два часа назад',agentCompany:'APK',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1',downloadInfo:['user1','user2','user3','user4'] })

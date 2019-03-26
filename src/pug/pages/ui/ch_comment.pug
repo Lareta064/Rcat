@@ -9,34 +9,10 @@ block content
 		.section-ui
 			.title Блок комментарии
 		.section-ui
-			.content-block
-				.ch-block
-					.ch-title-block
-						.ch-title-row
-							.ch-title
-								span.desk
-									+text-link('Развернуть предыдущие комментарии','#')
-								span.mb
-									+text-link('Развернуть комментарии','#')
-							.ch-subtitle
-								span.first еще
-								span.mob 2
-						.hidden-comments
-							+comment("Anton",{author:'Макс,',authorLink:'#',time:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'})
+			+messages([{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'} , {ImgPath:'Janna', author:'Антон Ленский,',authorLink:'#',publTime:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.' },{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'день назад',addClass:'text-link--line',text:'Алла, у меня есть несколько хороших вариантов, отправлю на почту через час.'},{ImgPath:'Janna'}])
 
-
-				+comment("Anton",{author:'Антон Ленский,',authorLink:'#',time:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'})
-
-				+comment("Anton",{author:'Антон Ленский,',authorLink:'#',time:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'})
-
-				+comment("Anton",{author:'Антон Ленский,',authorLink:'#',time:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'})
-
-				+comment("Janna")
-
+		.section-ui
+			h5 Миксин расположен по адресу  src/pug/mixins/_ch_comment.pug
 		.section-ui
 			pre.
-				+comment("Anton",{author:'Антон Ленский,',authorLink:'#',time:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'})
-
-				+comment("Janna")
-		.section-ui
-			+messages({item1:{ImgPath:'Anton',messageText:{author:'Антон Ленский,',authorLink:'#',publTime:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'} }, item2:{ImgPath:'Anton' },item3:{ImgPath:'Anton',messageText:{author:'Антон Ленский,',authorLink:'#',publTime:'день назад',addClass:'text-link--line',text:'Алла, у меня есть несколько хороших вариантов, отправлю на почту через час.'} }})
+				+messages([{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'} , {ImgPath:'Janna', author:'Антон Ленский,',authorLink:'#',publTime:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.' },{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'день назад',addClass:'text-link--line',text:'Алла, у меня есть несколько хороших вариантов, отправлю на почту через час.'},{ImgPath:'Janna'}])

@@ -1,40 +1,57 @@
-//-миксин для одного комментария
-mixin comment(imgPath,commentData)
-	if commentData
-		.message
-			.message-author
-				img(src="../img/message/"+imgPath+".png", alt="")
-			.message-block&attributes(attributes)
-				.message-top
-					+text-link(commentData.author,commentData.authorLink,commentData.addClass)
-					.message-time !{commentData.time}
-				.comment(contenteditable='true') #{commentData.text}
-	else
-		.message
-			.message-author
-				img(src="../img/message/"+imgPath+".png", alt="")
-			.message-block&attributes(attributes)
-				.comment(contenteditable='true')
 
-
-//-миксин блока комментариев
 mixin messages(messagesData)
 	.messages-block&attributes(attributes)
-		each item in messagesData
-			if item.messageText
+		if messagesData.length >2
+			each item, index in messagesData
+				if index <messagesData.length - 2
+					.message-hidden-items
+						.message
+							.message-author
+								img(src="../img/message/"+item.ImgPath+".png", alt="")
+							.message-block
+								.message-top
+									+text-link(item.author,item.authorLink,item.addClass)
+									.message-time !{item.publTime}
+								.comment(contenteditable='true') #{item.text}
+
+			.message-hidden-show
+				.message-hidden-show__title
+					span.desk
+						+text-link('Развернуть предыдущие комментарии','#')
+					span.mb
+						+text-link('Развернуть комментарии','#')
+				.message-hidden-show__subtitle
+					span.first еще
+					span.mob #{(messagesData.length - 2)}
+
+			each item, index in messagesData
+				if index >= messagesData.length - 2
+					.message
+						if item.author
+							.message-author
+								img(src="../img/message/"+item.ImgPath+".png", alt="")
+							.message-block
+								.message-top
+									+text-link(item.author,item.authorLink,item.addClass)
+									.message-time !{item.publTime}
+								.comment(contenteditable='true') #{item.text}
+						else
+							.message-author
+								img(src="../img/message/"+item.ImgPath+".png", alt="")
+							.message-block
+								.comment(contenteditable='true') #{item.text}
+
+		if messagesData.length <=2
+			each item in messagesData
 				.message
 					.message-author
 						img(src="../img/message/"+item.ImgPath+".png", alt="")
 					.message-block
-						.message-top
-							+text-link(item.messageText.author,item.messageText.authorLink,item.messageText.addClass)
-							.message-time !{item.messageText.publTime}
-						.comment(contenteditable='true') #{item.messageText.text}
-			else
-				.message
-					.message-author
-						img(src="../img/message/"+item.ImgPath+".png", alt="")
-					.message-block
-						.comment(contenteditable='true')
+						if item.author
+							.message-top
+								+text-link(item.author,item.authorLink,item.addClass)
+								.message-time !{item.publTime}
+						.comment(contenteditable='true') #{item.text}
+
 
 

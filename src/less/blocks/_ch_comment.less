@@ -18,14 +18,17 @@
 	}
 }
 
-.ch-title-row{
+.message-hidden-show{
 	display: flex;
 	padding-bottom: 35px;
-	width: 100%;
-
+	cursor:pointer;
+	padding-right: 10px;
+	@media(min-width: 768px){
+		padding-right: 0;
+		display: inline-flex;}
 }
 
-.ch-title{
+.message-hidden-show__title{
 	span.desk{
 		padding-right: 9px;
 		display: none;
@@ -42,7 +45,7 @@
 	}
 }
 
-.ch-subtitle{
+.message-hidden-show__subtitle{
 	display: flex;
 	text-align: center;
 	margin-left: auto;
@@ -103,6 +106,7 @@
 	display: flex;
 
 }
+.message-hidden-items{margin-bottom: 20px;}
 
 .message-top{
 	display: block;
@@ -219,4 +223,9 @@
 
 .ch-title-row-hidden{
 	display: none;
+}
+//-----//
+.message-hidden-items{
+	display: none;
+
 }
