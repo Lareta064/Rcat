@@ -28,7 +28,7 @@ $(document).ready(function() {
 
 	textShowLink.click(function(e){
 		e.preventDefault();
-		$(this).siblings('.text-hidden').fadeIn(500);
+		$(this).siblings('.text-hidden').fadeIn(800);
 		$(this).parent('.offer-row--info').removeClass('fadeOut');
 		$(this).css('display','none');
 
