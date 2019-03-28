@@ -13,6 +13,7 @@ mixin messages(messagesData)
 									+text-link(item.author,item.authorLink,item.addClass)
 									.message-time !{item.publTime}
 								.comment(contenteditable='true') #{item.text}
+								
 
 			.message-hidden-show
 				.message-hidden-show__title
@@ -35,11 +36,15 @@ mixin messages(messagesData)
 									+text-link(item.author,item.authorLink,item.addClass)
 									.message-time !{item.publTime}
 								.comment(contenteditable='true') #{item.text}
+								//- .message-send
+								//- 	i.fas.fa-paper-plane
 						else
 							.message-author
 								img(src="../img/message/"+item.ImgPath+".png", alt="")
 							.message-block
 								.comment(contenteditable='true') #{item.text}
+								.message-send
+									i.fas.fa-paper-plane
 
 		if messagesData.length <=2
 			each item in messagesData
@@ -52,6 +57,8 @@ mixin messages(messagesData)
 								+text-link(item.author,item.authorLink,item.addClass)
 								.message-time !{item.publTime}
 						.comment(contenteditable='true') #{item.text}
+						.message-send
+							i.fas.fa-paper-plane
 
 
 
