@@ -109,7 +109,9 @@
 .message-hidden-items{margin-bottom: 20px;}
 
 .message-top{
-	display: block;
+	// display: block;
+
+	display: flex;
 	margin-bottom: 12px;
 
 	@media(min-width: 768px){
@@ -134,6 +136,10 @@
 .message-author{
 		display: none;
 
+		background: url(../../img/message/profile.png);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 		@media(min-width: 768px){
 			display: block;
 			margin-right: 11px;
@@ -142,8 +148,26 @@
 			min-width: 34px;
 			height: 34px;
 		}
+		img{
+			min-width: 34px;
+			background-color: #fff;
+		}
 }
+.message-author--mob{
+	display: block;
+	margin-right: 20px;
+	min-width: 34px;
+	height: 34px;
+	@media(min-width: 768px){
+		display: none;
 
+	}
+}
+.message-author-name{
+	display:flex;
+	flex-direction: column;
+	@media(min-width: 768px){flex-direction: row;}
+}
 .comment{
 	padding-right: 15px;
 	font-size: 16px;
