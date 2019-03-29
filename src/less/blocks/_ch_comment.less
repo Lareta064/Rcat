@@ -80,20 +80,21 @@
 }
 
 .message-block{
+	max-width: 100%;
 	display: block;
 	margin-bottom: 20px;
-	max-width: 700px;
 	border-radius: 10px;
-
+	position: relative;
 	@media(min-width: 768px){
+	max-width: 700px;
 	// display: flex;
 	position: relative;
 	height: 100%;
 	padding-top: 12px;
 	padding-bottom: 12px;
 	background-color: #f2f3f7;
-
 	}
+	
 }
 
 .messages-block .message:last-child{
@@ -145,15 +146,15 @@
 }
 
 .comment{
-	padding-right: 15px;
+	padding-right: 35px;
 	font-size: 16px;
 	outline: none;
 	background-color: transparent;
-
 	border-radius: 10px;
 	padding-top: 12px;
 	padding-bottom: 12px;
-
+	min-width: 300px;
+	white-space: pre-wrap;
 	@media(min-width: 768px){
 	position: relative;
 	// min-height: 40px;
@@ -168,8 +169,11 @@
 	cursor: text;
 	padding-top: 0;
 	padding-bottom: 0;
+	padding-right: 45px;
+	
 	}
 }
+
 .comment:empty{
 	max-height: 48px;
 	border:1px solid @lightBorder;
@@ -251,3 +255,18 @@
 	display: none;
 
 }
+
+.message-send{
+	position: absolute;
+	cursor: pointer;
+	bottom: 11px;
+	right: 20px;
+	z-index: 10;
+	color: @lightGrey;	
+	transition:.5s;
+	svg{font-size: 20px;}
+}
+
+.message-send:hover{
+	opacity: 0.5;
+} 
