@@ -82,13 +82,16 @@ mixin offer-card(cardObject)
 							.icons-like
 								+icon-group({iconName:'icon-like', countNum:'45'})
 								+icon-group({iconName:'icon-dislike', countNum:'45'})
+			
+			.agent-card.agent-card-mob
+				+agent-info(cardObject.agentData)
 
 			if cardObject.messagesData
 				.row-line
 				.card-description-chat
 					+messages(cardObject.messagesData)
 
-		.agent-card
+		.agent-card.agent-card-desk
 			+agent-info(cardObject.agentData)
 
 
