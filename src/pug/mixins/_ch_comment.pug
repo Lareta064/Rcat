@@ -1,4 +1,3 @@
-
 mixin messages(messagesData)
 	.messages-block&attributes(attributes)
 		if messagesData.length >2
@@ -10,17 +9,13 @@ mixin messages(messagesData)
 								img(src="../img/message/"+item.ImgPath+".png", alt="")
 							.message-block
 								.message-top
-
 									.message-author.message-author--mob
 										img(src="../img/message/"+item.ImgPath+".png", alt="")
 									.message-author-name
 										+text-link(item.author,item.authorLink,item.addClass)
 										.message-time !{item.publTime}
-
-									+text-link(item.author,item.authorLink,item.addClass)
-									.message-time !{item.publTime}
-
-
+									//- +text-link(item.author,item.authorLink,item.addClass)
+									//- .message-time !{item.publTime}
 								.comment(contenteditable='true') #{item.text}
 
 
@@ -47,8 +42,11 @@ mixin messages(messagesData)
 									.message-author-name
 										+text-link(item.author,item.authorLink,item.addClass)
 										.message-time !{item.publTime}
+									//- +text-link(item.author,item.authorLink,item.addClass)
+									//- .message-time !{item.publTime}
 								.comment(contenteditable='true') #{item.text}
-
+								//- .message-send
+								//- 	i.fas.fa-paper-plane
 						else
 							.message-author
 								img(src="../img/message/"+item.ImgPath+".png", alt="")
@@ -56,7 +54,6 @@ mixin messages(messagesData)
 								.comment(contenteditable='true') #{item.text}
 								.message-send
 									i.fas.fa-paper-plane
-
 
 		if messagesData.length <=2
 			each item, index in messagesData
@@ -66,22 +63,19 @@ mixin messages(messagesData)
 					.message-block
 						if item.author
 							.message-top
-
 								.message-author.message-author--mob
 										img(src="../img/message/"+item.ImgPath+".png", alt="")
 								.message-author-name
 									+text-link(item.author,item.authorLink,item.addClass)
 									.message-time !{item.publTime}
+								//- +text-link(item.author,item.authorLink,item.addClass)
+								//- .message-time !{item.publTime}
 							.comment(contenteditable='true') #{item.text}
-
-
-
-								+text-link(item.author,item.authorLink,item.addClass)
-								.message-time !{item.publTime}
-
-							.comment(contenteditable='true') #{item.text}
-						if index == messagesData.length -1
+						if index==messagesData.length -1
 							//- each item in messagesData
 							.comment(contenteditable='true') #{item.text}
 							.message-send
 								i.fas.fa-paper-plane
+
+
+
