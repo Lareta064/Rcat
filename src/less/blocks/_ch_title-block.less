@@ -4,9 +4,13 @@
 	justify-content: space-between;
 	align-items: flex-start;
 	padding-left: 15px;
+
 	@media(min-width: 360px){width: 100%;}
 
-	@media(min-width: 768px){align-items: center;}
+	@media(min-width: 768px){
+		padding-right: 19px;
+		align-items: center;
+	}
 
 	.section-top__link{
 		padding-top: 16px;
@@ -155,6 +159,11 @@
 	font-weight: 700;
 	color: @black;
 	padding-bottom: 7px;
+	@media(min-width: 768px){padding-top: 12px;}
+	@media(min-width: 992px){padding-top: 0px;}
+
+
+
 }
 .chat-title__filters-bg{
 	display: none;
