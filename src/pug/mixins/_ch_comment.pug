@@ -12,6 +12,7 @@ mixin messages(messagesData)
 								.message-top
 									+text-link(item.author,item.authorLink,item.addClass)
 									.message-time !{item.publTime}
+
 								.comment(contenteditable='true') #{item.text}
 
 			.message-hidden-show
@@ -35,14 +36,16 @@ mixin messages(messagesData)
 									+text-link(item.author,item.authorLink,item.addClass)
 									.message-time !{item.publTime}
 								.comment(contenteditable='true') #{item.text}
+
 						else
 							.message-author
 								img(src="../img/message/"+item.ImgPath+".png", alt="")
 							.message-block
 								.comment(contenteditable='true') #{item.text}
+								.message-send
 
 		if messagesData.length <=2
-			each item in messagesData
+			each item, index in messagesData
 				.message
 					.message-author
 						img(src="../img/message/"+item.ImgPath+".png", alt="")
@@ -51,7 +54,9 @@ mixin messages(messagesData)
 							.message-top
 								+text-link(item.author,item.authorLink,item.addClass)
 								.message-time !{item.publTime}
-						.comment(contenteditable='true') #{item.text}
 
+							.comment(contenteditable='true') #{item.text}
 
-
+						if index == messagesData.length -1
+							.comment(contenteditable='true') #{item.text}
+							.message-send
