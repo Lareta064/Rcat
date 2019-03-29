@@ -61,17 +61,17 @@
 	padding-bottom: 20px;
 	padding-left: 20px;
 	// padding-top: 20px;
-	padding-right: 28px;
+	padding-right: 20px;
 
 	.appartment-card--address{margin-right: 15px;}
 
-    .badge{margin-right: 10px;}
+	.badge{margin-right: 10px;}
 
-    .metro-block{
-    	@media(min-width:768px){padding-right: 10px;}
-    }
+	.metro-block{
+		@media(min-width:768px){padding-right: 10px;}
+	}
 
-    .appartment-page-link{
+	.appartment-page-link{
     	// position: relative;
     	// top: auto;
     	// right: auto;
@@ -79,9 +79,9 @@
     	.share-link-text{display: none;}
     }
 
-	.appartment-card__toolbar{width: 100%;}
-
-
+    .appartment-card__toolbar{
+    	width: 100%;
+    }
 }
 
 .offer-row--swipe{
@@ -202,7 +202,7 @@
 	margin-left: auto;
 
 	.icon-group{
-		display: none;
+		// display: none;
 		@media(min-width:768px){
 			display: flex;
 		}
@@ -236,6 +236,10 @@
 }
 
 .offer-row--tools{
+	.appartment-card__toolbar{
+		flex-wrap: wrap;
+		@media(min-width:480px){flex-wrap: nowrap;}
+	}
 	.appartment-card__toolbar-item--mail{
 		padding-right: 0;
 		@media(min-width:768px){
@@ -251,6 +255,24 @@
 		padding-right: 20px;
 		@media(min-width:768px){
 			padding-right: 28px;
+		}
+	}
+
+	.appartment-card__toolbar-item--btn{
+		width: 100%;
+		margin-bottom: 20px;
+		
+		@media(min-width:480px){
+			padding-right: 28px;
+			flex-grow: inherit;
+			width: auto;
+			margin-bottom: 0;
+		}
+		
+		a{width: 100%;
+			@media(min-width:768px){
+				width: auto;
+			}
 		}
 	}
 }
@@ -300,3 +322,4 @@
 	.repaire-item-box{display: flex;}
 	@media(min-width: 768px){display: none;}
 }
+
