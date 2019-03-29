@@ -47,7 +47,7 @@ mixin messages(messagesData)
 									i.fas.fa-paper-plane
 
 		if messagesData.length <=2
-			each item in messagesData
+			each item, index in messagesData
 				.message
 					.message-author
 						img(src="../img/message/"+item.ImgPath+".png", alt="")
@@ -56,9 +56,12 @@ mixin messages(messagesData)
 							.message-top
 								+text-link(item.author,item.authorLink,item.addClass)
 								.message-time !{item.publTime}
-						.comment(contenteditable='true') #{item.text}
-						.message-send
-							i.fas.fa-paper-plane
+							.comment(contenteditable='true') #{item.text}
+						if index==messagesData.length -1
+							//- each item in messagesData
+							.comment(contenteditable='true') #{item.text}
+							.message-send
+								i.fas.fa-paper-plane
 
 
 
