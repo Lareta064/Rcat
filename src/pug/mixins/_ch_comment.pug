@@ -10,8 +10,16 @@ mixin messages(messagesData)
 								img(src="../img/message/"+item.ImgPath+".png", alt="")
 							.message-block
 								.message-top
+
+									.message-author.message-author--mob
+										img(src="../img/message/"+item.ImgPath+".png", alt="")
+									.message-author-name
+										+text-link(item.author,item.authorLink,item.addClass)
+										.message-time !{item.publTime}
+
 									+text-link(item.author,item.authorLink,item.addClass)
 									.message-time !{item.publTime}
+
 
 								.comment(contenteditable='true') #{item.text}
 
@@ -34,8 +42,11 @@ mixin messages(messagesData)
 								img(src="../img/message/"+item.ImgPath+".png", alt="")
 							.message-block
 								.message-top
-									+text-link(item.author,item.authorLink,item.addClass)
-									.message-time !{item.publTime}
+									.message-author.message-author--mob
+										img(src="../img/message/"+item.ImgPath+".png", alt="")
+									.message-author-name
+										+text-link(item.author,item.authorLink,item.addClass)
+										.message-time !{item.publTime}
 								.comment(contenteditable='true') #{item.text}
 
 						else
@@ -55,6 +66,16 @@ mixin messages(messagesData)
 					.message-block
 						if item.author
 							.message-top
+
+								.message-author.message-author--mob
+										img(src="../img/message/"+item.ImgPath+".png", alt="")
+								.message-author-name
+									+text-link(item.author,item.authorLink,item.addClass)
+									.message-time !{item.publTime}
+							.comment(contenteditable='true') #{item.text}
+
+
+
 								+text-link(item.author,item.authorLink,item.addClass)
 								.message-time !{item.publTime}
 
