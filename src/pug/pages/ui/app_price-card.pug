@@ -1,0 +1,29 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Цена квартиры';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.section-ui
+			.title Цена квартиры
+		.section-ui
+
+			.appartment-price
+				.appartment-page-link
+					.share-link-text Поделиться
+					+share-link
+					+tooltip('http://realtycat.pro/36732', 'mailto:info@mail.ru', '../img/test.pdf')
+				.appartment-price__row.appartment-price__row-title
+					.appartment-price__title.headline-bold 63 000 000 руб.
+				.appartment-price__row.appartment-price__row-subtitle
+					.appartment-price__usd $954 646 
+					.appartment-price__area.text-body.text-body--grey 840 000 руб./кв.м
+				.appartment-price__row.appartment-price__btn
+					+button('Показать телефон', '#','button--basic')
+				.appartment-price__row.appartment-price__message
+					.appartment-price__message-title Написать сообщение
+					form(method='post', action='')
+						textarea.appartment-price__textarea(name="appartment-price__textarea" autofocus='' placeholder='Написать сообщение' rows='3')
+				

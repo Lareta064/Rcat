@@ -1,0 +1,121 @@
+.appartment-price{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	position: relative;
+	@media(min-width: 768px){
+		margin-top: 30px;
+		margin-bottom: 0;
+		max-width: 410px;
+		// max-height: 304px;
+		border: 1px solid @lightBorder;
+		border-radius: 5px;
+		background-color: @white;
+		padding: 16px;
+	}
+
+	.appartment-page-link{
+		display: none;
+		@media(min-width: 768px){
+			display: block;
+			top: 24px;
+			// right: 0;
+		}
+	}
+	.share-link-text{
+		display: none;
+	}
+}
+
+.appartment-price__row-title{
+	display: flex;
+
+	@media(min-width: 768px){
+		padding-bottom: 0;	
+	}
+
+	.appartment-price__title{
+		position: relative;
+		display: block;
+		font-size: 24px;
+		border: 1px solid @lightBorder;
+		background-color: @white;
+		border-radius: 0 10px 10px 0;
+		padding-left: 30px;
+		padding-top: 18px;
+		width: 274px;
+		height: 60px;	
+		left: -16px;
+		@media(min-width: 768px){
+			left: 0;
+			line-height: normal;
+			height:auto;
+			padding-left: 0;
+			padding-top: 0;
+			padding-bottom: 8px;
+			font-size: 30px;
+			border: none;
+			margin-top: 0;
+		}
+	}	
+}
+
+
+.appartment-price__row-subtitle{
+	display: flex;
+    align-items: center;
+    padding-bottom: 17px;
+    padding-top: 16px;
+    @media(min-width: 768px){
+    	padding-top: 0;
+    }
+
+	.appartment-price__usd{
+		font-size: 20px;
+		font-weight: 700;
+		color: @black;
+		padding-right: 20px;
+	}
+
+	.text-body--grey{
+		font-weight: 700;
+	}
+}
+
+.appartment-price__btn{
+	padding-bottom: 20px;
+	@media(min-width: 768px){
+	padding-bottom: 26px;
+	}
+}
+
+.appartment-price__message{
+
+	.appartment-price__message-title{
+		display: none;
+		@media(min-width: 768px){
+			display: block;
+		}
+	}
+
+	.appartment-price__textarea{
+		width: 100%;
+		padding: 20px;
+		outline: none;
+		border: 1px solid @lightBorder;
+		border-radius: 5px;
+		min-height: 60px;
+		resize: none;
+		
+		@media(min-width: 768px){
+			min-height: 100px;	
+			margin-bottom: 0;		
+		}		
+	}
+}
+
+.appartment-price__textarea::placeholder{
+	color: #aaaaaa;
+	@media(min-width: 768px){
+		color: transparent;
+	}
+}
