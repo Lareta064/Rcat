@@ -1,0 +1,177 @@
+.section-top--chat-title{
+	width: 62%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding-left: 15px;
+
+	@media(min-width: 360px){width: 100%;}
+
+	@media(min-width: 768px){
+		padding-right: 19px;
+		align-items: center;
+	}
+
+	.section-top__link{
+		padding-top: 16px;
+		display: flex;
+		align-items:center ;
+		.icon-fire{
+			display: none;
+			margin-right: 6px;
+			@media(min-width: 768px){
+				padding-top: 0;
+				display: block;
+			}
+		}
+	}
+
+	.text-link{
+		display: flex;
+		.text-link--mob{
+			display: none;
+			@media(min-width: 992px){display:block; }
+
+		}
+	}
+
+}
+
+.chat-title__filters{
+	background-color: @bgChatPage;
+	padding: 20px;
+	padding-bottom: 40px;
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 40px;
+	.input-block{
+		position: relative;
+		z-index: 2;
+		@media(min-width: 768px){padding-bottom: 0;}
+
+	}
+	@media(min-width: 768px){padding-bottom: 28px;}
+}
+.chat-title__filters-top{
+	padding-bottom: 27px;
+	display: inline-block;
+	position: relative;
+}
+.chat-title__filters-title{
+	font-size: 20px;
+	color: @darkTitle;
+	line-height: 1.5;
+	font-weight: 700;
+}
+.help-link{
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 6px;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background-color: @white;
+	color:@btnBg;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 12px;
+	@media(min-width: 1200px){
+		top: auto;
+		transform: translateX(150%);
+		bottom: 28px;
+	}
+
+}
+.chat-title__filters-inputs{
+	display: flex;
+	flex-direction: column;
+	// align-items: flex-end;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	input{width: 100%;}
+	@media(min-width: 768px){
+		flex-direction: row;
+		align-items: flex-end;
+		input[name='appart-areas']{
+			min-width: 250px;
+		}
+		input[name='appart-price']{
+			min-width: 250px;
+		}
+		input[name='appart-address']{
+			min-width: 470px;
+		}
+
+	}
+		@media(min-width: 992px){
+		input[name='appart-areas']{
+			min-width: 210px;
+		}
+		input[name='appart-price']{
+			min-width: 210px;
+		}
+		input[name='appart-address']{
+			min-width: 400px;
+		}
+	}
+		@media(min-width: 1200px){
+		input[name='appart-areas']{
+			min-width: 200px;
+		}
+		input[name='appart-price']{
+			min-width: 200px;
+		}
+		input[name='appart-address']{
+			min-width: 440px;
+		}
+
+	}
+	@media(min-width: 1350px){
+		input[name='appart-areas']{
+			min-width: 210px;
+		}
+		input[name='appart-price']{
+			min-width: 230px;
+		}
+		input[name='appart-address']{
+			min-width: 605px;
+		}
+
+	}
+	.button--basic{
+		z-index: 10;
+		@media(min-width: 992px){
+			margin-left: auto;
+			margin-top: 20px;
+		}
+		@media(min-width: 1200px){
+			margin-left: 0;
+			margin-top: 0px;
+		}
+	}
+
+}
+.chat-title__filters-item-title{
+	font-size: 12px;
+	font-weight: 700;
+	color: @black;
+	padding-bottom: 7px;
+	@media(min-width: 768px){padding-top: 12px;}
+	@media(min-width: 992px){padding-top: 0px;}
+
+
+
+}
+.chat-title__filters-bg{
+	display: none;
+
+	position: absolute;
+	bottom: -95px;
+	right: 87px;
+	svg{width: 175px;}
+	z-index: 1;
+	@media(min-width: 1200px){display: block;}
+}

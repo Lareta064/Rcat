@@ -1,0 +1,81 @@
+mixin messages(messagesData)
+	.messages-block&attributes(attributes)
+		if messagesData.length >2
+			each item, index in messagesData
+				if index <messagesData.length - 2
+					.message-hidden-items
+						.message
+							.message-author
+								img(src="../img/message/"+item.ImgPath+".png", alt="")
+							.message-block
+								.message-top
+									.message-author.message-author--mob
+										img(src="../img/message/"+item.ImgPath+".png", alt="")
+									.message-author-name
+										+text-link(item.author,item.authorLink,item.addClass)
+										.message-time !{item.publTime}
+									//- +text-link(item.author,item.authorLink,item.addClass)
+									//- .message-time !{item.publTime}
+								.comment(contenteditable='true') #{item.text}
+
+
+			.message-hidden-show
+				.message-hidden-show__title
+					span.desk
+						+text-link('Развернуть предыдущие комментарии','#')
+					span.mb
+						+text-link('Развернуть комментарии','#')
+				.message-hidden-show__subtitle
+					span.first еще
+					span.mob #{(messagesData.length - 2)}
+
+			each item, index in messagesData
+				if index >= messagesData.length - 2
+					.message
+						if item.author
+							.message-author
+								img(src="../img/message/"+item.ImgPath+".png", alt="")
+							.message-block
+								.message-top
+									.message-author.message-author--mob
+										img(src="../img/message/"+item.ImgPath+".png", alt="")
+									.message-author-name
+										+text-link(item.author,item.authorLink,item.addClass)
+										.message-time !{item.publTime}
+									//- +text-link(item.author,item.authorLink,item.addClass)
+									//- .message-time !{item.publTime}
+								.comment(contenteditable='true') #{item.text}
+								//- .message-send
+								//- 	i.fas.fa-paper-plane
+						else
+							.message-author
+								img(src="../img/message/"+item.ImgPath+".png", alt="")
+							.message-block
+								.comment(contenteditable='true') #{item.text}
+								.message-send
+									i.fas.fa-paper-plane
+
+		if messagesData.length <=2
+			each item, index in messagesData
+				.message
+					.message-author
+						img(src="../img/message/"+item.ImgPath+".png", alt="")
+					.message-block
+						if item.author
+							.message-top
+								.message-author.message-author--mob
+										img(src="../img/message/"+item.ImgPath+".png", alt="")
+								.message-author-name
+									+text-link(item.author,item.authorLink,item.addClass)
+									.message-time !{item.publTime}
+								//- +text-link(item.author,item.authorLink,item.addClass)
+								//- .message-time !{item.publTime}
+							.comment(contenteditable='true') #{item.text}
+						if index==messagesData.length -1
+							//- each item in messagesData
+							.comment(contenteditable='true') #{item.text}
+							.message-send
+								i.fas.fa-paper-plane
+
+
+

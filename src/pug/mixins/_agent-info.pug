@@ -1,0 +1,24 @@
+mixin agent-info(agentData)
+	.agent-info&attributes(attributes)
+		.agent-info-content
+			.agent-info-text
+				.agent-name
+					+text-link(agentData.agentName,agentData.agentPageLink,agentData.agentClass)
+				.posted-time !{agentData.postedTime}
+				.agent-company
+					+text-link(agentData.agentCompany,agentData.agentCompanyLink,agentData.CompanyLinkClass)
+			if agentData.agentAvatar
+				.agent-info-img
+					img(src="../img/agents/"+ agentData.agentAvatar +".jpg", alt="agent")
+			else
+				.agent-info-img
+		if agentData.downloadInfo
+			.agent-info-download
+				.agent-info-download-num
+					- for (var i = 0; i < agentData.downloadInfo.length && i<6; i++)
+						.download-num-item
+							img(src="../img/agents/"+ agentData.downloadInfo[i] +".jpg", alt="user")
+							if i==5 && agentData.downloadInfo.length > 6
+								.download-num-item-last
+									span #{(agentData.downloadInfo.length - 6)}
+				.text-body.text-body--grey Скачали #{(agentData.downloadInfo.length )} человек

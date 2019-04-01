@@ -19,15 +19,16 @@
 	height: 141px;
 	background-color: @white;
 
-	padding-top: 2rem;
+	padding-top: 18px;
 	padding-bottom: 2rem;
 	@media(min-width: 768px){
+		padding-top: 2em;
 		align-items: center;
 		flex-direction: row;
 		height: 80px;
 	}
 	.logoblock{
-		margin-bottom: 2.3rem;
+		margin-bottom: 1.8rem;
 		margin-right: 2.5rem;
 		@media(min-width: 768px){margin-bottom: 0px;}
 	}
@@ -95,13 +96,20 @@
 		margin-right: 2.2rem;
 		margin-bottom: 0;
 	}
+	.header__icon-group__item--add{
+		margin-right: -32px;
+		// order:-1;
+		@media(min-width: 768px){
+
+			margin-right: 20px;}
+
+	}
 }
 .header__icon-group__item{padding-bottom: 8px;}
 .header__icon-group__item:hover{
 	border-bottom: 2px solid @activeIcon;
 	padding-bottom: 6px;
-	.icon-dashboard,
-	.icon-search,
+	i,
 	.icon-heart{
 		path{fill:@activeIcon;}
 
@@ -110,6 +118,7 @@
 
 		fill:@activeIcon;
 	}
+
 }
 .header__icon-group__item:not(:last-child){
 	margin-right: 32px;

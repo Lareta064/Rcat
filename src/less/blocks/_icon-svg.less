@@ -164,3 +164,38 @@ i{
 	opacity: .7;
 }
 
+.icon-group{
+	display: inline-flex;
+	cursor:pointer;
+	align-items: flex-end;
+	font-size: 14px;
+	color: @lightGrey;
+	font-weight: 700;
+	.icon-group__icon{margin-right: 6px;}
+
+}
+.icon-group.group--icon-like{
+	position: relative;
+	bottom: 4px;
+	.icon-group__num--color{color:@greenBg; }
+	&:hover{
+		.icon-like{
+			use{fill:@greenBg;}
+		}
+	}
+	.icon-group{use{fill:@lightGrey;}}
+	.clicked{use{fill:@greenBg;}}
+}
+.icon-group.group--icon-dislike{
+	.icon-group__num--color{color:@redText; }
+	&:hover{
+		.icon-dislike{
+			use{fill:@redText;}
+		}
+	}
+	.icon-group__num{padding-bottom: 4px;}
+	.icon-group{use{fill:@lightGrey;}}
+	.clicked{use{fill:@redText;}}
+
+
+}
