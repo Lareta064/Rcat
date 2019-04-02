@@ -3,3 +3,9 @@ mixin fotorama(items)
 		each item in items
 			a(href='../img/appartments/'+ item.bigFoto +'.jpg')
 				img(src='../img/appartments/'+ item.miniFoto +'.jpg')
+
+mixin appartment-fotorama(items)
+	.fotorama(data-nav="thumbs" data-width='100%' data-ratio='830/572')&attributes(attributes)
+		each item in items
+			a(href=''+ item.bigFoto +'.jpg' )
+				img(src=''+ item.miniFoto +'.jpg' width='90px' height='70px')
