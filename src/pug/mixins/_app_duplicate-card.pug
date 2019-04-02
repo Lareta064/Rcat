@@ -1,0 +1,95 @@
+mixin appartment-duplicate-card(cardData)
+	.appartment-card
+		.appartment-page-link
+			.share-link-text Поделиться
+			+share-link
+			+tooltip(cardData.tooltipLink,cardData.mailAddress,cardData.pdfLink)
+		.appartment-publication.text-body--grey !{cardData.publicDate}
+		if cardData.fotorama
+			.appartment-card__img
+				+fotorama(cardData.fotorama)
+		else
+			.appartment-card__img.appartment-card__img--empty
+		.appartment-card__content
+			.appartment-card__row.appartment-card__row--header
+				.appartment-card__title
+					+link-title(cardData.title, cardData.titleHref)(class="link-title--middle")
+
+				.appartment-card__price
+					if cardData.priceDown
+						.appartment-card__price-block.d-flex
+							.appartment-card__price--num.headline-bold !{cardData.price} руб.
+							+icon-price-down
+					else
+						.appartment-card__price--num.headline-bold !{cardData.price} руб.
+					.appartment-card__price--area.text-body.text-body--grey #[b !{cardData.areaPrice} руб./кв.м]
+						+icon-brach(class='icon-brach--hidden')
+
+			.appartment-card__row.appartment-card__row--transform
+				.appartment-card__row-col.d-flex
+					if cardData.darkBadge
+						.badge.badge--dark #{cardData.darkBadge}
+					.appartment-card--link-title
+						+link-title(cardData.hcName , cardData.hcHref)
+					.appartment--built.text-body.text-body--grey !{cardData.appartBuilt}
+				+metro(cardData.metroName)
+
+			.appartment-card__row.pl-0.appartment-card__row--badges
+				+badge-group(cardData.region)
+				+text-link(cardData.address,cardData.addressHref, 'appartment-card--address')
+				+repaire-item(cardData.repaireText)
+
+			.appartment-card__row.appartment-card__row--description
+				.appartment-card__text-box.appartment-card__truncate-text
+					div.text-part !{cardData.paragrafe1}
+					div.text-part !{cardData.paragrafe2}
+					div.text-part !{cardData.paragrafe3}
+					div.text-part !{cardData.paragrafe4}
+			.appartment-card__row.appartment-card__row--toolbar.pl-0
+				.appartment-card__toolbar.d-flex
+					.appartment-card__toolbar-item
+						+button(cardData.phoneNumber, cardData.phoneLink, 'btn-tel contact-phone')
+					.appartment-card__toolbar-item
+						+link('В избранное','','icon-heart')(class="icon-heart--tablet item-favorite")
+						+link('В избранное','','icon-heart','fix-width')(class="icon-heart--desk item-favorite icon-heart--small")
+					.appartment-card__toolbar-item.appartment-card__toolbar-item--mail
+						a.text-link.text-link--line(href='mailto:'+ cardData.mailAddress) Отправить электронной почтой
+						a(href='mailto:'+ cardData.mailAddress)
+							+icon-mail
+					.appartment-card__toolbar-item.appartment-card__toolbar-item--pdf
+						a.text-link.text-link--line(href=''+ cardData.pdfLink download) Скачать ПДФ
+
+	.appartment-card.appartment-card--mobile
+		.appartment-card__img
+			if cardData.apprtPhotoBlock
+				+appartment-photo(cardData.apprtPhotoBlock)
+			else
+				img.cat-placeholder(src="../img/appartments/cat-placeholder.jpg", alt="")
+		.appartment-content--mobile
+			.appartment-content--mobile-row.pt-16
+				+link-title(cardData.title, cardData.titleHref)
+				if cardData.repaireText == 'С ремонтом'
+					.appartment-card--mobile-repaire-icon
+						+brach-white
+			.appartment-content--mobile-row
+				.text-body !{cardData.hcName }
+			.appartment-content--mobile-row
+				.appartment-card__price
+					if cardData.priceDown
+						.appartment-card__price-block.d-flex
+							.appartment-card__price--num.headline-bold !{cardData.price} руб.
+							+icon-price-down
+					else
+						.appartment-card__price--num.headline-bold !{cardData.price} руб.
+
+			.appartment-content--mobile-row.d-flex.mobile-row--price
+				.appartment-card__price--usd $!{cardData.priceUsd}
+				.appartment-card__price--area.text-body.text-body--grey !{cardData.areaPrice} руб./кв.м
+
+			.appartment-card__toolbar
+				.appartment-card__toolbar-item
+					+button(cardData.phoneNumber, cardData.phoneLink, 'btn-tel contact-phone')
+				.appartment-card__toolbar-item.appartment-card__toolbar-icons.d-flex
+					a(href='mailto:'+ cardData.mailAddress)
+						+icon-mail
+					+link('В избранное','','icon-heart')(class=" item-favorite")
