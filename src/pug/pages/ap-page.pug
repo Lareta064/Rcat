@@ -4,4 +4,10 @@ block variables
 	- var title = 'Страница квартиры';
 
 block content
+	header.header
+		+header('avatar','Иван Марасин')
+	section.title-block.title-block--appartment-page
+		include ../sections/app_appartment-title-block.pug
+	section.option-panel-wrapper
+		+option-panel
 	include ../sections/app_appartment-description.pug
