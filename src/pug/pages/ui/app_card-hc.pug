@@ -1,0 +1,38 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Карточка ЖК';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.section-ui
+			.title Карточка ЖК
+		.section-ui
+			.hc-card
+				.hc-card-row
+					.hc-card-row__item.hc-card-row__item-img
+						img(src="../img/app-card-hc/BarrinHouse.jpg", alt="ЖК “Barrin House”")
+					.hc-card-row__item.hc-card-row__title
+						.row-text-title
+							+link-title('ЖК “Barrin House”', '#')  
+							.text-body.text-body--grey ЖК «Барин хаус»
+						.row-text-subtitle
+							+badge-group(['ЦАО','Хамовники'])
+							+text-link('Малая Пироговская улица, 8','#')
+						+metro-station('icon-metro','Новокузнецcкая',' 5 минут','icon-man')
+				.hc-card-description Шесть элитных домов с индивидуальным оформлением фасадов и роскошными квартирами.
+		//- 				.hc-card-row-info
+		//- 					.hc-card-row__info
+		//- 						.headline-bold от&nbsp;23&nbsp;339&nbsp;642&nbsp;руб.
+		//- 						.text-body стоимость квартир
+		//- 					.hc-card-row__info
+		//- 						.headline-bold 53–187 кв.м
+		//- 						.text-body площадь квартир
+		//- 					.hc-card-row__info
+		//- 						.headline-bold 3,1 м
+		//- 						.text-body потолки
+		//- 					.hc-card-row__badge
+		//- 							+bag-badge('48', '116')
+		//- 				.hc-card-row-
+		//- 

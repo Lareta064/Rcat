@@ -1,0 +1,99 @@
+.hc-card{
+	display: block;
+	
+	@media(min-width: 768px){
+		// display: flex;
+		max-width: 850px;
+		min-height: 450px;
+		background-color: @white;
+		border-radius: 5px;  
+		padding: 15px 15px 20px 15px;   
+	}
+}
+
+.hc-card-row{
+	display: block;
+	padding: 25px;
+	@media(min-width: 768px){
+		padding: 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.hc-card-row__item-img{
+	order: 1;
+	padding-bottom: 25px;
+	@media(min-width: 768px){
+		padding-bottom: 0;
+		order: 2;
+		width: 170px;
+		// min-height: 100px;
+		padding: 0;
+	}
+}
+
+.hc-card-row__title{
+	order: 2;
+	@media(min-width: 768px){order: 1;}
+
+	.row-text-title{
+		display: block;
+
+		@media(min-width: 768px){
+			display: flex;
+			padding-bottom: 17px;
+		}
+
+		.simple-link{
+			font-size: 20px;
+			@media(min-width: 768px){
+				margin-right: 10px;
+			}
+		}
+	}
+
+	.row-text-subtitle{
+		display: none;
+
+		@media(min-width: 768px){
+			display: flex;
+			padding-bottom: 14px;
+		}
+
+		.badge{margin-right: 10px;}
+	}
+
+	.metro-station{
+			display: none;
+			@media(min-width: 768px){
+				display: flex;
+				padding-bottom: 15px;
+			}
+		}
+}
+
+.hc-card-description{
+	display: block;
+	@media(min-width: 768px){
+		display: flex;
+		// width: 75%;
+		padding-bottom: 25px;
+	}
+}
+
+.hc-card-row-info{
+	display: none;
+	@media(min-width: 768px){
+		display: flex;
+		width: 100%;
+	}
+
+	.hc-card-row__info{
+		padding-right: 49px;
+	}
+}
+
+
+
