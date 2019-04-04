@@ -1,13 +1,37 @@
+.duplicate-add{padding-top: 25px;}
+.duplicate-add__cards{
+	display: none;
+	padding-top: 16px;
+}
+
+.duplicate-add__link{
+	.show-duplicate{
+		min-width: 265px;
+		@media(min-width: 768px){min-width: 230px;}
+	}
+	cursor: pointer;
+	.arrow-down{
+		display: none;
+		@media(min-width: 768px){display: block;}
+	}
+}
+
+.show-duplicate{
+	margin-right: 8px;
+	font-weight: 700;
+}
+.vertical-border--duplicate{
+	bottom:30px;
+	top:-18px;}
+
+
+//- стили для карточки дубликатов на 8 колонок
 .appartment-card--duplicate{
 
 	.appartment-card__row--header{
 		@media(min-width: 1200px){display: block;}
-		.appartment-card__price{
+		.appartment-card__price{@media(min-width: 1200px){padding-top: 14px;}}
 
-			@media(min-width: 1200px){padding-top: 14px;}
-
-
-		}
 	}
 
 	.appartment-card--link-title{
@@ -65,14 +89,15 @@
 	}
 	.appartment-card--link-title{
 		padding-right: 0;
+
 		.headline-body{
 			white-space: nowrap;
 			 overflow: hidden;
 			text-overflow: ellipsis;
-			// max-width: 210px;
 			@media(min-width: 768px){max-width: 210px;}
 			@media(min-width: 992px){max-width: 100%;}
 		}
+
 		.appartment-card--address{
 			@media(min-width: 768px){max-width: 200px;}
 			@media(min-width: 992px){max-width: 100%;}
@@ -83,5 +108,5 @@
 	.appartment-publication{
 		@media(min-width: 992px){display: block;}
 	}
-}
 
+}

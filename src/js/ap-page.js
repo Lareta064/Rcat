@@ -29,6 +29,27 @@ $(document).ready(function() {
 		}
      });
 
+     //-показать карточки дубликатов
+     const showDuplicateItem = $('.duplicate-add__link');
+     const duplicateCardsBlock = $('.duplicate-add__cards');
 
+     showDuplicateItem.on('click', function(e){
+     	e.preventDefault();
+     	if($(this).attr('data-position') == 'passive'){
+     	     	duplicateCardsBlock.fadeIn(1000);
+     	     	$(this).attr('data-position','active');
+     	     	$(this).children('.show-duplicate').text('Свернуть 3 дубля объявления');
+     	     	$(this).children('.arrow-down').addClass('icon-down--rotate');
+
+     	     }
+
+     	 else{
+     	 		duplicateCardsBlock.fadeOut(800);
+     	     	$(this).attr('data-position','passive');
+     	     	$(this).children('.show-duplicate').text('Найдено 3 дубля объявления');
+     	     	$(this).children('.arrow-down').removeClass('icon-down--rotate');
+     	 }
+
+     })
 
 })
