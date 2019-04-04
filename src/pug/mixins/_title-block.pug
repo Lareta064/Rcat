@@ -6,7 +6,8 @@ mixin title-block(titleBlockData)
 				.subtitle
 					span.span-title.text-body #{titleBlockData.subtitleName}
 					span.span-details.text-body #{titleBlockData.subtitleDate}
-				.price-badge.headline-bold от !{titleBlockData.subtitlePrice} руб.
+				if 	titleBlockData.subtitlePrice
+					.price-badge.headline-bold от !{titleBlockData.subtitlePrice} руб.
 
 			.main-badge-block.d-flex
 				+badge-group(titleBlockData.badgesItems)
@@ -20,4 +21,5 @@ mixin title-block(titleBlockData)
 						+metroStation(item)(class="metro-station--flex")
 		.title-block--right
 			.update-box !{titleBlockData.updateTime}
-			.price-box.headline-bold от !{titleBlockData.subtitlePrice} руб.
+			if 	titleBlockData.subtitlePrice
+				.price-box.headline-bold от !{titleBlockData.subtitlePrice} руб.
