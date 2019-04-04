@@ -1,5 +1,5 @@
 mixin appartment-duplicate-card(cardData)
-	.appartment-card
+	.appartment-card.appartment-card--duplicate
 		.appartment-page-link
 			.share-link-text Поделиться
 			+share-link
@@ -24,27 +24,29 @@ mixin appartment-duplicate-card(cardData)
 						.appartment-card__price--num.headline-bold !{cardData.price} руб.
 					.appartment-card__price--area.text-body.text-body--grey #[b !{cardData.areaPrice} руб./кв.м]
 						+icon-brach(class='icon-brach--hidden')
+					.repaire-item-inner
+						+repaire-item(cardData.repaireText)
 
 			.appartment-card__row.appartment-card__row--transform
-				.appartment-card__row-col.d-flex
-					if cardData.darkBadge
-						.badge.badge--dark #{cardData.darkBadge}
-					.appartment-card--link-title
-						+link-title(cardData.hcName , cardData.hcHref)
-					.appartment--built.text-body.text-body--grey !{cardData.appartBuilt}
+
+				if cardData.darkBadge
+					.badge.badge--dark #{cardData.darkBadge}
+				.appartment-card--link-title
+					+link-title(cardData.hcName , cardData.hcHref)
+				.appartment--built.text-body.text-body--grey !{cardData.appartBuilt}
 				+metro(cardData.metroName)
 
 			.appartment-card__row.pl-0.appartment-card__row--badges
 				+badge-group(cardData.region)
 				+text-link(cardData.address,cardData.addressHref, 'appartment-card--address')
-				+repaire-item(cardData.repaireText)
+				//- +repaire-item(cardData.repaireText)
 
 			.appartment-card__row.appartment-card__row--description
 				.appartment-card__text-box.appartment-card__truncate-text
 					div.text-part !{cardData.paragrafe1}
-					div.text-part !{cardData.paragrafe2}
-					div.text-part !{cardData.paragrafe3}
-					div.text-part !{cardData.paragrafe4}
+					//- div.text-part !{cardData.paragrafe2}
+					//- div.text-part !{cardData.paragrafe3}
+					//- div.text-part !{cardData.paragrafe4}
 			.appartment-card__row.appartment-card__row--toolbar.pl-0
 				.appartment-card__toolbar.d-flex
 					.appartment-card__toolbar-item
@@ -52,12 +54,13 @@ mixin appartment-duplicate-card(cardData)
 					.appartment-card__toolbar-item
 						+link('В избранное','','icon-heart')(class="icon-heart--tablet item-favorite")
 						+link('В избранное','','icon-heart','fix-width')(class="icon-heart--desk item-favorite icon-heart--small")
-					.appartment-card__toolbar-item.appartment-card__toolbar-item--mail
-						a.text-link.text-link--line(href='mailto:'+ cardData.mailAddress) Отправить электронной почтой
-						a(href='mailto:'+ cardData.mailAddress)
-							+icon-mail
-					.appartment-card__toolbar-item.appartment-card__toolbar-item--pdf
-						a.text-link.text-link--line(href=''+ cardData.pdfLink download) Скачать ПДФ
+						+text-link('Еще','#')
+					//- .appartment-card__toolbar-item.appartment-card__toolbar-item--mail
+					//- 	a.text-link.text-link--line(href='mailto:'+ cardData.mailAddress) Отправить электронной почтой
+					//- 	a(href='mailto:'+ cardData.mailAddress)
+					//- 		+icon-mail
+					//- .appartment-card__toolbar-item.appartment-card__toolbar-item--pdf
+					//- 	a.text-link.text-link--line(href=''+ cardData.pdfLink download) Скачать ПДФ
 
 	.appartment-card.appartment-card--mobile
 		.appartment-card__img

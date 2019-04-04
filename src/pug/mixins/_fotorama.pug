@@ -9,6 +9,9 @@ mixin fotorama(items)
 //-фоторама на странице квартиры
 mixin appartment-fotorama(items)
 	.fotorama(data-nav="thumbs" data-width='100%' data-ratio='830/572')&attributes(attributes)
-		each item in items
-			a(href=''+ item.bigFoto +'.jpg' )
-				img(src=''+ item.miniFoto +'.jpg' width='90px' height='70px')
+		- for (var i = 0; i < items.length && i<9; i++)
+			a(href=''+ items[i].bigFoto +'.jpg' )
+				img(src=''+ items[i].miniFoto +'.jpg' width='90px' height='70px')
+				if i==8 && items.length > 9
+					.download-num-item-last
+						span #{(items.length - 9)}

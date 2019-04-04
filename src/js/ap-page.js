@@ -3,25 +3,31 @@ $(document).ready(function() {
 
 	//-обрезать текст в описании квартиры на мобилках
 	let appartmentTruncateText = $('.description-paragrafe--truncate');
-	console.log(appartmentTruncateText);
+
 	var snippingAppartmentDescription = function(height){
-		console.log(555);
+		// console.log(555);
 		appartmentTruncateText.snipper({
 			height: height,
 			ellipsis: '&hellip;'
 		});
 
-
-
 	};
+	// snippingAppartmentDescription('110px');
 	if($(document).width()>=992){
 		snippingAppartmentDescription('100%');
 	}
 	else{
-		snippingAppartmentDescription('330px;');
+		snippingAppartmentDescription('110px;');
 	}
 
-     $(window).resize(snippingAppartmentDescription);
+     $(window).resize(function(){
+     	if($(document).width()>=992){
+			snippingAppartmentDescription('100%');
+		}
+		else{
+			snippingAppartmentDescription('110px;');
+		}
+     });
 
 
 

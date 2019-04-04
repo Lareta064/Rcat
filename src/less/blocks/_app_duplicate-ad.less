@@ -1,7 +1,53 @@
-.duplicate-add__cards{
+.appartment-card--duplicate{
+
+	.appartment-card__row--header{
+		@media(min-width: 1200px){display: block;}
+		.appartment-card__price{
+			padding-top: 14px;
+			padding-bottom: 2px;
+		}
+	}
 
 
+	.repaire-item-inner {
+		padding-left: 26px;
+		display: inline-flex;
 
+	}
+	.appartment-card__text-box{
+		@media(min-width: 1350px){
+			width: 100%;
 
+		}
+	}
+	.text-part:not(:last-child){padding-bottom: 4px;}
+	.appartment-card__row--description{
+		@media(min-width: 1350px){padding-bottom: 0;}
+	}
+	.appartment-card__row--toolbar{
+		@media(min-width: 1350px){padding-top: 0;}
+	}
+	.appartment-card__row--transform{
+
+		@media(min-width: 1350px){
+			flex-wrap: nowrap;
+			padding-bottom: 0;}
+
+	}
+	.appartment--built{
+		@media(min-width: 1350px){padding-right:20px;}
+	}
+	.appartment-card__price--area
+	{
+		display: none;
+		@media(min-width: 1350px){display: block;}
+	}
+
+}
+
+.appartment-card--link-title{
+	 white-space: nowrap;
+		 overflow: hidden;
+	text-overflow: ellipsis;
 
 }
