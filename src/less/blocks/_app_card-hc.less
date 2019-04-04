@@ -1,6 +1,12 @@
 .hc-card{
 	display: block;
-	
+	margin-left: -16px;
+	min-width: 360px;
+	@media(min-width: 360px){
+		margin-left: auto;
+		margin-right: auto;
+		min-width: 280px;
+	}
 	@media(min-width: 768px){
 		// display: flex;
 		max-width: 850px;
@@ -36,11 +42,12 @@
 
 .hc-card-row__title{
 	order: 2;
+	width: 100%;
 	@media(min-width: 768px){order: 1;}
 
 	.row-text-title{
 		display: block;
-
+		padding-bottom: 20px;
 		@media(min-width: 768px){
 			display: flex;
 			padding-bottom: 17px;
@@ -48,27 +55,44 @@
 
 		.simple-link{
 			font-size: 20px;
+			
 			@media(min-width: 768px){
 				margin-right: 10px;
+				padding-bottom: 0;
 			}
+		}
+
+		.text-body--grey{
+			padding-top: 8px;
+			@media(min-width: 768px){padding-top: 0;}
 		}
 	}
 
 	.row-text-subtitle{
-		display: none;
+		display: block;
 
 		@media(min-width: 768px){
 			display: flex;
 			padding-bottom: 14px;
 		}
 
-		.badge{margin-right: 10px;}
-	}
-
-	.metro-station{
+		.badge-group{
 			display: none;
 			@media(min-width: 768px){
 				display: flex;
+			}
+			.badge{margin-right: 10px;}
+		}
+
+		.link-group-hidden{
+			display: block;
+			@media(min-width: 768px){display: none;}
+		}
+	}
+
+	.metro-station{
+			// display: block;
+			@media(min-width: 768px){
 				padding-bottom: 15px;
 			}
 		}
@@ -78,7 +102,6 @@
 	display: block;
 	@media(min-width: 768px){
 		display: flex;
-		// width: 75%;
 		padding-bottom: 25px;
 	}
 }
@@ -95,5 +118,7 @@
 	}
 }
 
-
+.link-group-hidden{
+	a{padding-right: 5px;}
+}
 
