@@ -1,12 +1,23 @@
 mixin button(nameButton, linkButton, buttonClass,btnIcon, nameButtonMobile)
 	if btnIcon
-			a(href=""+ linkButton class=" "+buttonClass).button&attributes(attributes)
-				+#{btnIcon}
-				span.btn-text #{nameButton}
-				span.btn-text--mobile #{nameButtonMobile}
+		a(href=""+ linkButton class=" "+buttonClass).button&attributes(attributes)
+			+#{btnIcon}
+			span.btn-text #{nameButton}
+			span.btn-text--mobile #{nameButtonMobile}
 	if nameButtonMobile
 		a(href=""+ linkButton class=" "+buttonClass).button&attributes(attributes)
 			span.btn-text #{nameButton}
 			span.btn-text--mobile #{nameButtonMobile}
-	else 
+	else
+		a(href=""+ linkButton class=" "+buttonClass).button&attributes(attributes) #{nameButton}
+
+
+//-кнопка иконка слева
+mixin button-mode1(nameButton, linkButton, buttonClass,btnIcon, nameButtonMobile)
+	if btnIcon
+		a(href=""+ linkButton class=" "+buttonClass).button&attributes(attributes)
+			+#{btnIcon}
+			span.btn-text #{nameButton}
+			span.btn-text--mobile #{nameButtonMobile}
+	else
 		a(href=""+ linkButton class=" "+buttonClass).button&attributes(attributes) #{nameButton}

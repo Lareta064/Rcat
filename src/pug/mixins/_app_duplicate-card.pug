@@ -29,12 +29,12 @@ mixin appartment-duplicate-card(cardData)
 
 			.appartment-card__row.appartment-card__row--transform
 
-				if cardData.darkBadge
-					.badge.badge--dark #{cardData.darkBadge}
-				.appartment-card--link-title
+				//- if cardData.darkBadge
+				//- 	.badge.badge--dark #{cardData.darkBadge}
+				.appartment-card--link-title.d-flex
 					+link-title(cardData.hcName , cardData.hcHref)
-				.appartment--built.text-body.text-body--grey !{cardData.appartBuilt}
-				+metro(cardData.metroName)
+
+					+metro(cardData.metroName)
 
 			.appartment-card__row.pl-0.appartment-card__row--badges
 				+badge-group(cardData.region)
@@ -44,8 +44,8 @@ mixin appartment-duplicate-card(cardData)
 			.appartment-card__row.appartment-card__row--description
 				.appartment-card__text-box.appartment-card__truncate-text
 					div.text-part !{cardData.paragrafe1}
-					//- div.text-part !{cardData.paragrafe2}
-					//- div.text-part !{cardData.paragrafe3}
+					div.text-part !{cardData.paragrafe2}
+					div.text-part !{cardData.paragrafe3}
 					//- div.text-part !{cardData.paragrafe4}
 			.appartment-card__row.appartment-card__row--toolbar.pl-0
 				.appartment-card__toolbar.d-flex
