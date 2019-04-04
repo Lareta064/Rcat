@@ -1,7 +1,9 @@
-.hc-card{
+.hc-card--short{
 	display: block;
 	margin-left: -16px;
 	min-width: 360px;
+	background-color: @white;
+	padding: 25px;
 	@media(min-width: 360px){
 		margin-left: auto;
 		margin-right: auto;
@@ -11,7 +13,6 @@
 		// display: flex;
 		max-width: 850px;
 		min-height: 450px;
-		background-color: @white;
 		border-radius: 5px;  
 		padding: 15px 15px 20px 15px;   
 	}
@@ -19,7 +20,6 @@
 
 .hc-card-row{
 	display: block;
-	padding: 25px;
 	@media(min-width: 768px){
 		padding: 0;
 		width: 100%;
@@ -28,13 +28,20 @@
 	}
 }
 
+.hc-card-row__item{
+	@media(min-width: 768px){width: 60%;}
+	}
+
 .hc-card-row__item-img{
 	order: 1;
 	padding-bottom: 25px;
+	margin-left: auto;
+	margin-right: auto;
 	@media(min-width: 768px){
 		padding-bottom: 0;
 		order: 2;
-		width: 170px;
+		min-width: 170px;
+		max-width: 170px;
 		// min-height: 100px;
 		padding: 0;
 	}
@@ -54,8 +61,7 @@
 		}
 
 		.simple-link{
-			font-size: 20px;
-			
+			font-size: 20px;		
 			@media(min-width: 768px){
 				margin-right: 10px;
 				padding-bottom: 0;
@@ -68,34 +74,33 @@
 		}
 	}
 
-	.row-text-subtitle{
-		display: block;
-
+	.metro-block{
+		// display: block;
+		padding-bottom: 30px;
 		@media(min-width: 768px){
-			display: flex;
-			padding-bottom: 14px;
-		}
-
-		.badge-group{
-			display: none;
-			@media(min-width: 768px){
-				display: flex;
-			}
-			.badge{margin-right: 10px;}
-		}
-
-		.link-group-hidden{
-			display: block;
-			@media(min-width: 768px){display: none;}
+			padding-bottom: 15px;
 		}
 	}
+}
 
-	.metro-station{
-			// display: block;
-			@media(min-width: 768px){
-				padding-bottom: 15px;
-			}
-		}
+.row-text-subtitle{
+	display: block;
+	padding-bottom: 30px;
+	@media(min-width: 768px){
+		display: flex;
+		padding-bottom: 14px;
+	}
+
+	.badge-group{
+		display: none;
+		@media(min-width: 768px){display: flex;}
+		.badge{margin-right: 10px;}
+	}
+
+	.link-group-hidden{
+		display: block;
+		@media(min-width: 768px){display: none;}
+	}
 }
 
 .hc-card-description{
@@ -107,18 +112,41 @@
 }
 
 .hc-card-row-info{
-	display: none;
+	// display: none;
 	@media(min-width: 768px){
 		display: flex;
 		width: 100%;
+		padding-bottom: 20px;
+	}
+	.hc-card-row__info{
+		padding-right: 45px;
 	}
 
-	.hc-card-row__info{
-		padding-right: 49px;
-	}
+	// .headline-bold{font-size: 14px;}
 }
 
 .link-group-hidden{
-	a{padding-right: 5px;}
+	a{margin-right: 5px;}
 }
 
+.big-badge--short{
+	@media(min-width: 768px){
+		max-width: 170px;
+		margin-left: auto;
+	}
+}
+
+.hc-card-row-details{
+	@media(min-width: 768px){
+		// display: flex;
+		// width: 100%;
+		padding-bottom: 25px;
+	}
+}
+
+.hc-card-row-add{
+	@media(min-width: 768px){
+		min-width: 170px;
+	}
+	
+}
