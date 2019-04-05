@@ -97,11 +97,13 @@
 		.badge{margin-right: 10px;}
 	}
 
-	.link-group-hidden{
-		display: block;
-		@media(min-width: 768px){display: none;}
+	.link-adress-mob{
+		display: none;
+		a{margin-right: 5px;}
 	}
+	.link-adress-desk{display: flex;}
 }
+
 
 .hc-card-description{
 	display: block;
@@ -119,15 +121,15 @@
 		padding-bottom: 20px;
 	}
 	.hc-card-row__info{
-		padding-right: 45px;
+		@media(min-width: 768px){
+			padding-right: 45px;}
+		
 	}
 
 	// .headline-bold{font-size: 14px;}
 }
 
-.link-group-hidden{
-	a{margin-right: 5px;}
-}
+
 
 .big-badge--short{
 	@media(min-width: 768px){
@@ -149,4 +151,14 @@
 		min-width: 170px;
 	}
 	
+}
+
+.link-open-description{
+	display: block;
+	@media(min-width: 768px){display: none;}
+}
+
+.hc-card-row__info--hidden{
+	display: none;
+	@media(min-width: 768px){display: flex;}
 }

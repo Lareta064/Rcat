@@ -52,4 +52,16 @@ $(document).ready(function() {
 
      })
 
+    //-Показать/скрыть блок "подробнее" в карточке описание ЖК
+    const showHcDescription = $('.showHcDescription');
+    const linkGroupHidden = $('.link-info-mob');
+    const linkGroupHidden2 = $('.hc-card-row__info--hidden');
+
+    showHcDescription.on('click', function(e){
+    	e.preventDefault();
+    		linkGroupHidden.fadeIn(500);
+    		linkGroupHidden2.css('display','flex');
+    		$(this).css('display','none');
+  
+    })
 })

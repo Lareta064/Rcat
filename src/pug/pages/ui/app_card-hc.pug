@@ -17,19 +17,23 @@ block content
 								img(src="../img/app-card-hc/BarrinHouse.jpg", alt="ЖК “Barrin House”")
 							.hc-card-row__item.hc-card-row__title
 								.row-text-title
-									+link-title('ЖК “Barrin House”', '#')  
+									+link-title('ЖК “Barrin House”', '#')
 									.text-body.text-body--grey ЖК «Барин хаус»
 								.row-text-subtitle
-									.link-group-hidden
+									.link-adress-mob
 										+text-link('ЦАО,','#')
 										+text-link('Хамовники','#')
-									+badge-group(['ЦАО','Хамовники'])
-									+text-link('Малая Пироговская улица, 8','#')
-								+metro('Новокузнецкая')
+										+text-link('Малая Пироговская улица, 8','#')
+										+metro('Новокузнецкая')
+									.link-adress-desk.box-visible-desk
+										+badge-group(['ЦАО','Хамовники'])
+										+text-link('Малая Пироговская улица, 8','#')
+								+metro('Новокузнецкая')(class="box-visible-desk")
 						.hc-card-row__item.hc-card-description.text-body Шесть элитных домов с индивидуальным оформлением фасадов и роскошными квартирами.
+						+text-link('Подробнее','#',"showHcDescription link-open-description")
 						.hc-card-row.hc-card-row-info
 							.hc-card-row__info
-								.headline-bold от&nbsp;23&nbsp;339&nbsp;642&nbsp;руб.
+								.headline-bold.box-visible-desk от&nbsp;23&nbsp;339&nbsp;642&nbsp;руб.
 								.text-body стоимость квартир
 							.hc-card-row__info.d-flex
 								.hc-card-row__info-item
@@ -61,4 +65,3 @@ block content
 								.headline-body Эксплуатация
 								.text-body 328 руб./кв.м
 						+button-mode1('Следить за объявлениями в этом ЖК', '#', 'btn-mode1', 'icon-notify','Следить за ЖК' )
-				
