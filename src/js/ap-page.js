@@ -74,13 +74,16 @@ $(document).ready(function() {
     	e.preventDefault();
     	$(this).addClass('subscribeButton--active');
     	$(this).children('.btn-text--mobile').text('Вы подписаны');
+    	$(this).children('.btn-text').text('Вы подписаны на объявления в этом ЖК');
     	unSubscribeButton.css('display','flex');
     })
     //-Клик по ссылке Отписаться
     unSubscribeButton.on('click',function(e){
     	e.preventDefault();
     	subscribeButton.children('.btn-text--mobile').text('Следить за ЖК');
+    	subscribeButton.children('.btn-text').text('Следить за объявлениями в этом ЖК');
     	subscribeButton.removeClass('subscribeButton--active');
     	$(this).css('display','none');
+
     })
 })
