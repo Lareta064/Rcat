@@ -21,13 +21,32 @@ $(document).ready(function() {
 	}
 
      $(window).resize(function(){
-     	if($(document).width()>=992){
-			snippingAppartmentDescription('100%');
-		}
-		else{
-			snippingAppartmentDescription('110px;');
-		}
+          if(appartmentTruncateText.attr('data-position') == 'hidden'){
+               if($(document).width()>=992){
+                    snippingAppartmentDescription('100%');
+               }
+               else{
+                    snippingAppartmentDescription('110px;');
+               }
+
+
+          }
+
      });
+
+     //-показать скрытый на мобилках текст
+
+     const showTruncateText = $('.showTruncateText');
+     showTruncateText.on('click',function(e){
+     	e.preventDefault();
+     	appartmentTruncateText.snipper({
+			height: '300px'
+		});
+
+     	$(this).css('display','none');
+          appartmentTruncateText.attr('data-position','show');
+
+     })
 
      //-показать карточки дубликатов
      const showDuplicateItem = $('.duplicate-add__link');
