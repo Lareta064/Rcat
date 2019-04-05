@@ -8,7 +8,7 @@ mixin button(nameButton, linkButton, buttonClass,btnIcon, nameButtonMobile)
 		a(href=""+ linkButton class=" "+buttonClass).button&attributes(attributes)
 			span.btn-text #{nameButton}
 			span.btn-text--mobile #{nameButtonMobile}
-	else
+	else 
 		a(href=""+ linkButton class=" "+buttonClass).button&attributes(attributes) #{nameButton}
 
 
@@ -19,5 +19,5 @@ mixin button-mode1(nameButton, linkButton, buttonClass,btnIcon, nameButtonMobile
 			+#{btnIcon}
 			span.btn-text #{nameButton}
 			span.btn-text--mobile #{nameButtonMobile}
-	else
+	else 
 		a(href=""+ linkButton class=" "+buttonClass).button&attributes(attributes) #{nameButton}
