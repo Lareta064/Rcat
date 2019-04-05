@@ -54,16 +54,33 @@ $(document).ready(function() {
 
     //-Показать/скрыть блок "подробнее" в карточке описание ЖК
     const showHcDescription = $('.showHcDescription');
-    const linkGroupHidden = $('.link-adress-mob');
-    const linkGroupHidden2 = $('.test-block');
+    const linkGroupHidden = $('.row-text-subtitle');
+    const linkGroupHidden2 = $('.hc-card-wrapper');
     const bigBadgeWhite = $('.big-badge--white');
 
     showHcDescription.on('click', function(e){
     	e.preventDefault();
-    		linkGroupHidden.fadeIn(500);
+    		linkGroupHidden.toggleClass('row-text-subtitle--active');
     		linkGroupHidden2.fadeIn(500);
     		bigBadgeWhite.fadeOut(500);
     		$(this).css('display','none');
   
+    })
+    //-Клик по кнопке Следить за объявлениями в этом ЖК
+    const subscribeButton = $('.subscribeButton');
+    const unSubscribeButton = $('.unsubscribe');
+
+    subscribeButton.on('click', function(e){
+    	e.preventDefault();
+    	$(this).addClass('subscribeButton--active');
+    	$(this).children('.btn-text--mobile').text('Вы подписаны');
+    	unSubscribeButton.css('display','flex');
+    })
+    //-Клик по ссылке Отписаться
+    unSubscribeButton.on('click',function(e){
+    	e.preventDefault();
+    	subscribeButton.children('.btn-text--mobile').text('Следить за ЖК');
+    	subscribeButton.removeClass('subscribeButton--active');
+    	$(this).css('display','none');
     })
 })

@@ -28,10 +28,6 @@
 	}
 }
 
-.hc-card-row__item{
-	@media(min-width: 768px){width: 60%;}
-	}
-
 .hc-card-row__item-img{
 	order: 1;
 	padding-bottom: 25px;
@@ -82,9 +78,10 @@
 }
 
 .row-text-subtitle{
-	display: block;
+	// display: block;
+	display: none;
 	padding-top: 15px;
-	padding-bottom: 15px;
+	// padding-bottom: 15px;
 	@media(min-width: 768px){
 		display: flex;
 		padding-top: 0;
@@ -98,16 +95,25 @@
 	}
 
 	.link-adress-mob{
-		display: none;
+		// display: none;
+		display: flex;
+		flex-wrap: wrap;
+		@media(min-width: 768px){display: none;}
 		a{margin-right: 5px;}
 	}
 	.link-adress-desk{display: flex;}
+	// .link-adress-mob--active{
+	// 	display: flex;
+	// 	flex-wrap: wrap;
+	// }
 }
+
+.row-text-subtitle--active{display: block;}
 
 .hc-card-description{
 	display: block;
 	padding-bottom: 15px;
-	// padding-top: 30px;
+	padding-top: 15px;
 	@media(min-width: 768px){
 		display: flex;
 		padding-bottom: 25px;
@@ -126,16 +132,14 @@
 	.hc-card-group{
 		@media(min-width: 768px){
 			display: flex;
-			justify-content: space-between;
-			width: 70%;
-		}
-		@media(min-width: 992px){width: 60%}	
+			justify-content: space-between;		
+		}	
 	}
 
 	.hc-card-row__info{
 		display: block;
 		@media(min-width: 768px){
-			padding-right: 45px;
+			// padding-right: 45px;
 		}
 
 		// .hc-card-row__info-item{
@@ -193,7 +197,7 @@
 	@media(min-width: 768px){display: flex;}
 }
 
-.test-block{
+.hc-card-wrapper{
 	display: none;
 	@media(min-width: 768px){
 		display: block;
@@ -217,10 +221,7 @@
 	// .box-visible-mob{display: block !important;}
 }
 
-.btn-mode1.button{
-	margin-bottom: 50px;
-	@media(min-width: 768px){margin-bottom: 0;}
-}
+
 
 .box-visible-block{
 	display: none;
@@ -242,17 +243,37 @@
 	}
 }
 
-.unsubscribe{
-	margin-left: auto;
-	margin-right: auto;
-	@media(min-width: 768px){display: none;}
-}
-
 .block-width{
 	@media(min-width: 768px){
-		width: 75%;
+		width: 70%;
 	}
 	@media(min-width: 992px){
 		width: 60%;
+	}
+}
+
+.subscribe-group{
+	.btn-mode1.button{
+		margin-bottom: 20px;
+		@media(min-width: 768px){margin-bottom: 0;}
+	}
+
+	.unsubscribe{
+		display: none;
+		justify-content: center;
+		@media(min-width: 768px){display: none;}
+	}
+
+	.subscribeButton--active{
+		background-color: #fff8eb;
+		color: @black;
+		svg path{
+			fill: red;
+		}	
+	}
+
+	.btn-mode1.subscribeButton--active.button{
+		.icon-notify{border-right: 1px solid f2ebdf;}
+		.btn-text--mobile{border-left: 1px solid fffdf9;}
 	}
 }
