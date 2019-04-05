@@ -253,9 +253,17 @@
 }
 
 .subscribe-group{
+	@media(min-width: 768px){
+		display: flex;
+		align-items: center;
+	}
+
 	.btn-mode1.button{
 		margin-bottom: 20px;
-		@media(min-width: 768px){margin-bottom: 0;}
+		@media(min-width: 768px){
+			margin-bottom: 0;
+			margin-right: 30px;
+		}
 	}
 
 	.unsubscribe{
@@ -272,8 +280,16 @@
 		}	
 	}
 
-	.btn-mode1.subscribeButton--active.button{
-		.icon-notify{border-right: 1px solid f2ebdf;}
-		.btn-text--mobile{border-left: 1px solid fffdf9;}
+	.btn-mode1.subscribeButton--active{
+		.icon-notify{border-right: 1px solid #f2ebdf;
+			@media(min-width: 768px){
+				border-right:0;
+			}
+		}
+		.btn-text--mobile{border-left: 1px solid #fffdf9;
+			@media(min-width: 768px){
+				border-left:0;
+			}
+		}
 	}
 }
