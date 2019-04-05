@@ -24,14 +24,14 @@
 				.test-block
 					.hc-card-row.hc-card-row-info
 						.hc-card-group
-							.hc-card-row__info.box-visible-block
+							.box-visible-block
 								.headline-bold от&nbsp;23&nbsp;339&nbsp;642&nbsp;руб.
 								.text-body стоимость квартир
 							.hc-card-row__info.d-flex
-								.hc-card-row__info-item
+								.hc-card__area-mob
 									.headline-bold 53&nbsp;–&nbsp;187&nbsp;кв.м
 									.text-body площадь квартир
-								.hc-card-row__info-item.box-visible-mob
+								.box-mobile-block
 									.headline-bold 6
 									.text-body этажей
 							.box-visible-block
@@ -39,7 +39,7 @@
 								.text-body потолки
 						.hc-card-row-add.d-flex
 							+bag-badge('48', '116')(class='big-badge--short')
-							.hc-card-row__info.box-visible-mob
+							.box-mobile-block
 								.headline-bold 3,1 м
 								.text-body потолки
 					.hc-card-row.hc-card-row-details
@@ -59,7 +59,7 @@
 				//-Большой бэйдж на белом фоне
 				.hc-card-row-add.big-badge--white
 					+bag-badge('48', '116')(class='big-badge--short')
-					.hc-card-row__info.box-visible-mob
+					.hc-card-row__info
 						.headline-bold 3,1 м
 						.text-body потолки			
 				+button-mode1('Следить за объявлениями в этом ЖК', '#', 'btn-mode1', 'icon-notify','Следить за ЖК' )
