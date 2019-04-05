@@ -73,11 +73,12 @@
 		}
 	}
 
-	// .metro-block{
-	// 	@media(min-width: 768px){
-	// 		padding-bottom: 15px;
-	// 	}
-	// }
+	.metro-block{
+		padding-top: 15px;
+		@media(min-width: 768px){
+			padding-top: 0;
+		}
+	}
 }
 
 .row-text-subtitle{
@@ -167,8 +168,11 @@
 }
 
 .hc-card-row-add{
-	
+	padding-top: 25px;
+	padding-bottom: 25px;
 	@media(min-width: 768px){
+		padding-top: 0;
+		padding-bottom: 0;
 		min-width: 170px;
 	}
 	
@@ -235,5 +239,20 @@
 	@media(min-width: 768px){
 		min-width: auto;
 		margin-right: 0;
+	}
+}
+
+.unsubscribe{
+	margin-left: auto;
+	margin-right: auto;
+	@media(min-width: 768px){display: none;}
+}
+
+.block-width{
+	@media(min-width: 768px){
+		width: 75%;
+	}
+	@media(min-width: 992px){
+		width: 60%;
 	}
 }
