@@ -1,0 +1,65 @@
+.container
+	.row
+		.col-xl-8
+			.hc-card--short
+				.hc-card-row
+					.hc-card-row__item-img
+						img(src="../img/app-card-hc/BarrinHouse.jpg", alt="ЖК “Barrin House”")
+					.hc-card-row__item.hc-card-row__title
+						.row-text-title
+							+link-title('ЖК “Barrin House”', '#')
+							.text-body.text-body--grey ЖК «Барин хаус»
+						.row-text-subtitle
+							.link-adress-mob
+								+text-link('ЦАО,','#')
+								+text-link('Хамовники','#')
+								+text-link('Малая Пироговская улица, 8','#')
+								+metro('Новокузнецкая')
+							.link-adress-desk.box-visible-desk
+								+badge-group(['ЦАО','Хамовники'])
+								+text-link('Малая Пироговская улица, 8','#')
+						+metro('Новокузнецкая')(class="box-visible-desk")
+				.hc-card-row__item.hc-card-description.text-body Шесть элитных домов с индивидуальным оформлением фасадов и роскошными квартирами.
+				+text-link('Подробнее','#',"showHcDescription link-open-description")
+				.test-block
+					.hc-card-row.hc-card-row-info
+						.hc-card-group
+							.hc-card-row__info.box-visible-block
+								.headline-bold от&nbsp;23&nbsp;339&nbsp;642&nbsp;руб.
+								.text-body стоимость квартир
+							.hc-card-row__info.d-flex
+								.hc-card-row__info-item
+									.headline-bold 53&nbsp;–&nbsp;187&nbsp;кв.м
+									.text-body площадь квартир
+								.hc-card-row__info-item.box-visible-mob
+									.headline-bold 6
+									.text-body этажей
+							.box-visible-block
+								.headline-bold 3,1 м
+								.text-body потолки
+						.hc-card-row-add.d-flex
+							+bag-badge('48', '116')(class='big-badge--short')
+							.hc-card-row__info.box-visible-mob
+								.headline-bold 3,1 м
+								.text-body потолки
+					.hc-card-row.hc-card-row-details
+						.hc-card-row__item
+							.headline-body Парковка
+							.text-body подземная на 115 машиномест (17–35 кв.м), от 4 500 000 руб. за м/м
+						.hc-card-row-add
+							.headline-body Готовность
+							.text-body сдан, 3 квартал 2017
+					.hc-card-row.hc-card-row-details
+						.hc-card-row__item
+							.headline-body Инфраструктура
+							.text-body Офисные и административные помещения, кафе-кофейня
+						.hc-card-row-add
+							.headline-body Эксплуатация
+							.text-body 328 руб./кв.м
+				//-Большой бэйдж на белом фоне
+				.hc-card-row-add.big-badge--white
+					+bag-badge('48', '116')(class='big-badge--short')
+					.hc-card-row__info.box-visible-mob
+						.headline-bold 3,1 м
+						.text-body потолки			
+				+button-mode1('Следить за объявлениями в этом ЖК', '#', 'btn-mode1', 'icon-notify','Следить за ЖК' )

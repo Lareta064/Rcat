@@ -107,6 +107,7 @@
 
 .hc-card-description{
 	display: block;
+	padding-bottom: 15px;
 	@media(min-width: 768px){
 		display: flex;
 		padding-bottom: 25px;
@@ -120,19 +121,33 @@
 		width: 100%;
 		padding-bottom: 20px;
 	}
-	.hc-card-row__info{
+
+	.hc-card-group{
 		@media(min-width: 768px){
-			padding-right: 45px;}
-		
+			display: flex;
+			justify-content: space-between;
+			width: 70%;
+		}
+		@media(min-width: 992px){width: 60%}	
 	}
 
-	// .headline-bold{font-size: 14px;}
+	.hc-card-row__info{
+		display: block;
+		@media(min-width: 768px){
+			padding-right: 45px;
+		}
+
+		.hc-card-row__info-item{
+			padding-right: 50px;
+			@media(min-width: 768px){padding-right: 0;}
+		}	
+	}
 }
 
-
-
 .big-badge--short{
+	margin-right: 20px;
 	@media(min-width: 768px){
+		margin-right: 0;
 		max-width: 170px;
 		margin-left: auto;
 	}
@@ -154,11 +169,46 @@
 }
 
 .link-open-description{
-	display: block;
-	@media(min-width: 768px){display: none;}
+	display: inline-block;
+	margin-bottom: 25px;
+	@media(min-width: 768px){
+		display: none;
+		margin-bottom: 0;
+	}
 }
 
 .hc-card-row__info--hidden{
 	display: none;
 	@media(min-width: 768px){display: flex;}
+}
+
+.test-block{
+	display: none;
+	@media(min-width: 768px){
+		display: block;
+	}
+}
+
+
+.big-badge--white{
+	display: flex;
+	@media(min-width: 768px){display: none;}
+
+	.big-badge{
+		background-color: @white;
+		color: @black;
+		padding: 0;
+	}
+
+	.box-visible-mob{display: block !important;}
+}
+
+.btn-mode1.button{
+	margin-bottom: 50px;
+	@media(min-width: 768px){margin-bottom: 0;}
+}
+
+.box-visible-block{
+	display: none;
+	@media(min-width: 768px){display: block;}	
 }

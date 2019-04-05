@@ -55,12 +55,14 @@ $(document).ready(function() {
     //-Показать/скрыть блок "подробнее" в карточке описание ЖК
     const showHcDescription = $('.showHcDescription');
     const linkGroupHidden = $('.link-info-mob');
-    const linkGroupHidden2 = $('.hc-card-row__info--hidden');
+    const linkGroupHidden2 = $('.test-block');
+    const test3 = $('.test-block2');
 
     showHcDescription.on('click', function(e){
     	e.preventDefault();
     		linkGroupHidden.fadeIn(500);
-    		linkGroupHidden2.css('display','flex');
+    		linkGroupHidden2.fadeIn(500);
+    		test3.fadeOut(500);
     		$(this).css('display','none');
   
     })
