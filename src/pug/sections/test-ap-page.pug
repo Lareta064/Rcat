@@ -1,6 +1,12 @@
+-var hcShortCard = {imgSrc:'BarrinHouse', cardTitile:'ЖК “Barrin House”',cardTitileLink:'#',rusLangeTitle:'ЖК «Барин хаус»',regionLinks:[{linkTitle:'ЦАО',linkHref:'#'}, {linkTitle:'Хамовники',linkHref:'#'}], adressStreetName:'Малая Пироговская улица, 8', adressLinks:'#',badgeItems:['ЦАО','Хамовники'], metroInfo:{item1:{firstIcоn:'icon-metro', stationName:'Новокузнецкая', timeNum:'&nbsp;5&nbsp;минут',iconLast:'icon-man'}},appartmentPrice:'от&nbsp;23&nbsp;339&nbsp;642&nbsp;руб.', appartmentAreas:'53&nbsp;–&nbsp;187&nbsp;кв.м', appartmentFloor:'6', ceilingHeight:'3,1 м', blueBadgeNum1:'48', blueBadgeNum2:'116', parkingInfo:'подземная на 115 машиномест (17&nbsp;–&nbsp;35&nbsp;кв.м), от 4 500 000 руб. за м/м' ,buildInfo:'сдан, 3 квартал 2017',infrastructureInfo: 'Офисные и административные помещения, кафе-кофейня',usingPrice:'328 руб./кв.м' , descriptionText:'Шесть элитных домов с&nbsp;индивидуальным оформлением фасадов и&nbsp;роскошными квартирами.'  }
+
+
+
+
 .container
 	.row
 		.col-xl-8
+
 			.hc-card--short
 				.hc-card-row
 					.hc-card-row__item-img
@@ -66,3 +72,6 @@
 					+button-mode1('Следить за объявлениями в этом ЖК', '#', 'btn-mode1 subscribeButton', 'icon-notify','Следить за ЖК' )(data-position="passive")
 					.unsubscribe
 						+text-link('Отписаться','#')
+	.row
+		.col-xl-8
+			+hcCardShort(hcShortCard)
