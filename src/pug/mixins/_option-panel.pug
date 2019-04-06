@@ -1,10 +1,20 @@
-mixin option-panel
+mixin option-panel(panelModif)
 	.option-panel.option-panel--desktop
 		+link('Следить за объявлениями в этом ЖК','','icon-notify')(class="watch-announcements")
 		+link('В избранное','','icon-heart','fix-width')(class=" add-favorite icon-heart--small")
 		+text-link('Отправить эл.почтой','#','text-link--line mr-25')
 		+text-link('Скачать ПДФ','#','text-link--line mr-25')
-		+link('Добавить заметку','','icon-add')
+		.block-item--note
+			+link('Добавить заметку','','icon-add')
+
+		if panelModif
+			.option-panel__modal
+				+text-link('Еще','','showModalBlock')
+				.option-panel__modal-block
+					+text-link('Отправить в Ватсап','#','text-link--line link-block--pl text-link--line')
+					+text-link('Поделиться в Телеграме','#','text-link--line link-block--pl')
+
+
 		+link('Пожаловаться','','icon-question').order-item
 
 	.option-panel.option-panel--mobile
@@ -13,7 +23,7 @@ mixin option-panel
 	.dropdown#dropdown--option(data-control= 'hidden')
 		.dropdown-item
 			+link('Следить за объявлениями в этом ЖК','', 'icon-notify')(class="watch-announcements")
-		.dropdown-item
+		.dropdown-item.block-item--note
 			+link('Добавить заметку','','icon-add')
 		.dropdown-item
 			+text-link('Отправить эл.почтой','#','link-block--pl text-link--line')

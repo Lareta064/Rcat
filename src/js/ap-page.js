@@ -104,5 +104,40 @@ $(document).ready(function() {
     	subscribeButton.removeClass('subscribeButton--active');
     	$(this).css('display','none');
 
+    });
+
+    //-клик или наведение на cсылку 'Еще' в панели опций под шапкой
+    const optionPanelModal = $('.option-panel__modal-block');
+    const showModalBlock = $('.option-panel__modal');
+
+    showModalBlock.on('click', function(e){
+        e.preventDefault();
+        optionPanelModal.addClass('option-panel__modal-block--active');
+    });
+
+    showModalBlock.mouseenter(function() {
+      optionPanelModal.addClass('option-panel__modal-block--active');
+    });
+
+    optionPanelModal.mouseenter(function() {
+        console.log(555);
+       $(this).addClass('option-panel__modal-block--active');
+    });
+     optionPanelModal.mouseleave(function() {
+
+       $(this).removeClass('option-panel__modal-block--active');
+    });
+
+     //- показать поле для записи заметки
+    const showFieldNote = $('.block-item--note');
+    const textareaForNote = $('.write-note-textarea');
+
+    showFieldNote.on('click', function(e){
+        e.preventDefault();
+        textareaForNote.toggleClass('write-note--show');
+        console.log(444);
+
+
     })
+
 })
