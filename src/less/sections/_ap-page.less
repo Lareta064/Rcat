@@ -1,3 +1,11 @@
+.appartment-page__map .section-map--bottom{
+	@media(min-width: 1200px){
+		flex-wrap: wrap;
+		.badge-group, .link-group, .text-info--metro{padding-bottom: 7px;}
+	}
+
+}
+
 .title-block--appartment-page{
 	.title-block-wrapper{align-items: flex-end;}
 	.update-box{padding-bottom: 0;}
@@ -8,7 +16,19 @@
 		@media(min-width: 1350px){padding-left: 0;}
 
 	}
-
-
 }
 .section-top--similar-objects{padding-top: 52px;}
+.similar-objects-top__link{
+	display: none;
+	@media(min-width: 768px){display: flex;}
+	.icon-flag{
+		align-self: flex-start;
+		margin-right: 9px;
+		position: relative;
+		top:-5px;
+	}
+}
+.similar-objects-top__link-title{
+	color: #000;
+	padding-right: 5px;
+}

@@ -14,20 +14,39 @@ $(document).ready(function() {
 	};
 	// snippingAppartmentDescription('110px');
 	if($(document).width()>=992){
-		snippingAppartmentDescription('100%');
+		snippingAppartmentDescription('330px;');
 	}
 	else{
 		snippingAppartmentDescription('110px;');
 	}
 
      $(window).resize(function(){
-     	if($(document).width()>=992){
-			snippingAppartmentDescription('100%');
-		}
-		else{
-			snippingAppartmentDescription('110px;');
-		}
+          if(appartmentTruncateText.attr('data-position') == 'hidden'){
+               if($(document).width()>=992){
+                    snippingAppartmentDescription('330px;');
+               }
+               else{
+                    snippingAppartmentDescription('110px;');
+               }
+
+
+          }
+
      });
+
+     //-показать скрытый на мобилках текст
+
+     const showTruncateText = $('.showTruncateText');
+     showTruncateText.on('click',function(e){
+     	e.preventDefault();
+     	appartmentTruncateText.snipper({
+			height: '300px'
+		});
+
+     	$(this).css('display','none');
+          appartmentTruncateText.attr('data-position','show');
+
+     })
 
      //-показать карточки дубликатов
      const showDuplicateItem = $('.duplicate-add__link');
@@ -52,4 +71,38 @@ $(document).ready(function() {
 
      })
 
+    //-Показать/скрыть блок "подробнее" в карточке описание ЖК
+    const showHcDescription = $('.showHcDescription');
+    const linkGroupHidden = $('.row-text-subtitle');
+    const linkGroupHidden2 = $('.hc-card-wrapper');
+    const bigBadgeWhite = $('.big-badge--white');
+
+    showHcDescription.on('click', function(e){
+    	e.preventDefault();
+    		linkGroupHidden.toggleClass('row-text-subtitle--active');
+    		linkGroupHidden2.fadeIn(500);
+    		bigBadgeWhite.fadeOut(500);
+    		$(this).css('display','none');
+
+    })
+    //-Клик по кнопке Следить за объявлениями в этом ЖК
+    const subscribeButton = $('.subscribeButton');
+    const unSubscribeButton = $('.unsubscribe');
+
+    subscribeButton.on('click', function(e){
+    	e.preventDefault();
+    	$(this).addClass('subscribeButton--active');
+    	$(this).children('.btn-text--mobile').text('Вы подписаны');
+    	$(this).children('.btn-text').text('Вы подписаны на объявления в этом ЖК');
+    	unSubscribeButton.css('display','flex');
+    })
+    //-Клик по ссылке Отписаться
+    unSubscribeButton.on('click',function(e){
+    	e.preventDefault();
+    	subscribeButton.children('.btn-text--mobile').text('Следить за ЖК');
+    	subscribeButton.children('.btn-text').text('Следить за объявлениями в этом ЖК');
+    	subscribeButton.removeClass('subscribeButton--active');
+    	$(this).css('display','none');
+
+    })
 })

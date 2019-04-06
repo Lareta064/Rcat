@@ -81,12 +81,17 @@
 	}
 	.description-paragrafe--truncate{
 		margin-bottom: 14px;
+		transition: height 2s;
 
 	}
 
 }
 .appartment-description__text{
-	@media(min-width: 768px){padding-top: 30px;}
+	padding-bottom: 30px;
+	border-bottom: 1px solid #ced9f2;
+	@media(min-width: 768px){
+		border-bottom: 0px;
+		padding-top: 30px;}
 	@media(min-width: 992px){padding-top: 0px;}
 	.description-row__col--short{width: 25%;}
 	.description-slogan-text{
