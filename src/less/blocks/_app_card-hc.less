@@ -144,17 +144,10 @@
 		}
 	}
 
-	.hc-card-row__info{
-		display: block;
-		@media(min-width: 768px){
-			// padding-right: 45px;
-		}
+	// .hc-card-row__info{
+	// 	display: block;
 
-		// .hc-card-row__info-item{
-		// 	padding-right: 50px;
-		// 	@media(min-width: 768px){padding-right: 0;}
-		// }
-	}
+	// }
 }
 
 .big-badge--short{
@@ -172,11 +165,7 @@
 }
 
 .hc-card-row-details{
-	@media(min-width: 768px){
-		// display: flex;
-		// width: 100%;
-		padding-bottom: 25px;
-	}
+	@media(min-width: 768px){padding-bottom: 25px;}
 }
 
 .hc-card-row-add{
@@ -191,7 +180,7 @@
 }
 
 .link-open-description{
-	// margin-bottom: 25px;
+
 	width: 230px;
 	@media(min-width: 768px){
 		width: auto;
@@ -225,8 +214,6 @@
 		color: @black;
 		padding: 0;
 	}
-
-	// .box-visible-mob{display: block !important;}
 }
 
 .box-visible-block{
@@ -259,7 +246,9 @@
 }
 
 .subscribe-group{
+	min-height: 105px;
 	@media(min-width: 768px){
+		min-height: auto;
 		display: flex;
 		align-items: center;
 	}

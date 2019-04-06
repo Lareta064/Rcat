@@ -14,7 +14,7 @@ $(document).ready(function() {
 	};
 	// snippingAppartmentDescription('110px');
 	if($(document).width()>=992){
-		snippingAppartmentDescription('100%');
+		snippingAppartmentDescription('330px;');
 	}
 	else{
 		snippingAppartmentDescription('110px;');
@@ -23,7 +23,7 @@ $(document).ready(function() {
      $(window).resize(function(){
           if(appartmentTruncateText.attr('data-position') == 'hidden'){
                if($(document).width()>=992){
-                    snippingAppartmentDescription('100%');
+                    snippingAppartmentDescription('330px;');
                }
                else{
                     snippingAppartmentDescription('110px;');
@@ -83,7 +83,7 @@ $(document).ready(function() {
     		linkGroupHidden2.fadeIn(500);
     		bigBadgeWhite.fadeOut(500);
     		$(this).css('display','none');
-  
+
     })
     //-Клик по кнопке Следить за объявлениями в этом ЖК
     const subscribeButton = $('.subscribeButton');
