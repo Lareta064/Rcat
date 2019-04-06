@@ -15,25 +15,25 @@ mixin hcCardShort(cardObject)
 						+metro('Новокузнецкая')
 					.link-adress-desk.box-visible-desk
 						+badge-group(cardObject.badgesItems)
-						+text-link('Малая Пироговская улица, 8','#')
+						+text-link(cardObject.linkAdress,'#')
 				+metroStation(cardObject.metroName)(class="box-visible-desk")
-		.hc-card-description.text-body.block-width Шесть элитных домов с&nbsp;индивидуальным оформлением&nbsp;фасадов и&nbsp;роскошными квартирами.
+		.hc-card-description.text-body.block-width !{cardObject.paragrafe1}
 		+text-link('Подробнее','#',"showHcDescription link-open-description")
 		.hc-card-wrapper
 			.hc-card-row.hc-card-row-info
 				.hc-card-group.block-width
 					.box-visible-block
-						.headline-bold от&nbsp;23&nbsp;339&nbsp;642&nbsp;руб.
+						.headline-bold !{cardObject.price} руб. 
 						.text-body стоимость квартир
 					.hc-card-row__info.d-flex
 						.hc-card__area-mob
-							.headline-bold 53&nbsp;–&nbsp;187&nbsp;кв.м
+							.headline-bold !{cardObject.priceArea} кв.м
 							.text-body площадь квартир
 						.box-mobile-block
-							.headline-bold 6
+							.headline-bold !{cardObject.floor}
 							.text-body этажей
 					.box-visible-block
-						.headline-bold 3,1 м
+						.headline-bold !{cardObject.roof} м
 						.text-body потолки
 				.hc-card-row-add.d-flex
 					+bag-badge('48', '116')(class='big-badge--short')
