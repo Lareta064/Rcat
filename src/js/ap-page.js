@@ -176,18 +176,17 @@ $(document).ready(function() {
     });
 
     //-фикс карточки с ценой и показать тулбар карточки с ценой
-    $(window).on("scroll", function() {
-    if ($(window).scrollTop() > 215){
-
-        $('.price-card__toolbar').addClass('flex-visible');
-
-
+$(window).on("scroll", function() {
+    if($(window).innerWidth() >=1200){
+        if ($(window).scrollTop() > 215){
+            $('.price-card__toolbar').addClass('flex-visible');
+            $('#visibleScroll').addClass('block-visible');
+        }
+        else {
+            $('.price-card__toolbar').removeClass('flex-visible');
 
         }
-          else {
-                $('.price-card__toolbar').removeClass('flex-visible');
-                console.log($(window).scrollTop());
-          }
-    });
+    }
+});
 
 })

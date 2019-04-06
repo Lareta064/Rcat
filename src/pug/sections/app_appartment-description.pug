@@ -1,7 +1,7 @@
 section.appartment-decription
 	.container
 		.row
-			.col-xl-8
+			.col-xl-8.order-md-2.order-xl-1
 				.appartment-foto-wrapper
 					textarea.write-note-textarea(name='user-note' autofocus)
 					+mobile-slider([{imgSrc:'../img/appartment-page/slider/app-slider1'}, {imgSrc:'../img/appartment-page/slider/app-slider1'}])
@@ -17,7 +17,7 @@ section.appartment-decription
 				include app_map-section.pug
 
 			//-карточка с ценой
-			.col-xl-4
+			.col-xl-4.app-page-right.order-md-1.order-xl-2
 				+price-card('http://realtycat.pro/36732', 'info@mail.ru', '../img/test.pdf', '63 000 000','954 646','840 000')
 
 

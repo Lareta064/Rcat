@@ -7,7 +7,7 @@ mixin option-panel(panelModif)
 		.block-item--note
 			+link('Добавить заметку','','icon-add')
 
-		if panelModif
+		if panelModif == 'full'
 			.option-panel__modal
 				+text-link('Еще','','showModalBlock')
 				.option-panel__modal-block

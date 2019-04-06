@@ -20,11 +20,10 @@
 		padding: 14px;
 	}
 
-	@media(min-width: 992px){max-width: 410px;}
 	@media(min-width: 1200px){
 		position: static;
 		top:0;
-
+		max-width: 410px;
 	}
 	.appartment-page-link{
 		display: none;
@@ -154,13 +153,13 @@
 .phone-block-item--flex{
 	display: flex;
 	justify-content: space-between;
-	.text-body,
-	.icon-heart--small{
+	.text-body{
 		display: none;
 		@media(min-width: 768px){display: inline-flex;}
 	}
-
 }
+
+#visibleScroll{display: none;}
 .phone-block-item{
 	&:first-child{padding-bottom: 14px;}
 	.agent-name{padding-right: 5px;}
@@ -199,7 +198,7 @@
 .price-card__toolbar{
 	display: none;
 
-	@media(min-width: 768px){
+	@media(min-width: 1200px){
 
 	position: relative;
 	margin-top: 20px;
@@ -215,6 +214,8 @@
 	display: flex;
 	flex-direction: column;
 	width: 50%;
+
+
 }
 .toolbar-col__item:first-child{
 	padding-bottom: 12px;

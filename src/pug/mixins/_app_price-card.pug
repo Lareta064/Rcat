@@ -15,7 +15,7 @@ mixin price-card(tooltipLink,tooltipEmail,tooltipPdf,appPriceRub,appPriceUsd,app
 				.appartment-price__phone-block
 					.phone-block-item.phone-block-item--flex
 						a(href='tel:'+phoneNumberHref ).headline-bold +7 999 455 55 55
-						+link('В избранное','','icon-heart','fix-width')(class=" add-favorite icon-heart--small")
+						+link('В избранное','','icon-heart','add-favorite icon-heart--small fix-width')(id="visibleScroll ")
 
 					.phone-block-item
 						+text-link('Андрей Кальницкий,','#','agent-name')
