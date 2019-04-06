@@ -2,22 +2,22 @@ mixin hcCardShort(cardObject)
 	.hc-card--short
 		.hc-card-row
 			.hc-card-row__item-img
-				img(src="../img/app-card-hc/BarrinHouse.jpg", alt="ЖК “Barrin House”")
+				img.BarrinHouse(src="../img/app-card-hc/BarrinHouse.jpg", alt="")
 			.hc-card-row__title.block-width
 				.row-text-title
 					+link-title(cardObject.houseComplexTitle, '#')
 					.text-body.text-body--grey !{cardObject.houseComplexSubTitle}
 				.row-text-subtitle
 					.link-adress-mob
-						+text-link('ЦАО,','#')
-						+text-link('Хамовники','#')
-						+text-link('Малая&nbsp;Пироговская&nbsp;улица,&nbsp;8','#')
+						+text-link(cardObject.linkText,'#')
+						+text-link(cardObject.linkText2,'#')
+						+text-link(cardObject.linkAdress,'#')
 						+metro('Новокузнецкая')
 					.link-adress-desk.box-visible-desk
-						+badge-group(['ЦАО','Хамовники'])
+						+badge-group(cardObject.badgesItems)
 						+text-link('Малая Пироговская улица, 8','#')
 				+metroStation(cardObject.metroName)(class="box-visible-desk")
-		.hc-card-description.text-body.block-width Шесть элитных домов с&nbsp;индивидуальным оформлением фасадов и&nbsp;роскошными квартирами.
+		.hc-card-description.text-body.block-width Шесть элитных домов с&nbsp;индивидуальным оформлением&nbsp;фасадов и&nbsp;роскошными квартирами.
 		+text-link('Подробнее','#',"showHcDescription link-open-description")
 		.hc-card-wrapper
 			.hc-card-row.hc-card-row-info
@@ -43,7 +43,7 @@ mixin hcCardShort(cardObject)
 			.hc-card-row.hc-card-row-details
 				.hc-card-row__item.block-width
 					.headline-body Парковка
-					.text-body подземная на 115 машиномест (17&nbsp;–&nbsp;35&nbsp;кв.м), от 4 500 000 руб. за м/м
+					.text-body подземная&nbsp;на&nbsp;115&nbsp;машиномест&#160;&#160;(&nbsp;17&nbsp;–&nbsp;35&nbsp;кв.м&nbsp;),&nbsp;от&nbsp;4&nbsp;500&nbsp;000 руб.&nbsp;за&nbsp;м/м
 				.hc-card-row-add
 					.headline-body Готовность
 					.text-body сдан, 3 квартал 2017
