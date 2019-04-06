@@ -4,16 +4,16 @@ block variables
 	- var title = 'Страница квартиры';
 
 block content
-	//- header.header
-	//- 	+header('avatar','Иван Марасин')
-	//- section.title-block.title-block--appartment-page
-	//- 	include ../sections/app_appartment-title-block.pug
-	//- section.option-panel-wrapper
-	//- 	+option-panel
-	//- include ../sections/app_appartment-description.pug
-	//- include ../sections/app_duplicate-ad.pug
-	//- include ../sections/app_map-section.pug
-	//- include ../sections/app_similar-objects.pug
-	include ../sections/test-ap-page.pug
-	//- footer.footer
-	//- 	+page-footer
+	header.header
+		+header('avatar','Иван Марасин')
+	section.title-block.title-block--appartment-page
+		include ../sections/app_appartment-title-block.pug
+	section.option-panel-wrapper
+		+option-panel
+	include ../sections/app_appartment-description.pug
+	include ../sections/app_duplicate-ad.pug
+	include ../sections/app_hc-card.pug
+	include ../sections/app_map-section.pug
+	include ../sections/app_similar-objects.pug
+	footer.footer
+		+page-footer
