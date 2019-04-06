@@ -6,17 +6,15 @@
 
 
 section.duplicate-add
-	.container
-		.row
-			.col-xl-8
-				.duplicate-add__link(data-position='passive').d-flex
-					+text-link('Найдено 3 дубля объявления','#')(class='show-duplicate' )
-					+arrow-down
-				.duplicate-add__cards.section-cards-wrapper
-					.vertical-border.vertical-border--duplicate.active
-					+appartment-duplicate-card(apprtCard1)
-					+appartment-duplicate-card(apprtCard2)
-					+appartment-duplicate-card(apprtCard3)
+
+	.duplicate-add__link(data-position='passive').d-flex
+		+text-link('Найдено 3 дубля объявления','#')(class='show-duplicate' )
+		+arrow-down
+	.duplicate-add__cards.section-cards-wrapper
+		.vertical-border.vertical-border--duplicate.active
+		+appartment-duplicate-card(apprtCard1)
+		+appartment-duplicate-card(apprtCard2)
+		+appartment-duplicate-card(apprtCard3)
 
 
 

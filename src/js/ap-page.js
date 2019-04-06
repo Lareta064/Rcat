@@ -134,10 +134,60 @@ $(document).ready(function() {
 
     showFieldNote.on('click', function(e){
         e.preventDefault();
-        textareaForNote.toggleClass('write-note--show');
-        console.log(444);
+        textareaForNote.toggleClass('block-visible');
 
 
-    })
+    });
+
+    //-показать телефон в карточке с ценой
+    const buttonShowPhone = $('.buttonShowPhone');
+    const phoneBlock = $('.appartment-price__phone-block');
+
+    buttonShowPhone.on('click', function(e){
+        e.preventDefault();
+        phoneBlock.addClass('block-visible');
+        $(this).css('display','none');
+    });
+
+    //-показать кнопку Отправить в карточке с ценой
+    const priceCardTextarea = $('.appartment-price__textarea');
+    const buttonSendMessage = $('.btn-send-message');
+
+    priceCardTextarea.focus(function(){
+        buttonSendMessage.addClass('block-visible');
+    });
+    priceCardTextarea.blur(function(){
+        if(priceCardTextarea.val() == ''){
+            buttonSendMessage.removeClass('block-visible');
+
+        }
+        else{buttonSendMessage.addClass('block-visible');
+        }
+    });
+
+    //-показать тулбар карточки с ценой
+    const showNoteField = $('#show-note-field');
+    const fieldForNote = $('.price-card__toolbar-note');
+
+    showNoteField.on('click', function(e){
+        e.preventDefault();
+        fieldForNote.toggleClass('block-visible');
+        console.log(888);
+    });
+
+    //-фикс карточки с ценой и показать тулбар карточки с ценой
+    $(window).on("scroll", function() {
+    if ($(window).scrollTop() > 215){
+
+        $('.price-card__toolbar').addClass('flex-visible');
+
+
+
+        }
+          else {
+                $('.price-card__toolbar').removeClass('flex-visible');
+                console.log($(window).scrollTop());
+          }
+    });
 
 })
