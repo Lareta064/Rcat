@@ -184,6 +184,7 @@ $(window).on("scroll", function() {
         }
         else {
             $('.price-card__toolbar').removeClass('flex-visible');
+            $('#visibleScroll').removeClass('block-visible');
 
         }
     }
