@@ -5,14 +5,14 @@ $(document).ready(function() {
 	let appartmentTruncateText = $('.description-paragrafe--truncate');
 
 	var snippingAppartmentDescription = function(height){
-		// console.log(555);
+
 		appartmentTruncateText.snipper({
 			height: height,
 			ellipsis: '&hellip;'
 		});
 
 	};
-	// snippingAppartmentDescription('110px');
+
 	if($(document).width()>=992){
 		snippingAppartmentDescription('330px;');
 	}
@@ -121,7 +121,7 @@ $(document).ready(function() {
     });
 
     optionPanelModal.mouseenter(function() {
-        console.log(555);
+
        $(this).addClass('option-panel__modal-block--active');
     });
      optionPanelModal.mouseleave(function() {
@@ -198,7 +198,7 @@ $(document).ready(function() {
 
     });
 
-        //-фикс карточки с ценой и показать тулбар карточки с ценой, когда уезжает панель опций
+        //- показать тулбар карточки с ценой, когда уезжает панель опций
     $(window).on("scroll", function() {
         if($(window).innerWidth() >=1200){
 
