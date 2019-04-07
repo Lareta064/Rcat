@@ -37,7 +37,7 @@ mixin price-card(tooltipLink,tooltipEmail,tooltipPdf,appPriceRub,appPriceUsd,app
 			.price-card__toolbar-col
 				.toolbar-col__item
 					a.text-link.text-link--line(href=''+ pdfSrc download) Скачать ПДФ
-				#show-note-field.toolbar-col__item
+				.show-note-field.toolbar-col__item
 					+text-link('Добавить заметку','','text-link--line')
 		.price-card__toolbar-note
 			textarea.price-card-note(name='price-card-note')

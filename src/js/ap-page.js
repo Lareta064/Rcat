@@ -177,8 +177,8 @@ $(document).ready(function() {
         }
     });
 
-    //-показать тулбар карточки с ценой
-    const showNoteField = $('#show-note-field');
+    //-показать поле для заметок в  карточке с ценой
+    const showNoteField = $('.show-note-field');
     const fieldForNote = $('.price-card__toolbar-note');
 
     showNoteField.on('click', function(e){
@@ -188,6 +188,7 @@ $(document).ready(function() {
             fieldForNote.addClass('block-visible');
             $(this).attr('data-position','showing');
             $(this).children('.text-link').text('Удалить заметку');
+            console.log($(this).attr('data-position'))
         }
         else{
             fieldForNote.removeClass('block-visible');
@@ -206,7 +207,6 @@ $(document).ready(function() {
                 $('.phone-block-item .add-favorite').addClass('block-visible');
 
 
-                console.log( $('#visibleScroll').height());
             }
             else {
                 $('.price-card__toolbar').removeClass('flex-visible');
