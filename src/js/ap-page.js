@@ -21,7 +21,8 @@ $(document).ready(function() {
 	}
 
      $(window).resize(function(){
-          if(appartmentTruncateText.attr('data-position') == 'hidden'){
+          //if(appartmentTruncateText.attr('data-position') == 'hidden'){
+
                if($(document).width()>=992){
                     snippingAppartmentDescription('330px;');
                }
@@ -30,7 +31,7 @@ $(document).ready(function() {
                }
 
 
-          }
+          //}
 
      });
 
@@ -111,7 +112,7 @@ $(document).ready(function() {
     const showModalBlock = $('.option-panel__modal');
 
     showModalBlock.on('click', function(e){
-        e.preventDefault();
+        // e.preventDefault(); // ПРЕДОТВРАЩАЕТ НОРМАЛЬНОЕ ПОВЕДЕНИЕ!
         optionPanelModal.addClass('option-panel__modal-block--active');
     });
 
@@ -134,12 +135,23 @@ $(document).ready(function() {
 
     showFieldNote.on('click', function(e){
         e.preventDefault();
-        textareaForNote.toggleClass('block-visible');
+         if($(this).attr('data-position') !== 'showing'){
+
+             textareaForNote.addClass('block-visible');
+             $(this).attr('data-position','showing');
+             $(this).children('.text-link').text('Удалить заметку');
+         }
+         else{
+            textareaForNote.removeClass('block-visible');
+             $(this).attr('data-position','hidden');
+             $(this).children('.text-link').text('Добавить заметку');
+
+         }
 
 
     });
 
-    //-показать телефон в карточке с ценой
+    //-клик по кнопке "Показать телефон"" в карточке с ценой
     const buttonShowPhone = $('.buttonShowPhone');
     const phoneBlock = $('.appartment-price__phone-block');
 
@@ -171,23 +183,37 @@ $(document).ready(function() {
 
     showNoteField.on('click', function(e){
         e.preventDefault();
-        fieldForNote.toggleClass('block-visible');
-        console.log(888);
+        if($(this).attr('data-position') !== 'showing'){
+
+            fieldForNote.addClass('block-visible');
+            $(this).attr('data-position','showing');
+            $(this).children('.text-link').text('Удалить заметку');
+        }
+        else{
+            fieldForNote.removeClass('block-visible');
+            $(this).attr('data-position','hidden');
+            $(this).children('.text-link').text('Добавить заметку');
+        }
+
     });
 
-    //-фикс карточки с ценой и показать тулбар карточки с ценой
-$(window).on("scroll", function() {
-    if($(window).innerWidth() >=1200){
-        if ($(window).scrollTop() > 215){
-            $('.price-card__toolbar').addClass('flex-visible');
-            $('#visibleScroll').addClass('block-visible');
-        }
-        else {
-            $('.price-card__toolbar').removeClass('flex-visible');
-            $('#visibleScroll').removeClass('block-visible');
+        //-фикс карточки с ценой и показать тулбар карточки с ценой, когда уезжает панель опций
+    $(window).on("scroll", function() {
+        if($(window).innerWidth() >=1200){
 
+            if ($(window).scrollTop() > 215){
+                $('.price-card__toolbar').addClass('flex-visible');
+                $('.phone-block-item .add-favorite').addClass('block-visible');
+
+
+                console.log( $('#visibleScroll').height());
+            }
+            else {
+                $('.price-card__toolbar').removeClass('flex-visible');
+                $('.phone-block-item .add-favorite').removeClass('block-visible');
+
+            }
         }
-    }
-});
+    });
 
 })

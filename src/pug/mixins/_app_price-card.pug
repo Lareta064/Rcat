@@ -1,4 +1,4 @@
-mixin price-card(tooltipLink,tooltipEmail,tooltipPdf,appPriceRub,appPriceUsd,appPriceArea,phoneNumber, phoneNumberHref)
+mixin price-card(tooltipLink,tooltipEmail,tooltipPdf,appPriceRub,appPriceUsd,appPriceArea,phoneNumber, phoneNumberHref, agentName, agentPageLink, agentOnlineTime, addressEmail, whatsAppLink, pdfSrc)
 	.price-card-wrapper
 		.appartment-price
 			.appartment-page-link
@@ -14,12 +14,12 @@ mixin price-card(tooltipLink,tooltipEmail,tooltipPdf,appPriceRub,appPriceUsd,app
 				+button('Показать телефон', '#','button--basic buttonShowPhone')
 				.appartment-price__phone-block
 					.phone-block-item.phone-block-item--flex
-						a(href='tel:'+phoneNumberHref ).headline-bold +7 999 455 55 55
-						+link('В избранное','','icon-heart','add-favorite  fix-width')(class='icon-heart--small' id='visibleScroll')
+						a(href='tel:'+phoneNumberHref ).headline-bold !{phoneNumber}
+						+link('В избранное','#','icon-heart','fix-width')(class='add-favorite icon-heart--small')
 
 					.phone-block-item
-						+text-link('Андрей Кальницкий,','#','agent-name')
-						span.text-body был онлайн 2 часа назад
+						+text-link(agentName,agentPageLink,'agent-name')
+						span.text-body !{agentOnlineTime}
 
 
 			.appartment-price__row.appartment-price__message
@@ -31,12 +31,12 @@ mixin price-card(tooltipLink,tooltipEmail,tooltipPdf,appPriceRub,appPriceUsd,app
 		.price-card__toolbar
 			.price-card__toolbar-col
 				.toolbar-col__item
-					+text-link('Отправить эл.почтой','#','text-link--line')
+					+text-link('Отправить эл.почтой','mailto:'+ addressEmail,'text-link--line')
 				.toolbar-col__item
-					+text-link('Отправить в Ватсап','#','text-link--line')
+					+text-link('Отправить в Ватсап', whatsAppLink,'text-link--line')
 			.price-card__toolbar-col
 				.toolbar-col__item
-					+text-link('Скачать ПДФ','#','text-link--line')
+					a.text-link.text-link--line(href=''+ pdfSrc download) Скачать ПДФ
 				#show-note-field.toolbar-col__item
 					+text-link('Добавить заметку','','text-link--line')
 		.price-card__toolbar-note
