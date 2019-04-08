@@ -139,12 +139,16 @@ $(document).ready(function() {
 
              textareaForNote.addClass('block-visible');
              $(this).attr('data-position','showing');
+             $(this).addClass('block-item--note-active');
              $(this).children('.text-link').text('Удалить заметку');
+             $(this).children('.icon-add').addClass('icon-add--active');
+
          }
          else{
             textareaForNote.removeClass('block-visible');
              $(this).attr('data-position','hidden');
              $(this).children('.text-link').text('Добавить заметку');
+             $(this).children('.icon-add').removeClass('icon-add--active');
 
          }
 
@@ -187,13 +191,13 @@ $(document).ready(function() {
 
             fieldForNote.addClass('block-visible');
             $(this).attr('data-position','showing');
-            $(this).children('.text-link').text('Удалить заметку');
+            $(this).children('.text-link').text('Удалить заметку').css('color','#325b82');
             console.log($(this).attr('data-position'))
         }
         else{
             fieldForNote.removeClass('block-visible');
             $(this).attr('data-position','hidden');
-            $(this).children('.text-link').text('Добавить заметку');
+            $(this).children('.text-link').text('Добавить заметку').css('color','#2c81d1');;
         }
 
     });
