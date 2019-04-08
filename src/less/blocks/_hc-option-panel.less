@@ -183,8 +183,11 @@
 .icon-add.icon-add--active{
 	.icon-add--path{fill: #d15656 !important;}
 	& +.text-link{
-		color: #325b82;
-		border-bottom-color:#325b82;
+		@media(min-width: 1200px){
+			color: #325b82;
+			border-bottom-color:#325b82;
+		}
+
 	}
 
 }
