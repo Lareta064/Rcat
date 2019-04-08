@@ -33,7 +33,7 @@ mixin price-card(tooltipLink,tooltipEmail,tooltipPdf,appPriceRub,appPriceUsd,app
 				.toolbar-col__item
 					+text-link('Отправить эл.почтой','mailto:'+ addressEmail,'text-link--line')
 				.toolbar-col__item
-					+text-link('Отправить в Ватсап', whatsAppLink,'text-link--line')
+					+text-link('Отправить в Ватсап', whatsAppLink,'text-link--line')(target='_blank')
 			.price-card__toolbar-col
 				.toolbar-col__item
 					a.text-link.text-link--line(href=''+ pdfSrc download) Скачать ПДФ

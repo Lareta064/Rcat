@@ -11,8 +11,8 @@ mixin option-panel(panelModif)
 			.option-panel__modal
 				+text-link('Еще','','showModalBlock')
 				.option-panel__modal-block
-					+text-link('Отправить в Ватсап','#','text-link--line link-block--pl text-link--line')
-					+text-link('Поделиться в Телеграме','#','text-link--line link-block--pl')
+					+text-link('Отправить в Ватсап','#','text-link--line link-block--pl text-link--line')(target='_blank')
+					+text-link('Поделиться в Телеграме','#','text-link--line link-block--pl')(target='_blank')
 
 
 		+link('Пожаловаться','','icon-question').order-item
@@ -30,9 +30,9 @@ mixin option-panel(panelModif)
 		.dropdown-item
 			+text-link('Скачать ПДФ','#','link-block--pl text-link--line')
 		.dropdown-item
-			+text-link('Отправить в Ватсап','#','link-block--pl text-link--line')
+			+text-link('Отправить в Ватсап','#','link-block--pl text-link--line')(target='_blank')
 		.dropdown-item
-			+text-link('Поделиться в Телеграме','#','link-block--pl text-link--line')
+			+text-link('Поделиться в Телеграме','#','link-block--pl text-link--line')(target='_blank')
 		.dropdown-item
 			+link('Пожаловаться','','icon-question').order-item
 
