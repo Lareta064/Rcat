@@ -161,7 +161,8 @@ $(document).ready(function() {
 
     buttonShowPhone.on('click', function(e){
         e.preventDefault();
-        phoneBlock.addClass('block-visible');
+        // phoneBlock.addClass('block-visible');
+        phoneBlock.fadeIn(900);
         $(this).css('display','none');
     });
 
