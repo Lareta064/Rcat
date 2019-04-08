@@ -73,9 +73,9 @@ mixin optionPanel(panelModif, еmailLink, pdfSrc, whatsAppLink, telegramLink)
 			//- +text-link('Скачать ПДФ',pdfSrc,'link-block--pl text-link--line')
 			a.text-link.text-link--line.link-block--pl(href=''+ pdfSrc download) Скачать ПДФ
 		.dropdown-item
-			+text-link('Отправить в Ватсап',whatsAppLink,'link-block--pl text-link--line')
+			+text-link('Отправить в Ватсап',whatsAppLink,'link-block--pl text-link--line')(target='_blank')
 		.dropdown-item
-			+text-link('Поделиться в Телеграме',telegramLink,'link-block--pl text-link--line')
+			+text-link('Поделиться в Телеграме',telegramLink,'link-block--pl text-link--line')(target='_blank')
 		.dropdown-item
 			+link('Пожаловаться','','icon-question').order-item
 
