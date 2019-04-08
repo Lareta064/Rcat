@@ -167,10 +167,21 @@
 
 	}
 }
-.write-note--show{display: block;}
+// .write-note--show{display: block;}
 
 .write-note-textarea:focus{
 	outline: none !important;
 	border-color:@blueBorder;
+
+}
+.block-item--note{
+	padding-right: 25px;
+	.icon-add{margin-right: 10px;}
+
+	@media(min-width: 1350px){min-width: 185px;}
+}
+.icon-add.icon-add--active{
+	.icon-add--path{fill: #d15656;}
+	& +.text-link{color: #325b82;}
 
 }

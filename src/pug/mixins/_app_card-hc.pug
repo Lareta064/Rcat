@@ -27,8 +27,9 @@ mixin hcCardShort(cardObject)
 		.hc-card-wrapper
 			.hc-card-row.hc-card-row-info
 				.hc-card-group.block-width
-					.box-visible-block
-						.headline-bold !{cardObject.price} руб. 
+					//- .box-visible-block
+					.box-desktop-block
+						.headline-bold !{cardObject.price} руб.
 						.text-body стоимость квартир
 					.hc-card-row__info.d-flex
 						.hc-card__area-mob
@@ -58,7 +59,7 @@ mixin hcCardShort(cardObject)
 					.text-body !{cardObject.infrastructure}
 				.hc-card-row-add
 					.headline-body Эксплуатация
-					.text-body !{cardObject.operationPrice} 
+					.text-body !{cardObject.operationPrice}
 		//-Большой бэйдж на белом фоне
 		.hc-card-row-add.big-badge--white
 			+bag-badge(cardObject.blueBadgeNum1,cardObject.blueBadgeNum2)(class='big-badge--short')

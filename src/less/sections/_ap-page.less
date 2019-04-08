@@ -1,3 +1,15 @@
+
+.option-panel--appartment-page{
+	.option-panel--desktop{
+		display: none;
+		@media(min-width: 1350px){display: flex;}
+	}
+	.option-panel--mobile{
+		display: flex;
+		@media(min-width: 1350px){display: none;}
+	}
+}
+
 .appartment-page__map .section-map--bottom{
 	@media(min-width: 1200px){
 		flex-wrap: wrap;
@@ -31,4 +43,17 @@
 .similar-objects-top__link-title{
 	color: #000;
 	padding-right: 5px;
+}
+.card-price--mobile{
+	display: block;
+	@media(min-width: 1200px){display: none;}
+
+}
+.card-price--desktop{
+	display: none;
+	@media(min-width: 1200px){display: block;}
+
+}
+.similar-objects--cards{
+	.share-link-text{display: none;	}
 }

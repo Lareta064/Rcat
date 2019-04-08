@@ -5,14 +5,14 @@ $(document).ready(function() {
 	let appartmentTruncateText = $('.description-paragrafe--truncate');
 
 	var snippingAppartmentDescription = function(height){
-		// console.log(555);
+
 		appartmentTruncateText.snipper({
 			height: height,
 			ellipsis: '&hellip;'
 		});
 
 	};
-	// snippingAppartmentDescription('110px');
+
 	if($(document).width()>=992){
 		snippingAppartmentDescription('330px;');
 	}
@@ -21,7 +21,8 @@ $(document).ready(function() {
 	}
 
      $(window).resize(function(){
-          if(appartmentTruncateText.attr('data-position') == 'hidden'){
+          //if(appartmentTruncateText.attr('data-position') == 'hidden'){
+
                if($(document).width()>=992){
                     snippingAppartmentDescription('330px;');
                }
@@ -30,7 +31,7 @@ $(document).ready(function() {
                }
 
 
-          }
+          //}
 
      });
 
@@ -111,7 +112,7 @@ $(document).ready(function() {
     const showModalBlock = $('.option-panel__modal');
 
     showModalBlock.on('click', function(e){
-        e.preventDefault();
+        // e.preventDefault(); // ПРЕДОТВРАЩАЕТ НОРМАЛЬНОЕ ПОВЕДЕНИЕ!
         optionPanelModal.addClass('option-panel__modal-block--active');
     });
 
@@ -120,7 +121,7 @@ $(document).ready(function() {
     });
 
     optionPanelModal.mouseenter(function() {
-        console.log(555);
+
        $(this).addClass('option-panel__modal-block--active');
     });
      optionPanelModal.mouseleave(function() {
@@ -134,10 +135,89 @@ $(document).ready(function() {
 
     showFieldNote.on('click', function(e){
         e.preventDefault();
-        textareaForNote.toggleClass('write-note--show');
-        console.log(444);
+         if($(this).attr('data-position') !== 'showing'){
+
+             textareaForNote.addClass('block-visible');
+             $(this).attr('data-position','showing');
+             $(this).addClass('block-item--note-active');
+             $(this).children('.text-link').text('Удалить заметку');
+             $(this).children('.icon-add').addClass('icon-add--active');
+
+         }
+         else{
+            textareaForNote.removeClass('block-visible');
+             $(this).attr('data-position','hidden');
+             $(this).children('.text-link').text('Добавить заметку');
+             $(this).children('.icon-add').removeClass('icon-add--active');
+
+         }
 
 
-    })
+    });
+
+    //-клик по кнопке "Показать телефон"" в карточке с ценой
+    const buttonShowPhone = $('.buttonShowPhone');
+    const phoneBlock = $('.appartment-price__phone-block');
+
+    buttonShowPhone.on('click', function(e){
+        e.preventDefault();
+        phoneBlock.addClass('block-visible');
+        $(this).css('display','none');
+    });
+
+    //-показать кнопку Отправить в карточке с ценой
+    const priceCardTextarea = $('.appartment-price__textarea');
+    const buttonSendMessage = $('.btn-send-message');
+
+    priceCardTextarea.focus(function(){
+        buttonSendMessage.addClass('block-visible');
+    });
+    priceCardTextarea.blur(function(){
+        if(priceCardTextarea.val() == ''){
+            buttonSendMessage.removeClass('block-visible');
+
+        }
+        else{buttonSendMessage.addClass('block-visible');
+        }
+    });
+
+    //-показать поле для заметок в  карточке с ценой
+    const showNoteField = $('.show-note-field');
+    const fieldForNote = $('.price-card__toolbar-note');
+
+    showNoteField.on('click', function(e){
+        e.preventDefault();
+        if($(this).attr('data-position') !== 'showing'){
+
+            fieldForNote.addClass('block-visible');
+            $(this).attr('data-position','showing');
+            $(this).children('.text-link').text('Удалить заметку').css('color','#325b82');
+            console.log($(this).attr('data-position'))
+        }
+        else{
+            fieldForNote.removeClass('block-visible');
+            $(this).attr('data-position','hidden');
+            $(this).children('.text-link').text('Добавить заметку').css('color','#2c81d1');;
+        }
+
+    });
+
+        //- показать тулбар карточки с ценой, когда уезжает панель опций
+    $(window).on("scroll", function() {
+        if($(window).innerWidth() >=1200){
+
+            if ($(window).scrollTop() > 215){
+                $('.price-card__toolbar').addClass('flex-visible');
+                $('.phone-block-item .add-favorite').addClass('block-visible');
+
+
+            }
+            else {
+                $('.price-card__toolbar').removeClass('flex-visible');
+                $('.phone-block-item .add-favorite').removeClass('block-visible');
+
+            }
+        }
+    });
 
 })

@@ -1,7 +1,7 @@
 mixin appartment-duplicate-card(cardData)
 	.appartment-card.appartment-card--duplicate
 		.appartment-page-link
-			.share-link-text Поделиться
+			//- .share-link-text Поделиться
 			+share-link
 			+tooltip(cardData.tooltipLink,cardData.mailAddress,cardData.pdfLink)
 		.appartment-publication.text-body--grey !{cardData.publicDate}

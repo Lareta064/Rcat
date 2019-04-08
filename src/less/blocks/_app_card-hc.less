@@ -1,6 +1,7 @@
 .app_hc-card{
 	padding-top: 45px;
 	padding-bottom: 50px;
+	@media(min-width: 1200px){padding-bottom: 18px;}
 }
 
 .hc-card--short{
@@ -9,20 +10,21 @@
 	min-width: 360px;
 	background-color: @white;
 	padding: 25px;
-	padding-bottom: 50px;
+	padding-bottom: 30px;
 	@media(min-width: 360px){
-		margin-left: auto;
-		margin-right: auto;
+		margin-left: 0;
+		margin-right: 0;
 		min-width: 280px;
 	}
 	@media(min-width: 768px){
 		// display: flex;
-		max-width: 850px;
+
 		min-height: 450px;
 
 		border-radius: 5px;
 		padding: 15px 15px 40px 15px;
 	}
+	@media(min-width: 1200px){max-width: 850px;}
 	.last-text--comma{display: none;}
 }
 
@@ -216,15 +218,15 @@
 	}
 }
 
-.box-visible-block{
-	display: none;
-	@media(min-width: 768px){display: block;}
-}
+// .box-visible-block{
+// 	display: none;
+// 	@media(min-width: 768px){display: block;}
+// }
 
-.box-mobile-block{
-	display: block;
-	@media(min-width: 768px){display: none;}
-}
+// .box-mobile-block{
+// 	display: block;
+// 	@media(min-width: 768px){display: none;}
+// }
 
 .hc-card__area-mob{
 	min-width: 180px;
@@ -268,7 +270,7 @@
 	}
 
 	.subscribeButton--active{
-		background-color: #fff8eb;
+		background-color:@yellowBg;
 		color: @black;
 		svg path{
 			fill: red;
