@@ -182,6 +182,12 @@
 }
 .icon-add.icon-add--active{
 	.icon-add--path{fill: #d15656;}
-	& +.text-link{color: #325b82;}
+	& +.text-link{
+		color: #325b82;
+		border-bottom-color:#325b82;
+	}
 
+}
+.icon-add.icon-add--active:hover{
+	.dropdown-item:hover .icon-add .icon-add--path{fill: #d15656;}
 }
