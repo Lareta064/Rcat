@@ -7,15 +7,16 @@ block content
 	.appartment-page-wrapper
 		header.header
 			+header('avatar','Иван Марасин')
+
 		section.title-block.title-block--appartment-page
 			include ../sections/app_appartment-title-block.pug
+
 		section.option-panel-wrapper.option-panel--appartment-page
-			//- +option-panel('full')
 			+optionPanel('full', 'info@mail.ru', '../img/test.pdf', 'https://msng.link/wa/9271048499', 'https://msng.link/tg/Lareta555')
+
 		include ../sections/app_appartment-description.pug
-		//- include ../sections/app_duplicate-ad.pug
-		//- include ../sections/app_hc-card.pug
-		//- include ../sections/app_map-section.pug
+
 		include ../sections/app_similar-objects.pug
+
 		footer.footer
 			+page-footer
