@@ -62,14 +62,21 @@
 	}
 	.link-block__text--line{margin-left: 28px;}
 }
-.option-panel--desktop{
-	display: none;
-	@media(min-width: 1200px){display: flex;}
-}
 .option-panel--mobile{
 	display: flex;
-	@media(min-width: 1200px){display: none;}
+	@media(min-width: 992px){display: none;}
 }
+.option-panel--tablet{
+	display: none;
+	@media(min-width: 992px){display: flex;}
+	@media(min-width: 1350px){display: none;}
+
+}
+.option-panel--desktop{
+	display: none;
+	@media(min-width: 1350px){display: flex;}
+}
+
 .icon-down--rotate{
 	transform: rotate(180deg) translate(-25%);
 }
@@ -187,7 +194,5 @@
 			color: #325b82;
 			border-bottom-color:#325b82;
 		}
-
 	}
-
 }
