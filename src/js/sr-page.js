@@ -70,7 +70,19 @@ $(document).ready(function() {
 			$(this).children('.simple-link').text('В избранноe');
 		}
 	});
-
+	//- красим иконку сердечко  и меняем на текст "удалить поиск"
+	$('.save-search').on('click', function(e){
+		e.preventDefault();
+		if($(this).children('.link-block__icon').children('.icon-heart').children('svg').attr('data-prefix') == 'far'){
+			$(this).children('.link-block__icon').children('.icon-heart').children('svg').attr('data-prefix','fas');
+			$(this).children('.simple-link').text('Удалить поиск');
+			// $(this).children('.simple-link').text('Удалить из избранного');
+		}
+		else {
+			$(this).children('.link-block__icon').children('.icon-heart').children('svg').attr('data-prefix','far');
+			$(this).children('.simple-link').text('Сохранить поиск');
+		}
+	});
 
 	//-красим кнопки с квартирами
 	$('.rooms-num .link-btn').on('click', function(){
