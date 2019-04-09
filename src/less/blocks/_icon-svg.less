@@ -25,7 +25,12 @@ i{
 	fill-rule: evenodd;
 }
 .watch-announcements{
-	.simple-link{min-width: 273px;}
+	.simple-link{
+		min-width: 273px;
+		@media(min-width: 992px){min-width: 110px;}
+		@media(min-width: 1350px){min-width: 273px;}
+	}
+
 }
 .watch-announcements--active{
 	.icon-notify{
