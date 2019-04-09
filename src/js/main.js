@@ -42,16 +42,32 @@ $(document).ready(function() {
 		//-следить за объявлениями
 	$('.watch-announcements').on('click', function(e){
 		e.preventDefault();
-		if($(this).hasClass('watch-announcements--active')){
-			$(this).removeClass('watch-announcements--active');
-			$(this).children('.simple-link').children('span').children('nohyphen').text('Следить за объявлениями в этом ЖК');
+		if($(window).innerWidth()<992 || $(window).innerWidth()>=1350){
+			if($(this).hasClass('watch-announcements--active')){
+				$(this).removeClass('watch-announcements--active');
+				$(this).children('.simple-link').children('span').children('nohyphen').text('Следить за объявлениями в этом ЖК');
 
+			}
+			else {
+				$(this).addClass('watch-announcements--active');
+				$(this).children('.simple-link').children('span').children('nohyphen').text('Отписаться от объявлений в этом ЖК');
+
+			}
 		}
 		else {
-			$(this).addClass('watch-announcements--active');
-			$(this).children('.simple-link').children('span').children('nohyphen').text('Отписаться от объявлений в этом ЖК');
 
+			if($(this).hasClass('watch-announcements--active')){
+				$(this).removeClass('watch-announcements--active');
+				$(this).children('.simple-link').children('span').children('nohyphen').text('Следить за ЖК');
+
+			}
+			else {
+				$(this).addClass('watch-announcements--active');
+				$(this).children('.simple-link').children('span').children('nohyphen').text('Отписаться');
+
+			}
 		}
+
 	});
 
 	// Изменение фото в блоке Фото ЖК

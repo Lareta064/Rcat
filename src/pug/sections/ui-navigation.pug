@@ -74,15 +74,20 @@
 
 				+linkLeftPanel("Блок с заголовком", "ch_title-block.html")
 				+linkLeftPanel("Блок агента", "ch_agent-info.html")
-
+				+linkLeftPanel("Комментарии", "ch_comment.html")
+				+linkLeftPanel("Карточка новые запросы", "ch_new-request.html")
 
 
 	.left-panel__section
-		p.strong Страница бесед
+		p.strong Страница квартиры
 			.left-panel-nav
+				+linkLeftPanel("Карточка цены квартиры", "app_price-card.html")
+				+linkLeftPanel("Карточка ЖК", "app_card-hc.html")
 
-				+linkLeftPanel("Комментарии", "ch_comment.html")
-				+linkLeftPanel("Карточка новые запросы", "ch_new-request.html")
+				+linkLeftPanel("Описание квартиры: текст", "app_description-text.html")
+				+linkLeftPanel("Описание квартиры: полная секция", "app_appartment-description.html")
+
+
 
 
 

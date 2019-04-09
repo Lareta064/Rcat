@@ -1,0 +1,61 @@
+
+// .option-panel--appartment-page{
+// 	.option-panel--desktop{
+// 		display: none;
+// 		@media(min-width: 1350px){display: flex;}
+// 	}
+// 	.option-panel--mobile{
+// 		display: flex;
+// 		@media(min-width: 1350px){display: none;}
+// 	}
+// }
+
+.appartment-page__map .section-map--bottom{
+	@media(min-width: 1200px){
+		flex-wrap: wrap;
+		.badge-group, .link-group, .text-info--metro{padding-bottom: 7px;}
+	}
+
+}
+
+.title-block--appartment-page{
+	.title-block-wrapper{align-items: flex-end;}
+	.update-box{padding-bottom: 0;}
+	.text-info{
+		@media(min-width: 992px){
+		padding-left: 14px;
+		padding-top: 3px;}
+		@media(min-width: 1350px){padding-left: 0;}
+
+	}
+}
+.section-top--similar-objects{padding-top: 52px;}
+.similar-objects-top__link{
+	display: none;
+	@media(min-width: 768px){display: flex;}
+	.icon-flag{
+		align-self: flex-start;
+		margin-right: 9px;
+		position: relative;
+		top:-5px;
+	}
+}
+.similar-objects-top__link-title{
+	color: #000;
+	padding-right: 5px;
+}
+.card-price--mobile{
+	display: block;
+	margin-bottom: 40px;
+	.price-card__toolbar{display: none;	}
+	@media(min-width: 1200px){display: none;}
+
+}
+.card-price--desktop{
+	display: none;
+	@media(min-width: 1200px){display: block;}
+
+}
+.similar-objects--cards{
+	.share-link-text{display: none;	}
+}

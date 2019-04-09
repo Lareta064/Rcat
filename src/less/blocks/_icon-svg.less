@@ -25,7 +25,12 @@ i{
 	fill-rule: evenodd;
 }
 .watch-announcements{
-	.simple-link{min-width: 273px;}
+	.simple-link{
+		min-width: 273px;
+		@media(min-width: 992px){min-width: 110px;}
+		@media(min-width: 1350px){min-width: 273px;}
+	}
+
 }
 .watch-announcements--active{
 	.icon-notify{
@@ -71,7 +76,7 @@ i{
 	font-size: 24px;
 	cursor: pointer;
 }
-
+.add-favorite .icon-heart,
 .icon-heart.icon-heart--red{
 	svg{
 		width: 18px ;
@@ -81,6 +86,12 @@ i{
 		fill: @redText;
 		width: 18px ;
 		height: 16px ;
+	}
+}
+.add-favorite .icon-heart{
+	svg{
+		width: 20px ;
+		height: 20px ;
 	}
 }
 .icon-heart--grey{
