@@ -147,7 +147,7 @@ $(document).ready(function() {
          }
          else{
             // textareaForNote.removeClass('block-visible');
-            textareaForNote.fadeOut(500);
+            textareaForNote.fadeOut(100);
              $(this).attr('data-position','hidden');
              $(this).children('.text-link').text('Добавить заметку');
              $(this).children('.icon-add').removeClass('icon-add--active');
