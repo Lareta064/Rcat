@@ -137,7 +137,8 @@ $(document).ready(function() {
         e.preventDefault();
          if($(this).attr('data-position') !== 'showing'){
 
-             textareaForNote.addClass('block-visible');
+             // textareaForNote.addClass('block-visible');
+             textareaForNote.fadeIn(500);
              $(this).attr('data-position','showing');
              $(this).addClass('block-item--note-active');
              $(this).children('.text-link').text('Удалить заметку');
@@ -145,7 +146,8 @@ $(document).ready(function() {
 
          }
          else{
-            textareaForNote.removeClass('block-visible');
+            // textareaForNote.removeClass('block-visible');
+            textareaForNote.fadeOut(500);
              $(this).attr('data-position','hidden');
              $(this).children('.text-link').text('Добавить заметку');
              $(this).children('.icon-add').removeClass('icon-add--active');
