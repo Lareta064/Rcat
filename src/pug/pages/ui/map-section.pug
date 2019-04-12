@@ -1,0 +1,15 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'ЖК. Секция с картой местности';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.section-ui
+			.title ЖК. Секция с картой местности
+		.section-ui
+			include ../../sections/map-section.pug
+		.section-ui
+			pre.
+				include ../../sections/map-section.pug

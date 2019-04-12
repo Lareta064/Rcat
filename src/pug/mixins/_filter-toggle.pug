@@ -1,0 +1,16 @@
+//-миксн для переключателя фильтра
+mixin toggle-item(itemName, itemClass)
+	.filter-toggle-item(class=" "+ itemClass) !{itemName}
+
+//-миксн для блока с фильтрами
+mixin toggle-block(blockData)
+	if blockData.modif == 'border'
+		.filter-toggle.filter-toggle--border&attributes(attributes)
+			.filter-toggle__text !{blockData.title}
+			each item in blockData.items
+				+toggle-item(item.name,item.class)
+	else
+		.filter-toggle&attributes(attributes)
+			.filter-toggle__text !{blockData.title}
+			each item in blockData.items
+				+toggle-item(item.name,item.class)

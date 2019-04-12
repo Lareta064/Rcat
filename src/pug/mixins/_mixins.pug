@@ -1,82 +1,101 @@
-// Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.
-mixin colors-product__circle(imgSrc, titleText)
+//- Разные миксины по одному, которые понадобятся. Для логотипа, бейджа, и т.д.
 
-		.colors-product__circle
-			a.colors-product-link(href="#")
-				img(src="../img/good_colors/"+ imgSrc  alt="color" title =""+ titleText)
+//-заголовок секции
+mixin section-title(title)
+	.section-top-title.headline-bold&attributes(attributes) !{title}
 
-//- Mixn for search result
-mixin searchResult (img, text)
-	.header-search__result
-		.header-search__result-img
-			img(src="../img/good_thumbnail/" + img , alt=img)
-		.header-search__result-description !{text}
+//-строка с заголовоком секции , с фильтрами ...
+mixin section-top(sectionTitle,filterToggles,sectionSubtitle,addClass )
+	.section-top.d-flex(class=" "+ addClass)&attributes(attributes)
+		.section-top-title.headline-bold !{sectionTitle}
+		if sectionSubtitle
+			.section-top-subtitle.headline-bold.headline-bold--grey !{sectionSubtitle}
+		//-фильтры
+		if filterToggles
+			+toggle-block(filterToggles)
 
-mixin header-info__item(img, title)
-	.header-info__block.d-flex&attributes(attributes)
-		img(src=img alt="иконка")
-		span #{title}
-
-//- Миксин для бейджа в фильтре
-mixin badgeFilter(text, colorClass)
-	.badge-filter(class= colorClass)= text
-//- Миксин для бейджа статус заказа в аккаунте
-mixin badgeOrderStatus(text, colorStatus)
-	.badge-order-status(class= colorStatus)= text
-
-//- Миксин для checkbox
-
-mixin checkbox (text)
-	label.checkbox-label
-		input.checkbox(type="checkbox")
-		span.checkbox-custom
-		span.checkbox-label-text #{text}
-
-mixin checkboxFilter (text)
-	label.checkbox-label
-		input.checkbox(type="checkbox")
-		span.checkbox-custom.checkbox-custom--filter
-		span.checkbox-label-text.checkbox-label-text--filter #{text}
-
-//- Миксин для товаров в корзине
-mixin goodsCart (img, text, price)
-	.goods-cart-wrapper.clearfix
-		.goods-cart__img
-			img(src="../img/good_thumbnail/blue-purse/" + img, alt= img)
-		.goods-cart__info
-			.goods-cart__title-icon
-				.goods-cart__description= text
-				.goods-cart__close-icon
-			.goods-cart__counter-price
-				.product-counter.goods-cart__counter
-					.btn-counter.btn-counter--minus.goods-cart__counter-minus
-					span.goods-cart__count 1
-					.btn-counter.btn-counter--plus.goods-cart__counter-plus
-				.goods-cart__price= price
+//-ссылка заголовок
+mixin link-title(linkText, href)
+	a(href=" "+href ).headline-body.simple-link.link-solid-border&attributes(attributes) !{linkText}
 
 
-//-Hause Complex
-//- Миксин ссылок
 
-mixin link(linkText,linkIcon,linkClass)
-	a(href='#').link-block&attributes(attributes)
+//-Простая ссылка
+mixin text-link(linkText,href,linkClass)
+	if linkClass
+		a.text-link(href=""+ href class=" "+ linkClass)&attributes(attributes) !{linkText}
+	else
+		a.text-link(href=""+ href)&attributes(attributes) !{linkText}
+
+//- ссылка, которая может переноситься, подчеркивается градиентом
+mixin link(linkText,href, linkIcon,linkClass)
+	a(href=' '+ href).link-block&attributes(attributes)
 		if linkIcon
 			.link-block__icon
 				+#{linkIcon}
-			.simple-link(class=' simple-link--'+ linkClass) #{linkText}
+			if linkClass
+				.simple-link(class=' '+ linkClass)
+					span
+						nohyphen !{linkText}
+			else
+				.simple-link
+					span
+						nohyphen !{linkText}
 		else
-			.simple-link(class=' simple-link--'+ linkClass) #{linkText}
+			if linkClass
+				.simple-link(class=' '+ linkClass)
+					span
+						nohyphen !{linkText}
+			else
+				.simple-link
+					span
+						nohyphen !{linkText}
 
-//- Миксин для одного бейджа
+mixin linkInMixin(linkData)
+	a(href=' '+ linkData.href).link-block&attributes(attributes)
+		if linkIcon
+			.link-block__icon
+				+#{linkData.Icon}
+			if linkClass
+				.simple-link(class=' '+ linkData.addClass)
+					span
+						nohyphen !{linkData.Text}
+			else
+				.simple-link
+					span
+						nohyphen !{linkData.Text}
+		else
+			if linkClass
+				.simple-link(class=' '+ linkData.addClass)
+					span
+						nohyphen !{linkData.Text}
+			else
+				.simple-link
+					span
+						nohyphen !{linkData.Text}
+
+
+//-бэйдж с дата аттрибутом
+mixin badge2(  attrValue,badgeName )
+	.badge(data-group=''+ attrValue ) !{badgeName}
+mixin badge-attr(badgeGroup)
+	.badge-group&attributes(attributes)
+		each item in badgeGroup
+			if item.badgeClass
+				.badge(data-name=''+ item.attrValue class= ''+ item.badgeClass) !{item.badgeName}
+			else
+				.badge(data-name=''+ item.attrValue ) !{item.badgeName}
+
+//-бэйджи без дата аттрибута
 mixin badge(...items)
 	each item in items
 		.badge= item
 
 //- Миксин для группы бейджиков
-mixin badge-group(...badgesItems)
-	.badge-group
-		each item in badgesItems
-			+badge(...item)
+mixin badge-group(badges)
+	.badge-group&attributes(attributes)
+		each item in badges
+			.badge= item
 
 
 //-большой голубой бейдж
@@ -85,7 +104,7 @@ mixin bag-badge(num1,num2 )
 		.big-badge__top #[span #{num1}] из #[span #{num2}]
 		.big-badge__bottom квартир в продаже
 
-
+//-большой голубой бейдж для объекта
 mixin big-badge(objItem)
 	.big-badge&attributes(attributes)
 		.big-badge__top #[span #{objItem.num1}] из #[span #{objItem.num2}]
@@ -95,68 +114,108 @@ mixin big-badge(objItem)
 mixin mobile-btn(btnImg)
 	a(href="#").mobile-button&attributes(attributes)
 		+plus
-		//- img(src="../img/icons/"+ btnImg +".png", alt="")
 
-//-метро+текст+человечек
-mixin text-and-icon(iconFirst,text1,text2, text3,iconLast)
-	.text-group.d-flex&attributes(attributes)
-		if iconFirst
-			span.first-icon
-				+#{iconFirst}
-		span.text-body.first-text #{text1},
-		span.text-body.middle-text.text-body--grey #{text2}
-		span.text-body.last-text.text-body--grey #{text3}
+//-базовый миксин иконка + метро
+mixin metro(...metroName )
+	.metro-block.d-flex&attributes(attributes)
+		+icon-metro
+		each item in metroName
+			.metro-name !{item} #[span.metro-name--comma ,]
+
+
+//-миксин для метро с человечком
+mixin metro-station(firstIcоn,stationName,timeNum, iconLast)
+	.metro-station&attributes(attributes)
+		if firstIcоn
+			+#{firstIcоn}
+		span.text-body.first-text #{stationName},
+		span.text-body.middle-text.text-body--grey !{timeNum}
+		span.text-body.last-text.text-body--grey пешком
+		span.last-icon
 		if iconLast
 			span.last-icon
 				+#{iconLast}
 
-//-миксин для таблицы квартир
-mixin table-row(roomsNum, roomsLink, roomsArea, roomsFloor,roomsRepair, roomsImg, priceUsd, priceRub, priceMeter, phoneNumber, priceDown )
-	.apartment-item
-		.row
-			.col-md-10
-				.apartment-item-column.d-flex
-					.d-flex.column-item
-						.d-flex.apartment-info.apartment-info--pb.order-md-2
-							.d-flex.apartment-info__col
-								a(href=""+ roomsLink).info-item.info-item--rooms #[span.link-solid-border #{roomsNum} комн. кв]
-								.info-item.info-item--area #[span #{roomsArea} кв.м]
-							.d-flex.apartment-info__col
-								.info-item.info-item--floor #[span #{roomsFloor} этаж]
-								if(roomsRepair == 'без отделки')
-									.info-item.info-item--repair #[span Без отделки]
-								if(roomsRepair == 'отделка')
-									.info-item.info-item--repair #[span.repaire-icon Отделка]
-						.apartment-img.order-md-1(style="background-image: url(../img/hc/"+ roomsImg +".png);")
-					.d-flex.column-item
-						.d-flex.apartment-info
-							.d-flex.apartment-info__col.apartment-info__col--short
-								if priceDown
 
-									.info-item.info-item--price.info-item--price-usd #[span.visible-usd $#{priceUsd}] #[span.hidden-rub.price-down #{priceRub} руб.]
-										+icon-price-down
-
-								else
-									.info-item.info-item--price-usd #[span.visible-usd $#{priceUsd}] #[span.hidden-rub #{priceRub} руб.]
-
-							.d-flex.apartment-info__col.apartment-info__col--large
-								if priceDown
-									.info-item.info-item--price-rub #[span.visible-rub.price-down #{priceRub} руб.] #[span.hidden-usd $#{priceUsd}]
-										+icon-price-down
-
-								else
-									.info-item.info-item--price-rub #[span.visible-rub #{priceRub} руб.] #[span.hidden-usd $#{priceUsd}]
-
-								.info-item.info-item--price-meter #[span #{priceMeter} руб./кв.м]
+mixin metro-station-mobile(items)
+	.metro-station-mobile
+		each item in items
+			.metro-station-mobile__item
+				.text-body.first-text #{item.stationName}
+				.text-body.middle-text.text-body--grey !{item.timeNum} пешком
+		+icon-metro
 
 
-			.col-md-2
-				.d-flex.column-contacts
-					a(href="#").contact-phone #{phoneNumber}
-					.icon-group
-						a(href="#")
-							+icon-mail
-						+icon-heart('red')
+//-миксин для метро с человечком для объекта
+mixin metroStation(metroStation)
+	.metro-station&attributes(attributes)
+		span.text-body.first-text #{metroStation.stationName},&nbsp;
+			if metroStation.firstIcоn
+				+#{metroStation.firstIcоn}
+		.metro-station--box.d-flex
+			span.text-body.middle-text.text-body--grey !{metroStation.timeNum}
+			span.text-body.last-text.text-body--grey пешком #[span.last-text--comma , ]
+		span.last-icon
+		if metroStation.iconLast
+			span.last-icon
+				+#{metroStation.iconLast}
 
-//-конец миксина "строка таблицы""
 
+//-миксин для ссылки-кнопки с кол-вом квартир
+mixin link-btn(text)
+	a(href='#').link-btn
+		span.link-btn--text= text
+
+mixin link-btn-block(...items)
+	.link-btn-block&attributes(attributes)
+		each item in items
+			+link-btn(item)
+
+mixin repaire-item(text)
+	if text == 'С ремонтом'
+		.repaire-item-box
+			+icon-brach
+			.repaire-item= text
+	else
+		.repaire-item= text
+
+
+//-миксин для одиночного инпута
+mixin input-block(inputType,inputPlace,inputName)
+	.input-block&attributes(attributes)
+		input.form-input(type=""+ inputType placeholder=""+ inputPlace name=""+ inputName)
+
+
+//-миксин для двойного инпута
+mixin input-block--double(inputType1,inputPlace1,inputName1,inputType2,inputPlace2,inputName2)
+	.input-block.input-block--double.d-flex&attributes(attributes)
+		input.form-input.form-input--left(type=""+ inputType1 placeholder=""+inputPlace1 name=""+ inputName1)
+		input.form-input.form-input--right(type=""+ inputType2 placeholder=""+ inputPlace2 name=""+ inputName2)
+
+//-окошко тултип
+mixin tooltip(placeholder, mailHref, pdfHref)
+	.tooltip-box&attributes(attributes)
+		.tooltip__title Ссылка на объект
+		.tooltip__input
+			+icon-copy
+			input.form-input(type='text' placeholder=''+ placeholder readonly)
+		.tooltip__links.d-flex
+			+text-link('Отправить по эл почте','mailto:'+mailHref,'text-link--line')
+			+text-link('Скачать ПДФ',pdfHref,'text-link--line')(download)
+
+//-кастомный чекбокс
+mixin custom-checkbox(text)
+	label.checkbox-label(for='hc-type')&attributes(attributes)
+		span.checkbox-title= text
+		input(type="checkbox" id='hc-type' name="form-checkbox" class="form-checkbox")
+		span.custom-checkbox
+
+//-иконка лайк с количеством лайков
+mixin icon-group(groupData)
+	.icon-group(class=" group--"+ groupData.iconName )&attributes(attributes)
+		.icon-group__icon
+			+#{groupData.iconName}
+		if groupData.countNum > 0
+			span.icon-group__num.icon-group__num--color #{groupData.countNum}
+		else
+			span.icon-group__num #{groupData.countNum}

@@ -10,21 +10,8 @@ block content
 			h1 Footer
 		.section-ui
 			footer.footer
-				.footer-top.d-flex
-					.logoblock.d-flex
-						+logo-icon
-						.logo-text Профессиональный каталог недвижимости Москвы
-					.links-block.d-flex
-						a(href='#').simple-link Как присоединиться
-						a(href='#').simple-link О каталоге
-						a(href='#').simple-link Контакты
-
-					.button-block
-						+button('Добавить квартиру', '#', 'btn-add')
-
-				.footer-bottom.d-flex
-					.footer-bottom__copyright.
-						 &copy;2018 RealtyCat — Профессиональный каталог недвижимости Москвы
-					.footer-bottom__politic
-						a(href='#').simple-link Политика конфиденциальности
-
+				+page-footer
+		.section-ui
+			pre.
+				footer.footer
+					+page-footer

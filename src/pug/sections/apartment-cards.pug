@@ -1,0 +1,16 @@
+.container
+	.section-top.d-flex.section-top--hc-cards
+		.section-top-title.headline-bold Похожие ЖК
+		//-фильтры
+		+toggle-block({title:'', items:[{name:'по цене',class:''},{name:'району',class:''},{name:'станциям метро',class:'filter-active'}]})(class=" visible-desktop")
+		+toggle-block({title:'', items:[{name:'по цене',class:''},{name:'району',class:''},{name:'метро',class:'filter-active'}]})(class=" visible-mobile")
+
+	.row
+		.col-md-6.col-lg-6.col-xl-3
+			+hc-card('card-photo1', 'Садовые кварталы','#', 'ЦАО, Хамовники, улица Усачева','2 квартал 2019','390 543','Новостройка' )
+		.col-md-6.col-lg-6.col-xl-3
+			+hc-card('card-photo2', 'Дом на Красина','#', 'ЦАО, Пресня, переулок Красина, ','Дом сдан во 2 квартале 2014','382 800')
+		.col-md-6.col-lg-6.col-xl-3
+			+hc-card('card-photo3', 'Нескучный Home&SPA','#', 'ЮАО, 5-й Донской проезд','1 квартал 2020','371 050','Новостройка' )
+		.col-md-6.col-lg-6.col-xl-3
+			+hc-card('card-photo4', 'Корона Эйр','#', 'ЮЗАО, проспект Вернадского, 92к1 ','Дом сдан в 1 квартале 2006','384 500')

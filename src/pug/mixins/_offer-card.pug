@@ -1,0 +1,97 @@
+mixin offer-card(cardObject)
+	.card-offer(class='card-offer--'+cardObject.modif)
+		.card-description
+			.card-description-top
+				.offer-row.offer-row--swipe
+					if cardObject.badgeDark
+						.badge.badge--dark Новостройка
+
+					+badge-group(cardObject.badgeGroup)
+					if cardObject.modif=='hot'
+						+text-link(cardObject.adress,cardObject.addressHref,'appartment-card--address')
+						.appartment--built.text-body.text-body--grey !{cardObject.builtDate}
+						+metro(cardObject.metroName)
+					.appartment-page-link
+						.share-link-text Поделиться
+						+share-link
+						+tooltip(cardObject.tooltipLink,cardObject.mailAddress,cardObject.pdfLink)
+
+				.offer-row.offer-row--title
+					+link-title(cardObject.appartmentRooms, cardObject.titleHref)(class="link-title--middle")
+					.offer-row--transform
+						if cardObject.priceDown
+							.appartment-card__price-section
+								.appartment-card__price--num.headline-bold.price-down !{cardObject.price} руб.
+								+icon-price-down
+						else
+							.appartment-card__price-section
+								.appartment-card__price--num.headline-bold !{cardObject.price} руб.
+
+						.mobile-price
+							.appartment-card__price--usd $ !{cardObject.priceUsd}
+							.appartment-card__price--area.text-body.text-body--grey !{cardObject.priceArea}
+						+repaire-item(cardObject.repaireText)
+
+
+				if cardObject.modif=='new'
+					if cardObject.cardDescription
+						if cardObject.cardDescriptionHidden
+							.offer-row.offer-row--info.text-body.fadeOut !{cardObject.cardDescription}
+								span.text-hidden !{cardObject.cardDescriptionHidden}
+
+								.show-hidden-text
+									+text-link('Развернуть','#')
+						else
+							.offer-row.offer-row--info.text-body !{cardObject.cardDescription}
+
+				else
+					.offer-row.offer-row--info
+						if cardObject.modif=='hot' && cardObject.sliderItems
+							if cardObject.repaireText=='С ремонтом'
+								.appartment-card--mobile-repaire-icon
+									+brach-white
+						else
+							if cardObject.modif=='hot'
+								.double-repaire-box
+									+repaire-item(cardObject.repaireText)
+
+						if 	cardObject.sliderItems
+							+card-slider(cardObject.sliderItems)
+						.text-body !{cardObject.sliderSubText}
+
+
+				.offer-row.offer-row--tools
+					.appartment-card__toolbar
+						if cardObject.modif=='new'
+							.appartment-card__toolbar-item.appartment-card__toolbar-item--tel
+								+button(cardObject.telNumber, cardObject.telLink, 'btn-tel contact-phone')
+						else
+							.appartment-card__toolbar-item.appartment-card__toolbar-item--btn
+								a(href=""+cardObject.presentationLink download).button-download
+									span.button-download--desk Скачать презентацию
+									span.button-download--mob Презентация
+						.appartment-card__toolbar-item.appartment-card__toolbar-item--heart
+							+link('В избранное','','icon-heart')(class="icon-heart--tablet item-favorite")
+							+link('В избранное','','icon-heart','fix-width')(class="icon-heart--desk item-favorite icon-heart--small")
+						.appartment-card__toolbar-item.appartment-card__toolbar-item--mail
+							a.text-link.text-link--line(href='mailto:'+ 'cardObject.mailAddress') Отправить электронной почтой
+							a(href='mailto:'+cardObject.mailAddress)
+								+icon-mail
+
+						if	cardObject.modif=='hot'
+							.icons-like
+								+icon-group({iconName:'icon-like', countNum:'45'})
+								+icon-group({iconName:'icon-dislike', countNum:'45'})
+			
+			.agent-card.agent-card-mob
+				+agent-info(cardObject.agentData)
+
+			if cardObject.messagesData
+				.row-line
+				.card-description-chat
+					+messages(cardObject.messagesData)
+
+		.agent-card.agent-card-desk
+			+agent-info(cardObject.agentData)
+
+

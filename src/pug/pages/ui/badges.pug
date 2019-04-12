@@ -7,17 +7,44 @@ block variables
 block content
 	.container.container--left
 		.section-ui
-			h1 Бейджи
+			h3 Бейджи
 		.section-ui
-			.badge ЦАО
+			+badge('ЦАО')
 		.section-ui
 			pre.
-				.badge ЦАО
+				+badge('ЦАО')
+		.section-ui
+			h3 Бейджи с data-атрибутом
+		.section-ui
+			+badge-attr([{attrValue:'1',badgeName:'SOS'},{attrValue:'1',badgeName:'SOS'}])
+		.section-ui
+			pre.
+				+badge-attr([{attrValue:'1',badgeName:'SOS'},{attrValue:'2',badgeName:'BOS'}])
+		.section-ui
+			pre.
+				+badge('ЦАО')
+		.section-ui
+			h3 Группа бейджиков
+		.section-ui
+			+badge-group(['ЦАО','Замоскворечье'])
+		.section-ui
+			pre.
+				+badge-group(['ЦАО','Замоскворечье'])
 		.section-ui
 			.badge.badge--dark Новостройка
 		.section-ui
 			pre.
 				.badge.badge--dark Новостройка
+		.section-ui
+			.badge.badge--green Новостройка
+		.section-ui
+			pre.
+				.badge.badge--green Новостройка
+		.section-ui
+			.badge.badge--red Новостройка
+		.section-ui
+			pre.
+				.badge.badge--red Новостройка
 		.section-ui
 			+bag-badge('48', '116' )
 		.section-ui

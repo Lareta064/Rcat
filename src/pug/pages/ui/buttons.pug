@@ -8,23 +8,35 @@ block content
 	.container.container--left
 		.section-ui
 			.title Кнопки
-
-			p Кнопка Добавить квартиру
+		.section-ui
+			h3.pb-20 Базовая кнопка
+			+button('Показать телефон', '#','button--basic')
+		.section-ui
+			pre.
+				+button('Показать телефон', '#','button--basic')
+		.section-ui
+			h3.pb-20 Кнопка Добавить квартиру
 			+button('Добавить квартиру', '#', 'btn-add')
-		pre.
-			+button('+ Добавить квартиру', '#', 'btn-add')
 		.section-ui
-
-
-			p Кнопка +7 985 356 452 44 54
-			+button('+7 985 356 452 44 54', '#', 'btn-tel')
-		pre.
-			+button('+7 985 356 452 44 54', '#', 'btn-tel')
-
+			pre.
+				+button('+ Добавить квартиру', '#', 'btn-add')
 
 		.section-ui
-			a(href="#").mobile-button
-				img(src="../img/icons/plus.png", alt="")
-		pre.
-			+mobile-btn('plus')
+			h3.pb-20 Кнопка +7 985 356 4524
+
+			+button('+7 985 356 4524', '#', 'btn-tel contact-phone')
+		.section-ui
+			pre.
+				+button('+7 985 356 4524', '#', 'btn-tel contact-phone')
+		.section-ui
+			+button-mode1('Следить за объявлениями в этом ЖК', '#', 'btn-mode1', 'icon-notify','Следить за ЖК' )
+		.section-ui
+			pre.
+				+button-mode1('Следить за объявлениями в этом ЖК', '#', 'btn-mode1', 'icon-notify','Следить за ЖК' )
+		.section-ui
+			+custom-checkbox('Сгруппировать по ЖК')(class=' check--hc-type')
+		.section-ui
+			pre.
+				+custom-checkbox('Сгруппировать по ЖК')(class=' check--hc-type')
+		.section-ui
 

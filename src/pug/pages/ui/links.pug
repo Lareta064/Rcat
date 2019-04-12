@@ -9,29 +9,59 @@ block content
 	.main-wrapper
 		.container.container--left
 			.section-ui
-				.title Стили для ссылок
-			.section-ui.d-flex
-				+link('В избранное','icon-heart')
-				+link('Добавить заметку','icon-add')
-				+link('Еще','arrow-down')
-				+link('Скачать ПФД','', 'line')
-				+link('В избранном','icon-heart')
+				h2 Стили для ссылок
+			.section-ui
+				h3(style="padding-bottom: 20px;") Ссылка с иконкой(подчеркивание градиентом)
+				+link('В избранное','#','icon-heart')
 
 			.section-ui
 				pre.
-					+link('В избранное','icon-heart')
-					+link('Добавить заметку','icon-add')
-					+link('Еще','arrow-down')
-					+link('Скачать ПФД','', 'line')
-					+link('В избранном','icon-heart')
-
-			.section-ui.d-flex
-				.test-block.pr-40
-					a(href='#').link-filter.simple-link по цене
-				a(href='#').link-filter.simple-link.link-filter--active по цене
+					Код данного примера
+					+link('В избранное','#','icon-heart')
 			.section-ui
 				pre.
-					Класс link-filter--active меняется по клику
+					Полный миксин для ссылки
+					mixin link(linkText,href, linkIcon,linkClass)
 
-					a(href='#').link-filter.simple-link по цене
-					a(href='#').link-filter.simple-link.link-filter--active по цене
+			.section-ui
+				h3(style="padding-bottom: 20px;") Простая ссылка с пунктиром(подчеркивание бордером)
+				+text-link('Подробнее','#')
+			.section-ui
+				pre.
+					Код данного примера
+					+text-link('Подробнее','#')
+			.section-ui
+				pre.
+					Полный миксин для ссылки
+					mixin text-link(linkText,href,linkClass)
+			.section-ui
+				h3(style="padding-bottom: 20px;") Простая ссылка сплошное подчеркивание
+				+text-link('Скачать ПДФ','#','text-link--line')
+			.section-ui
+				pre.
+					Код данного примера
+					+text-link('Скачать ПДФ','#','text-link--line')
+			.section-ui
+				pre.
+					Полный миксин для ссылки
+					mixin text-link(linkText,href,linkClass)
+			.section-ui
+				h3(style="padding-bottom: 20px;") Ссылка для заголовка
+				+link-title('Садовые кварталы', '#')
+
+			.section-ui
+				pre.
+					Код данного примера
+					+link-title('Садовые кварталы', '#')
+			.section-ui
+				pre.
+					Полный миксин для ссылки
+					mixin link-title(linkText, href)
+			
+			.section-ui
+				pre.
+					Ссылка-кнопка с количеством квартир
+					.link-btn
+
+
+

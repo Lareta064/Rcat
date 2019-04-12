@@ -1,0 +1,13 @@
+mixin card-slider(srcPath)
+	.card-slider&attributes(attributes)
+		each item in srcPath
+			.card-slider-item
+				img(src="../img/hot-offer-slider/"+ item.imgSrc +".jpg", alt="товар")
+
+
+//-слайдер на мобильном с полным путем для картинки
+mixin mobile-slider(srcPath)
+	.card-slider&attributes(attributes)
+		each item in srcPath
+			.card-slider-item
+				img(src=""+ item.imgSrc +".jpg", alt="товар")

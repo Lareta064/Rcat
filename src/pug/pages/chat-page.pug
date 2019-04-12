@@ -1,0 +1,17 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Страница бесед';
+
+block content
+	.offer-page-wrapper
+		header.header
+			+header('avatar','Иван Марасин','icon-exchange')
+		include ../sections/ch_title-block.pug
+		include ../sections/ch_new-offer.pug
+		include ../sections/ch_hot-offer.pug
+
+
+		footer.footer
+			+page-footer
+

@@ -1,0 +1,118 @@
+.container.container-search--block
+	.search-block
+		.search-block-header
+			.search-row-item.search-row-item--rooms
+				.search-item-title Комнат
+				+link-btn-block('1','2','3','4+')(class="rooms-num")
+			.search-row-item.search-row-item-desk.item-order-2
+				.search-item-title Площадь, кв.м
+				+input-block--double('number','от','','number','до')
+
+			.search-row-item.search-row-item--input.item-order-4
+				.search-item-title Адрес или ЖК
+				+input-block('text','Улица, район, ЖК, адрес')
+			.search-row-item.search-row-item--doubleinput.item-order-3
+				.search-item-title Стоимость,&nbsp;
+					select.currency-select
+						option(value='rub') рубли
+						option(value='usd') usd
+				+input-block--double('number','от','','number','до')
+			.search-row-item.search-row-item--mobile.full-search-mobile
+					+text-link('Площадь, отделка...','#')
+					+arrow-down
+
+			.search-dropdown.item-order-7
+				.search-dropdown-wrapper
+					.search-row-item.search-row-item--doubleinput
+						.search-item-title Площадь, кв.м
+						+input-block--double('number','от','','number','до')
+					.search-row-item.search-row-item--pb.dropdown-order-1
+						.search-item-title Содержит слова
+						+input-block('text','Укажите любое слово')
+						.search-item-subtitle Можно ввести несколько слов через запятую
+					.search-row-item.search-row-item-badge.dropdown-order-2
+						.search-item-title Отделка
+						+badge-group(['с ремонтом','без отделки'])
+					.search-row-item.search-row-item-link.box-visible-desk.dropdown-order-3
+							+text-link('Сбросить параметры поиска','#')
+
+					.line.box-visible-desk.dropdown-order-4
+
+					.search-block--footer.dropdown-order-5.d-flex
+						.mobile-badge-block.mobile-badge-block--first
+							.search-item-title Округ
+							//- +badge-group(['ЦАО','ВАО','СВАО','СЗАО','ЗАО','ЮЗАО','САО'])(class="click-badge")
+							+badge-attr([{attrValue:'1', badgeName:'ЦАО'},{attrValue:'2', badgeName:'ВАО'},{attrValue:'3', badgeName:'СВАО'},{attrValue:'4', badgeName:'СЗАО'},{attrValue:'5', badgeName:'ЗАО'},{attrValue:'6', badgeName:'ЮЗАО'},{attrValue:'7', badgeName:'САО'}])(class="click-badge")
+						.areas-badges.mobile-badge-block.mobile-badge-block--four
+							+badge-group(['Арбат','Замоскворечье и Якиманка','Москва-Сити','Остоженка','Патриаршие','Пресня','Таганка','Тверская','Хамовники','Чистые пруды','Басманный'])(data-group='1')
+
+							+badge-group(['Коньково','Митино','Раменки','Царицыно','Савелки','Чертаново'])(data-group='2')
+							+badge-group(['Зюзино','Ховрино','Братеево','Басманный','Черемушки','Коптево','Перово', 'Зюзино','Ховрино','Братеево'])(data-group='3')
+							+badge-group(['Арбат','Замоскворечье и Якиманка','Москва-Сити','Остоженка','Патриаршие','Пресня','Таганка','Тверская','Хамовники','Чистые пруды','Басманный'])(data-group='4')
+							+badge-group(['Коньково','Митино','Раменки','Царицыно','Савелки','Чертаново', 'Арбат'])(data-group='5')
+							+badge-group(['Зюзино','Ховрино','Братеево','Басманный','Черемушки','Коптево','Перово', 'Зюзино','Ховрино','Братеево'])(data-group='6')
+							+badge-group(['Коньково','Митино','Раменки','Царицыно','Басманный','Черемушки','Коптево','Перово', 'Зюзино','Ховрино','Братеево'])(data-group='7')
+
+						.mobile-badge-block.mobile-badge-block--second
+							.search-item-title Дом
+							+badge-group(['Новостройка','Сдан'])
+						.mobile-badge-block.mobile-badge-block--third
+							.search-item-title Дополнительно
+							+badge-group(['Без апартаментов','Только аппартаменты'])
+						.search-row-item.search-row-item-link.box-visible-mob
+							+link('Сохранить поиск','#','icon-heart')(class="icon-heart--small")
+							+text-link('Сбросить параметры поиска','#')
+
+
+
+				.line.dropdown-order-6
+
+				.search-edit.dropdown-order-7
+					.search-edit-header.d-flex
+						.search-edit-title Сохраненные поиски:
+						.search-edit-items
+							+text-link('2-комн., 50–100 кв.м., в САО и СВАО','#','text-link--line')
+							+text-link('Двушки с ремонтом','#','text-link--line')
+						+text-link('Редактировать','#')(class="open-save-items")
+
+					.search-edit-body
+						.search-edit-body__item
+							.search-edit-badges
+								+input-block('text','2-комн., 50–100 кв.м, 50 000 000 – 70 000 000 руб.. с ремонтом, содержит слово «срочно», ВАО и СВАО')
+								+badge-group(['2-комн.','50-100 кв.м','50 000 000 - 70 000 000 руб.','С ремонтом','Содержит слово "срочно"','ВАО','СВАО'])
+							.search-edit-basket
+								.basket-text Удалить
+								.basket-icon
+									+icon-basket
+
+						.search-edit-body__item
+							.search-edit-badges
+								+input-block('text','2-комн., 50–100 кв.м, 50 000 000 – 70 000 000 руб.. с ремонтом, содержит слово «срочно», ВАО и СВАО')
+								+badge-group(['2-комн.','50-100 кв.м','50 000 000 - 70 000 000 руб.','С ремонтом','Содержит слово "срочно"','ВАО','СВАО'])
+							.search-edit-basket
+								.basket-text Удалить
+								.basket-icon
+									+icon-basket
+
+			.search-row-item.search-row-item--flex.item-order-5.show-full-search
+
+				+text-link('Еще', '#')
+				+arrow-down
+			.search-row-item.search-row-item--flex.item-order-5.close-full-mobile
+				+text-link('Скрыть', '#')
+				+arrow-down
+			.search-row-item.search-row-item--flex.search-row-item--col.item-order-6
+				+link('Сохранить поиск','#','icon-heart')(class="icon-heart--small save-search")
+				+button('Показать', '#','button--basic')
+
+	.search-save-mob
+		.search-save-title
+			span Сохраненные&nbsp;поиски
+			+arrow-down
+		.search-edit-items--mobile
+			.search-edit-items--links
+				+text-link('2-комн., 50–100 кв.м., в САО и СВАО','#','text-link--line')
+				+text-link('Однушки и двушки в ЦАО','#','text-link--line')
+			.search-edit--mobile
+				+text-link('Редактировать','#')(class="open-save-items")
+

@@ -1,0 +1,38 @@
+mixin appartmentDescription(appartmentArea, appartmentRooms, appartmentStage, appartmentSection, repaireСondition, descriptionTextPart1, descriptionSlogan, descriptionTextPart2)
+	.appartment-description__text
+		.description-row.description-row__col--large
+			.description-row__col
+				.appartment-info.appartment-info--area
+					.headline-bold #{appartmentArea} кв.м.
+					.text-body площадь
+				.appartment-info.appartment-info--rooms
+					.headline-bold #{appartmentRooms}
+					.text-body комнаты
+			.description-row__col
+				.appartment-info.appartment-info--stage
+					.headline-bold #{appartmentStage}
+					.text-body этаж
+				.appartment-info.appartment-info--section
+					.headline-bold #{appartmentSection}
+					.text-body секция
+			.description-row__col
+				.appartment-info.appartment-info--repaire
+					if repaireСondition == 'С ремонтом'
+						+repaire-item(repaireСondition)
+					else
+						.repaire-item !{repaireСondition}
+					.text-body отделка
+
+		.description-row
+			.description-row__col--large
+				.description-paragrafe.text-body !{descriptionTextPart1}
+
+				.description-paragrafe.description-paragrafe--double.text-body !{descriptionSlogan}
+
+				.description-paragrafe.description-paragrafe--truncate.text-body !{descriptionTextPart2}
+
+				.description-paragrafe__link
+					+text-link('Подробнее','',' showTruncateText')
+
+
+			.description-row__col--short.description-slogan-text !{descriptionSlogan}

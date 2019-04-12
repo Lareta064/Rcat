@@ -9,8 +9,10 @@
 	font-size: 16px;
 	margin-bottom: 12px;
 	background-color: @white;
+	overflow: hidden;
 	@media(min-width: 768px){
-		min-width: 1290px;
+
+		width: 100%;
 		height: 50px;
 		font-size: 14px;
 		padding: 0;
@@ -28,14 +30,13 @@
 		}
 
 	}
+	.icon-price-down{
+		cursor: default;
+	}
 }
-.test-block-contacts{
-	// height: 50px;
-	// background-color: orange;
-}
+
 .apartment-item-column{
 	height: 140px;
-	// background-color: green;
 	display: flex;
 	flex-wrap: wrap;
 	@media(min-width: 768px){
@@ -43,9 +44,7 @@
 	}
 }
 .apartment-info{
-	// background-color: red;
 	width: 100%;
-	// height: 50px;
 	flex-direction: column;
 	align-items: center;
 	@media(min-width: 768px){
@@ -84,7 +83,7 @@
 	background-repeat: no-repeat;
 	min-width: 60px;
 	height: 50px;
-	border-radius: 5px;
+	border-radius: 5px 0 0 5px;
 
 }
 .column-item{
@@ -163,7 +162,8 @@
 
 .info-item.info-item--price-rub{
 	width: 120px;
-	@media(min-width: 768px){width: 60%;}
+	@media(min-width: 768px){width: 100%;}
+	@media(min-width: 1152px){width: 60%;}
 }
 .info-item--price-meter{
 	font-weight: 400;
@@ -171,13 +171,15 @@
 
 }
 .column-contacts{
+	position: relative;
 	align-items: center;
 	justify-content: space-between;
 	height: 100%;
 	margin-top: 10px;
 	.icon-group{
+		margin-left: auto;
 		display: flex;
-		// align-items: center;
+
 	}
 	@media(min-width: 768px){margin-top: 0;}
 }
@@ -185,8 +187,9 @@
 .contact-phone{
 	width: 125px;
 	padding-left: 11px;
-	height: 24px;
-	padding-top: 1px;
+	height: 30px;
+	// padding-top: 1px;
+	line-height: 1.7;
 	padding-right: 5px;
 	border-radius: 3px;
 	text-align: center;
@@ -194,17 +197,17 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	background-color: @btnBg;
-	// margin-right: 2em;
 	color: @white;
-	font-weight: 600;
 	transition:.8s;
 	@media(min-width: 768px){
-		padding-top: 3px;
+		height: 24px;
+		// padding-top: 3px;
 		width: 110px;
+		line-height: 0.9;
 	}
 	&:hover{color:@white;}
 }
-.show-phoneNumber{width: 150px;}
+.show-phoneNumber{width: 165px;}
 .icon-mail{
 	display: block;
 	margin-right: 20px;
@@ -214,12 +217,19 @@
 }
 .apartment-info__col--short{
 	width: 100%;
-
 	justify-content: flex-start;
 	@media(min-width: 768px){
+
+		border-right: 1px solid #e5e9f2;
+		.info-item{
+		justify-content: flex-end;
+		width: 100%;
+		}
+	}
+		@media(min-width: 1350px){
 		padding-right: 20px;
 		width: 30%;
-		border-right: 1px solid #e5e9f2;
+
 		.info-item{
 		justify-content: flex-end;
 		width: 100%;
@@ -300,4 +310,94 @@
 	position: relative;
 	@media(min-width: 768px){overflow-x: auto;}
 	margin-bottom: 32px;
+}
+
+
+//-правки от Андрея по таблице
+
+.container.container--table{
+	@media(min-width: 768px){
+		max-width: 96%;
+	}
+	@media(min-width: 1152px){
+		max-width: 1064px ;
+	}
+
+	@media(min-width: 1200px){
+		max-width: 1140px ;
+	}
+	@media(min-width: 1350px){
+		max-width: 1320px ;
+	}
+}
+@media(min-width: 768px){
+	.apartment-table .contact-phone{
+		position: relative;
+		left: -10px;
+	}
+	.column-item{width: 70%;}
+	.column-item--tablet{width: 30%;}
+	.apartment-info__col{width: 59%;}
+	.apartment-info__col--tablet{
+		width: 41%;
+	}
+	.apartment-info__price-rub--tablet{
+		width: 100%;
+	}
+
+	.info-item.info-item--floor{min-width:65px;}
+	.info-item--repair,
+	.apartment-info__col--short{
+		font-size: 0;
+		width: 0;
+	}
+	.info-item.info-item--price-meter{
+		display: none;
+
+	}
+}
+
+@media(min-width: 1152px){
+	.column-item{width: 55%;}
+	.column-item--tablet{width: 45%;}
+	.info-item.info-item--price-meter{
+		width: 43%;
+		display: block;
+	}
+
+	.apartment-info__price-rub--tablet{
+		width: 100%;
+	}
+}
+// .apartment-table .contact-phone{
+// 	@media(min-width: 768px){
+// 		position: relative;
+// 		left: -10px;
+// 	}
+
+// }
+
+@media(min-width: 1350px){
+	.apartment-table .contact-phone{
+		position: relative;
+		left: 0px;
+	}
+	.apartment-info__col{width:100% ;}
+	.apartment-info__col--tablet{
+		width: 50%;
+	}
+
+	.info-item{min-width: 105px;}
+	.column-item{width: 50%;}
+	.column-item--tablet{width: 50%;}
+	.info-item--repair,
+	.apartment-info__col--short{
+		font-size: 14px;
+		width: auto;
+
+	}
+}
+.appartment-card__row--description{
+	@media(min-width: 1200px){padding-bottom: 4px;}
+
 }

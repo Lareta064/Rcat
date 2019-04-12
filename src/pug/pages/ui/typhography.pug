@@ -1,0 +1,49 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Типографика - UI-kit и HTML фреймворк - Документация';
+	- var pageClass = 'body--dashboard';
+
+block content
+
+	.main-wrapper
+		.container.container--left
+			.section-ui
+				.title Стили для заголовков и текста
+			.section-ui
+				.title-1 Заголовок
+			.section-ui
+				pre.
+					.title-1 Заголовок
+
+			.section-ui
+				.title-2 Популярные объекты
+
+			.section-ui
+				pre.
+					.title-2 Популярные объекты
+
+			.section-ui
+				.headline-body Заголовки в карточках: Парковка, Инфраструктура, Готовность
+			.section-ui
+				pre.
+					.headline-body Заголовки в карточках: Парковка, Инфраструктура, Готовность
+
+			.section-ui
+				h3(style="display:inline-block; border-bottom: 1px solid #000;") Заголовок секции миксином
+			.section-ui
+				+section-title('Расположение')
+			.section-ui
+				pre.
+					+section-title('Расположение')
+			//- .section-ui
+			//- 	.headline-bold Заголовки разделов: 48 Предложений, Расположение
+			//- .section-ui
+			//- 	pre.
+			//- 		.headline-bold Заголовки разделов: 48 Предложений, Расположение
+
+			.section-ui
+				.text-body Основной текст
+			.section-ui
+				pre.
+					.text-body Основной текст

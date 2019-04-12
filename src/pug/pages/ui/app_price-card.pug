@@ -1,0 +1,21 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Цена квартиры';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.section-ui
+			.title Цена квартиры
+		.section-ui
+
+			+price-card('http://realtycat.pro/36732', 'info@mail.ru', '../img/test.pdf', '63 000 000','954 646','840 000', '+7 955 555-45-45', '+79555554555', 'Андрей Кальницкий, ', '#', 'был онлайн 2 часа назад', 'info@mail.ru', 'https://msng.link/wa/9271048499', '../img/test.pdf')
+		.section-ui
+			pre.
+				+price-card('http://realtycat.pro/36732', 'info@mail.ru', '../img/test.pdf', '63 000 000','954 646','840 000', '+7 955 555-45-45', '+79555554555', 'Андрей Кальницкий, ', '#', 'был онлайн 2 часа назад', 'info@mail.ru', 'https://msng.link/wa/9271048499', '../img/test.pdf')
+		.section-ui
+			h5 Миксин и его параметры
+		.section-ui
+			pre.
+				price-card(tooltipLink,tooltipEmail,tooltipPdf,appPriceRub,appPriceUsd,appPriceArea,phoneNumber, phoneNumberHref, agentName, agentPageLink, agentOnlineTime, addressEmail, whatsAppLink, pdfSrc)

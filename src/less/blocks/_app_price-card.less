@@ -1,0 +1,257 @@
+.card-price--desktop{
+	@media(min-width: 1200px){
+		position: sticky;
+		top:0;
+
+	}
+}
+.appartment-price{
+
+	margin-bottom: 40px;
+	position: relative;
+	@media(min-width: 768px){
+		margin-top: 5px;
+		margin-bottom: 25px;
+
+
+		border: 1px solid @lightBorder;
+		border-radius: 5px;
+		background-color: @white;
+		padding: 14px;
+	}
+
+	@media(min-width: 1200px){
+		position: static;
+		top:0;
+		max-width: 410px;
+		margin-bottom: 0;
+	}
+	.appartment-page-link{
+		display: none;
+		@media(min-width: 768px){
+			display: block;
+			top: 24px;
+
+		}
+	}
+	.share-link-text{
+		display: none;
+	}
+}
+.block-fixed{
+	position: fixed;
+	top: 0;
+}
+.appartment-price__row-title{
+	display: flex;
+
+	@media(min-width: 768px){
+		padding-bottom: 0;
+	}
+
+	.appartment-price__title{
+		position: relative;
+		display: block;
+		font-size: 24px;
+		border: 1px solid @lightBorder;
+		background-color: @white;
+		border-radius: 0 10px 10px 0;
+		padding-left: 30px;
+		padding-top: 18px;
+		width: 274px;
+		height: 60px;
+		left: -16px;
+		@media(min-width: 768px){
+			left: 0;
+			line-height: normal;
+			height:auto;
+			padding-left: 0;
+			padding-top: 0;
+			padding-bottom: 8px;
+			font-size: 30px;
+			border: none;
+			margin-top: 0;
+		}
+	}
+}
+
+
+.appartment-price__row-subtitle{
+	display: flex;
+    align-items: center;
+    padding-bottom: 17px;
+    padding-top: 16px;
+    @media(min-width: 768px){
+    	padding-top: 0;
+    }
+
+	.appartment-price__usd{
+		font-size: 20px;
+		font-weight: 700;
+		color: @black;
+		padding-right: 20px;
+	}
+
+	.text-body--grey{
+		font-weight: 700;
+	}
+}
+
+.appartment-price__btn{
+	padding-bottom: 20px;
+	@media(min-width: 768px){
+	padding-bottom: 26px;
+	}
+}
+
+.appartment-price__message{
+
+	.appartment-price__message-title{
+		display: none;
+		@media(min-width: 768px){
+			display: block;
+		}
+	}
+
+	.appartment-price__textarea{
+		width: 100%;
+		padding: 14px;
+
+		outline: none;
+		border: 1px solid @lightBorder;
+		border-radius: 5px;
+		min-height: 60px;
+		resize: none;
+		transition: .5s;
+		&:focus{
+			border-color:@btnBg;
+			min-height: 160px;
+		}
+		@media(min-width: 768px){
+			padding: 20px;
+			min-height: 100px;
+			margin-bottom: 8px;
+		}
+	}
+}
+
+.appartment-price__textarea::placeholder{
+	color: #aaaaaa;
+	@media(min-width: 768px){
+		color: transparent;
+	}
+}
+
+.appartment-price__phone-block{
+	margin-top: 10px;
+	display: none;
+	padding: 20px;
+	background-color:@yellowBg;
+}
+.phone-block-item--flex{
+	display: flex;
+	justify-content: space-between;
+	@media(min-width: 1200px){flex-wrap: wrap;}
+
+
+	.text-body{
+		display: none;
+		@media(min-width: 768px){display: inline-flex;}
+	}
+}
+
+.phone-block-item--flex .add-favorite{
+	@media(min-width: 1200px){padding-top: 14px;}
+	@media(min-width: 1350px){padding-top: 0px;}
+	display: none;
+}
+.add-favorite.block-visible{display: flex;}
+.phone-block-item{
+	&:first-child{padding-bottom: 14px;}
+	.agent-name{margin-right: 5px;}
+}
+.price-card-form{position: relative;}
+.btn-send-message{
+	position: absolute;
+	left: 50%;
+	// bottom:;
+	transform: translate(-50%, -150%);
+	border: 0px;
+	color:@white;
+	min-height: 40px;
+	background-color:@btnBg;
+	padding-top: 2px;
+	font-weight: 700;
+	min-width: 230px;
+	cursor:pointer;
+	border-radius: 3px;
+	transition: .5s;
+	&:hover{opacity: .8;}
+	display: none;
+	@media(min-width: 768px){
+		position: relative;
+		transform: translate(0%, 0%);
+		left: 0;
+		min-width: 200px;
+		min-height: 30px;
+	}
+
+
+}
+
+
+
+.price-card__toolbar{
+	display: none;
+
+	@media(min-width: 1200px){
+
+	position: relative;
+	margin-top: 20px;
+	border: 1px solid @lightBorder;
+	border-radius: 5px;
+	background-color: transparent;
+	padding: 16px;
+
+	}
+}
+.price-card__toolbar.flex-visible{display: flex;}
+.price-card__toolbar-col{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	&:last-child{padding-left: 25px;}
+
+
+}
+.toolbar-col__item:first-child{
+	padding-bottom: 12px;
+}
+
+.price-card__toolbar-note{
+	display: none;
+	border: 1px solid @lightBorder;
+	border-radius: 0 0 5px 5px;
+	background-color: transparent;
+	padding: 16px;
+	padding-top: 10px;
+	position: relative;
+	top: -10px;
+	border-top: 0px;
+}
+.price-card-note{
+	display: block;
+	padding: 14px;
+	resize: none;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid @lightBorder;
+	border-radius: 5px;
+	height: 100px;
+	outline: none;
+	&:focus{border: 1px solid @btnBg;}
+	@media(min-width: 768px){padding: 20px;}
+
+}
+.block-visible{display: block;}

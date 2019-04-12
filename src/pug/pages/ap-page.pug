@@ -1,0 +1,22 @@
+extends ../layouts/page-layout/page.pug
+
+block variables
+	- var title = 'Страница квартиры';
+
+block content
+	.appartment-page-wrapper
+		header.header
+			+header('avatar','Иван Марасин')
+
+		section.title-block.title-block--appartment-page
+			include ../sections/app_appartment-title-block.pug
+
+		section.option-panel-wrapper.option-panel--appartment-page
+			+optionPanel('full', 'info@mail.ru', '../img/test.pdf', 'https://msng.link/wa/9271048499', 'https://msng.link/tg/Lareta555')
+
+		include ../sections/app_appartment-description.pug
+
+		include ../sections/app_similar-objects.pug
+
+		footer.footer
+			+page-footer

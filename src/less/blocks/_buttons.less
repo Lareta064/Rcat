@@ -1,7 +1,7 @@
 .button {
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 16px;
-	// padding: 7px 7px 19px 20px;
+
 	border-radius: 3px;
 	text-align: center;
 	background-color: @btnBg;
@@ -15,44 +15,69 @@
 		text-decoration: none;
 		opacity: .85;
 	}
-
+	@media(min-width: 768px){font-size: 14px;}
 }
-
+.button--basic{
+	height: 60px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	@media(min-width: 768px){
+		height: 30px;
+		width: auto;
+		display: inline-flex;
+		padding-left: 32px;
+		padding-right: 32px;
+	}
+}
 .btn-add {
 	position: relative;
 	min-width:270px;
 	height:60px;
 	padding: 1.6rem 4.8rem ;
 	white-space: nowrap;
-	font-size: 16px;
+
 	font-weight: 500;
 
 
 	@media (min-width:768px) {
-		font-size: 14px;
+
 		padding: 7px 10px 8px 28px;
 		min-width: 200px;
 		height: 30px;
 	}
 }
 .btn-add:before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translate(170%, -43%);
+	width: 20px;
+	height: 20px;
+	background-image: url(../../img/plus.svg);
+	background-repeat: no-repeat;
+
+}
+@media(min-width: 768px){
+.btn-add:before{
 	content: "\f067";
 	position: absolute;
 	left: 0;
 	top: 50%;
-	transform: translate(170%, -77%);
+	transform: translate(170%, -30%);
 	width: 20px;
 	height: 20px;
+	font-size: 26px;
 	font-family: FontAwesome;
-	// background: url(../../img/icons/plus.png);
-	// background-position: center;
-	// background-repeat: no-repeat;
-	@media (min-width:768px) {
 		width: 8px;
 		height: 8px;
-		transform: translate(245%, -77%);
-	}
+		font-size: 14px;
+		transform: translate(245%, -80%);
 
+	}
 }
 
 .btn-tel{
@@ -61,12 +86,15 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	overflow: hidden;
-	font-weight: bold;
+
+	line-height: normal;
+
+	font-weight: 700;
 
 	@media (min-width:768px) {
 		padding: 6px 10px;
 		width: 108px;
-		min-height: 22px;
+		min-height: 24px;
 	}
 }
 
@@ -74,7 +102,6 @@
 	display: flex;
 	position: relative;
 	color: @white;
-	// background: @btnBg;
 	border-radius: 3px;
 	width: 40px;
 	height: 40px;
@@ -111,3 +138,103 @@
 .section-btn{
 	border-radius: 5px;
 }
+//-синяя кнопка с иконкой колокольчик
+.btn-mode1{
+	display: inline-flex;
+	align-items: center;
+	height: 60px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-weight: 700;
+	width: 100%;
+	.icon-notify{
+		height: 60px;
+		display: flex;
+		padding-right: 19px;
+		border-right: 1px solid #2874bc;
+
+		svg{
+			margin: auto;
+			width: 19px;
+			height: 22px;
+		}
+		path {fill: @white;}
+		@media(min-width: 768px){
+			border-right: 0px;
+			padding-right: 9px;
+		}
+	}
+	.btn-text--mobile{
+		font-size: 16px;
+		height: 60px;
+		padding-top: 23px;
+		padding-left: 39px;
+		border-left: 1px solid #569ada;
+		@media(min-width: 768px){display:none;}
+	}
+	.btn-text{
+		display:none;
+		@media(min-width: 768px){display: block;}
+	}
+	@media(min-width: 768px){
+		width: auto;
+		height: 30px;
+	}
+}
+/*КАСТОМНЫЙ ЧЕКБОКС*/
+.checkbox-label{
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+    .checkbox-title{
+    	margin-right: 10px;
+    }
+}
+.check--hc-type{
+	.checkbox-title{
+		color:@btnBg;
+		border-bottom: 1px dashed @linkLine;}
+}
+.check--hc-type:hover{
+	.checkbox-title{
+		color:@redText;
+		border-bottom-color:@linkActiveLine;
+	}
+}
+
+.form-checkbox{
+	width: 0.01px;
+}
+.form-checkbox:focus + .custom-checkbox{
+	border: 1px solid @btnBg;
+}
+
+.custom-checkbox{
+	position: relative;
+	display: inline-block;
+	min-width: 24px;
+	min-height: 24px;
+	border-radius: 50%;
+	border: 1px solid @btnBg;
+	background-color: #fff;
+	transition: 0.5s ease-out;
+}
+
+.form-checkbox:checked + .custom-checkbox:after{
+	content:'';
+	position: absolute;
+	border: 1px solid @btnBg;
+	min-width: 24px;
+	min-height: 24px;
+	border-radius: 50%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.form-checkbox:checked + .custom-checkbox{
+	border: 3px solid #fff;
+	background-color: @btnBg;
+
+}
+
+

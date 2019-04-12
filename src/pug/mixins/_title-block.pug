@@ -1,23 +1,25 @@
 mixin title-block(titleBlockData)
-	.title-block.d-flex
+	.title-block-wrapper.d-flex
 		.title-block--left
 			.main-title-block.d-flex
 				.title-1 !{titleBlockData.mainTitle}
 				.subtitle
-					span.span-title.text-body #{titleBlockData.subtitle.subtitleName}
-					span.span-details.text-body #{titleBlockData.subtitle.subtitleDate}
-				.price-badge.headline-bold !{titleBlockData.subtitle.subtitlePrice}
+					span.span-title.text-body #{titleBlockData.subtitleName}
+					span.span-details.text-body #{titleBlockData.subtitleDate}
+				if 	titleBlockData.subtitlePrice
+					.price-badge.headline-bold от !{titleBlockData.subtitlePrice} руб.
 
 			.main-badge-block.d-flex
 				+badge-group(titleBlockData.badgesItems)
 
-		//- 		.link-group
-		//- 			a(href="#").simple-link.link-hidden ЦАО,
-		//- 			a(href="#").simple-link.link-hidden Замоскворечье,
-		//- 			a(href="#").simple-link Садовническая набережная, 5 стр.
+				.link-group
+					each item in titleBlockData.linkItems
+						+link(item.linkText, item.href, item.linkIcon,item.linkClass)
 
-		//- 		.text-info.text-group.d-flex
-		//- 			+text-and-icon('icon-metro','Новокузнеcкая','5 минут','пешком','icon-man')
-		//- .title-block--right
-		//- 	.update-box Обновлено сегодня
-		//- 	.price-box.headline-bold от 23 339 642 руб.
+				.text-info.text-group.d-flex
+					each item in titleBlockData.metroInfo
+						+metroStation(item)(class="metro-station--flex")
+		.title-block--right
+			.update-box !{titleBlockData.updateTime}
+			if 	titleBlockData.subtitlePrice
+				.price-box.headline-bold от !{titleBlockData.subtitlePrice} руб.

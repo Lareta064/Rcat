@@ -1,0 +1,24 @@
+- var newOffer1 = {modif:'new',tooltipLink:'http://realtycat.pro/36732', mailAddress: 'info@mail.ru', pdfLink:'../img/test.pdf', badgeGroup:['ЦАО', 'Хамовники'], appartmentRooms:'2—3-комн. кв., до 150 кв.м.',titleHref:'#', price:' от 120 000', repaireText:'С ремонтом', cardDescription:'Ищу 2–3-комнатную квартиру в Хамовниках до 120 млн. руб. Новый дом. Средний этаж. С ремонтом, в хорошем состоянии, чтобы можно было сразу въехать и жить. Другие районы и без отделки не предлагать.' ,cardDescriptionHidden:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius animi nobis repellat reiciendis ullam aperiam! Blanditiis quos recusandae, reprehenderit eaque, laboriosam sunt illum provident a modi commodi, quibusdam molestias dicta.', telNumber:'+7 985 356 56 56',telLink:'tel:89853565656', messagesData:[{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Андрей, предложите мою квартиру в Барин-хаусе, вот ссылка: http://realtycat.ru/antonlenskiy/6785'}, {ImgPath:'Andrey' }], agentData:{agentName:'Андрей Кальницкий',agentPageLink:'#', agentClass:'text-link--line',postedTime:'сделал запрос сегодня',agentCompany:'Vesco Realty',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent3'}};
+
+- var newOffer2 = {modif:'new',tooltipLink:'http://realtycat.pro/36732', mailAddress: 'info@mail.ru', pdfLink:'../img/test.pdf', badgeGroup:['ЖК «Дом у Пречистенских ворот»'],  appartmentRooms:'1-комн. кв., до 75 кв.м.',titleHref:'#', price:' от 30 000 000', repaireText:'Без ремонта',  telNumber:'+7 985 356 56 56',telLink:'tel:89853565656', messagesData:[{ImgPath:'Anton'}], agentData:{agentName:'Татьяна Смирнова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'два часа назад',agentCompany:'Новый дом',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'',downloadInfo:['user1']}};
+
+- var newOffer3 = {modif:'new',tooltipLink:'http://realtycat.pro/36732', mailAddress: 'info@mail.ru', pdfLink:'../img/test.pdf', badgeGroup:['ЦАО', 'ЗАО'],  appartmentRooms:'3-комн. кв., до 200 кв.м.',titleHref:'#', price:' от 200 000 000', repaireText:'Отделка значения не имеет', cardDescription:'Нужна трешка до 200 млн. Центр + ЗАО (Кутузовский до Парка Победы). Любое состояние.', telNumber:'+7 985 356 56 56',telLink:'tel:89853565656',messagesData:[{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.' }, {ImgPath:'Janna' }], agentData:{agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'два часа назад',agentCompany:'ARK Realty',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1',downloadInfo:['user1','user2','user3','user4','user5','user4','user1','user2','user3','user4','user5']}};
+
+
+
+section.new-offer
+	.container
+		.section-top--new-offer
+			.badge.badge--green 257 новых запросов
+			+toggle-block({modif:'border',title:'Отсортированы по', items:[{name:'цене',class:'filter-active filter-toggle-item--left'},{name:'площади',class:'filter-toggle-item--right'}]})
+		.section-cards
+			+offer-card(newOffer1)
+			+offer-card(newOffer2)
+			+offer-card(newOffer3)
+
+		.new-offer-footer
+			+pagination([{href:'#', value:'1',modif:'active'},{href:'#', value:'2'},{href:'#', value:'3'},{href:'#', value:'4'},{href:'#', value:'5'},{href:'#', value:'6'},{href:'#', value:'7'},{href:'#', value:'&hellip;'}])
+			+button('Показать еще 10 объявлений', '#','button--basic','','Еще 10 объявлений')
+
+
+

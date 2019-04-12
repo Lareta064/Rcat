@@ -1,0 +1,15 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Пагинация';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.section-ui
+			h3 Пагинация
+		.section-ui
+			+pagination([{href:'#', value:'1',modif:'active'},{href:'#', value:'2'},{href:'#', value:'3'},{href:'#', value:'4'},{href:'#', value:'5'},{href:'#', value:'6'},{href:'#', value:'7'},{href:'#', value:'&hellip;'}])
+		.section-ui
+			pre.
+				+pagination([{href:'#', value:'1',modif:'active'},{href:'#', value:'2'},{href:'#', value:'3'},{href:'#', value:'4'},{href:'#', value:'5'},{href:'#', value:'6'},{href:'#', value:'7'},{href:'#', value:'&hellip;'}])

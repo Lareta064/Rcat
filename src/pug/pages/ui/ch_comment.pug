@@ -1,0 +1,18 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Комментарии';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.section-ui
+			.title Блок комментарии
+		.section-ui
+			+messages([{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'} , {ImgPath:'Janna', author:'Антон Ленский,',authorLink:'#',publTime:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.' },{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'день назад',addClass:'text-link--line',text:'Алла, у меня есть несколько хороших вариантов, отправлю на почту через час.'},{ImgPath:'Janna'}])
+
+		.section-ui
+			h5 Миксин расположен по адресу  src/pug/mixins/_ch_comment.pug
+		.section-ui
+			pre.
+				+messages([{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'} , {ImgPath:'Janna', author:'Антон Ленский,',authorLink:'#',publTime:'полчаса назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.' },{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'день назад',addClass:'text-link--line',text:'Алла, у меня есть несколько хороших вариантов, отправлю на почту через час.'},{ImgPath:'Janna'}])

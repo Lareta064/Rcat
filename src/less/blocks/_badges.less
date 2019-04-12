@@ -1,9 +1,10 @@
 .badge{
+	cursor: pointer;
 	font-size: 16px;
 	font-weight: 500;
-	height: 24px;
+	min-height: 30px;
 	align-items: center;
-	display: flex;
+	display: inline-flex;
 	padding-left:8px;
 	padding-right:8px;
 	color: @darkBlueBg;
@@ -12,12 +13,29 @@
 	text-align: center;
 	letter-spacing: .5px;
 
-	@media(min-width: 768px){font-size: 14px;}
+	@media(min-width: 768px){
+		.badge-group{flex-shrink: 0}
+		min-height: 24px;
+		font-size: 14px;
+	}
 }
 
 .badge--dark{
 	background-color: @badgeBg;
 	border: 1px solid @badgeBg;
+	color: @white;
+}
+
+.badge--green{
+	background-color: @greenBg;
+	border: 1px solid @greenBg;
+
+	color: @white;
+}
+
+.badge--red{
+	background-color: @redText;
+	border: 1px solid @redText;
 	color: @white;
 }
 .big-badge{
@@ -34,8 +52,15 @@
 		padding-top: 3px;
 		padding-left: 10px;
 		height: 55px;
-
 		border-radius: 4px;
+	}
+	@media(min-width: 1200px){
+		width: 160px;
+
+	}
+	@media(min-width: 1350px){
+		width:200px;
+		padding-left: 15px;
 	}
 
 }
@@ -48,6 +73,8 @@
 .big-badge__bottom{
 	font-size: 16px;
 	@media(min-width: 768px){font-size: 14px;}
-
 }
-
+.badge--active{
+	background-color:@btnBg; ;
+	color:@white;
+}

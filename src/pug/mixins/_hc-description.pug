@@ -11,12 +11,12 @@ mixin hc-description(objectArgument)
 						.hc-description-item
 							.headline-bold #{objectArgument.floor}
 							.text-body этажей
-				.col-5.order-2.col-md-2.offset-md-1.col-lg-3.offset-lg-0.order-md-1.pl-0.pr-0
+				.col-5.order-2.col-md-2.offset-md-1.col-lg-3.offset-lg-0.col-xl-2.col-hl-3.order-md-1.pl-0.pr-0
 					.hc-description-item.hc-description-item--align
 						.text-box
 							.headline-bold #{objectArgument.ceilingHeight} м
 							.text-body потолки
-				.col-7.order-1.col-md-4.order-md-2.col-lg-4.pl-0
+				.col-7.order-1.col-md-4.order-md-2.col-lg-4.offset-xl-1.offset-hl-0.pl-0
 					.hc-description-item.hc-description-item--btn
 						+big-badge(objectArgument.objItem )
 		.hc-description__center
@@ -27,31 +27,35 @@ mixin hc-description(objectArgument)
 						.text-body !{objectArgument.parkingDescription}
 
 
-				.order-3.order-md-2.col-md-4.col-lg-2.offset-lg-2.col-hl-4.offset-hl-0.pr-0.col-pl-0
+				.order-3.order-md-2.col-md-4.col-lg-2.offset-lg-2.col-xl-4.offset-xl-0.pr-0.col-pl-0
 					.hc-description__center-item.headline-body--pl
 						.headline-body Готовность:
-						.text-body #{objectArgument.readinessLevel}
+						.text-body !{objectArgument.readinessLevel}
 
 				.order-2.order-md-3.col-md-8.col-lg-8.pl-0
 					.hc-description__center-item.text-body--pr
 						.headline-body Инфрастуктура:
 						.text-body !{objectArgument.infrastructure}
 
-				.order-6.col-md-4.col-lg-2.offset-lg-2.col-hl-4.offset-hl-0.pr-0.col-pl-0
+				.order-6.col-md-4.col-lg-2.offset-lg-2.col-xl-4.offset-xl-0.pr-0.col-pl-0
 
 					.hc-description__center-item.headline-body--pl
 						.headline-body Эксплуатация:
-							.text-body #{objectArgument.operationPrice}
+							.text-body !{objectArgument.operationPrice}
 		.hc-description__footer
 			.hc-description__footer-content
 				.text-body !{objectArgument.hauseDescription}
 
 				.headline-body Квартиры
-				.text-body.description__visible-text !{objectArgument.apartmentDescription}
+				.text-body.description__visible-text.fadeOut !{objectArgument.apartmentDescription}
 					.description__hidden-text  #{objectArgument.hiddenText}
 
 			.hc-description__footer-links
 				.footer-links-item
-					a(href="#")#openHiddenDescrip.simple-link Подробнее о ЖК
+					//- a(href="#")#openHiddenDescrip.simple-link Подробнее о ЖК
+
+					+text-link('Подробнее о ЖК','',' openHiddenDescrip')
 				.footer-links-item
-					a(href="#").simple-link Сообщить о неточности описания
+					//- a(href="#").simple-link.simple-link--error Сообщить о неточности описания
+					+text-link('Сообщить о неточности описания','',' simple-link--error')
+

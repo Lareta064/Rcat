@@ -1,0 +1,43 @@
+.input-block{
+	padding-bottom: 20px;
+}
+
+.form-input{
+	width: 100%;
+	border: 1px solid @lightGrey; 
+	border-radius: 3px; 
+	background: @white !important; 
+	outline: none;    
+	background-color: @white;
+	color: @inputText;
+	height: 42px;
+	padding-left: 9px;
+	cursor: text;
+	font-size: 14px;
+	transition: 0.5s;
+	
+	&::placeholder{
+		color: @inputText;
+		
+	}
+
+	@media(min-width:768px){
+		height: 30px;
+		
+	}
+}
+
+.form-input--left{
+	width: 50%;
+	border-radius: 3px 0 0 3px;
+	border-right: 0px;
+}
+
+.form-input--right{
+	width: 50%;
+	border-radius: 0 3px 3px 0;
+}
+
+.form-input--focus{
+	border: 1px solid @blueBorder;
+}

@@ -1,27 +1,74 @@
-mixin option-panel
-	.option-panel.option-panel--desktop
-		+link('Следить за объявлениями в этом ЖК','icon-notify')
-		+link('В избранное','icon-heart')
-		+link('Отправить эл.почтой','','line')
-		+link('Скачать ПДФ','', 'line')
-		+link('Добавить заметку','icon-add')
-		+link('Пожаловаться','icon-question').order-item
 
+mixin optionPanel(panelModif, еmailLink, pdfSrc, whatsAppLink, telegramLink)
 	.option-panel.option-panel--mobile
-		+link('В избранное','icon-heart')
-		+link('Еще','arrow-down').order-item#showOptions
+		+link('В избранное','','icon-heart')(class=" add-favorite ")
+		+link('Еще','','arrow-down').order-item#showOptions
 	.dropdown#dropdown--option(data-control= 'hidden')
 		.dropdown-item
-			+link('Следить за объявлениями в этом ЖК','icon-notify')
+			+link('Следить за объявлениями в этом ЖК','', 'icon-notify')(class="watch-announcements")
 		.dropdown-item
-			+link('Добавить заметку','icon-add')
+			.block-item--note
+				+icon-add
+				+text-link('Добавить заметку','#')
 		.dropdown-item
-			+link('Отправить эл.почтой','','line')(class="link-block--pl")
+			+text-link('Отправить эл.почтой','mailto:'+ еmailLink,'link-block--pl text-link--line')
 		.dropdown-item
-			+link('Скачать ПДФ','', 'line')(class="link-block--pl")
+			//- +text-link('Скачать ПДФ',pdfSrc,'link-block--pl text-link--line')
+			a.text-link.text-link--line.link-block--pl(href=''+ pdfSrc download) Скачать ПДФ
 		.dropdown-item
-			+link('Отправить в Ватсап','', 'line')(class="link-block--pl")
+			+text-link('Отправить в Ватсап',whatsAppLink,'link-block--pl text-link--line')(target='_blank')
 		.dropdown-item
-			+link('Поделиться в Телеграме','', 'line')(class="link-block--pl")
+			+text-link('Поделиться в Телеграме',telegramLink,'link-block--pl text-link--line')(target='_blank')
 		.dropdown-item
-			+link('Пожаловаться','icon-question').order-item
+			+link('Пожаловаться','','icon-question').order-item
+
+	.option-panel.option-panel--tablet
+		+link('Следить за ЖК','','icon-notify')(class="watch-announcements")
+		+link('В избранное','','icon-heart','fix-width')(class=" add-favorite icon-heart--small")
+		+text-link('Отправить email','mailto:'+ еmailLink,'text-link--line mr-25')
+
+		a.text-link.text-link--line.mr-25(href=''+ pdfSrc download) Скачать ПДФ
+		.block-item--note
+			+icon-add
+			+text-link('Добавить заметку','#')
+
+		if panelModif == 'full'
+			.option-panel__modal
+				+text-link('Еще','','showModalBlock')
+				.option-panel__modal-block
+					+text-link('Отправить в Ватсап', whatsAppLink,'text-link--line link-block--pl text-link--line')
+					+text-link('Поделиться в Телеграме',telegramLink,'text-link--line link-block--pl')
+
+		if panelModif == 'full'
+			+link('','','icon-question')(title='Пожаловаться').order-item
+		else
+			+link('Пожаловаться','','icon-question').order-item
+
+
+	.option-panel.option-panel--desktop
+		+link('Следить за объявлениями в этом ЖК','','icon-notify')(class="watch-announcements")
+		+link('В избранное','','icon-heart','fix-width')(class=" add-favorite icon-heart--small")
+		+text-link('Отправить эл.почтой','mailto:'+ еmailLink,'text-link--line mr-25')
+		//- +text-link('Скачать ПДФ',pdfSrc,'text-link--line mr-25')
+		a.text-link.text-link--line.mr-25(href=''+ pdfSrc download) Скачать ПДФ
+		.block-item--note
+			+icon-add
+			+text-link('Добавить заметку','#')
+
+		if panelModif == 'full'
+			.option-panel__modal
+				+text-link('Еще','','showModalBlock')
+				.option-panel__modal-block
+					+text-link('Отправить в Ватсап', whatsAppLink,'text-link--line link-block--pl text-link--line')
+					+text-link('Поделиться в Телеграме',telegramLink,'text-link--line link-block--pl')
+
+
+		+link('Пожаловаться','','icon-question').order-item
+
+
+
+
+
+
+
+

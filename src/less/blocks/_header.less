@@ -16,19 +16,19 @@
 	display: flex;
 	flex-direction: column;
 
-	// justify-content: space-between;
 	height: 141px;
 	background-color: @white;
 
-	padding-top: 2rem;
+	padding-top: 18px;
 	padding-bottom: 2rem;
 	@media(min-width: 768px){
+		padding-top: 2em;
 		align-items: center;
 		flex-direction: row;
 		height: 80px;
 	}
 	.logoblock{
-		margin-bottom: 2.3rem;
+		margin-bottom: 1.8rem;
 		margin-right: 2.5rem;
 		@media(min-width: 768px){margin-bottom: 0px;}
 	}
@@ -39,7 +39,7 @@
 	.mobile-button{
 		display:flex;
 		position: absolute;
-		right: 15px;
+		right: 0px;
 		top: 18px;
 		@media(min-width: 768px){
 			top: 0;
@@ -96,43 +96,29 @@
 		margin-right: 2.2rem;
 		margin-bottom: 0;
 	}
+	.header__icon-group__item--add{
+		margin-right: -32px;
+		// order:-1;
+		@media(min-width: 768px){
 
+			margin-right: 20px;}
 
-}
-.header__icon-group__item{
-	padding-bottom: 8px;
-	.icon-search,
-	.icon-dashboard{
-		width: 24px;
-		height: 24px;
-	}
-	.icon-notify{width: 20px;
-		height: 24px;}
-	.icon-heart{
-		svg{
-			width: 23px;
-			height: 23px;
-		}
 	}
 }
-
+.header__icon-group__item{padding-bottom: 8px;}
 .header__icon-group__item:hover{
 	border-bottom: 2px solid @activeIcon;
 	padding-bottom: 6px;
-	.icon-dashboard,
-	.icon-search,
+	i,
 	.icon-heart{
 		path{fill:@activeIcon;}
 
 	}
-	.cls-11{
-
-		stroke:@activeIcon;
-	}
-	.cls-6{
+	.icon-notify--path{
 
 		fill:@activeIcon;
 	}
+
 }
 .header__icon-group__item:not(:last-child){
 	margin-right: 32px;
@@ -152,9 +138,9 @@
 .header__user__avatar{
 	position: absolute;
 	bottom: 22px;
-	right: 15px;
+	right: 0px;
 	border: 1px solid #e5e9f2;
-	border-radius: 3px;
+	border-radius: 3px 3px 0 0;
 	min-width: 36px;
 	min-height: 36px;
 	@media(min-width: 768px){
@@ -162,17 +148,17 @@
 		right:0;
 		bottom: 0;
 
+
 	}
-	@media(min-width: 1350px){margin-right: 1.3rem;}
+	@media(min-width: 1200px){margin-right: 1.3rem;}
 }
 
 .header__user__lk-dropdown{
 	display: none;
 
 	a{
-		margin-right: 9px;
+		margin-right: 10px;
 		display: inline-block;
 	}
 	@media(min-width: 1200px){display: block;}
-	&:hover{opacity: .7;}
 }

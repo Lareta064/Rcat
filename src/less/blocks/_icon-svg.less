@@ -3,6 +3,60 @@ i{
 	cursor: pointer;
 	transition: .5;
 }
+.arrow-down--path {
+	fill: #2c81d1;
+	fill-rule: evenodd;
+}
+.icon-add--path {
+	fill: #b3b3b3;
+	fill-rule: evenodd;
+}
+
+.icon-brach--path {
+	fill: #41ae1b;
+	fill-rule: evenodd;
+}
+.icon-man--path {
+	fill: #b0b0b0;
+	fill-rule: evenodd;
+}
+.icon-notify--path {
+	fill: #b3b3b3;
+	fill-rule: evenodd;
+}
+.watch-announcements{
+	.simple-link{
+		min-width: 273px;
+		@media(min-width: 992px){min-width: 110px;}
+		@media(min-width: 1350px){min-width: 273px;}
+	}
+
+}
+.watch-announcements--active{
+	.icon-notify{
+		svg path{
+			fill: #d15656;
+			fill-rule: evenodd;
+		}
+	}
+}
+
+.icon-price-down--path {
+	fill: #d15656;
+	fill-rule: evenodd;
+}
+.icon-question--path {
+	fill: #b3b3b3;
+	fill-rule: evenodd;
+}
+.icon-mail--path {
+	fill: #b3b3b3;
+	fill-rule: evenodd;
+}
+.ic-dashboard {
+	fill: #b3b3b3;
+	fill-rule: evenodd;
+}
 .notify{
 	position: relative;
 	display: inline-block;
@@ -22,7 +76,7 @@ i{
 	font-size: 24px;
 	cursor: pointer;
 }
-
+.add-favorite .icon-heart,
 .icon-heart.icon-heart--red{
 	svg{
 		width: 18px ;
@@ -34,23 +88,125 @@ i{
 		height: 16px ;
 	}
 }
+.add-favorite .icon-heart{
+	svg{
+		width: 20px ;
+		height: 20px ;
+	}
+}
 .icon-heart--grey{
 	width: 24px;
 	path{
 		fill: @lightGrey;
 	}
 }
+
 //-search
 .icon-search{
+	svg{
+		width: 23px;
+		height: 23px;
+	}
 	path{fill: @lightGrey;}
 }
 .arrow-down svg{
 	width: 19px;
 	height: 13px;
 }
+.arrow-down--rotate{
+	transform:rotate(180deg);
+}
 .icon-notify{
+	svg{
+		width: 20px;
+		height: 23px;
+	}
+}
+.option-panel {
 	svg{
 		width: 18px;
 		height: 21px;
 	}
+}
+
+
+.icon-dashboard{
+	svg{
+		width: 23px;
+		height: 23px;
+	}
+
+}
+
+.icon-metro svg{
+	width: 25px;
+	height: 18px;
+
+	@media(min-width:768px){
+		width: 18px;
+		height: 13px;
+	}
+}
+// .share-link:hover{
+// 	path{fill:#d15656;}
+// }
+
+.repaire-item-box{
+	display: flex;
+	// align-items: center;
+	// margin-left: 28px;
+	.icon-brach{
+		margin-right: 10px;
+	}
+}
+.icon-pdf{
+	svg{
+		width: 30px;
+		polygon,
+		path{fill: #999;}
+
+	}
+}
+.icon-copy{
+	width: 20px;
+	path{fill: #2c81d1;}
+}
+.icon-copy:hover{
+	opacity: .7;
+}
+
+.icon-group{
+	display: inline-flex;
+	cursor:pointer;
+	align-items: flex-end;
+	font-size: 14px;
+	color: @lightGrey;
+	font-weight: 700;
+	.icon-group__icon{margin-right: 6px;}
+
+}
+.icon-group.group--icon-like{
+	position: relative;
+	bottom: 4px;
+	.icon-group__num--color{color:@greenBg; }
+	&:hover{
+		.icon-like{
+			use{fill:@greenBg;}
+		}
+	}
+	.icon-group{use{fill:@lightGrey;}}
+	.clicked{use{fill:@greenBg;}}
+}
+.icon-group.group--icon-dislike{
+	.icon-group__num--color{color:@redText; }
+	&:hover{
+		.icon-dislike{
+			use{fill:@redText;}
+		}
+	}
+	.icon-group__num{padding-bottom: 4px;}
+	.icon-group{use{fill:@lightGrey;}}
+	.clicked{use{fill:@redText;}}
+
+
 }

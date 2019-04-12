@@ -1,0 +1,24 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Информация об агенте';
+	- var pageClass= "body--dashboard";
+	- var agentData = {agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'поделилась лотом два часа назад',agentCompany:'APK',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1',downloadInfo:['user1','user2','user3','user4'], downloadNum:'56 человек'   }
+
+
+block content
+	.container.container--left
+		.section-ui
+			h3 Информация об агенте
+		.section-ui
+			+agent-info({agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'поделилась лотом два часа назад',agentCompany:'APK',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1',downloadInfo:['user1','user2','user3','user4','user5','user4','user1','user2','user3','user4','user5']})
+		.section-ui
+			pre.
+				+agent-info({agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'поделилась лотом два часа назад',agentCompany:'APK',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1',downloadInfo:['user1','user2','user3','user4'] })
+
+		.section-ui
+			+agent-info({agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'поделилась лотом два часа назад',agentCompany:'APK',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1'})
+		.section-ui
+			pre.
+				+agent-info({agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'поделилась лотом два часа назад',agentCompany:'APK',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1'})
+

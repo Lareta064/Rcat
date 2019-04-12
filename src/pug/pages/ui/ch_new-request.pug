@@ -1,0 +1,22 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Комментарии';
+	- var pageClass = 'body--dashboard';
+	- var newOffer3 = {modif:'new',tooltipLink:'http://realtycat.pro/36732', mailAddress: 'info@mail.ru', pdfLink:'../img/test.pdf', badgeGroup:['ЦАО', 'ЗАО'],  appartmentRooms:'3-комн. кв., до 200 кв.м.',titleHref:'#', price:' от 200 000 000', repaireText:'Отделка значения не имеет', cardDescription:'Нужна трешка до 200 млн. Центр + ЗАО (Кутузовский до Парка Победы). Любое состояние.', telNumber:'+7 985 356 56 56',telLink:'tel:89853565656',messagesData:[{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'},{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'}, {ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'}, {ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'},{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'},{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'},{ImgPath:'Janna' }], agentData:{agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'два часа назад',agentCompany:'ARK Realty',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1',downloadInfo:['user1','user2','user3','user4','user5','user4','user1','user2','user3','user4','user5']}};
+
+
+block content
+	.container.container--left
+		.section-ui
+			.title Карточка новых запросов
+		.section-ui
+			+offer-card(newOffer3)
+		.section-ui
+			h4 Миксин карточки расположен по адресу src/pug/mixins/_offer-card.pug
+		.section-ui
+			pre.
+				+offer-card(newOffer3)
+
+				- var newOffer3 = {modif:'new',tooltipLink:'http://realtycat.pro/36732', mailAddress: 'info@mail.ru', pdfLink:'../img/test.pdf', badgeGroup:['ЦАО', 'ЗАО'],  appartmentRooms:'3-комн. кв., до 200 кв.м.',titleHref:'#', price:' от 200 000 000', repaireText:'Отделка значения не имеет', cardDescription:'Нужна трешка до 200 млн. Центр + ЗАО (Кутузовский до Парка Победы). Любое состояние.', telNumber:'+7 985 356 56 56',telLink:'tel:89853565656',messagesData:[{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'},{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'}, {ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'}, {ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'},{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'},{ImgPath:'Anton',author:'Антон Ленский,',authorLink:'#',publTime:'2 часа назад',addClass:'text-link--line',text:'Жанна, у меня есть несколько хороших вариантов, отправлю на почту через полчаса.'},{ImgPath:'Janna' }], agentData:{agentName:'Жанна Гончарова',agentPageLink:'#', agentClass:'text-link--line',postedTime:'два часа назад',agentCompany:'ARK Realty',agentCompanyLink:'#', CompanyLinkClass:'text-link--line',agentAvatar:'agent1',downloadInfo:['user1','user2','user3','user4','user5','user4','user1','user2','user3','user4','user5']}};
+

@@ -1,0 +1,25 @@
+extends ../../layouts/ui-layout/ui-layout.pug
+
+block variables
+	- var title = 'Переключатель фильтра';
+	- var pageClass = 'body--dashboard';
+
+block content
+	.container.container--left
+		.section-ui
+			.title Переключатель фильтра
+		.section-ui
+			+toggle-block({modif:'border',title:'Сортировка', items:[{name:'цене',class:'filter-active filter-toggle-item--left'},{name:'площади',class:'filter-toggle-item--right'}]})
+		.section-ui
+			pre.
+				+toggle-block({modif:'border',title:'Сортировка', items:[{name:'цене',class:'filter-active filter-toggle-item--left'},{name:'площади',class:'filter-toggle-item--right'}]})
+		.section-ui
+			+toggle-block({title:'', items:[{name:'по цене',class:'filter-active'},{name:'по району',class:''},{name:'по станциям метро',class:'filter-active'}]})
+		.section-ui
+			pre.
+				+toggle-block({modif:'border',title:'Сортировка', items:[{name:'цене',class:'filter-active filter-toggle-item--left'},{name:'площади',class:'filter-toggle-item--right'}]})
+		.section-ui
+			+section-top('48&nbsp;предложений', {modif:'border',title:'Отсортировано по',items:[{name:'цене',class:'filter-active filter-toggle-item--left'},{name:'площади',class:'filter-toggle-item--right'}]}, 'от&nbsp;386&nbsp;460&nbsp;руб./кв.м', 'section-top--apartment')
+		.section-ui
+			pre.
+				+section-top('48&nbsp;предложений', {modif:'border',title:'Отсортировано по',items:[{name:'цене',class:'filter-active filter-toggle-item--left'},{name:'площади',class:'filter-toggle-item--right'}]}, 'от&nbsp;386&nbsp;460&nbsp;руб./кв.м', 'section-top--apartment')

@@ -1,0 +1,72 @@
+//-миксин для описания карточки ЖК с боковым фото
+mixin hcCardShort(cardObject)
+	.hc-card--short
+		.hc-card-row
+			.hc-card-row__item-img
+				img(src="../img/app-card-hc/"+ cardObject.imgSrc +".jpg", alt=""+cardObject.houseComplexSubTitle)
+			.hc-card-row__title.block-width
+				.row-text-title
+					+link-title(cardObject.houseComplexTitle, '#')
+					.text-body.text-body--grey !{cardObject.houseComplexSubTitle}
+				.row-text-subtitle
+					.link-adress-mob
+						each item in cardObject.regionLinks
+							+link(item.linkTitle,item.linkHref)
+						+text-link(cardObject.StreetAdress,cardObject.StreetAdressHref)
+						.text-info.text-group.d-flex
+							each item in cardObject.metroInfo
+								+metroStation(item)(class="metro-station--flex")
+					.link-adress-desk.box-visible-desk
+						+badge-group(cardObject.badgesItems)
+						+text-link(cardObject.linkAdress,'#')
+				.text-info.text-group.d-flex(class="box-visible-desk")
+					each item in cardObject.metroInfo
+						+metroStation(item)(class="metro-station--flex")
+		.hc-card-description.text-body.block-width !{cardObject.paragrafe1}
+		+text-link('Подробнее','#',"showHcDescription link-open-description")
+		.hc-card-wrapper
+			.hc-card-row.hc-card-row-info
+				.hc-card-group.block-width
+					//- .box-visible-block
+					.box-desktop-block
+						.headline-bold !{cardObject.price} руб.
+						.text-body стоимость квартир
+					.hc-card-row__info.d-flex
+						.hc-card__area-mob
+							.headline-bold !{cardObject.priceArea} кв.м
+							.text-body площадь квартир
+						.box-mobile-block
+							.headline-bold !{cardObject.floor}
+							.text-body этажей
+					.box-visible-block
+						.headline-bold !{cardObject.roof} м
+						.text-body потолки
+				.hc-card-row-add.d-flex
+					+bag-badge(cardObject.blueBadgeNum1,cardObject.blueBadgeNum2)(class='big-badge--short')
+					.box-mobile-block
+						.headline-bold !{cardObject.roof} м
+						.text-body потолки
+			.hc-card-row.hc-card-row-details
+				.hc-card-row__item.block-width
+					.headline-body Парковка
+					.text-body !{cardObject.parkingDescription}
+				.hc-card-row-add
+					.headline-body Готовность
+					.text-body !{cardObject.readinessLevel}
+			.hc-card-row.hc-card-row-details
+				.hc-card-row__item.block-width
+					.headline-body Инфраструктура
+					.text-body !{cardObject.infrastructure}
+				.hc-card-row-add
+					.headline-body Эксплуатация
+					.text-body !{cardObject.operationPrice}
+		//-Большой бэйдж на белом фоне
+		.hc-card-row-add.big-badge--white
+			+bag-badge(cardObject.blueBadgeNum1,cardObject.blueBadgeNum2)(class='big-badge--short')
+			.hc-card-row__info
+				.headline-bold !{cardObject.roof} м
+				.text-body потолки
+		.subscribe-group
+			+button-mode1('Следить за объявлениями в этом ЖК', '#', 'btn-mode1 subscribeButton', 'icon-notify','Следить за ЖК' )(data-position="passive")
+			.unsubscribe
+				+text-link('Отписаться','#')

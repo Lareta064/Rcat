@@ -1,0 +1,43 @@
+mixin price-card(tooltipLink,tooltipEmail,tooltipPdf,appPriceRub,appPriceUsd,appPriceArea,phoneNumber, phoneNumberHref, agentName, agentPageLink, agentOnlineTime, addressEmail, whatsAppLink, pdfSrc)
+	.price-card-wrapper
+		.appartment-price
+			.appartment-page-link
+				.share-link-text Поделиться
+				+share-link
+				+tooltip(tooltipLink, 'mailto:'+ tooltipEmail,tooltipPdf)
+			.appartment-price__row.appartment-price__row-title
+				.appartment-price__title.headline-bold !{appPriceRub} руб.
+			.appartment-price__row.appartment-price__row-subtitle
+				.appartment-price__usd $!{appPriceUsd}
+				.appartment-price__area.text-body.text-body--grey !{appPriceArea} руб./кв.м
+			.appartment-price__row.appartment-price__btn
+				+button('Показать телефон', '#','button--basic buttonShowPhone')
+				.appartment-price__phone-block
+					.phone-block-item.phone-block-item--flex
+						a(href='tel:'+phoneNumberHref ).headline-bold !{phoneNumber}
+						+link('В избранное','#','icon-heart','fix-width')(class='add-favorite icon-heart--small')
+
+					.phone-block-item
+						+text-link(agentName,agentPageLink,'agent-name')
+						span.text-body !{agentOnlineTime}
+
+
+			.appartment-price__row.appartment-price__message
+				.appartment-price__message-title Написать сообщение
+				form.price-card-form(method='post', action='')
+					textarea.appartment-price__textarea(name="appartment-price__textarea"  placeholder='Написать сообщение' rows='3')
+					input(type="submit" name = 'send-message' value='Отправить').btn-send-message
+
+		.price-card__toolbar
+			.price-card__toolbar-col
+				.toolbar-col__item
+					+text-link('Отправить эл.почтой','mailto:'+ addressEmail,'text-link--line')
+				.toolbar-col__item
+					+text-link('Отправить в Ватсап', whatsAppLink,'text-link--line')(target='_blank')
+			.price-card__toolbar-col
+				.toolbar-col__item
+					a.text-link.text-link--line(href=''+ pdfSrc download) Скачать ПДФ
+				.show-note-field.toolbar-col__item
+					+text-link('Добавить заметку','','text-link--line')
+		.price-card__toolbar-note
+			textarea.price-card-note(name='price-card-note')

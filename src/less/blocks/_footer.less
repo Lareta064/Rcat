@@ -2,15 +2,19 @@
 	padding-top: 66px;
 	height: 207px;
 	position: relative;
-
-	@media(min-width: 992px){
-			// background: url(../../img/cat-gray.svg);
-			// background-position: center bottom -50px;
-			// background-size: contain;
-			// background-repeat: no-repeat;
-			overflow:hidden;
-			flex-direction: row;
-			align-items: center;}
+	padding-left: 17px;
+	@media(min-width: 768px){
+	padding-left: 0px;
+	}
+	@media(min-width: 1200px){
+		height: 270px;
+		overflow:hidden;
+	}
+	@media(min-width: 1350px){
+		flex-direction: row;
+		align-items: center;
+		height: 207px;
+	}
 	.footer-top{
 		background: transparent;
 		position: relative;
@@ -25,10 +29,14 @@
 		@media(min-width: 1350px){justify-content: flex-start;}
 	}
 	.simple-link{
-		border-bottom: 1px solid @linkLine;
+		border-bottom: 1px solid rgba(44,129,209, .2);
 		margin-right: 2rem;
 		padding-top: 1rem;
-		@media(min-width: 992px){padding-top: 0px;}
+
+		@media(min-width: 992px){padding-top: 0px;
+		@media(min-width: 1350px){margin-right: 38px;}
+		}
+
 	}
 	.links-block{
 		width: 300px;
@@ -44,10 +52,27 @@
 	.logoblock{
 		align-items: flex-start;
 		flex-direction: column;
+		padding-bottom: 20px;
+
 		@media(min-width: 1350px){
+
 			align-items: center;
 			flex-direction: row;
 			margin-right: 15.2em;
+			padding-bottom: 0;
+		}
+		.logo-text{
+			width: 270px;
+			font-size: 16px;
+			display: block;
+			@media(min-width: 768px){font-size: 14px;}
+			@media(min-width: 1350px){width: 210px;}
+		}
+		.logo-icon{
+			margin-bottom: 12px;
+			@media(min-width: 1350px){
+			margin-bottom: 0;
+			}
 		}
 	}
 
@@ -82,8 +107,12 @@
 .footer-bottom__copyright{
 	color: #999;
 	order:2;
+	font-size: 16px;
 	@media(min-width: 992px){
 		order:1;
+	}
+	@media(min-width: 768px){
+		font-size: 14px;
 	}
 }
 .footer-bottom__politic{
@@ -101,8 +130,12 @@
 	svg{
 		width: 230px;
 	}
-	@media(min-width: 992px){display: block;}
-
-	@media(min-width: 1350px){transform: translateX(-50%) translateX(22px);}
+	@media(min-width: 1200px){
+		display: block;
+		transform: translate(-32%,-10%);
+	}
+	@media(min-width: 1350px){
+		transform: translateX(-50%) translateX(22px);
+		}
 
 }

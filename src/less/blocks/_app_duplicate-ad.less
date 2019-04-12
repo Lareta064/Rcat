@@ -1,0 +1,115 @@
+.duplicate-add{
+	padding-top: 28px;
+	@media(min-width: 768px){padding-top:0px;}
+}
+.duplicate-add__cards{
+	display: none;
+	padding-top: 16px;
+}
+
+.duplicate-add__link{
+	.show-duplicate{
+		min-width: 265px;
+		@media(min-width: 768px){min-width: 230px;}
+	}
+	cursor: pointer;
+	.arrow-down{
+		display: none;
+		@media(min-width: 768px){display: block;}
+	}
+}
+
+.show-duplicate{
+	margin-right: 8px;
+	font-weight: 700;
+}
+.vertical-border--duplicate{
+	bottom:30px;
+	top:-18px;}
+
+
+//- стили для карточки дубликатов на 8 колонок
+.appartment-card--duplicate{
+
+	.appartment-card__row--header{
+		@media(min-width: 1200px){display: block;}
+		.appartment-card__price{@media(min-width: 1200px){padding-top: 14px;}}
+
+	}
+
+	.appartment-card--link-title{
+		.headline-body{margin-right: 28px;}
+		align-items: center;}
+	.metro-block{
+
+		padding-top: 0;
+	}
+	.repaire-item-box,
+	.repaire-item{display: flex;}
+	.icon-brach{display: block;	}
+
+
+	.repaire-item-inner {
+		padding-left: 26px;
+		display: inline-flex;
+
+	}
+	.appartment-card__text-box{
+		@media(min-width: 1350px){
+			width: 100%;
+
+		}
+	}
+	.text-part:not(:last-child){padding-bottom: 4px;}
+	.appartment-card__row--description{
+		@media(min-width: 768px){display: block;		}
+		@media(min-width: 1350px){padding-bottom: 0;}
+	}
+	.appartment-card__row--toolbar{
+		@media(min-width: 1350px){padding-top: 0;}
+		.text-link{@media(min-width: 768px){margin-left: 28px;}}
+	}
+	.appartment-card__row--transform{
+
+		@media(min-width: 1350px){
+			flex-wrap: nowrap;
+			padding-bottom: 6px;}
+
+	}
+	.appartment--built{
+		@media(min-width: 1350px){padding-right:20px;}
+	}
+	.appartment-card__price--area
+	{
+		display: none;
+		@media(min-width: 1350px){display: block;}
+	}
+	.appartment-card__truncate-text{
+		.text-part:not(:first-child){
+			display: none;
+			@media(min-width: 1350px){display: block;}
+		}
+	}
+	.appartment-card--link-title{
+		padding-right: 0;
+
+		.headline-body{
+			white-space: nowrap;
+			 overflow: hidden;
+			text-overflow: ellipsis;
+			@media(min-width: 768px){max-width: 210px;}
+			@media(min-width: 992px){max-width: 100%;}
+		}
+
+		.appartment-card--address{
+			@media(min-width: 768px){max-width: 200px;}
+			@media(min-width: 992px){max-width: 100%;}
+		}
+
+	}
+
+	.appartment-publication{
+		@media(min-width: 992px){display: block;}
+	}
+
+}
